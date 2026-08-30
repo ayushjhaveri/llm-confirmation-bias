@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-1, -21, -81].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that each number is the previous number multiplied by a negative odd integer.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,6,18]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that each subsequent number is the previous number multiplied by -3.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,-3,9]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that each subsequent number is the previous number multiplied by -3, except for the first number which can be any integer.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-2,-42,-162]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [3,-9,27]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting from any initial integer.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [4,-12,36]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, and the sequence must start with a negative integer.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-3,-9,-27]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, and the sequence must start with a negative integer.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-4,-12,-36]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-5,-15,-45]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that each number in the sequence is obtained by multiplying the previous number by -3, starting with a negative integer.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-6,-18,-54]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that each subsequent number is the previous number multiplied by -3, starting with a negative integer.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-7,-21,-63]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that each number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-8,-24,-72]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, beginning with a negative integer.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-9,-27,-81]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-10,-30,-90]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting from any negative integer.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-11,-33,-99]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, beginning with any negative integer.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-12,-36,-108]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-13,-39,-117]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-14,-42,-126]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-15,-45,-135]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-16,-48,-144]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-17,-51,-153]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-18,-54,-162]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-19,-57,-171]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-20,-60,-180]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-21,-63,-189]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-22,-66,-198]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-23,-69,-207]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-24,-72,-216]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-25,-75,-225]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-26,-78,-234]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-27,-81,-243]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-28,-84,-252]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-29,-87,-261]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-30,-90,-270]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-31,-93,-279]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-32,-96,-288]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-33,-99,-297]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-34,-102,-306]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-35,-105,-315]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-36,-108,-324]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-37,-111,-333]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-38,-114,-342]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-39,-117,-351]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-40,-120,-360]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-41,-123,-369]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-42,-126,-378]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that each subsequent number is obtained by multiplying the previous number by -3, starting with any negative integer.
+
+[183] ENVIRONMENT:
+Turn - Test

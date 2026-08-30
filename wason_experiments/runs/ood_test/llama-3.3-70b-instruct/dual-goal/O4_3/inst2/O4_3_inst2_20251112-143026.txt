@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [8, 27, -27].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The numbers are in a specific arithmetic or geometric relationship to each other.
+Announce: MED rule - The numbers do not have a specific arithmetic or geometric relationship to each other.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,4,8]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The numbers are in a geometric sequence with a common ratio of -1 or a specific pattern of positive and negative numbers.
+Announce: MED rule - The numbers do not follow a geometric sequence with a common ratio of -1 or a specific pattern of positive and negative numbers.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,-1,1]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - One number is the cube of another, and the third is the negative of the cube.
+Announce: MED rule - No number is the cube of another, or the third is not the negative of the cube.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [8,27,64]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - One number is a perfect cube, another is the same number negated, and the third is a different perfect cube that is not the negation of the first.
+Announce: MED rule - The numbers do not meet the criteria of having one perfect cube, its negation, and a different perfect cube.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [27,-27,64]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - One number is a perfect cube, another is the negative of that perfect cube, and the third number is also a perfect cube but the same absolute value as the first two.
+Announce: MED rule - The numbers do not meet the criteria of having one perfect cube, its negation, and another number that is also a perfect cube with the same absolute value.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [27,-27,1]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - One number is a perfect cube, another is the negative of that perfect cube, and the third is the cube root of the first two numbers cubed.
+Announce: MED rule - The numbers do not meet the criteria of having one perfect cube, its negation, and the cube root of the first two numbers cubed, which in the case of the given DAX example would be 3^3 = 27, -3^3 = -27 and 3 = cube root of 27 and -27.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [8,-8,2]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - One number is a perfect cube, another is the negative of that perfect cube, and the third number is the cube root of the absolute value of the first two numbers.
+Announce: MED rule - The numbers do not meet the criteria of having one perfect cube, its negation, and the cube root of the absolute value of the first two numbers.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [27,-27,3]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - A triple consists of a number, its negative, and a third number that, when cubed, equals the first number or its negative.
+Announce: MED rule - The numbers do not meet the criteria of having a number, its negative, and a third number that, when cubed, equals the first number or its negative.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [64,-64,4]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - One number is a perfect cube, another is the negative of that perfect cube, and the third number is the cube root of either the first or the second number.
+Announce: MED rule - The numbers do not meet the criteria of having one perfect cube, its negation, and the cube root of either the first or the second number.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [8,-8,2]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - A number, its negative, and the cube root of the absolute value of the number.
+Announce: MED rule - The numbers do not meet the criteria of being a number, its negative, and the cube root of the absolute value of the number.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [27,-27,3]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The numbers are a perfect cube, its negative, and the number that, when cubed, gives the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the number that, when cubed, gives the perfect cube.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [1,-1,1]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - A perfect cube, its negative, and the cube root of the absolute value of the perfect cube, where the cube root is an integer.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the cube root of the absolute value of the perfect cube, where the cube root is an integer.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [8,-8,2]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - A triple consisting of a perfect cube, its negative, and the number that is the cube root of both the perfect cube and its negative.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the number that is the cube root of both the perfect cube and its negative.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [27,-27,3]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The triple consists of a number that is a perfect cube, its negative counterpart, and the cube root of the absolute value of the perfect cube, which results in an integer.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and having an integer cube root of the absolute value of the perfect cube.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [64,-64,4]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - A triple where one number is a perfect cube, the second is the negative of the perfect cube, and the third is a value that, when cubed, equals either the first or the second number, specifically in the case of the given example, 3^3 = 27 and (-3)^3 = -27.
+Announce: MED rule - The numbers do not meet the criteria of having one perfect cube, its negative, and a third number that, when cubed, gives the perfect cube or its negative.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [27,-27,3]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The numbers form a set where one is a perfect cube, another is the negative of that cube, and the third number is the integer cube root of the absolute value of the first two numbers.
+Announce: MED rule - The numbers do not form a set where one is a perfect cube, another is the negative of that cube, and the third number is the integer cube root of the absolute value of the first two numbers.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [8,-8,2]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - A set of three numbers where one number is a perfect cube, the second number is the negative of the perfect cube, and the third number is an integer that, when cubed, gives the absolute value of the first two numbers.
+Announce: MED rule - The numbers do not meet the criteria of having one perfect cube, its negative, and an integer that, when cubed, gives the absolute value of the first two numbers.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [27,-27,3]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - One number is a perfect cube, another is the negative of that perfect cube, and the third is the base number that was cubed to get the first two numbers.
+Announce: MED rule - The numbers do not meet the criteria of having one perfect cube, its negative, and the base number that was cubed to get the first two numbers.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [8,-8,2]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The triple consists of a perfect cube, its negative, and the number that, when cubed, equals the absolute value of the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the number that, when cubed, equals the absolute value of the perfect cube.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [27,-27,3]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - A perfect cube, its negative, and the cube root of the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the cube root of the perfect cube.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [1,-1,1]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The numbers are a perfect cube, the negative of the perfect cube, and the base that, when cubed, gives the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, the negative of the perfect cube, and the base that, when cubed, gives the perfect cube.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [8,-8,2]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The triple consists of a number that is a perfect cube, its negative counterpart, and the integer that was cubed to produce the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer that was cubed to produce the perfect cube.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [27,-27,3]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - A set of three numbers where one is a perfect cube, another is the negative of the perfect cube, and the third number is the base number that, when cubed, results in the perfect cube or its negative.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the base number that, when cubed, results in the perfect cube or its negative.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [64,-64,4]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The numbers form a triple where one number is a perfect cube, the second number is the negative of that perfect cube, and the third number is the value that, when cubed, gives the absolute value of the first two numbers, which must be an integer.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the value that, when cubed, gives the absolute value of the first two numbers as an integer.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [27,-27,3]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The triple consists of a perfect cube, its negative, and the integer base that was cubed to obtain the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer base that was cubed to obtain the perfect cube.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [8,-8,2]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - A perfect cube, its negative, and the number that, when cubed, equals the absolute value of both the perfect cube and its negative.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the number that, when cubed, equals the absolute value of both the perfect cube and its negative.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [27,-27,3]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The numbers are a perfect cube, the negative of the perfect cube, and the cube root of the absolute value of the perfect cube, which is an integer.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the cube root of the absolute value of the perfect cube, which is an integer.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,-1,1]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The triple consists of a number that is a perfect cube, its negative counterpart, and the integer that, when cubed, gives the absolute value of the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer that, when cubed, gives the absolute value of the perfect cube.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [8,-8,2]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - A set of three numbers where one is a perfect cube, another is the negative of the perfect cube, and the third is the integer value that was cubed to produce the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer value that was cubed to produce the perfect cube.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [27,-27,3]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The numbers form a triple where one number is a perfect cube, the second number is the negative of that perfect cube, and the third number is an integer that, when cubed, equals the absolute value of the first two numbers.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and an integer that, when cubed, equals the absolute value of the first two numbers.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [64,-64,4]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The triple consists of a perfect cube, its negative, and the base number that, when cubed, results in the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the base number that, when cubed, results in the perfect cube.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [8,-8,2]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - A set of three numbers where one number is a perfect cube, another is the negative of the perfect cube, and the third number is the cube root of the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the cube root of the perfect cube.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [27,-27,3]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The numbers are a perfect cube, the negative of the perfect cube, and the integer that is the cube root of both the perfect cube and its negative.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer that is the cube root of both the perfect cube and its negative.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [1,-1,1]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The triple consists of a number that is a perfect cube, its negative, and the number that was cubed to get the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the number that was cubed to get the perfect cube.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [8,-8,2]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - A perfect cube, its negative, and the integer base that, when raised to the power of 3, equals the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer base that, when raised to the power of 3, equals the perfect cube.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [27,-27,3]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The triple consists of a perfect cube, the negative of the perfect cube, and the cube root of the absolute value of the perfect cube, which must be an integer.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the cube root of the absolute value of the perfect cube, which must be an integer.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [64,-64,4]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The numbers form a triple where one is a perfect cube, another is the negative of the perfect cube, and the third is the integer that, when cubed, gives the same absolute value as the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer that, when cubed, gives the same absolute value as the perfect cube.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [8,-8,2]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - A set of three numbers where one number is a perfect cube, another is the negative of that perfect cube, and the third number is the integer value whose cube is equal to the absolute value of the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer value whose cube is equal to the absolute value of the perfect cube.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [27,-27,3]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The triple consists of a perfect cube, its negative, and the number that, when cubed, equals the absolute value of the perfect cube, which is also the cube root of the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the number that, when cubed, equals the absolute value of the perfect cube, which is also the cube root of the perfect cube.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [1,-1,1]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The numbers are a perfect cube, the negative of the perfect cube, and the base number that, when cubed, results in the absolute value of the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the base number that, when cubed, results in the absolute value of the perfect cube.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [8,-8,2]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - A perfect cube, its negative, and the integer that is the cube root of the absolute value of the perfect cube and its negative.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer that is the cube root of the absolute value of the perfect cube and its negative.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [27,-27,3]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The triple consists of a number that is a perfect cube, its negative, and the integer base that was cubed to obtain the perfect cube and its negative.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer base that was cubed to obtain the perfect cube and its negative.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [64,-64,4]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The numbers form a triple where one is a perfect cube, another is the negative of the perfect cube, and the third is the cube root of the perfect cube, which is an integer.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the cube root of the perfect cube, which is an integer.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [8,-8,2]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - A set of three numbers where one number is a perfect cube, another is the negative of the perfect cube, and the third number is the integer that was cubed to get both the perfect cube and its negative.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer that was cubed to get both the perfect cube and its negative.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [27,-27,3]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The triple consists of a perfect cube, its negative, and the integer cube root of both the perfect cube and its negative, which must be the same integer.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the integer cube root of both the perfect cube and its negative, which must be the same integer.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [1,-1,1]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The numbers are a perfect cube, the negative of the perfect cube, and the number that, when cubed, gives the absolute value of the perfect cube and is also the cube root of the perfect cube.
+Announce: MED rule - The numbers do not meet the criteria of being a perfect cube, its negative, and the number that, when cubed, gives the absolute value of the perfect cube and is also the cube root of the perfect cube.
+
+[183] ENVIRONMENT:
+Turn - Test

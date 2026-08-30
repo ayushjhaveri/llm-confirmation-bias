@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-39, 81, 3].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: All numbers are multiples of 3.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [6,12,18]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: All numbers are odd integers.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,3,5]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The product of the three numbers must be negative.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-1,2,3]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The greatest common divisor of the three numbers must be exactly 3.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [3,6,9]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: Each number is an odd multiple of 3.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [3,9,15]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The triple contains exactly one negative number and all numbers are multiples of 3.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-3,9,15]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The three numbers are multiples of 3, include at least one negative, and their sum is a multiple of 9.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-3,3,9]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The sum of the numbers divided by 3 must be a multiple of 5.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [5,5,5]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: All numbers are multiples of 3 and their sum is a multiple of 15.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [3,3,9]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The combined number of times 3 appears as a factor in all three numbers is exactly 6.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [9,27,3]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The sum of the exponents of 3 in the prime factorization of each number equals 6.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [9,9,9]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The sum of the exponents of 3 in their prime factors equals 6, and at least one number isn't a multiple of 9.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [3,27,9]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The sum of the exponents of 3 in the prime factorization of each number equals 6, and at least one number is not divisible by 9.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [9,9,18]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The sum of the exponents of 3 in the prime factorization of each number equals 6, and at least one number is not divisible by 9.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [3,3,81]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The three numbers must be distinct and the sum of the exponents of 3 in their prime factorizations equals 6.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [3,9,27]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The three numbers are not in a geometric progression with ratio 3, the sum of the exponents of 3 in their prime factors is 6, and at least one is not divisible by 9.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [3,9,54]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and the numbers do not form a geometric progression with a common ratio of 3.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [3,27,18]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and at least one number is not divisible by 9.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [3,9,54]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The exponents of 3 in each number's prime factors sum to 6, the exponents are not in strictly increasing or decreasing order, and at least one number is not divisible by 9.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [6,27,9]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The three numbers are distinct, the sum of the exponents of 3 in their prime factors equals 6, the exponents are not in strictly increasing or decreasing order, and at least one number is not divisible by 9.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [9,27,6]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and their exponents are not in strictly increasing or decreasing order.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [9,3,27]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The numbers are distinct multiples of 3, the sum of their exponents of 3 equals 6, and they do not form a geometric progression with ratio 3 in any order.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-9,27,6]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [3,6,81]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [9,12,27]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The three numbers are distinct multiples of 3, the sum of the exponents of 3 in their prime factors equals 6, and their exponents are not in strictly increasing or decreasing order.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [81,3,6]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-3,27,18]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, the numbers are distinct, and the exponents are not in strictly increasing or decreasing order.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [9,18,36]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors equals 6, exponents are not monotonic, and at least one number is divisible by 3 but not 9.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [6,27,18]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The three numbers are distinct multiples of 3, the sum of the exponents of 3 in their prime factors equals 6, the exponents are not in strictly increasing or decreasing order, and no two numbers are exact doubles of each other.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [9,24,27]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [3,27,36]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [9,15,27]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The three numbers are distinct multiples of 3, the sum of the exponents of 3 in their prime factors equals 6, and they cannot form a geometric progression with a common ratio of 3 in any order.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [3,6,81]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and the exponents are not in strictly increasing or decreasing order.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [3,21,81]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, the exponents are not in strictly increasing or decreasing order, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [6,18,27]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and the exponents are not in strictly increasing or decreasing order.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [9,6,27]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The three numbers are distinct multiples of 3, the sum of the exponents of 3 in their prime factors equals 6, their exponents are not in strictly increasing or decreasing order, and they cannot form a geometric progression with a common ratio of 3 in any order.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-6,27,18]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [9,15,27]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The three numbers are distinct multiples of 3, the sum of the exponents of 3 in their prime factors equals 6, no two numbers form a geometric progression with a ratio of 3, and their exponents are not in strictly increasing or decreasing order.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-9,27,6]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, the exponents are not in strictly increasing or decreasing order, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [6,27,9]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The three distinct numbers are multiples of 3, the sum of the exponents of 3 in their prime factors equals 6, the exponents are not in strictly increasing or decreasing order, and they cannot form a geometric progression with a common ratio of 3 in any order.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [3,12,81]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, the exponents are not in strictly increasing or decreasing order, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [27,3,18]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, the exponents are not in strictly increasing or decreasing order, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-9,6,27]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, the exponents are not in strictly increasing or decreasing order, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-18,3,27]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, the exponents are not in strictly increasing or decreasing order, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-6,27,18]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, the exponents are not in strictly increasing or decreasing order, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-15,27,18]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The sum of the exponents of 3 in the prime factors of each number equals 6, the exponents are not in strictly increasing or decreasing order, and the numbers cannot form a geometric progression with a common ratio of 3 in any order.
+
+[183] ENVIRONMENT:
+Turn - Test

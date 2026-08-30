@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [8, 27, -27].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The product of the three numbers is a perfect cube.
+Announce: MED rule - The product of the three numbers is not a perfect cube.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,1,1]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The product of the three numbers is a perfect cube, and all three numbers are distinct.
+Announce: MED rule - Either the product of the three numbers is not a perfect cube, or all three numbers are the same.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [2,4,8]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - Each number in the triple is a perfect cube.
+Announce: MED rule - At least one number in the triple is not a perfect cube.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [1,8,27]
+
+[013] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - All three numbers are perfect cubes and distinct.
+Announce: MED rule - At least one number is not a perfect cube or all three numbers are the same.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [1,-1,-1]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes.
+Announce: MED rule - At least one number is not a perfect cube or the numbers are not all distinct.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [8,27,64]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes from different prime bases.
+Announce: MED rule - At least one number is not a perfect cube, or the numbers share the same prime base, or there are duplicates.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [8,27,125]
+
+[025] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes from different prime bases.
+Announce: MED rule - At least one number is not a perfect cube, or the numbers share the same prime base, or there are duplicates.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [27,64,125]
+
+[029] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes, and their product is a perfect cube.
+Announce: MED rule - At least one number is not a perfect cube, or the product of the three numbers is not a perfect cube.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [1,8,27]
+
+[033] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube, or the numbers share the same prime base.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [8,27,343]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes from different prime bases, and their product is a perfect cube.
+Announce: MED rule - At least one number is not a perfect cube, or the numbers share the same prime base, or their product is not a perfect cube.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [8,27,125]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube, the numbers share the same prime base, or there are duplicates.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [8,64,512]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube, or the numbers share the same prime base, or there are duplicates.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [27,125,343]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers, and their product is a perfect cube.
+Announce: MED rule - At least one number is not a perfect cube of a distinct prime, or the product of the three numbers is not a perfect cube.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [1,8,64]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers, and their product is a perfect cube.
+Announce: MED rule - At least one number is not a perfect cube of a distinct prime, or the product of the three numbers is not a perfect cube.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [1,8,64]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes, each being a cube of a distinct prime number.
+Announce: MED rule - At least one number is not a perfect cube, or the numbers are cubes of the same prime or duplicates.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [8,125,343]
+
+[061] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - All three numbers are perfect cubes, with exactly one being even and the other two being odd.
+Announce: MED rule - The triple does not meet the DAX criteria, either because not all numbers are perfect cubes or the even-odd count isn't one even and two odds.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [2,9,16]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube, or the numbers share the same prime base, or there are duplicates.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [27,125,343]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube of a distinct prime, or there are duplicates.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [8,27,125]
+
+[073] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube of a prime, or the numbers are not distinct.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [3,4,5]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The product of the three numbers is a perfect cube.
+Announce: MED rule - The product of the three numbers is not a perfect cube.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [2,9,16]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube of a distinct prime, or there are duplicates.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [125,343,1331]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube, the numbers share the same prime base, or there are duplicates.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [1,8,27]
+
+[089] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - Exactly one number is even, and the other two are odd.
+Announce: MED rule - Zero, two, or all three numbers are even.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [8,27,125]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - Exactly one even number and two odd numbers.
+Announce: MED rule - All even, all odd, or two even numbers and one odd.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [8,27,125]
+
+[097] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube, or the numbers share the same prime base, or there are duplicates.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [2,9,16]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube, or the numbers share the same prime base, or there are duplicates.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [8,27,343]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube of a distinct prime, or there are duplicates.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [2,3,5]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - All three numbers are perfect cubes.
+Announce: MED rule - At least one number is not a perfect cube.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [2,3,5]
+
+[113] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube of a distinct prime, or there are duplicates.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [4,9,25]
+
+[117] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect squares or cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect square or cube of a distinct prime, or there are duplicates.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [27,64,125]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes.
+Announce: MED rule - At least one number is not a perfect cube or the numbers are not distinct.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [2,9,25]
+
+[125] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The product of the three numbers is a perfect cube, and all three numbers are distinct.
+Announce: MED rule - Either the product of the three numbers is not a perfect cube, or the numbers are not all distinct.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [27,125,343]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - All three numbers must be distinct perfect cubes, and their product must also be a perfect cube.
+Announce: MED rule - At least one number is not a perfect cube, the numbers are not distinct, or their product is not a perfect cube.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [2,9,16]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes, and their product is also a perfect cube.
+Announce: MED rule - At least one number is not a perfect cube, the numbers are not distinct, or their product is not a perfect cube.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [8,27,125]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - All three numbers are pairwise coprime.
+Announce: MED rule - At least two numbers share a common divisor greater than 1.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [2,9,16]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - Exactly one number is even, and the other two are odd.
+Announce: MED rule - All numbers are even, all are odd, or two are even and one is odd.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [125,343,1331]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The sum of the three numbers is even.
+Announce: MED rule - The sum of the three numbers is odd.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [2,9,16]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - All three numbers are perfect cubes, and their sum is even.
+Announce: MED rule - At least one number is not a perfect cube, or the sum of the three numbers is odd.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [8,27,343]
+
+[153] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - Exactly one number is even, and the other two are odd.
+Announce: MED rule - All numbers are even, all are odd, or two are even and one is odd.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [8,27,125]
+
+[157] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - Exactly one number is even, and the other two are odd.
+Announce: MED rule - All numbers are even, all are odd, or two are even and one is odd.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [8,27,125]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - Exactly one number is even, and the other two are odd.
+Announce: MED rule - All numbers are even, all are odd, or two are even and one is odd.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [1,8,27]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - Exactly one number is even, and the other two are odd.
+Announce: MED rule - All numbers are even, all are odd, or two are even and one is odd.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [8,27,343]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - Exactly one number is even, and the other two are odd.
+Announce: MED rule - All numbers are even, all are odd, or two are even and one is odd.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [2,3,5]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes of different prime numbers.
+Announce: MED rule - At least one number is not a perfect cube of a distinct prime, or there are duplicates.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [4,9,25]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes, and exactly one is even.
+Announce: MED rule - Either not all numbers are perfect cubes, or the count of even numbers is not exactly one.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [2,3,5]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - All three numbers are distinct perfect cubes, and their sum is even.
+Announce: MED rule - Either not all numbers are perfect cubes, or their sum is odd.
+
+[183] ENVIRONMENT:
+Turn - Test

@@ -1,0 +1,113 @@
+# Group O3
+
+## Rule O3_1
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 0 | — | — | 0.667 | — | 0.731 | — | — | 0 | 27 | 18 | 0.400 | 458 |
+| inst2 | 0 | — | — | 1.368 | — | 1.368 | — | — | 0 | 19 | 26 | 0.578 | 405 |
+| inst3 | 0 | — | — | 0.731 | — | 0.667 | — | — | 0 | 26 | 19 | 0.422 | 429 |
+| inst4 | 0 | — | — | 0.500 | — | 0.552 | — | — | 0 | 30 | 15 | 0.333 | 443 |
+| inst5 | 0 | — | — | 1.045 | — | 1.250 | — | — | 0 | 22 | 23 | 0.511 | 483 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.000 |
+| #Tests Before First Correct (solved only) | — |
+| Incompat:Compat (solved, pre-first) | — |
+| Incompat:Compat (unsolved, all) | 0.862 |
+| NO:YES (solved, pre-first) | — |
+| NO:YES (unsolved, all) | 0.914 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | — |
+| Avg Incompatibility Fraction (unsolved, all) | 0.449 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 0 |
+| Sum Total Tokens Generated (unsolved, all) | 2218 |
+
+## Rule O3_2
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 1 | 10 | 0.667 | — | 0.429 | — | — | — | 0 | 6 | 4 | 0.400 | 110 |
+| inst2 | 1 | 3 | 0.000 | — | 0.500 | — | — | — | 0 | 3 | 0 | 0.000 | 43 |
+| inst3 | 1 | 4 | — | — | 0.333 | — | — | — | 0 | 0 | 4 | 1.000 | 58 |
+| inst4 | 1 | 4 | 3.000 | — | 1.000 | — | — | — | 0 | 1 | 3 | 0.750 | 57 |
+| inst5 | 1 | 8 | 1.667 | — | 0.600 | — | — | — | 0 | 3 | 5 | 0.625 | 116 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 1.000 |
+| #Tests Before First Correct (solved only) | 5.800 |
+| Incompat:Compat (solved, pre-first) | 1.333 |
+| Incompat:Compat (unsolved, all) | — |
+| NO:YES (solved, pre-first) | 0.572 |
+| NO:YES (unsolved, all) | — |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | 0.555 |
+| Avg Incompatibility Fraction (unsolved, all) | — |
+| Sum Total Tokens Generated (solved, up-to-correct) | 384 |
+| Sum Total Tokens Generated (unsolved, all) | 0 |
+
+## Rule O3_3
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 1 | 25 | 0.923 | — | 0.000 | — | — | — | 0 | 13 | 12 | 0.480 | 536 |
+| inst2 | 1 | 8 | 1.667 | — | 0.143 | — | — | — | 0 | 3 | 5 | 0.625 | 113 |
+| inst3 | 1 | 9 | 3.500 | — | 0.125 | — | — | — | 0 | 2 | 7 | 0.778 | 129 |
+| inst4 | 1 | 11 | 1.750 | — | 0.222 | — | — | — | 0 | 4 | 7 | 0.636 | 168 |
+| inst5 | 1 | 8 | 7.000 | — | 0.143 | — | — | — | 0 | 1 | 7 | 0.875 | 129 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 1.000 |
+| #Tests Before First Correct (solved only) | 12.200 |
+| Incompat:Compat (solved, pre-first) | 2.968 |
+| Incompat:Compat (unsolved, all) | — |
+| NO:YES (solved, pre-first) | 0.127 |
+| NO:YES (unsolved, all) | — |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | 0.679 |
+| Avg Incompatibility Fraction (unsolved, all) | — |
+| Sum Total Tokens Generated (solved, up-to-correct) | 1075 |
+| Sum Total Tokens Generated (unsolved, all) | 0 |
+
+## Rule O3_4
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 1 | 22 | 1.444 | — | 0.571 | — | — | — | 0 | 9 | 13 | 0.591 | 424 |
+| inst2 | 1 | 2 | — | — | 1.000 | — | — | — | 0 | 0 | 2 | 1.000 | 33 |
+| inst3 | 0 | — | — | 1.500 | — | 0.286 | — | — | 0 | 18 | 27 | 0.600 | 1133 |
+| inst4 | 1 | 2 | — | — | 1.000 | — | — | — | 0 | 0 | 2 | 1.000 | 36 |
+| inst5 | 1 | 8 | 7.000 | — | 0.000 | — | — | — | 0 | 1 | 7 | 0.875 | 124 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.800 |
+| #Tests Before First Correct (solved only) | 8.500 |
+| Incompat:Compat (solved, pre-first) | 4.222 |
+| Incompat:Compat (unsolved, all) | 1.500 |
+| NO:YES (solved, pre-first) | 0.643 |
+| NO:YES (unsolved, all) | 0.286 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | 0.866 |
+| Avg Incompatibility Fraction (unsolved, all) | 0.600 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 617 |
+| Sum Total Tokens Generated (unsolved, all) | 1133 |

@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [-21, -41, -91].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - All three numbers have the same remainder when divided by 5.
+Announce: MED rule - The three numbers do not all have the same remainder when divided by 5.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,6,16]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - All three numbers are negative.
+Announce: MED rule - Not all three numbers are negative.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-2,-4,-6]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - All three numbers are negative.
+Announce: MED rule - Not all three numbers are negative.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [3,5,7]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - All three numbers are negative.
+Announce: MED rule - Not all three numbers are negative.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [10,20,-40]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The product of the three numbers is negative.
+Announce: MED rule - The product of the three numbers is positive.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-1,-2,5]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The sum of the three numbers is less than or equal to zero.
+Announce: MED rule - The sum of the three numbers is greater than zero.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-5,2,3]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is greater than or equal to zero.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-10,-20,5]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - All three numbers have the same parity and their sum is negative.
+Announce: MED rule - The three numbers do not all have the same parity or their sum is zero or positive.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-10,-2,8]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The triple either contains all negative numbers, or it contains exactly one negative number and has a negative sum.
+Announce: MED rule - The triple contains an even number of negative values, or it contains one negative number and has a non-negative sum.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-10,0,5]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The triple has an odd number of negative integers and all three integers have the same parity.
+Announce: MED rule - The triple has an even number of negative integers or the three integers do not all have the same parity.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [2,4,8]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The triple has an odd number of negative integers and all three integers have the same parity.
+Announce: MED rule - The triple has an even number of negative integers or the three integers do not all have the same parity.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-1,-2,-3]
+
+[045] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The product of the three numbers is negative and their sum is also negative.
+Announce: MED rule - The product of the three numbers is non-negative, or their sum is non-negative.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-10,1,2]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The triple contains either three negative numbers, or one negative number and all three numbers have the same parity.
+Announce: MED rule - The triple contains an even number of negative numbers, or one negative number and the numbers do not all have the same parity.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-5,1,3]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The triple either contains three negative numbers, or it contains exactly one negative number and all three numbers are even.
+Announce: MED rule - The triple contains an even number of negative integers (zero or two), or it contains one negative integer and at least one of the numbers is odd.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-10,20,30]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The triple either contains three negative numbers, or it contains exactly one negative number, has a negative sum, and all three numbers are even.
+Announce: MED rule - The triple does not meet the conditions for the DAX rule.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-11,3,5]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The triple either contains three negative numbers, or it contains one negative number and all three numbers are even with a negative sum.
+Announce: MED rule - The triple does not meet the conditions for the DAX rule.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-30,4,8]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - All three numbers are negative, or their absolute values form a geometric progression and exactly one number is negative.
+Announce: MED rule - The triple has zero or two negative numbers, or it has one negative number and its absolute values do not form a geometric progression.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [3,-9,27]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - All three numbers are negative, or their absolute values form a geometric progression and the sum is negative.
+Announce: MED rule - The triple does not have three negative numbers, and its absolute values do not form a geometric progression or its sum is non-negative.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [1,3,-9]
+
+[073] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The triple has three negative numbers, or it has one negative number, a negative sum, and its absolute values form a geometric progression.
+Announce: MED rule - The triple does not meet the conditions for the DAX rule.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [2,4,-8]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The triple has three negative numbers, or it has one negative number, a negative sum, and its absolute values form a geometric progression.
+Announce: MED rule - The triple does not meet the conditions for the DAX rule.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [1,4,-16]
+
+[081] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - All three numbers are negative, or exactly one is negative, the sum is negative, and the absolute values form a geometric progression.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-8,2,4]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - All three numbers are negative, or exactly one is negative, the sum is negative, and their absolute values form a geometric progression in order.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-5,0,0]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The triple either contains all negative numbers, or the first two numbers are positive while the third is negative, their absolute values form a geometric progression, and their sum is negative.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-9,3,1]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - All three numbers are negative, or their absolute values form a geometric progression with an integer ratio greater than 1 and their sum is negative.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [0,-2,-4]
+
+[097] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The triple consists of all negative numbers, or it is an arithmetic progression with a non-positive sum, or it satisfies b^2=-ac with the first two numbers having the same sign.
+Announce: MED rule - The triple does not satisfy any of the conditions for the DAX rule.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-4,-2,0]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The three numbers are in strictly decreasing order (a > b > c), or they satisfy the relation b^2 = -ac where a and b have the same sign.
+Announce: MED rule - The triple does not satisfy the DAX rule.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [9,-6,-4]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The three numbers are in strictly decreasing order, or they satisfy the relation b^2 = -ac with a and b having the same sign.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [3,2,1]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order and the first and last have the same sign, or b^2 = -ac where a and b have the same sign.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-2,-4,8]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The numbers are in strictly decreasing order, or the first two are positive, the third is negative, and they satisfy b^2 = -ac.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [4,2,-1]
+
+[117] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The numbers are strictly decreasing with a non-negative product of the first two, or they satisfy b^2=-ac with a sign pattern of (+,+,−).
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [4,6,-9]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The numbers are in strictly decreasing order, or they are of the form (+, +, -) and satisfy b^2 = -ac.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-4,-6,9]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The three numbers are in strictly decreasing order (a > b > c), or they follow the pattern (+, +, -) and satisfy the relation b^2 = -ac.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,1,-1]
+
+[129] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The numbers are in strictly decreasing order (a>b>c) and a*b>=0, or they have a (+,+,−) sign pattern and satisfy b^2=-ac.
+Announce: MED rule - Any triple that does not satisfy both conditions of the DAX rule.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [4,-2,-5]
+
+[133] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The numbers are strictly decreasing (a > b > c), or they have signs (+,+,−) and satisfy b^2=-ac.
+Announce: MED rule - The numbers are not strictly decreasing, unless they have signs (+,−,−) and satisfy b^2=-ac.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [5,5,-5]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a>=b>=c), or they have a (+,+,−) sign pattern and satisfy b^2 = -ac.
+Announce: MED rule - The triple does not satisfy the DAX rule.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [1,2,-4]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a ≥ b ≥ c), or they have a (+,+,−) sign pattern and satisfy b² = -ac.
+Announce: MED rule - The numbers are not in non-increasing order, and they do not satisfy the condition of having a (+,+,−) sign pattern with b² = -ac.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [5,3,3]
+
+[145] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a ≥ b ≥ c), or they have a (+,+,−) sign pattern and satisfy b² = -ac.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-1,-2,4]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a ≥ b ≥ c), or they have a (+,+,−) sign pattern and satisfy b² = -ac.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [4,-5,-2]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a ≥ b ≥ c), or the first two numbers are positive, the third is negative, and b² = -ac.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [2,1,-4]
+
+[157] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a ≥ b ≥ c), or the first two numbers are positive, the third is negative, and b² = -ac.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-4,-6,-9]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a ≥ b ≥ c), or they have a (+,+,−) sign pattern and their absolute values form a geometric progression.
+Announce: MED rule - The numbers are not in non-increasing order, and they do not have a (+,+,−) sign pattern with their absolute values in a geometric progression.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [8,4,-2]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a≥b≥c) and c is not 0, or a>0, b>0, c<0 and b²=-ac.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [5,0,-1]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a ≥ b ≥ c), or the first two are positive, the third is negative, and b² = -ac.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-4,2,1]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - If b²≠-ac the numbers must be non-increasing (a≥b≥c); if b²=-ac they must have a (+,+,−) sign pattern.
+Announce: MED rule - Any triple that does not satisfy the DAX rule.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [5,5,5]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The triple satisfies exactly one of two conditions: the numbers are in non-increasing order (a≥b≥c), or they are all non-zero and satisfy b² = -ac.
+Announce: MED rule - The triple satisfies either both or neither of two conditions: the numbers are in non-increasing order (a≥b≥c), or they are all non-zero and satisfy b² = -ac.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-1,0,1]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The numbers are in non-increasing order (a≥b≥c), or they satisfy b²=-ac with a (+,+,−) sign pattern, but not both if the sign pattern is different.
+Announce: MED rule - The numbers are not in non-increasing order and do not satisfy b²=-ac with a (+,+,−) sign pattern, or they satisfy both but with a different sign pattern.
+
+[183] ENVIRONMENT:
+Turn - Test

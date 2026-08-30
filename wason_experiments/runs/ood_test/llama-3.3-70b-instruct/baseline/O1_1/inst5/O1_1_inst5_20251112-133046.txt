@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-11, -31, -41].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers in the triple are in an arithmetic sequence with a common difference of -20.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,3,5]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers in the triple are in an arithmetic sequence.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [2,4,6]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers in the triple have a common difference of the same absolute value, and the middle number is the average of the other two numbers, but a specific pattern is that the common difference is negative and increases by 20 or decreases by a factor or has some pattern related to negative numbers as shown in the given example [-11, -31, -41].
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-1,-21,-41]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers in the triple are in an arithmetic sequence with a common difference of -20.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [10,-10,-30]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the numbers in the triple are consecutive multiples of a certain number or have a common difference of a certain number, specifically a decreasing sequence with a common difference of -20, and all numbers are negative or become negative in the sequence as shown.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-50,-70,-90]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the numbers in the triple are in an arithmetic sequence with a common difference of -20 and all numbers are negative.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-7,-27,-47]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the numbers in the triple are in an arithmetic sequence with a common difference of -20, all numbers are negative, and the numbers end in 1.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-21,-41,-61]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the numbers in the triple are negative, in an arithmetic sequence, and end with the digit 1, with a common difference of -20.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-81,-101,-121]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the numbers in the triple are negative and decrease by 20, with each number ending in 1.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-1,-21,-41]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the numbers in the triple are negative, decrease by 20, and end with the digit 1.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-31,-51,-71]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the numbers in the triple are negative, in an arithmetic sequence with a common difference of -20, and each number ends in 1.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-91,-111,-131]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the numbers in the triple are negative integers that decrease by 20 and end with the digit 1.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-201,-221,-241]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the numbers in the triple are negative integers that decrease by 20 and end with the digit 1.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [1,21,41]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the numbers in the triple are integers that increase by 20 and end with the digit 1.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-11,-31,51]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the numbers in the triple are integers that have a difference of 20 between consecutive terms and end with the digit 1.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [101,81,61]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the numbers in the triple have a common difference of 20 and end with the digit 1.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-121,-101,-81]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the numbers in the triple are integers that differ by 20 and end in 1.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [141,121,101]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the numbers in the triple are integers that have a difference of 20 between consecutive terms and all end with the digit 1.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [61,41,21]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the numbers in the triple are integers that differ by 20 and end with the digit 1.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [81,61,41]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the numbers in the triple differ by 20 and all end in 1.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [201,181,161]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the numbers in the triple have a difference of 20 and end with the digit 1.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [311,291,271]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the numbers in the triple are integers that end in 1 and differ by 20.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [991,971,951]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the numbers in the triple end in 1 and have a common difference of 20.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [251,231,211]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the numbers in the triple are separated by 20 and all end with the digit 1.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [531,511,491]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the numbers in the triple end in 1 and differ by 20.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [781,761,741]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the numbers in the triple have a common difference of 20 and end with the digit 1.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [701,681,661]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the numbers in the triple differ by 20 and end in 1.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [641,621,601]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the numbers in the triple are separated by 20 and end with the digit 1.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [571,551,531]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the numbers in the triple end in 1 and have a difference of 20.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [461,441,421]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the numbers in the triple differ by 20 and all end with the digit 1.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [401,381,361]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the numbers in the triple have a common difference of 20 and end in 1.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [341,321,301]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the numbers in the triple are integers that end in 1 and differ by 20.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [281,261,241]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the numbers in the triple end with the digit 1 and have a difference of 20.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [221,201,181]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the numbers in the triple differ by 20 and all end in 1.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [161,141,121]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the numbers in the triple have a difference of 20 and end with the digit 1.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [101,81,61]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the numbers in the triple end in 1 and are separated by 20.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [41,21,1]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the numbers in the triple are separated by 20 and end with the digit 1.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [81,61,41]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the numbers in the triple differ by 20 and end in 1.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [121,101,81]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the numbers in the triple have a common difference of 20 and all end in 1.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [261,241,221]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the numbers in the triple end in 1 and are separated by 20.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [501,481,461]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the numbers in the triple differ by 20 and all end with the digit 1.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [781,761,741]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the numbers in the triple have a difference of 20 and end in 1.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [981,961,941]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the numbers in the triple are separated by 20 and end with the digit 1.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [601,581,561]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the numbers in the triple end in 1 and differ by 20.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [441,421,401]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the numbers in the triple have a common difference of 20 and all end in 1.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [921,901,881]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the numbers in the triple differ by 20 and end with the digit 1.
+
+[183] ENVIRONMENT:
+Turn - Test

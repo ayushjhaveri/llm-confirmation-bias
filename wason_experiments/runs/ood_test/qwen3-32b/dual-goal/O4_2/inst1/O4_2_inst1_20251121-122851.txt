@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [-27, 8, 27].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - All three numbers are perfect cubes.
+Announce: MED rule - At least one number is not a perfect cube.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [4,5,6]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - All three numbers are perfect cubes.
+Announce: MED rule - At least one number is not a perfect cube.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,8,27]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - All three numbers are perfect cubes.
+Announce: MED rule - At least one number is not a perfect cube.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [8,27,64]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - All three numbers are perfect cubes of consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of consecutive integers.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [0,1,8]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of consecutive integers.
+Announce: MED rule - The three numbers are perfect cubes but not of consecutive integers.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-8,-1,0]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of consecutive integers starting from 1.
+Announce: MED rule - The three numbers are perfect cubes but not of consecutive integers starting from 1.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-1,0,1]
+
+[025] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-27,-8,-1]
+
+[029] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-8,-27,-64]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers in any order.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-8,-1,8]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-8,0,8]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-8,0,8]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-64,-27,-8]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [0,1,8]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [27,64,125]
+
+[057] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-8,-27,-64]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers in ascending order.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers in ascending order.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-64,-27,-8]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-125,-64,-27]
+
+[069] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers in ascending order.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers in ascending order.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [27,64,125]
+
+[073] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers in ascending order.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers in ascending order.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [64,125,216]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers in ascending order.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers in ascending order.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-8,-1,0]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers with the middle even.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-343,-216,-125]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but do not have the middle integer even in their consecutive sequence.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-216,-125,-64]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (either non-consecutive or consecutive with odd middle integer).
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [125,216,343]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers in ascending order with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive, not in ascending order, or middle integer odd).
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [343,512,729]
+
+[097] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but do not have the middle integer even in their consecutive sequence.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-729,-512,-343]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but do not consist of three consecutive integers with the middle integer even.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [27,8,1]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers where the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not consist of three consecutive integers with the middle integer even.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [216,343,512]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive or consecutive with odd middle integer).
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-216,-125,-64]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but do not consist of three consecutive integers with the middle integer even.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [64,27,125]
+
+[117] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers in ascending order with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive, not in ascending order, or middle integer odd).
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-343,-512,-729]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even.
+Announce: MED rule - The numbers are perfect cubes but do not consist of three consecutive integers with the middle integer even.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [125,216,343]
+
+[125] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers where the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not consist of three consecutive integers with the middle integer even.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-512,-343,-216]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even when sorted in ascending order.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive, not in ascending order, or middle integer odd).
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [8,27,64]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even when sorted in ascending order.
+Announce: MED rule - The numbers are perfect cubes but do not consist of three consecutive integers with the middle integer even when sorted.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [0,1,8]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers with the middle integer even when sorted in ascending order.
+Announce: MED rule - The numbers are perfect cubes but do not consist of three consecutive integers with the middle integer even when sorted.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [729,1000,1331]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive, or consecutive with an odd middle integer when sorted).
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-216,-125,-64]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive or consecutive with an odd middle integer when sorted).
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-27,-8,1]
+
+[149] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive or consecutive with an odd middle integer when sorted).
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-216,-64,-8]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers.
+Announce: MED rule - The numbers are perfect cubes but not of three consecutive integers.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [512,729,1000]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive or consecutive with an odd middle integer when sorted).
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-8,-27,-64]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive or consecutive with an odd middle integer when sorted).
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-1000,-729,-512]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive or consecutive with an odd middle integer when sorted).
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-125,-64,-27]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive or consecutive with an odd middle integer when sorted).
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-512,-343,-216]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive or consecutive with an odd middle integer when sorted).
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [343,512,729]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive, or consecutive with an odd middle integer when sorted).
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-125,-343,-216]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The three numbers are perfect cubes of three consecutive integers, and when sorted, the middle integer is even.
+Announce: MED rule - The numbers are perfect cubes but do not meet the DAX criteria (non-consecutive, or consecutive with an odd middle integer when sorted).
+
+[183] ENVIRONMENT:
+Turn - Test

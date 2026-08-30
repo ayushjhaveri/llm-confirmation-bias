@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-77, 75, -47].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers have different signs or are all negative.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [10,20,30]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers are in ascending order.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [5,5,5]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers are distinct and in ascending order.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-3,-2,-1]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers are in ascending order, regardless of being positive or negative, and are distinct.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [10,9,8]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the numbers are distinct and in either ascending or descending order.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [1,2,2]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the numbers are distinct and in either ascending or descending order.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [7,7,7]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the numbers are distinct and in either ascending or descending order.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-5,-3,-1]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the numbers are distinct and in either ascending or descending order.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [3,3,4]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is not that the numbers are distinct and in either ascending or descending order, as the previous test [3,3,4] says YES, so the rule is actually that at least two of the numbers are in ascending or descending order but can be equal,  or more simply put the middle number is between the first and last.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [4,2,1]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the middle number is between the first and last, or more specifically, the middle number is greater than or equal to the smaller of the first and last, and less than or equal to the larger of the first and last.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [5,5,5]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the middle number is between the first and last, or more specifically, the middle number is greater than or equal to the smaller of the first and last, and less than or equal to the larger of the first and last, and the numbers are not all equal.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [10,5,10]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the middle number is strictly between the first and last, excluding equality, and the numbers are not all equal.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [1,3,2]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the middle number is either greater than the first and less than the third, or less than the first and greater than the third.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [7,2,6]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the second number is between the first and third when arranged in order, but not necessarily in the order given.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [3,1,3]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the second number is between the first and third when arranged in order.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [4,4,5]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the three numbers can be arranged in ascending or descending order with the middle number being strictly between the other two.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [2,1,2]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the three numbers are distinct and when arranged in order, the middle number is strictly between the other two.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [5,9,7]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the three numbers can be arranged in order such that the middle number is strictly between the other two, with no two numbers being equal.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [3,5,3]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that when the numbers are arranged in order, the second number is greater than the first and less than the third, or less than the first and greater than the third, and the numbers are not all equal, but can have duplicates as long as the middle number in the sorted order is strictly between the other two.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [7,7,9]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the middle value of the three numbers, when arranged in ascending or descending order, is strictly between the other two values, allowing for duplicates.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [1,1,1]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the three numbers are not all equal and when arranged in ascending or descending order, the middle number is strictly between the other two.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [6,8,7]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the three numbers are not all equal and when arranged in order, the middle value is strictly between the highest and lowest values.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [9,9,10]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that at least one of the numbers is between the other two when arranged in ascending or descending order, and the three numbers are not all equal.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [2,4,4]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the three numbers are not all equal, and when arranged in ascending or descending order, one of the numbers is strictly between the other two.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [8,6,7]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that one of the three numbers is between the other two in value, with no requirement for the numbers to be distinct, except that not all three can be equal.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [3,5,3]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that one number is between the other two, or equivalently, the three numbers are not all equal and one is neither the largest nor the smallest.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [11,11,12]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the three numbers are not all equal, and one of the numbers is greater than or less than the other two, but not necessarily strictly between them in the classical sense, as duplicates are allowed.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [4,6,5]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the three numbers can be arranged such that one is less than, one is greater than, and one is between the other two, allowing for duplicates, or alternatively, the rule can be stated as one number being neither the smallest nor the largest.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [9,7,8]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that there exists a number that is neither the smallest nor the largest among the three numbers.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [1,1,0]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that there is exactly one number that is neither the smallest nor the largest, or equivalently, one of the three numbers is between the other two, considering duplicates are allowed.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [6,5,6]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that one of the numbers is neither the smallest nor the largest of the three.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [3,3,4]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that there is a middle value, which may be duplicated, and is neither the smallest nor the largest of the three numbers.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [8,9,8]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that one number is neither the smallest nor the largest.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [2,2,1]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending or descending order, the middle number is neither the smallest nor the largest, but since [2,2,1] is no, it seems the rule should be restated as: one of the three numbers is greater than one of the others and less than the remaining one, or equal to one and greater or less than the remaining one.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [7,6,7]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that one of the numbers is between the other two, or equivalently, one number is neither the smallest nor the largest, considering duplicates are allowed and the middle value can be equal to one of the other values.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [5,4,4]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that there exists a number that is strictly between the smallest and largest of the three numbers, or equivalently, one number is neither the smallest nor the largest, with at least one number being distinct from the others.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [3,5,4]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that one of the three numbers is greater than one and less than the other, or in other words, one number is between the other two in value.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [9,8,9]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that there is a number that falls between the minimum and maximum of the three numbers.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [1,3,2]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the three numbers have a median value that is distinct from the requirement that all numbers are distinct, meaning the middle value when ordered can be one of the three numbers.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [6,7,6]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the numbers can be arranged in a way that one is in the middle of the other two.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [4,5,4]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that when the three numbers are arranged in ascending or descending order, the middle value is not equal to both the smallest and largest values.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [2,3,4]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that one of the numbers is between the other two when arranged in order.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [10,8,9]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that there exists a middle number when the three numbers are arranged in ascending or descending order.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [7,6,5]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that one number is between the other two, either in ascending or descending order.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [9,10,9]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the three numbers have a middle value.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [1,1,1]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the three numbers are not all equal and one is between the other two.
+
+[183] ENVIRONMENT:
+Turn - Test

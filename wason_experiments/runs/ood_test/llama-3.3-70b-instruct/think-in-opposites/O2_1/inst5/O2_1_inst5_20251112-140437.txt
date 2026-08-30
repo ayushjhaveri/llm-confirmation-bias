@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-39, 81, 3].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers can be multiplied together to give a product that is a multiple of 3.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,4,6]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [9,10,11]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers are in arithmetic progression or one of the numbers is a multiple of 3 or the sum of two numbers is a multiple of 3 or the difference of two numbers is a multiple of 3, but a more likely rule is that at least one of the numbers is a multiple of 3 and the other two numbers have the same remainder when divided by 3, however a simpler rule could be the rule that at least one of the numbers is a multiple of 3 and another number is  a factor of the first or last number in the sequence of the three given numbers, however an even simpler rule could be the numbers have the same remainder when divided by a certain divisor, but most likely the rule is the one where one number is the product of the other two or one number is the sum or difference of the other two or at least one of the numbers has the property of being a multiple of 3 and one of the other numbers has a certain relation with the multiple of 3 such as being its double, half or having the sum or difference with it be a multiple of a certain divisor, however the most likely and the simplest rule is that one of the numbers is a multiple of 3.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [3,5,7]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [1,4,9]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the sum of the numbers is a multiple of 3 or one of the numbers is a multiple of 3 and the other two numbers have the same remainder when divided by 3, but more likely the rule is one of the numbers is a multiple of 3 and the difference between the other two is also a multiple of 3 or the rule could be one of the numbers is a factor of another, however the most likely rule is one of the numbers is a multiple of 3.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [6,12,18]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that exactly one of the numbers is a multiple of 3.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [3,5,8]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that one and only one of the numbers is a multiple of 3 and the other two numbers are not multiples of 3 but have the same remainder when divided by 3, or more simply the rule could be the numbers have the property that when divided by 3 the remainders are 0, 1 and 2 respectively or in any order, however a simpler rule could be the rule that the numbers are such that one is a multiple of 3 and the other two have remainders of 1 and 2 when divided by 3 in any order.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [2,4,9]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the numbers have the property that when divided by 3, the remainders are 0, 1, and 2, respectively, or in any order.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [1,2,3]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and the other two numbers have the same remainder when divided by 3 is incorrect, a more likely rule could be the one where the sum of the two numbers is a multiple of 3 or one number is the difference of the other two, however the most likely and simplest rule could be one number is a multiple of 3 and the other two have different remainders when divided by 3, or more simply the rule is the remainders when the three numbers are divided by 3 are 0, 1, and 2 in any order.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [3,4,7]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that one number is a multiple of 3 and the other two have remainders of 1 and 2 when divided by 3, in any order, but a simpler and more general rule could be the remainders of the three numbers when divided by 3 are distinct.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [2,5,9]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the remainders when the numbers are divided by 3 are distinct, meaning one is 0, one is 1, and one is 2, but not necessarily in that order, however a more specific and correct rule could be one number is a multiple of 3 and the other two numbers are consecutive integers.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [3,4,5]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and the other two numbers are consecutive integers.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-39,80,81]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that one number is a multiple of 3 and the other two numbers differ by 3 or one of the numbers is a multiple of 3 and the other two are in an arithmetic progression with a common difference of 3 or a simpler rule one of the numbers is a multiple of 3 and the other two have a difference that is a multiple of 3, however the most accurate rule could be one number is a multiple of 3 and the other two numbers have the property that their sum or difference is a multiple of 3 or one number is a multiple of 3 and the other two numbers are such that one is 3 more than the other or one is 3 less than the other or one of the numbers is a multiple of 3 and the other two numbers are in an arithmetic sequence with a common difference of 3.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [6,9,12]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and the other two numbers differ by a multiple of 3, but not both multiples of 3, or more specifically one number is a multiple of 3 and the other two have a difference of 3 but are not both multiples of 3 or a simpler rule could be one of the numbers is a multiple of 3 and the other two are consecutive multiples of a certain number or one number is a multiple of 3 and one of the other two is 3 more or 3 less than the multiple of 3, however the most accurate rule could be one number is a multiple of 3 and the other two have the property that one is 3 more than the other or one of the numbers is a multiple of 3 and one of the other numbers is 3 times the other number or the rule is one number is a multiple of 3 and the other two are such that their sum or difference is a multiple of a certain divisor.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [1,2,3]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that one number is a multiple of 3 and the other two numbers are consecutive integers, or more specifically, one number is a multiple of 3 and the other two numbers have a difference of 1 or -1, but a more general and simpler rule could be one of the numbers is a multiple of 3 and the other two are in an arithmetic sequence with a common difference of 1 or one number is a multiple of 3 and one of the other numbers is one more or one less than the multiple of 3.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [3,4,5]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that one of the numbers is a factor of another.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [1,2,4]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that one number is a multiple of another.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [2,4,8]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two is incorrect, a simpler and more accurate rule could be one number is a multiple of another, however a more general rule could be the numbers have a certain mathematical relationship such as one being the sum, difference, or product of the other two, but the most accurate rule is one number is a factor or multiple of another, however an even simpler rule could be that the numbers are related by a simple arithmetic operation such as addition, subtraction, multiplication or division.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [1,3,3]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that one of the numbers is a product of the other two.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [2,3,6]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the product of two of the numbers equals the third number, or more specifically, one of the numbers is the product of the other two, but in a specific order, such as the largest number is the product of the other two, however the most accurate and simplest rule is that two of the numbers multiply to give the third.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-3,1,-3]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that two of the numbers multiply to give the third.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [2,2,4]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that two of the numbers multiply to give the third, and the two numbers that multiply are different.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [1,0,0]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that two of the numbers multiply to give the third, and the two numbers that multiply are different and non-zero.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-1,1,-1]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that two of the numbers multiply to give the third.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [4,1,4]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that two of the numbers multiply to give the third, with one of the numbers being 1 or -1.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-2,2,-4]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, with one of the factors being 1 or -1.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [3,1,3]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, with one of the factors being 1 or -1, however a simpler rule could be that one number is equal to the product of the other two.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,-1,-1]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that one of the numbers is equal to the product of the other two.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [2,2,4]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that one of the numbers is equal to the product of the other two, and the two numbers that multiply are 1 or -1.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-3,1,-3]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, where one factor is 1 or -1.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [5,1,5]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, where one factor is 1 or -1.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [0,5,0]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, where one factor is 1 or -1, and the product is not zero.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-1,1,-1]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, where one factor is 1 or -1.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [1,-2,-2]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, where one factor is 1 or -1, and the numbers are not all nonzero.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [1,3,3]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, where one factor is 1 or -1.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [4,1,4]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, where one factor is 1 or -1, and the two identical numbers are not both greater than 1.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [2,2,4]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, where one factor is 1 or -1, and the two identical numbers are equal to the product or one of the factors.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [1,2,2]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, where one factor is 1 or -1, and one of the numbers is equal to the other two multiplied together, with one of the two identical numbers being 1 or -1.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-1,-1,1]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, with one of the factors being 1 or -1.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [1,1,1]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, with one of the factors being 1 or -1.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [2,0,0]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, with one of the factors being 1 or -1, and none of the numbers are zero unless one of the other numbers is also 1 or -1.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-3,1,-3]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, with one of the factors being 1 or -1.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [3,3,1]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that one of the numbers is the product of the other two, with one of the factors being 1 or -1.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [1,4,4]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that two of the numbers are identical and one of them is the product of the other two, with one of the factors being 1 or -1.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [2,2,4]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that two of the numbers are identical and one of them is the product of the other two, with one of the factors being 1 or -1, and the identical numbers are not the result of multiplying two different numbers.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [5,1,5]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that two of the numbers are identical and one of them is the product of the other two, with one of the factors being 1 or -1.
+
+[183] ENVIRONMENT:
+Turn - Test

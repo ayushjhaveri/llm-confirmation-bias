@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [-64, 1, -1].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The numbers are in a specific mathematical relationship or pattern.
+Announce: MED rule - The numbers do not follow the specific mathematical relationship or pattern of DAX triples.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,2,3]
+
+[005] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The numbers are in arithmetic progression, with a common difference between them.
+Announce: MED rule - The numbers are not in arithmetic progression.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [2,4,8]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The numbers are in arithmetic progression, with a common difference between them.
+Announce: MED rule - The numbers are in geometric progression, or any other non-arithmetic progression relationship.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [3,6,9]
+
+[013] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - The numbers are in arithmetic progression, with a common difference between them.
+Announce: MED rule - The numbers are not in arithmetic progression, including those in geometric progression or any other non-arithmetic relationship.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-1,0,1]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The numbers are in arithmetic progression, with a common difference between them.
+Announce: MED rule - The numbers are not in arithmetic progression, including those in geometric progression or any other non-arithmetic relationship, except for constant difference.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [0,2,4]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The numbers are in arithmetic progression with a common difference of 1 or -1, or a difference of a certain pattern.
+Announce: MED rule - The numbers are in arithmetic progression but the common difference is not 1 or -1, or they do not follow the specific DAX pattern.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-2,0,2]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The numbers are in arithmetic progression with a common difference of 1 or -1.
+Announce: MED rule - The numbers are in arithmetic progression but the common difference is not 1 or -1.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [1,0,-1]
+
+[029] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The numbers are in arithmetic progression with a common difference of 1 or -1.
+Announce: MED rule - The numbers are in arithmetic progression but the common difference is not 1 or -1.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-3,-2,-1]
+
+[033] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The numbers are in arithmetic progression with a common difference of 1 or -1.
+Announce: MED rule - The numbers are in arithmetic progression but the common difference is not 1 or -1.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [4,3,2]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The numbers are in arithmetic progression with a common difference of 1 or -1.
+Announce: MED rule - The numbers are in arithmetic progression but the common difference is not 1 or -1.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [5,5,5]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer.
+Announce: MED rule - The numbers are not consecutive integers and not all the same integer.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [7,7,7]
+
+[045] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer.
+Announce: MED rule - The numbers are not consecutive integers and not all the same integer.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [10,12,14]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer.
+Announce: MED rule - The numbers are not consecutive integers and not all the same integer.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [2,4,6]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer.
+Announce: MED rule - The numbers are in arithmetic progression but not consecutive integers and not all the same integer, or any other non-consecutive and non-constant relationship.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [1,1,1]
+
+[057] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer.
+Announce: MED rule - The numbers are not consecutive integers and not all the same integer.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [9,10,11]
+
+[061] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer.
+Announce: MED rule - The numbers are not consecutive integers and not all the same integer.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [3,5,7]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or have a difference of 2 and are in an odd-even-odd or even-odd-even sequence is not a rule, but rather the difference of 2 with the first and last term being either both odd or both even is not the rule, the correct rule is the difference of 2 with the middle term being odd when the first term is odd and even when the first term is even is not the rule but having the same parity, either all odd or all even is not the rule but having the same parity in the first and last term is the rule, or having a difference of -2, 2, 1 or -1.
+Announce: MED rule - The numbers are not consecutive integers, not all the same integer, and do not have the same parity in the first and last term.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [0,2,4]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or have a difference of 1 or -1, or have the same parity in the first and last term with a difference of 2.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [8,6,4]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer.
+Announce: MED rule - The numbers are not consecutive integers and not all the same integer.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [6,4,2]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or have the same parity and a common difference of 2 in an increasing or decreasing sequence where the middle term is even when the first term is even or the middle term is odd when the first term is odd is not the rule, the correct rule is that the first and last term have the same parity.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule, they are in arithmetic progression but the first and last term do not have the same parity, or they are in any other non-consecutive, non-constant relationship.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [11,9,7]
+
+[081] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [13,11,9]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [15,13,11]
+
+[089] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [17,15,13]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [2,4,6]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule, and have a common difference of 2 with the first and last term having different parity.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [1,3,5]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [7,5,3]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [9,7,5]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers do not meet the conditions of the DAX rule.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [10,8,6]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2, but the first and last terms have different parity.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [12,10,8]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [14,12,10]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [16,14,12]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [4,3,2]
+
+[129] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [5,4,3]
+
+[133] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [7,6,5]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [9,8,7]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [2,6,10]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference that is an even number greater than 2, or the numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [1,3,5]
+
+[149] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference that is an even number greater than 2, or the numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [3,1,-1]
+
+[153] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference that is an even number greater than 2, or the numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [6,4,2]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [10,8,6]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [11,9,7]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [8,6,4]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [7,5,3]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [5,7,9]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [4,6,8]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The numbers are consecutive integers, or all the same integer, or the first and last terms have the same parity.
+Announce: MED rule - The numbers are in arithmetic progression with a common difference of 2 and the first and last terms have different parity.
+
+[183] ENVIRONMENT:
+Turn - Test

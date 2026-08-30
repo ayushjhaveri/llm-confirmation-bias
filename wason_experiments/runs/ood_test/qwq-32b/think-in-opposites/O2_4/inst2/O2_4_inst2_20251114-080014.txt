@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-9, 55, -71].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: Each subsequent number has a larger absolute value than the previous one.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [3,2,1]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: All three numbers have distinct absolute values.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [2,-2,3]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: All three numbers must be distinct.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [5,5,5]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: All three numbers must be distinct.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [2,2,3]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The three numbers cannot all be the same.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [1,1,2]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The third number is not the sum of the first two, and all three numbers are not identical.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [1,2,3]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The third number cannot be the sum of the first two if the first two are the same, and all three numbers cannot be identical.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [2,2,4]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The third number cannot be the sum of the first two if the first two are the same, and all three numbers cannot be identical.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [3,4,7]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: All three numbers must be distinct, and if the first two are equal, the third cannot be their sum.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [5,5,10]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three numbers cannot be identical.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [2,3,5]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three cannot be identical.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [4,4,9]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: If the first two numbers are equal, the third cannot be their sum, and all three numbers cannot be identical.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [0,0,1]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: If the first two numbers are equal, the third cannot be their sum, and all three numbers cannot be identical.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [6,6,12]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three numbers cannot be identical.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-5,-5,-10]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three numbers cannot be identical.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [3,6,9]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three numbers cannot be identical.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [7,7,14]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: If the first two numbers are equal, the third cannot be their sum, and all three numbers cannot be identical.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [0,0,0]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The third number cannot be the sum of the first two if they are equal, and all three numbers cannot be identical unless they are all zeros.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [1,1,1]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The three numbers cannot all be the same unless they are all zeros, and if the first two are equal, the third must not be their sum.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [4,4,5]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The three numbers cannot all be the same unless they are all zeros, and if the first two are equal, the third must not be their sum.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [0,0,1]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and if they are greater than 2, the third cannot be a prime number. All three numbers cannot be the same unless they are all zeros.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [3,3,4]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three numbers cannot be identical.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [4,5,9]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The three numbers cannot all be identical, and if the first two are equal, the third must not be their sum.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [5,5,11]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The three numbers cannot all be the same, and if the first two are equal, the third must not be their sum.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [5,5,6]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The three numbers cannot all be the same, and if the first two are equal, the third must not be their sum.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [6,6,12]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: If the first two numbers are equal and even (greater than 2), the third must not be a prime; otherwise, the third cannot be the sum of the first two if they are equal, and all three cannot be identical unless all zeros.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [5,5,10]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The three numbers cannot all be the same, and if the first two are equal, the third must not be their sum.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [6,6,7]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three numbers cannot be identical.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [4,4,6]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three numbers cannot be identical.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-2,-2,-4]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and if the first two are odd, the third must not be a prime number. All three numbers must be distinct.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [3,3,5]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three numbers cannot be identical.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [5,5,10]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The three numbers cannot all be the same, and if the first two are equal, the third must not be their sum.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-3,-3,-6]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The three numbers cannot all be the same, and if the first two are equal, the third must not be their sum.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-4,-4,-8]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum and must be less than the first number. All three numbers cannot be the same unless all zeros.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-1,-1,-2]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and all three cannot be identical.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [5,5,9]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The three numbers cannot all be identical, and if the first two are equal, the third must not be their sum.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [7,7,13]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The three numbers cannot all be the same, and if the first two are equal, the third must not be their sum.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [7,7,12]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The three numbers cannot all be the same, and if the first two are equal, the third must not be their sum.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-4,-4,-8]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The three numbers must be distinct. If the first two are equal, the third must not be their sum, and if the first two are 4 or greater, the third must not be a prime number.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [5,5,7]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and if their absolute value is 4 or greater, the third must not be a prime number. All three numbers must be distinct.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [4,4,5]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and if they are 4 or greater, the third cannot be a prime number. All three numbers must be distinct.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [4,4,9]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and if their absolute value is 4 or greater, the third must not be a prime number; additionally, all three numbers must be distinct.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [6,6,8]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: All three numbers must be distinct; if the first two are equal, the third must not be their sum, and if their absolute value is at least 4, the third must not be a prime number.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [4,4,7]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and if their absolute value is at least 4, the third must not be a prime number. All three numbers must be distinct.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [5,5,8]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: If the first two numbers are equal, the third must not be their sum, and if their absolute value is at least 4, the third must not be a prime number. All three numbers must be distinct.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [5,5,9]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The three numbers must be distinct; if the first two are equal, the third cannot be their sum or a prime number when their absolute value is at least 4.
+
+[183] ENVIRONMENT:
+Turn - Test

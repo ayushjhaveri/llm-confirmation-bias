@@ -1,0 +1,20 @@
+{
+  "model_name": "qwen3-8b",
+  "model_path": "/scratch/aj4332/models/qwen3-8b",
+  "backend": "vllm",
+  "dtype": "bfloat16",
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "max_new_tokens": 256,
+  "repetition_penalty": 1.0,
+  "stop": [
+    "<|im_end|>",
+    "<|endoftext|>",
+    "</s>"
+  ],
+  "supports_think": false,
+  "tensor_parallel_size": null,
+  "gpu_memory_utilization": null,
+  "max_model_len": null
+}

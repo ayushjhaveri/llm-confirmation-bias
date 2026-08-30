@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [8, 27, -27].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: Each number is a cube of an integer.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,8,-1]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: Each number is a cube of an integer.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,8,27]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [8,-8,27]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [2,-2,8]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [2,-2,1]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [4,9,-9]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [16,-16,81]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: All three numbers are cubes of consecutive integers, and exactly two of them are negatives of each other.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [64,-64,27]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [3,-3,8]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [27,-27,64]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [64,-64,125]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: Exactly two numbers are odd, and the third is even.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [3,-3,8]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [1,-1,8]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [2,-2,8]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [3,-3,8]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and the absolute values are consecutive perfect powers (either squares or cubes).
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [2,-2,27]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [5,-5,64]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [27,64,-64]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [27,64,-64]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [27,64,-64]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [64,125,-125]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other, with their cube roots being consecutive integers.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [9,-9,64]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [1,8,-8]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other, with the cube roots of the positive numbers being consecutive integers.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [2,3,-2]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: All three numbers are cubes of consecutive integers, and exactly two of them are negatives of each other.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [3,4,-3]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all three are cubes of consecutive integers.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [125,216,-125]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all three are cubes of consecutive integers.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,-1,8]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers, with their cube roots being consecutive integers where one is positive and the other is its negative.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [2,-2,8]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other, with their cube roots being consecutive integers.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [27,64,-64]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other, with their cube roots being consecutive integers.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [4,9,-9]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: All three numbers are cubes of consecutive integers, and exactly two of them are negatives of each other.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [16,-16,25]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [5,6,-5]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all three are cubes of consecutive integers.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [27,64,-64]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are perfect powers (either squares or cubes).
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [5,6,-5]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: All three numbers are cubes of integers, and exactly two of them are negatives of each other, with their cube roots being consecutive integers.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [2,-2,8]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and the third is the cube of the next consecutive integer after the cube roots of the first two.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [16,81,-16]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: All three numbers are cubes of consecutive integers, and exactly two of them are negatives of each other.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [27,64,-27]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all three are cubes of consecutive integers.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [64,125,-125]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all three are cubes of consecutive integers.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [125,216,-216]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: All three numbers are cubes of consecutive integers, and exactly two of them are negatives of each other.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [125,216,-216]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [27,64,-27]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: All three numbers are cubes of consecutive integers, and exactly two of them are negatives of each other.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [64,125,-64]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: All three numbers are cubes of consecutive integers, and exactly two of them are negatives of each other.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [27,64,-64]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers whose absolute values are consecutive.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [27,64,-64]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of integers.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [27,64,-64]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: Among the three numbers, exactly two are negatives of each other, and all are cubes of consecutive integers.
+
+[183] ENVIRONMENT:
+Turn - Test

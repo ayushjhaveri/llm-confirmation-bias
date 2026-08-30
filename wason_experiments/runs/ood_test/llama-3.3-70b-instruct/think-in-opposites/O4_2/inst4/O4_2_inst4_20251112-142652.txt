@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-1, 64, -1].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that two of the numbers in the triple are the same.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,2,1]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that two of the numbers in the triple are the same.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [3,3,3]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [4,5,4]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same, but not all three, and the two identical numbers are not the middle number, or the rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [7,7,8]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [9,8,9]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are either the first and the last numbers.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [10,9,10]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [11,12,11]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [13,14,13]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [15,16,17]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, but the middle number can be anything and is not restricted to being different from the first and last.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [20,20,20]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [21,22,21]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [25,26,25]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [30,31,32]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [35,36,35]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [40,41,40]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are the same and they are the first and the last numbers, but the middle number must be different from the first and last.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [45,45,45]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, but not equal to the middle number.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [50,51,50]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, but the middle number must be different from the first and last.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [55,56,55]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, but different from the middle number.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [60,61,60]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, but different from the middle number, and the numbers are integers.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [65,67,65]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, but different from the middle number, and the middle number is greater than the first and last numbers is not a requirement, the only requirement is the first and last are the same and different from the middle.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [70,69,70]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and different from the middle number, with no restriction on the relative magnitude of the middle number.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [75,74,75]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and different from the middle number.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [80,79,80]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and different from the middle number, and the triple conforms to the rule if the middle number is less than the first and last numbers.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [85,84,85]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is less than the first and last numbers.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [90,88,90]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is less than the first and last numbers, or the rule is more simply that the first and last numbers are equal.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [95,93,95]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [100,99,100]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is less than the first and last numbers, but only when the first and last numbers are not equal to the middle number by more than 1, no, that can't be it, Announce: The rule is that the first and last numbers in the triple are the same.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [105,104,105]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is less than the first and last numbers.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [110,109,110]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is less than the first and last numbers, but the difference between the middle and the first and last numbers must be 1.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [115,114,115]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is one less than the first and last numbers.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [120,118,120]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is one less than the first and last numbers.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [125,124,125]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is one less than the first and last numbers.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [130,129,130]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is one less than the first and last numbers, and the numbers are consecutive integers.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [135,134,135]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is one less than the first and last numbers.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [140,139,140]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is one less than the first and last numbers, and the first and last numbers are odd.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [145,144,145]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is one less than the first and last numbers, and the first and last numbers are odd.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [151,150,151]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same and the middle number is one less than the first and last numbers, and the first and last numbers are odd.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [157,156,157]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, are odd, and the middle number is one less than the first and last numbers.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [163,162,163]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, are odd, and the middle number is one less than the first and last numbers.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [169,168,169]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, are odd, and the middle number is one less than the first and last numbers.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [175,174,175]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, are odd, and the middle number is one less than the first and last numbers.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [181,180,181]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, are odd, and the middle number is one less than the first and last numbers.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [187,186,187]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, are odd, and the middle number is one less than the first and last numbers.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [193,192,193]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, are odd, and the middle number is one less than the first and last numbers.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [199,198,199]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the first and last numbers in the triple are the same, are odd, and the middle number is one less than the first and last numbers.
+
+[183] ENVIRONMENT:
+Turn - Test

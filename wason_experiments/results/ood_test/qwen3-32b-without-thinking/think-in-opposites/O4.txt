@@ -1,0 +1,118 @@
+# Group O4
+
+## Rule O4_1
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 1 | 0 | — | — | — | — | — | — | 1 | 0 | 0 | — | 6 |
+| inst2 | 1 | 0 | — | — | — | — | — | — | 1 | 0 | 0 | — | 7 |
+| inst3 | 1 | 14 | 0.077 | — | — | — | — | — | 0 | 13 | 1 | 0.071 | 153 |
+| inst4 | 0 | — | — | 0.154 | — | 0.957 | — | — | 0 | 39 | 6 | 0.133 | 599 |
+| inst5 | 1 | 0 | — | — | — | — | — | — | 1 | 0 | 0 | — | 7 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.800 |
+| #Tests Before First Correct (solved only) | 3.500 |
+| Incompat:Compat (solved, pre-first) | 0.077 |
+| Incompat:Compat (unsolved, all) | 0.154 |
+| NO:YES (solved, pre-first) | — |
+| NO:YES (unsolved, all) | 0.957 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.600 |
+| Avg Incompatibility Fraction (solved, pre-first) | 0.071 |
+| Avg Incompatibility Fraction (unsolved, all) | 0.133 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 173 |
+| Sum Total Tokens Generated (unsolved, all) | 599 |
+
+## Rule O4_2
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 0 | — | — | 0.500 | — | 1.045 | — | — | 0 | 30 | 15 | 0.333 | 484 |
+| inst2 | 0 | — | — | 0.406 | — | 1.000 | — | — | 0 | 32 | 13 | 0.289 | 502 |
+| inst3 | 0 | — | — | 0.355 | — | 2.214 | — | — | 0 | 31 | 11 | 0.262 | 676 |
+| inst4 | 0 | — | — | 0.184 | — | 1.143 | — | — | 0 | 38 | 7 | 0.156 | 490 |
+| inst5 | 0 | — | — | 0.875 | — | 1.250 | — | — | 0 | 24 | 21 | 0.467 | 789 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.000 |
+| #Tests Before First Correct (solved only) | — |
+| Incompat:Compat (solved, pre-first) | — |
+| Incompat:Compat (unsolved, all) | 0.464 |
+| NO:YES (solved, pre-first) | — |
+| NO:YES (unsolved, all) | 1.331 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | — |
+| Avg Incompatibility Fraction (unsolved, all) | 0.301 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 0 |
+| Sum Total Tokens Generated (unsolved, all) | 2941 |
+
+## Rule O4_3
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 0 | — | — | 0.957 | — | 6.333 | — | — | 0 | 23 | 22 | 0.489 | 630 |
+| inst2 | 0 | — | — | 0.071 | — | 6.333 | — | — | 0 | 42 | 3 | 0.067 | 457 |
+| inst3 | 0 | — | — | 0.023 | — | 4.625 | — | — | 0 | 44 | 1 | 0.022 | 499 |
+| inst4 | 0 | — | — | 0.406 | — | 0.731 | — | — | 0 | 32 | 13 | 0.289 | 552 |
+| inst5 | 0 | — | — | 1.045 | — | 4.500 | — | — | 0 | 22 | 23 | 0.511 | 569 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.000 |
+| #Tests Before First Correct (solved only) | — |
+| Incompat:Compat (solved, pre-first) | — |
+| Incompat:Compat (unsolved, all) | 0.500 |
+| NO:YES (solved, pre-first) | — |
+| NO:YES (unsolved, all) | 4.504 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | — |
+| Avg Incompatibility Fraction (unsolved, all) | 0.276 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 0 |
+| Sum Total Tokens Generated (unsolved, all) | 2707 |
+
+## Rule O4_4
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 0 | — | — | 0.324 | — | 0.071 | — | — | 0 | 34 | 11 | 0.244 | 723 |
+| inst2 | 0 | — | — | 0.875 | — | 0.250 | — | — | 0 | 24 | 21 | 0.467 | 544 |
+| inst3 | 0 | — | — | 1.250 | — | 0.364 | — | — | 0 | 20 | 25 | 0.556 | 486 |
+| inst4 | 0 | — | — | 0.957 | — | 0.364 | — | — | 0 | 23 | 22 | 0.489 | 633 |
+| inst5 | 0 | — | — | 21.500 | — | 0.000 | — | — | 0 | 2 | 43 | 0.956 | 448 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.000 |
+| #Tests Before First Correct (solved only) | — |
+| Incompat:Compat (solved, pre-first) | — |
+| Incompat:Compat (unsolved, all) | 4.981 |
+| NO:YES (solved, pre-first) | — |
+| NO:YES (unsolved, all) | 0.210 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | — |
+| Avg Incompatibility Fraction (unsolved, all) | 0.542 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 0 |
+| Sum Total Tokens Generated (unsolved, all) | 2834 |
+
+## Issues detected
+- COMPAT_STATUS_NOT_OK: O4_2/inst3 index=30 status=TIMEOUT
+- COMPAT_STATUS_NOT_OK: O4_2/inst3 index=33 status=TIMEOUT
+- COMPAT_STATUS_NOT_OK: O4_2/inst3 index=34 status=TIMEOUT

@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [-77, 75, -47].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - All three numbers are odd.
+Announce: MED rule - At least one of the three numbers is even.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [3,5,9]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The triple contains both positive and negative numbers.
+Announce: MED rule - The numbers in the triple are all positive or all negative.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [10,5,20]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The triple contains both positive and negative numbers.
+Announce: MED rule - The numbers in the triple are all positive or all negative.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [3,4,5]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - When sorted, the difference between the largest and middle number is not a multiple of the difference between the middle and smallest number, and vice-versa.
+Announce: MED rule - When sorted, one of the two differences between adjacent numbers is a multiple of the other.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-1,1,3]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - When the numbers are sorted, neither of the two differences between adjacent numbers divides the other.
+Announce: MED rule - When the numbers are sorted, one of the two differences between adjacent numbers divides the other.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [0,3,8]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The two differences between the sorted numbers are both composite and do not divide each other.
+Announce: MED rule - At least one of the two differences between the sorted numbers is prime, or one divides the other.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [10,12,15]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - When the numbers are sorted, both differences between adjacent numbers are composite numbers.
+Announce: MED rule - When the numbers are sorted, at least one difference between adjacent numbers is not a composite number.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [0,4,10]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - When sorted, the two gaps between the numbers are not multiples of each other and their own difference is greater than 2.
+Announce: MED rule - When sorted, one gap between the numbers is a multiple of the other, or their own difference is 2 or less.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [0,8,18]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - When the numbers are sorted, both differences between adjacent numbers must have at least two distinct prime factors.
+Announce: MED rule - When the numbers are sorted, at least one of the two differences between adjacent numbers is a prime power.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [0,6,18]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The two differences between the sorted numbers are not multiples of each other, nor are they consecutive primes or evens.
+Announce: MED rule - When sorted, one difference divides the other, or the two differences are consecutive primes or consecutive even numbers.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [10,16,26]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - When the numbers are sorted, neither of the two differences between adjacent numbers divides the other, and their sum is not a prime power.
+Announce: MED rule - When the numbers are sorted, one of the two differences between adjacent numbers divides the other, or their sum is a prime power.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [0,10,34]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and their sum of squares is not a perfect square.
+Announce: MED rule - When the numbers are sorted, one difference divides the other, or the sum of the squares of the two differences is a perfect square.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [1,7,16]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - When the numbers are sorted, neither of the two differences between adjacent numbers is a power of a prime number.
+Announce: MED rule - When the numbers are sorted, at least one of the two differences between adjacent numbers is a power of a prime number.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [0,9,25]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - When the numbers are sorted, at least one of the two differences between adjacent numbers has a prime factor of 11 or greater.
+Announce: MED rule - When the numbers are sorted, all prime factors of both differences between adjacent numbers are less than 11.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [0,11,13]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - When the numbers are sorted, neither of the two differences between adjacent numbers is a perfect square.
+Announce: MED rule - When the numbers are sorted, at least one of the two differences between adjacent numbers is a perfect square.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [0,1,2]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - When the numbers are sorted, one of the differences between adjacent numbers is a multiple of the other.
+Announce: MED rule - When the numbers are sorted, neither of the two differences between adjacent numbers is a multiple of the other.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [0,2,7]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers share no common prime factors.
+Announce: MED rule - When the numbers are sorted, the two differences between adjacent numbers share at least one common prime factor.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [0,1,14]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers share a common prime factor.
+Announce: MED rule - When the numbers are sorted, the two differences between adjacent numbers are coprime.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-10,-8,-4]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - When sorted, the two differences between adjacent numbers share a common factor, are not multiples of each other, and at least one difference has a prime factor greater than 5.
+Announce: MED rule - When sorted, the two differences between adjacent numbers are multiples of each other, are coprime, or only have prime factors of 5 or less.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [0,10,25]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The triple contains exactly two negative numbers.
+Announce: MED rule - The triple does not contain exactly two negative numbers.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-10,-5,1]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - When sorted, the two differences between adjacent numbers share a common factor greater than 1, and neither difference is a multiple of the other.
+Announce: MED rule - When sorted, the two differences between adjacent numbers are coprime, or one difference is a multiple of the other.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [3,5,8]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - When sorted, the two differences between adjacent numbers are not multiples of each other, and the coprime parts of the differences do not form a Pythagorean triple.
+Announce: MED rule - When sorted, one of the two differences between adjacent numbers is a multiple of the other, or the coprime parts of the differences form a Pythagorean triple.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [0,8,14]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The three numbers correspond to distant terms of an arithmetic progression.
+Announce: MED rule - The three numbers correspond to nearby terms of an arithmetic progression.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [0,6,15]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - When sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When sorted, one of the two differences between adjacent numbers is a multiple of the other, or the two differences are coprime.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [0,16,46]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - When sorted, the two differences are not multiples of each other, are not coprime, and their coprime parts are not a simple pair.
+Announce: MED rule - When sorted, the two differences are multiples of each other, are coprime, or their coprime parts form a simple pair (e.g. consecutive or Pythagorean).
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [0,6,20]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of the two differences between adjacent numbers is a multiple of the other, or the two differences are coprime.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [0,18,40]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - When the numbers are sorted, their two differences are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [0,6,41]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of the two differences between adjacent numbers is a multiple of the other, or the two differences are coprime.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [0,17,18]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - When sorted, the two differences are not multiples of each other, are not coprime, and their simplified ratio involves a prime factor greater than 11.
+Announce: MED rule - When sorted, the two differences are multiples of each other, are coprime, or their simplified ratio only involves prime factors of 11 or less.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [0,22,50]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of the two differences between adjacent numbers is a multiple of the other, or the two differences are coprime.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [0,20,62]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of the two differences between adjacent numbers is a multiple of the other, or the two differences are coprime.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [0,10,36]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - When the numbers are sorted, the coprime parts of the two differences have a prime factor greater than 13.
+Announce: MED rule - When the numbers are sorted, all prime factors of the coprime parts of the two differences are 13 or less.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [0,34,38]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - When the numbers are sorted, the greatest common divisor of the two differences between adjacent numbers does not divide the second-order difference.
+Announce: MED rule - When the numbers are sorted, the greatest common divisor of the two differences between adjacent numbers also divides their own difference.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [1,7,17]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - When the numbers are sorted, their two differences are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [0,6,9]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - When the numbers are sorted, their two differences are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [0,4,66]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [0,14,32]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - When the numbers are sorted, their two differences are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [0,6,10]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [0,6,10]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [0,6,64]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - When the numbers are sorted, their two differences are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [0,30,72]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [0,18,64]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [0,6,11]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - When the numbers are sorted, their two differences are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [0,12,82]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [0,6,16]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are not multiples of each other and are not coprime.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, or the two differences are coprime.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [0,41,43]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - When the numbers are sorted, their two differences are not multiples of each other, are not coprime, and the largest prime factor of the simplified differences is 37 or greater.
+Announce: MED rule - When the numbers are sorted, one of their two differences is a multiple of the other, they are coprime, or the largest prime factor of the simplified differences is less than 37.
+
+[183] ENVIRONMENT:
+Turn - Test

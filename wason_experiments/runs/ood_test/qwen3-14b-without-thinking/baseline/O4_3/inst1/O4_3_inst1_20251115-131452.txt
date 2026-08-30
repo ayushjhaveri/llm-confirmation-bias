@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-27, 8, 27].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The numbers are all perfect cubes.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,8,27]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The numbers are all perfect cubes of integers with alternating signs.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-1,-8,-27]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The numbers are all perfect cubes of integers, and they include at least one negative and one positive cube.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [0,1,-1]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The numbers are all perfect cubes, and they include at least one negative and one positive cube.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [1,-8,27]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The numbers are all perfect cubes, and they include at least one negative and one positive cube, but not all three have distinct absolute values.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [1,-1,8]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The numbers are all perfect cubes, and they include at least one negative and one positive cube, with all three having distinct absolute values.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-8,1,27]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The numbers are all perfect cubes, and they include at least one negative and one positive cube, with all three having distinct absolute values and being in ascending order.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-27,8,27]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, have distinct absolute values, and are in ascending order.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-1,0,1]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, have distinct absolute values, are in ascending order, and do not include zero.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-8,1,27]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, have distinct absolute values, are in ascending order, do not include zero, and their absolute values are all odd.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-1,8,27]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, have distinct absolute values, are in ascending order, do not include zero, and their absolute values are consecutive odd numbers.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-27,1,27]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, have distinct absolute values, are in ascending order, do not include zero, and their absolute values are not consecutive odd numbers.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-1,8,27]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, have distinct absolute values, are in ascending order, do not include zero, and their absolute values are not consecutive.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-8,1,27]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, have distinct absolute values, are in ascending order, do not include zero, and their absolute values are not consecutive and include both even and odd numbers.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-8,1,8]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, have distinct absolute values, are in ascending order, do not include zero, and their absolute values are not consecutive and include both even and odd numbers, but allow for repeated absolute values if they are not all distinct.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-1,1,8]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, have distinct absolute values, are in ascending order, do not include zero, and their absolute values are not consecutive and include both even and odd numbers, but do not allow for repeated absolute values.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-8,1,8]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, are in ascending order, do not include zero, and have at least one repeated absolute value.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-1,1,8]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, are in ascending order, do not include zero, and have at least one repeated absolute value but not all absolute values are the same.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-8,8,27]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, are in ascending order, do not include zero, and have at least one repeated absolute value but not all absolute values are the same, and the repeated absolute values are not adjacent in the sequence.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-8,1,8]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, are in ascending order, do not include zero, and have at least one repeated absolute value.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-27,1,27]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, are in ascending order, do not include zero, and have at least one repeated absolute value.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-1,1,1]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, are in ascending order, and have at least one repeated absolute value.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-1,1,8]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, are in ascending order, have at least one repeated absolute value, and do not have all absolute values the same.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-8,8,8]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, are in ascending order, and have at least one repeated absolute value.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-1,1,1]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The numbers are all perfect cubes, include at least one negative and one positive cube, and have at least one repeated absolute value.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-1,1,-1]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The numbers are all perfect cubes and have at least one repeated absolute value.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-1,1,0]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The numbers are all perfect cubes and have at least one repeated absolute value.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [0,0,0]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, and are not all zero.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [0,0,1]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all zero, and include at least one non-zero value.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [0,0,8]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all zero, and include at least one non-zero value, but do not include zero.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [0,1,1]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The numbers are all perfect cubes and have at least one repeated absolute value.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [0,0,0]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The numbers are all perfect cubes and have at least one repeated absolute value, but are not all zero.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [0,0,1]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, and do not include zero.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [1,1,8]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, and do not include zero or have all distinct absolute values.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [1,1,1]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: The numbers are all perfect cubes and have at least one repeated absolute value, but are not all the same.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [1,1,-1]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The numbers are all perfect cubes and have at least one repeated absolute value, but are not all the same.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-1,-1,1]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, and include at least one positive and one negative cube.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-1,1,1]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, and include at least one positive and one negative cube.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-1,-1,1]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, include at least one positive and one negative cube, and have at least one positive cube.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-1,-1,-1]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, and include at least one positive and one negative cube.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-1,-1,1]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, and include at least one positive and one negative cube, with at least two distinct absolute values.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-1,-1,1]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, include at least one positive and one negative cube, and have at least two distinct absolute values, with the positive cube appearing more than once.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [1,1,-1]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, include at least one positive and one negative cube, and have at least two distinct absolute values.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-1,-8,8]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, include at least one positive and one negative cube, have at least two distinct absolute values, and the repeated absolute value is not the same as the absolute value of the cube with the opposite sign.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-1,1,8]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, include at least one positive and one negative cube, have at least two distinct absolute values, and the repeated absolute value does not include both a positive and negative version of the same cube.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-1,1,-1]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The numbers are all perfect cubes, have at least one repeated absolute value, are not all the same, include at least one positive and one negative cube, and have at least two distinct absolute values.
+
+[183] ENVIRONMENT:
+Turn - Test

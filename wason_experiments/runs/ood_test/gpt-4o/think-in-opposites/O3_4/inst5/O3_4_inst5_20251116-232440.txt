@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [89, 67, 2].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers must be in descending order.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [100,50,25]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers must be in any order but must be all distinct.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [5,10,15]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers must be distinct and can be in any order.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [3,7,11]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers must be distinct integers.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [8,8,9]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the numbers must be distinct integers in any order.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [1,2,3]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the numbers must be three distinct integers.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [4,5,6]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the numbers must be three distinct integers in any order.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [7,8,9]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the numbers must be three distinct integers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [10,20,30]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the numbers must be three distinct integers in strictly increasing order.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [1,3,2]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [5,3,1]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [6,7,5]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [9,8,10]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are in strictly decreasing order or in a non-increasing order.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [3,1,2]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [4,2,3]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [7,5,8]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [10,8,9]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the sequence is not in strictly increasing order.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [5,4,6]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not arranged in strictly increasing order.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [9,7,8]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [2,1,3]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [4,6,5]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [10,9,11]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [15,12,14]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where at least one pair of numbers is not in strictly increasing order.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [5,7,6]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the sequence is not in strictly increasing order.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [11,13,12]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [9,11,10]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [14,13,15]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [18,16,17]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [20,19,21]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [22,21,23]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing order.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [24,26,25]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the sequence is neither strictly increasing nor strictly decreasing.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [27,29,28]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the sequence is neither strictly increasing nor strictly decreasing.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [30,32,31]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the sequence is neither strictly increasing nor strictly decreasing.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [33,31,32]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the sequence is neither strictly increasing nor strictly decreasing.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [35,37,36]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the sequence is neither strictly increasing nor strictly decreasing.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [39,38,40]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the middle number is not in between the other two in value.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [42,41,43]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the middle number is not in between the other two in value.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [45,47,46]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the middle number is not in between the other two in value.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [50,52,51]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing or strictly decreasing order.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [53,55,54]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing or strictly decreasing order.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [56,54,55]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the sequence is neither strictly increasing nor strictly decreasing.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [58,60,59]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing or strictly decreasing order.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [62,61,63]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing or strictly decreasing order.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [65,67,66]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing or strictly decreasing order.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [68,70,69]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the numbers must be three distinct integers where the sequence is not strictly increasing or strictly decreasing.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [72,71,73]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the numbers must be three distinct integers that are not in strictly increasing or strictly decreasing order.
+
+[183] ENVIRONMENT:
+Turn - Test

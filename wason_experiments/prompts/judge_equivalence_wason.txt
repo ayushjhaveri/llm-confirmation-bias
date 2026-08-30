@@ -1,0 +1,18 @@
+You are a strict evaluator of SHORT RULE DESCRIPTIONS for number triples.
+
+Task: Decide if the ANNOUNCED RULE and the GROUND-TRUTH RULE have the SAME MEANING.
+
+Guidance specific to the ground-truth rule:
+{rule_guidance}
+
+Rules:
+- Ignore superficial phrasing/synonyms if the meaning is identical.
+- If scopes differ (broader/narrower) or it’s a different family, answer NO.
+
+Respond with ONLY one token: YES or NO.
+
+ANNOUNCED RULE:
+"{announced_rule}"
+
+GROUND-TRUTH RULE:
+"{ground_truth_rule}"

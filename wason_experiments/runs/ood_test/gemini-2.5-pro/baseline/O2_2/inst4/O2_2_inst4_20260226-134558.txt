@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-67, 75, 25].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The three numbers have distinct remainders when divided by 3.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,1,1]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The numbers are not all of the same sign.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-2,-4,-6]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The numbers are not all of the same sign.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [1,-2,3]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The sum of the three numbers is a multiple of 11.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [10,10,2]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The sum of the three numbers is an odd multiple of 11.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [5,5,1]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: All three numbers are two-digit numbers, ignoring their sign.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [10,13,16]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The sum of the numbers is a multiple of 11, and they are not all of the same sign.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [50,-5,-1]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The sum of the three numbers is 33.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [10,11,12]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The sum of the numbers is 33, and they do not all have the same sign.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [30,5,-2]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The sum of the three numbers is 33, and all three numbers are odd.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [1,3,29]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The sum of the two largest numbers is 100.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [20,40,60]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The sum of the two largest numbers is 100, and all three numbers are odd.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [1,49,51]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The sum of the two largest numbers is 100, and not all numbers have the same sign.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-10,50,50]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The sum of the two largest numbers is 100 and the third number is -67.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-67,10,90]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The difference between the two largest numbers is 50.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [0,20,70]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The difference between the two largest numbers is 50 and all three numbers are odd.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-100,10,60]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The difference between the two largest numbers is 50, and all three numbers are odd.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-1,3,5]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: Two numbers sum to 100, all three numbers are odd, and not all numbers have the same sign.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-3,49,51]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The sum of the numbers is 33, they are all odd, and they are not all of the same sign.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-1,3,31]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: One number is three times another number in the set.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-10,40,3]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The sum of the three numbers is 33.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [10,-40,63]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The sum of the three numbers is 33, and the set contains at least one negative number.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [38,-12,7]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The sum of the three numbers is 33, and the set contains at least one negative and at least one positive number.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [40,-5,-2]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The sum of the three numbers is 33, and one of the numbers is negative.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [34,-1,0]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The sum of the three numbers is 33, and there is exactly one negative number.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [33,10,-10]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The sum of the three numbers is 33, and exactly one of them is negative.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-10,-7,50]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The sum of the three numbers is 33, and the middle number (when sorted) is not the average of the other two.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,11,21]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The sum of the three numbers is 33.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [3,10,20]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The sum of the three numbers is 33.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-10,40,4]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: Two numbers differ by 50, and either they sum to 100, or they have opposite signs and the third number is between them.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [10,60,30]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The range of the numbers is 50, or the two largest numbers differ by 50 and the smallest number is negative.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [0,10,50]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: Two of the numbers have a difference of 50, and no number is zero.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-25,25,10]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: Two numbers have a difference of 50, the third number is less than 50, and no number is zero.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [10,60,100]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The difference between the two largest numbers is 50.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [100,150,125]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The range of the three numbers is 50.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [50,75,100]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The range of the three numbers (the difference between the largest and smallest) is 50.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-70,-20,10]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The difference between the largest and smallest number in the set is 50.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-20,-30,100]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The difference between the largest and smallest number in the set is not 50.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [1,2,52]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: One number is between the other two, but is not their average.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [10,25,75]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: The middle number is closer to one end than the other.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [0,25,75]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The third number in the list is the median of the three numbers.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [10,35,60]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The middle number is not the average of the other two numbers.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-50,-25,0]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The three numbers do not form an arithmetic progression.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [10,20,30]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The three numbers do not form an arithmetic progression.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [10,20,15]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The three numbers do not form an arithmetic progression.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [10,15,20]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: The middle number is not the median of the three numbers.
+
+[183] ENVIRONMENT:
+Turn - Test

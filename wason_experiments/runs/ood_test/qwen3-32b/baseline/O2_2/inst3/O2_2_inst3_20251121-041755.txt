@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-51, 37, -87].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: All three numbers are odd.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [3,5,7]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: All three numbers are two-digit odd integers.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [5,9,13]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: All three numbers are two-digit odd integers (positive or negative).
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [11,13,15]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: Exactly two of the numbers are negative.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-3,-5,7]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: All three numbers are not divisible by 2 or 5 (i.e., their last digits are 1, 3, 7, or 9).
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [11,21,31]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: All three numbers are odd and their absolute values are not divisible by 5.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [11,13,17]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: All three numbers are congruent modulo 4.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-1,-2,-3]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: All three numbers are two-digit odd integers with distinct digits.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [13,15,17]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: All three numbers are two-digit odd integers (positive or negative).
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-37,-51,-87]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-11,-13,-17]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-11,-17,21]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit and a tens digit not equal to 1.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [23,45,67]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [21,37,47]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [13,27,39]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [13,35,57]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with units digit 1, 3, 7, or 9.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-13,25,-37]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [31,53,75]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [21,37,49]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-21,43,-65]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: All three numbers are two-digit integers (positive or negative) with an odd units digit.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-33,45,-57]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The three numbers consist of exactly one positive and two negative two-digit integers, each with an odd units digit.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-15,27,-39]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The three numbers are two-digit integers (positive or negative) with odd units digits, and exactly two are negative while one is positive.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-25,37,-49]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The three numbers are two-digit integers (positive or negative) with odd units digits, and exactly two are negative while one is positive.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-17,29,-31]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The three numbers are two-digit integers (positive or negative) with odd units digits, and exactly two are negative while one is positive.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-10,20,-30]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The three numbers are two-digit integers (positive or negative) with exactly two negative numbers and one positive number.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-12,34,-56]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The three numbers are two-digit integers (positive or negative) with exactly two negative numbers and one positive number.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-33,44,-55]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The three numbers are two-digit integers (positive or negative) with exactly two negative numbers and one positive number.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-44,55,-66]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The three numbers are two-digit integers (positive or negative) with exactly two negative numbers and one positive number.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-14,25,-36]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative, and one is positive.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-19,28,-37]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The hidden rule is that all three numbers are two-digit integers (positive or negative), and exactly two of them are negative while one is positive.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-18,29,-30]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative, and one is positive.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-45,67,-89]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The hidden rule is that all three numbers are two-digit integers (positive or negative), and exactly two of them are negative while one is positive.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-1,-2,3]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The hidden rule is that all three numbers are two-digit integers (positive or negative), and exactly two of them are negative while one is positive.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-12,-34,56]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The hidden rule is that all three numbers are two-digit integers (positive or negative) with odd units digits, and exactly two of them are negative while one is positive.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-20,15,-25]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative, and one is positive, and all numbers are two-digit integers (positive or negative).
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-10,11,-20]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative two-digit integers, and one is a positive two-digit integer with an odd units digit.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-15,-20,30]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative, and one is positive, and all numbers are two-digit integers (positive or negative).
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-11,22,-33]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The hidden rule is that all three numbers are two-digit integers (positive or negative), and exactly two of them are negative while one is positive.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-20,-30,40]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative, one is positive, and all are two-digit integers (positive or negative).
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-16,24,-32]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative, and one is positive, and all numbers are two-digit integers (positive or negative).
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-14,25,-36]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative two-digit integers, one is a positive two-digit integer, and the sum of all three is negative.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-22,33,-44]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative two-digit integers, one is a positive two-digit integer, and the sum of all three numbers is negative.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-18,29,-30]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative two-digit integers, one is a positive two-digit integer, and the sum of all three numbers is negative.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-19,20,-21]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative, one is positive, and the sum of all three numbers is negative.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-22,33,-44]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative two-digit integers, one is a positive two-digit integer, and the positive number's absolute value is between the absolute values of the two negative numbers.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-15,20,-25]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The hidden rule is that exactly two of the three numbers are negative two-digit integers, one is a positive two-digit integer, and the sum of all three numbers is negative.
+
+[183] ENVIRONMENT:
+Turn - Test

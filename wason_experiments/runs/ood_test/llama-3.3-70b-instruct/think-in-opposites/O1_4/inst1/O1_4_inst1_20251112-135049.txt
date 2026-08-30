@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-1, -81, -91].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the three numbers are odd.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,4,6]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the three numbers are negative.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,2,3]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the three numbers are odd and negative.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-2,-4,-6]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the three numbers are negative and have the same parity, either all odd or all even.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-3,-5,-7]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the three numbers are negative and have the same parity, either all odd or all even, and are integers.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-10,-8,-4]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the three numbers are consecutive in terms of their absolute values being multiples of a certain number or having a certain difference, but since [-1, -81, -91] and [-2,-4,-6] are given as examples of the rule, the actual rule is the three numbers are negative and have the same parity, either all odd or all even, but since [-10,-8,-4] is not, I should reconsider the rule to The rule is that the numbers have the same parity and are negative and the difference between consecutive terms is constant or the numbers are in an arithmetic progression or the rule is the three numbers are negative and have the same parity and the ratio between consecutive terms is constant but none of these, so: The rule is that the three numbers are negative and are in arithmetic progression.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-5,-3,-1]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the three numbers are negative and have the same parity, either all odd or all even.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-7,-6,-5]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the three numbers are negative and have the same parity, either all odd or all even, and the difference between consecutive terms is a constant multiple of a certain number or the numbers form a specific sequence but most likely The rule is that the three numbers are negative and the difference between consecutive terms is constant or The rule is the numbers have the same parity and are in arithmetic sequence or The rule is the three numbers have the same parity and the ratio of the first two and last two numbers is the same but given the examples The rule is the numbers are in arithmetic progression and have the same parity and are negative.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-3,-6,-9]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression and are negative.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-4,-8,-12]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression and are negative.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [0,-2,-4]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [1,3,5]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression and have at least one negative number or are all negative and have the same parity or are in a sequence with a common difference that is negative or The rule is the numbers form an arithmetic sequence with a negative common difference, but given the previous examples The rule is the numbers form an arithmetic sequence with a common difference that is negative or zero but not positive.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-1,0,1]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a negative common difference.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-5,-10,-15]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a negative common difference.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [2,0,-2]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference that is negative or zero is not correct, but the numbers are in an arithmetic progression and include at least one negative number, so The rule is that the three numbers are in an arithmetic progression and include at least one negative number or The rule is the numbers form an arithmetic sequence with a negative common difference or zero and have at least one negative term.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-2,0,2]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression and have at least one negative term and the common difference is not positive or The rule is that the three numbers form an arithmetic sequence with a common difference that is less than or equal to zero.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-3,-2,-1]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference that is less than or equal to zero and not all terms are positive.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [0,-1,-2]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference that is less than or equal to zero and include at least one non-positive term or The rule is that the three numbers form an arithmetic sequence with a non-positive common difference and at least one term is not positive.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-3,-4,-5]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a non-positive common difference.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [0,-3,-6]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a negative common difference.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-10,-7,-4]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference that is a negative even integer or a common difference of zero is allowed if there's at least one negative term, but given previous examples The rule is the numbers form an arithmetic sequence with a common difference of -1 or -2 or any negative even integer.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-6,-4,-2]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2 or any negative even integer, excluding -4 and other even integers greater than 2 in absolute value that are not powers of 2, but given previous examples, a more general rule could be The rule is that the three numbers form an arithmetic sequence with a common difference that is a negative power of 2 or a negative integer that is a power of 2, but considering previous examples The rule is the numbers form an arithmetic sequence with a common difference that is a negative power of 2, but most likely The rule is the three numbers form an arithmetic sequence with a common difference of -1 is not correct or any negative power of 2 or The rule is the three numbers form an arithmetic sequence with a common difference that is a negative integer that is a power of 2.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-8,-4,0]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference that is a negative integer power of 2, specifically -2, excluding other powers of 2.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-4,-2,0]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-6,-4,-2]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2 and are negative.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-8,-6,-4]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2, include at least one negative term, and have at least one term that is not zero or The rule is the three numbers are negative and in an arithmetic progression with a common difference of -2, but given previous examples The rule is the numbers are in an arithmetic sequence with a common difference of -2.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-8,-6,-4]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the three numbers are negative, in an arithmetic progression, and have a common difference of -2, but not necessarily starting from an even number or The rule is the three numbers form an arithmetic sequence with a common difference of -2 and the middle term is even.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-2,0,2]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the three numbers form an arithmetic sequence with a common difference of -2 and all terms are negative.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-6,-4,-2]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2, all terms are negative, and the first term is even.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-4,-2,0]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the three numbers form an arithmetic sequence with a common difference of -2 and all three terms are negative integers.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-10,-8,-6]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the three numbers are consecutive negative even integers in an arithmetic progression with a common difference of -2.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-8,-6,-4]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the three numbers form an arithmetic sequence with a common difference of -2, are negative, and the first term is a multiple of 4 or a specific even number.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-12,-10,-8]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2, are negative, and the first term is a power of 2 multiplied by -1, or specifically -2, -4, -8.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-16,-14,-12]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2, are negative, and the first term is -2, -4, or -8, but not other powers of 2.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-2,0,2]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the three numbers form an arithmetic sequence with a common difference of -2, are negative, and specifically include the terms -2, -4, or other specific negative even integers in sequence.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-4,-2,0]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the three numbers are -4, -2, and 0 are not correct, but the correct sequence is the three numbers are in an arithmetic progression with a common difference of -2 and the sequence starts with -4, or The rule is the three numbers are -4, -2, and a third negative even integer in sequence, but given previous examples The rule is the three numbers form an arithmetic sequence with a common difference of -2 and the terms are -4, -2, and another negative term.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-8,-6,-4]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2 and the sequence consists of the terms -4, -2, and 0, no, that's incorrect, but The rule is the three numbers form an arithmetic sequence with a common difference of -2 and specifically include the terms -4 and -2 in that order, but the third term must also be negative, so The rule is the three numbers are -4, -2, and -0, no, that's also incorrect, The rule is the numbers are in sequence -4, -2, and the next term would be 0, but that's not correct, The rule is the numbers form an arithmetic sequence with a common difference of -2, include -4 and -2, and the third term must be negative and in sequence, so The rule is the three numbers are -4, -2, and a negative even integer in sequence, which is -4, -2, and the next even integer would be 0, but that's not correct, the next term after -2 should be negative, so The rule is the three numbers are -4, -2, and the next term in sequence with a common difference of
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-4,-2,0]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2 and the sequence consists of the terms -4, -2, and a third negative term that comes before 0, so the correct sequence is -4, -2, and -0 is not possible, but a negative even integer that comes after -2 in sequence with a common difference of -2 would be a number less than -2, but the examples given were -4, -2, so the next even integer with a common difference of -2 would indeed be 0 if the sequence were to continue, but since 0 is not negative, the correct sequence that comes before 0 would indeed include negative even integers, so The rule is the three numbers form an arithmetic sequence with a common difference of -2 and include the terms -4 and -2, but since -4, -2, 0 is not correct, the correct sequence must include a third term that is also negative, and the only sequence that satisfies the given conditions and includes -4 and -2 with a common difference of -2 would be a sequence where the third term is indeed negative, so the correct rule would be The rule is the numbers are in sequence with a
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-4,-2,0]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the three numbers form an arithmetic sequence with a common difference of -2 and specifically include the terms -4 and -2, and the third term must be a negative even integer that comes after -2 in the sequence, which would be a number less than -2, so The rule is the three numbers are -4, -2, and another negative even integer.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-8,-6,-4]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2, include the terms -4 and -2, and the sequence starts with -4, and the third term must also be negative and an even integer, so The rule is the three numbers form an arithmetic sequence with a common difference of -2, starting with -4.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-4,-2,0]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the three numbers form an arithmetic sequence with a common difference of -2, include the terms -4 and -2, and all three terms are negative even integers.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-6,-4,-2]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2 and the terms are -4, -2, and a third negative even integer that immediately follows -2 in the sequence with a common difference of -2, which would be a sequence that starts with -4 and -2, and the next term would be a negative even integer that comes after -2, so The rule is the three numbers form an arithmetic sequence with a common difference of -2, starting with -4, and the third term is also a negative even integer.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-4,-2,0]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the three numbers form an arithmetic sequence with a common difference of -2, starting with -4, and the sequence consists of only negative even integers.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-6,-4,-2]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the three numbers are in an arithmetic progression with a common difference of -2, the first term is -4, the second term is -2, and the third term must be a negative even integer that immediately precedes -2 in a sequence with a common difference of 2, but in the negative direction, it would be a number that comes after -4 and -2, so The rule is the three numbers form an arithmetic sequence with a common difference of -2 and are -4, -2, and another negative even integer.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-4,-2,0]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the three numbers form an arithmetic sequence with a common difference of -2, are negative even integers, and the sequence starts with -4 and -2, and continues with another negative even integer, so the correct sequence would be -4, -2, and -0 is not possible since 0 is not negative, but a sequence that continues with another negative even integer would be -4, -2, and the next negative even integer that comes after -2 with a common difference of -2 would indeed be a sequence that only includes negative even integers.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-4,-2,0]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the three numbers are -4, -2, and a third negative even integer that follows -2 in an arithmetic sequence with a common difference of -2, which would be a sequence that only includes negative even integers, so the next term would indeed be another negative even integer, and since the common difference is -2, the next term would be -2 - 2 = -4, no, that's the first term, so the next term after -2 would indeed be another negative even integer, which is -6, no, that's the term that comes before -4, so the correct sequence would indeed start with -4, -2, and the next term would be a negative even integer that comes after -2 with a common difference of -2, so The rule is the three numbers form an arithmetic sequence with a common difference of -2 and are -4, -2, and -6, no, that's not correct, but The rule is the numbers form an arithmetic sequence with a common difference of -2, start with -4, and the next term is -2, and the third term must be another negative even integer, which would indeed be a sequence that only includes negative even integers, and
+
+[183] ENVIRONMENT:
+Turn - Test

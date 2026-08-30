@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [89, 67, 13].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The numbers are in decreasing order.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [5,5,5]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: The numbers are in non-increasing order.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,2,3]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The numbers are in non-increasing order, allowing equals.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [10,9,9]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is not just non-increasing order, I need to test more.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [7,7,7]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The numbers are the same.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [3,3,4]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: All numbers in the triple are equal.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [11,11,11]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: All numbers in the triple are equal.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [2,2,1]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: All numbers in the triple are equal.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [9,9,9]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: All numbers in the triple are equal, but the previous turn's result is inconsistent with this rule, I should re-evaluate.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [8,8,8]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that all numbers in the triple are equal, but there seems to be an inconsistency, so I'm going to take a guess that the original example [89, 67, 13] is a special case and the actual rule is related to something else, perhaps the property that the numbers have when considered together.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [4,4,4]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The numbers are all the same or the rule is related to the digits of the original example [89, 67, 13] having a property in common.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [12,23,34]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that each number has a decreasing digit sequence, like in the original example [89, 67, 13] where 8>9, 6>7, and 1>3 are not true but the numbers themselves are decreasing when read as a whole number, no, I mean that the digits of each number are in decreasing order, like 9>8 and 7>6 and no, that is not it, I have it, all the digits of the three numbers are different in the original example and also in [5,5,5] the digits are the same, I think I have a guess, the digits of the three numbers are the same or the digits of the three numbers have a special property.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [22,22,22]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that all digits of the three numbers are different, no, that can't be it, I made a mistake, I remember now, the original example had a property that the digits of each number were different from each other, like 8 and 9, 6 and 7, 1 and 3, I think I have it, each digit appears only once among the three numbers, that's my guess.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [3,4,5]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: Each number has digits that are different from the digits of the other two numbers, or more specifically, all the digits among the three numbers are distinct.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [19,28,37]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The digits 1, 2, and 3, and also the digits 8, 9, and 7 from the first example [89,67,13] and other examples are not the rule, I re-evaluate and think the rule might be related to the set of digits {1,3,7,9} that appear in the original example.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [17,39,93]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the numbers only contain the digits 1, 3, 7, and 9, and each digit is used at least once among the three numbers, but that can't be it, I remember now, the original example [89,67,13] and [5,5,5] had a property that the digits of each number were among the set {1,3,5,7,9}, I think I have it, each digit of the three numbers is one of the odd digits.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [13,57,79]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the odd digits 1, 3, 5, 7, or 9.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [1,3,5]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that each number is composed only of the digits 1, 3, 7, and 9, and only these four digits.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [13,37,79]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [17,71,13]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [39,93,31]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9, but the number cannot contain the digit 5, and also the digits 1, 3, 7, 9 are the only allowed digits in the numbers, I re-evaluate the previous examples, [89,67,13] and other examples that had a YES and I have it, I think the rule might be more specific to only the digits 1, 3, 7 and 9.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [71,17,37]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [19,91,79]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9, and the digit 9 can only be used in combination with 1, 3, or 7 if it is the first digit, no I made a mistake, I re-evaluate and think the rule might be more specific to the set {1,3,7,9} and I remember now the original example had a property, I think I have it, the numbers only contain the digits 1, 3, 7, and 9.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [37,73,13]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [79,97,13]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [13,31,79]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [1,7,9]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that each number is composed only of the digits 1, 3, 7, or 9, and each number must be a two-digit number or the rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9, and all numbers are two-digit numbers, I re-evaluate the previous examples and think I have it.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [13,37,91]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that each digit of the three numbers is one of the digits 1, 3, 7, or 9, and all numbers are two-digit numbers, and the numbers only contain the digits 1, 3, 7, and 9.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [97,79,13]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [71,19,37]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [39,93,17]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the tens digit and units digit must be different.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [13,31,79]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [17,71,39]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and no number can have the digit 9 as its second digit, except when it's part of a specific combination, no I made a mistake, I re-evaluate the previous examples, I think I have it, the rule might be related to the digits being different, I have an idea, each digit of the two-digit numbers must be unique.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [13,37,97]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and each digit within each number is unique.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [19,91,73]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different, and the rule also requires that the numbers do not have 9 as the first digit when the second digit is 1, no I made a mistake, I re-evaluate, I think the correct rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [71,13,97]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [37,91,17]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different, and also the digit 9 can only be used as the first digit when paired with 7, and the digit 1 can be used as the second digit when paired with 3 or 7, no I made a mistake, I re-evaluate the previous examples, I have an idea, the numbers must use the digits 1, 3, 7, and 9 without repetition within each number and also without using certain combinations.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [73,19,37]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different, and each pair of digits is a valid combination, I re-evaluate and I have it, the rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different, and the combinations 13, 17, 19, 31, 37, 71, 73, 79, 91, and 97 are allowed, and also 39 and 93 are not allowed.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [97,13,71]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [79,17,31]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different, and all possible combinations of these digits are allowed except when 3 and 9 are together.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [13,79,71]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [19,37,97]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [31,79,13]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [73,19,97]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [91,37,79]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different, and the combination 9 and 1 is not allowed when 9 is the first digit and 1 is the second digit in the same number, no I made a mistake, I re-evaluate, I think the correct rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different, except for the combination 91.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [17,39,73]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that each number is a two-digit number composed only of the digits 1, 3, 7, or 9, and the digits within each number are different, and the combinations 39 and 91 are not allowed.
+
+[183] ENVIRONMENT:
+Turn - Test

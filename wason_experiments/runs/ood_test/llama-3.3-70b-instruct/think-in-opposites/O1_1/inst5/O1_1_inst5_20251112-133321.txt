@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-11, -31, -41].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers are decreasing by 20.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [10,30,50]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers are decreasing by 20 and are negative.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-50,-30,-10]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers are in an arithmetic sequence with a common difference of 20 and are negative and decreasing, or more simply, the rule is that the numbers are in an arithmetic sequence with a common difference of 20.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [1,21,41]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers are in an arithmetic sequence with a common difference of 20.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [5,25,45]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the numbers are in an arithmetic sequence with a common difference of 20, but the middle number must be a multiple of a specific pattern or have a certain property, or more specifically and simply the rule could be related to having the numbers in the sequence end with 1.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [21,41,61]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the numbers are in an arithmetic sequence with a common difference of 20 and the numbers end with 1.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [11,31,51]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [81,101,121]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the numbers are in an arithmetic sequence with a common difference of 20 and end with 1.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [2,22,42]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-1,19,39]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [91,111,131]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [51,71,91]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [31,51,71]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [10,30,50]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-1,19,39]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [1,21,41]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [3,23,43]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [11,31,51]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [111,131,151]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [41,61,81]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [71,91,111]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [21,41,61]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [101,121,141]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [81,101,121]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [61,81,101]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [31,51,71]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [51,71,91]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,21,41]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [11,31,51]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [91,111,131]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [71,91,111]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [41,61,81]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [21,41,61]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [131,151,171]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [201,221,241]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [251,271,291]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [281,301,321]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [191,211,231]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [161,181,201]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [121,141,161]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [141,161,181]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [181,201,221]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [61,81,101]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [501,521,541]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [541,561,581]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [301,321,341]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the numbers end with 1 and are in an arithmetic sequence with a common difference of 20.
+
+[183] ENVIRONMENT:
+Turn - Test

@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-27, 8, 27].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The three numbers are in increasing order.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,2,3]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The three numbers form an arithmetic sequence.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [3,9,15]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The three numbers have equal absolute values.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-5,5,5]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The three numbers are symmetric around zero.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-10,0,10]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The three numbers include both negative and positive values, and their sum is zero.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-5,0,5]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The three numbers are symmetric around a central number, with equal differences between consecutive numbers.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-3,0,3]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The three numbers are powers of 3.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [1,3,9]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The three numbers are cubes of integers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-1,0,1]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The three numbers are consecutive integers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [7,8,9]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The three numbers include both negative and positive values, and have a zero in between.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-10,0,10]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The three numbers are symmetric around zero and include a zero.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-7,0,7]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The three numbers consist of one negative, one positive, and zero, with the negative and positive numbers being opposites.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-2,0,2]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The three numbers are symmetric around zero and consist of two opposites and zero.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-1,0,1]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The three numbers are symmetric around zero and include both negative and positive numbers.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-4,0,4]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The three numbers include one negative, one positive, and zero, and the absolute values of the negative and positive numbers are equal.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-6,0,6]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The three numbers are consecutive integers centered around zero.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-2,0,2]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The three numbers are symmetric around zero, with one negative, one zero, and one positive integer.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-1,0,1]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The three numbers are symmetric around zero, with one being negative, one being zero, and one being positive.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-3,0,3]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The three numbers include a negative number, a positive number, and zero, where the negative and positive numbers are consecutive integers.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-2,0,1]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The three numbers include a negative number, zero, and a positive number, where the negative and positive numbers are consecutive integers.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-1,0,2]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The three numbers include a negative number, zero, and a positive number, and they are consecutive integers.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-2,0,1]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The three numbers form a sequence where the first and last numbers are negatives and positives of the same value, and the middle number is zero.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-5,0,5]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The three numbers consist of a negative number, zero, and a positive number, with each being a cube of an integer.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-8,0,8]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The three numbers are cubes of integers, including one negative, one zero, and one positive.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-27,0,27]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The three numbers are cubes of consecutive integers.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-1,0,1]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The three numbers are cubes of consecutive integers, including a negative, zero, and a positive.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-64,0,64]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The three numbers are cubes of integers, including one negative, zero, and one positive, where the negative and positive numbers are opposites.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-125,0,125]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The three numbers are cubes of integers, including a negative number, zero, and a positive number, with the negative and positive numbers being opposites.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-1,0,1]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The three numbers are cubes of integers, with one negative, one zero, and one positive, where the negative and positive numbers are opposites.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-8,0,8]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The three numbers are cubes of integers, consisting of a negative number, zero, and a positive number, with the negative and positive numbers being additive inverses.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-27,0,27]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The three numbers are cubes of integers, consisting of a negative number, zero, and a positive number, where the negative and positive numbers are additive inverses.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-64,0,64]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The three numbers are cubes of integers, including a negative number, zero, and a positive number, with the negative and positive numbers being opposites.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-1,0,1]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The three numbers are cubes of integers, with one negative, one zero, and one positive, where the negative and positive numbers are opposites.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-8,0,8]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The three numbers are cubes of integers, with one negative, one zero, and one positive, where the negative and positive numbers are opposites.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-27,0,27]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The three numbers are cubes of integers, consisting of a negative, zero, and a positive number, where the negative and positive numbers are opposites.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-64,0,64]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The three numbers are cubes of integers, with one negative, one zero, and one positive, where the negative and positive numbers are additive inverses.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-125,0,125]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The three numbers are cubes of integers, including a negative number, zero, and a positive number, where the negative and positive numbers are opposites.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-216,0,216]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The three numbers are cubes of integers, with the negative and positive numbers being opposites, and the middle number being zero.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-343,0,343]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The three numbers are cubes of integers, including a negative number, zero, and a positive number, with the negative and positive numbers being opposites.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-512,0,512]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The three numbers are cubes of integers, consisting of a negative number, zero, and a positive number, with the negative and positive numbers being opposites.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-729,0,729]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The three numbers are cubes of integers, with one negative, one zero, and one positive, where the negative and positive numbers are additive inverses.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-1000,0,1000]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The three numbers are cubes of integers, including a negative number, zero, and a positive number, with the negative and positive numbers being opposites.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-1,0,1]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The three numbers are cubes of integers, with one negative, one zero, and one positive, where the negative and positive numbers are opposites.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-8,0,8]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The three numbers are cubes of integers, with one negative, zero, and one positive, where the negative and positive numbers are opposites.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-27,0,27]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The three numbers are cubes of integers, including a negative number, zero, and a positive number, with the negative and positive numbers being opposites.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-64,0,64]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The three numbers are cubes of integers, with one negative, one zero, and one positive, where the negative and positive numbers are opposites.
+
+[183] ENVIRONMENT:
+Turn - Test

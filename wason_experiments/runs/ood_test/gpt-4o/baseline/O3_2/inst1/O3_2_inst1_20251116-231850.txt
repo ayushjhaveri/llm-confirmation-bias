@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [97, 67, 37].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The numbers are in descending order.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [50,30,10]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [100,50,25]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The numbers form a strictly descending sequence.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [5,3,1]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The numbers are in strictly descending order with no specific interval.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [200,150,100]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The numbers are in strictly descending order, regardless of the difference between them.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [12,8,3]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The numbers are in strictly descending order, with each subsequent number being smaller than the previous one.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [9,7,5]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The numbers are in strictly decreasing order.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [20,10,5]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The numbers are in strictly decreasing order, without any specific pattern or interval.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [15,10,1]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The numbers are in strictly descending order, with each number smaller than the previous one.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [30,20,10]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The numbers are arranged in strictly descending order.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [40,30,20]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [60,50,40]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The numbers are in strictly decreasing order.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [25,15,5]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [18,12,6]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [22,11,1]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [45,30,15]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [70,60,50]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [80,70,60]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [90,80,70]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [100,90,80]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [110,100,90]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [130,120,110]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [140,130,120]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [160,150,140]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [170,160,150]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [190,180,170]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [210,200,190]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [220,210,200]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [230,220,210]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [250,240,230]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [260,250,240]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [280,270,260]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [290,280,270]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [300,290,280]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [310,300,290]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [320,310,300]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [330,320,310]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [340,330,320]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [350,340,330]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [360,350,340]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [370,360,350]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [380,370,360]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [390,380,370]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [400,390,380]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [410,400,390]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [420,410,400]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The numbers are in strictly descending order.
+
+[183] ENVIRONMENT:
+Turn - Test

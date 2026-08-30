@@ -1,0 +1,665 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [89, 67, 2].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The numbers in the triple are in descending order when sorted.
+Announce: MED rule - The numbers in the triple are not in descending order when sorted.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [5,3,1]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The numbers in the triple are in descending order when sorted and at least one number is even.
+Announce: MED rule - The numbers in the triple are not in descending order when sorted or all numbers are odd.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [10,8,2]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The numbers in the triple are in descending order when sorted and have a difference of at least 20 between the largest and smallest.
+Announce: MED rule - The numbers in the triple do not meet the conditions of the DAX rule.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [90,70,40]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - One of the numbers in the triple is the smallest possible number.
+Announce: MED rule - None of the numbers in the triple is the smallest possible number.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [7,5,0]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The triple contains a zero and the other two numbers are in descending order when sorted and one of them is the smallest non-zero number that can be in the pair.
+Announce: MED rule - The triple does not contain a zero or the other two numbers are not in descending order when sorted.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [10,0,8]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The triple contains a number that is the smallest possible non-negative integer, which is 0, and the other two numbers are in descending order when sorted, but with one being the smallest non-zero value and the other the next smallest after that value.
+Announce: MED rule - The triple does not contain a zero or the other two numbers are not the two smallest non-zero positive integers in descending order when the zero is present.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [2,1,0]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - One of the numbers is the smallest possible non-negative integer and the other two numbers are the next two smallest possible integers in some order.
+Announce: MED rule - The triple does not contain the three smallest possible non-negative integers.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [0,1,2]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The triple contains the numbers 0, 1, and 2, but not necessarily in that order, and one example is [89, 67, 2] where 2 is the key.
+Announce: MED rule - The triple does not contain the numbers 0, 1, and 2, or if the numbers are the smallest three integers, they must be in a specific order that does not match the DAX rule.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [2,0,1]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The numbers in the triple are 0, 1, and 2, and 2 is the largest number.
+Announce: MED rule - The triple does not contain the numbers 0, 1, and 2, or 2 is not the largest number.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [1,0,2]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The triple contains the numbers 0, 1, and 2 in any order, but 2 must be the middle number when sorted.
+Announce: MED rule - The triple does not contain the numbers 0, 1, and 2, or 2 is not the largest number when the numbers are in ascending order, or 2 is the smallest or middle when not in ascending order but in the case of [89, 67, 2], 2 is the smallest.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [0,2,1]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The triple contains the numbers 0, 1, and 2, and they are in ascending order when the largest number is 2 but not necessarily in the case of [89, 67, 2].
+Announce: MED rule - The triple does not contain the numbers 0, 1, and 2 in ascending order, or the numbers are not the smallest three non-negative integers.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [2,1,0]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The triple contains the number 2 and the numbers are in a specific order or contain specific numbers such that one example is [89, 67, 2].
+Announce: MED rule - The triple does not contain the specific characteristics that define a DAX triple, such as the numbers in [89, 67, 2].
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [8,2,0]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The triple contains the number 2, and the other two numbers do not matter as long as one example is [89, 67, 2] which is a DAX triple.
+Announce: MED rule - The triple does not have the same characteristics that make [89, 67, 2] a DAX triple, which seems to be just the presence of 2.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [2,9,8]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - One of the numbers in the triple is 2.
+Announce: MED rule - None of the numbers in the triple is 2.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [4,2,1]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The triple contains the number 2 and at least one of the other numbers is less than 60, as in [89, 67, 2].
+Announce: MED rule - The triple does not contain the number 2 or all numbers are greater than 60 but [4,2,1] is not a DAX so the rule is likely just the presence of 2.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [7,2,6]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The triple contains the number 2.
+Announce: MED rule - The triple does not contain the number 2.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [3,5,2]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The triple contains the number 2.
+Announce: MED rule - The triple does not contain the number 2.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [11,2,9]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The triple contains the number 2 and is in a specific order or has a certain arrangement that is not clearly defined yet.
+Announce: MED rule - The triple does not contain the number 2 or does not meet the specific arrangement required for a DAX triple.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [9,8,2]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The triple contains the number 2 and the other two numbers are in a specific relationship or order with 2 being the smallest number.
+Announce: MED rule - The triple does not contain the number 2 or 2 is not the smallest number.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [2,8,9]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The triple contains the number 2 as the smallest number.
+Announce: MED rule - The triple does not contain the number 2 as the smallest number.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [1,2,3]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The triple contains the number 2 and 2 is the smallest number in the triple, as in [89, 67, 2].
+Announce: MED rule - The triple does not contain the number 2 or 2 is not the smallest number in the triple.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [2,89,67]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The number 2 is present in the triple.
+Announce: MED rule - The number 2 is not present in the triple.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [2,7,1]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The triple contains the number 2 and the other numbers are greater than 2, as in [89, 67, 2].
+Announce: MED rule - The triple does not contain the number 2 or 2 is not the smallest number in the triple and there is at least one number smaller than 2.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [10,20,2]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple.
+Announce: MED rule - The number 2 is not the smallest number in the triple.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [2,90,80]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The triple contains the number 2 as the smallest number and the other two numbers are in descending order when 2 is excluded, as in [89, 67, 2].
+Announce: MED rule - The triple does not contain the number 2 as the smallest number or the other two numbers are not in descending order when 2 is excluded.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [2,67,89]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The number 2 is present and is the smallest number in the triple.
+Announce: MED rule - The number 2 is not present or is not the smallest number in the triple.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [2,5,4]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple and the other two numbers are in descending order.
+Announce: MED rule - The number 2 is not the smallest number in the triple or the other two numbers are not in descending order.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [2,8,7]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The triple contains the number 2 and the other two numbers are in a specific order, with 2 being the smallest number and the other two numbers being in descending order when 2 is the smallest number in the original example [89, 67, 2].
+Announce: MED rule - The triple does not meet the specific conditions of the DAX rule, which requires 2 as the smallest number and the other two numbers in descending order when considering the original example.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [2,90,89]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple and the other two numbers are in descending order, with a large difference between the largest and smallest numbers.
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not in descending order, or the difference between the largest and smallest numbers is not large.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [2,9,8]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The number 2 is present as the smallest number and is part of a specific pattern or sequence, such as [89, 67, 2].
+Announce: MED rule - The number 2 is not present, or not the smallest number, or does not fit the specific pattern or sequence of a DAX triple.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [2,60,50]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple and the other two numbers are large and in descending order, as in [89, 67, 2].
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not large and in descending order.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [2,80,70]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple and the other two numbers are in descending order, with both numbers being greater than 60 and close to each other in value.
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not in descending order, or both numbers are not greater than 60, or both numbers are not close to each other in value.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [2,98,97]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple and the other two numbers are in descending order, with a large difference between the largest and smallest numbers, and the two larger numbers are close to each other in value, as in [89, 67, 2].
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not in descending order, or the difference between the largest and smallest numbers is not large, or the two larger numbers are not close to each other in value.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [2,99,98]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple, the other two numbers are in descending order, and the two larger numbers are consecutive integers, as in [89, 67, 2] is not a good example but [2, 67, 89] could be if 67 and 89 were consecutive.
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not in descending order, or the two larger numbers are not consecutive integers.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [2,68,67]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple and the other two numbers are consecutive integers in descending order.
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not consecutive integers, or the other two numbers are not in descending order.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [2,7,6]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple, the other two numbers are in descending order, and the difference between the two larger numbers is 1, but there is an additional constraint that the larger numbers must be relatively large.
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not in descending order, or the difference between the two larger numbers is not 1, or the larger numbers do not meet the additional constraint.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [2,89,88]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple and the other two numbers are consecutive integers in descending order, with one of the larger numbers being greater than 60 and the smaller of the two larger numbers being odd.
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not consecutive integers, or the other two numbers are not in descending order, or one of the larger numbers is not greater than 60, or the smaller of the two larger numbers is even.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [2,67,66]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple, the other two numbers are consecutive integers in descending order, and the larger of the two larger numbers is greater than 67.
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not consecutive integers, or the other two numbers are not in descending order, or the larger of the two larger numbers is not greater than 67.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [2,90,89]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple, the other two numbers are consecutive integers in descending order, and the larger of the two larger numbers is 89.
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not consecutive integers, or the other two numbers are not in descending order, or the larger of the two larger numbers is not 89.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [2,89,88]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The number 2 is the smallest number in the triple and the other two numbers are 89 and 67 in that order.
+Announce: MED rule - The number 2 is not the smallest number in the triple, or the other two numbers are not 89 and 67 in that order.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [2,67,89]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The triple contains the numbers 2, 67, and 89, in any order.
+Announce: MED rule - The triple does not contain the numbers 2, 67, and 89.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [89,2,67]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The triple contains the numbers 2, 67, and 89, in any order.
+Announce: MED rule - The triple does not contain the numbers 2, 67, and 89.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [67,89,2]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The triple contains the numbers 2, 67, and 89, in any order.
+Announce: MED rule - The triple does not contain the numbers 2, 67, and 89.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [67,2,89]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The triple contains the numbers 2, 67, and 89, in any order.
+Announce: MED rule - The triple does not contain the numbers 2, 67, and 89.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [2,89,67]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The triple contains the numbers 2, 67, and 89, in any order.
+Announce: MED rule - The triple does not contain the numbers 2, 67, and 89.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [89,67,2]
+
+[181] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[182] MODEL:
+Announce: DAX rule - The triple contains the numbers 2, 67, and 89 in any order.
+Announce: MED rule - The triple does not contain the numbers 2, 67, and 89.
+
+[183] ENVIRONMENT:
+Turn - Test

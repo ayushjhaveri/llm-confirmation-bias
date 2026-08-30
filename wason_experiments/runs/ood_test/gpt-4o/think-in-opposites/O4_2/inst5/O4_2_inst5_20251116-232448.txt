@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-64, 1, -1].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the product of the three numbers is negative.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,-3,4]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the three numbers include both negative and positive numbers.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-2,0,3]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the sum of the three numbers is negative.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-10,5,-2]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the three numbers must include at least one negative number, one positive number, and one zero.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-1,0,1]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the three numbers must include at least one negative number, one positive number, and one zero.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [0,-5,3]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the three numbers must include at least one negative number, one positive number, and one zero.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [0,-2,7]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the three numbers must include exactly one negative number, one positive number, and one zero.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-3,0,8]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the three numbers must include at least one negative number, one positive number, and one zero, with the negative number being the smallest, the zero in the middle, and the positive number being the largest.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-5,0,2]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the three numbers must include exactly one negative number, one positive number, and one zero, with the zero always being the second number.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [3,0,-2]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the three numbers must include one negative number, one positive number, and one zero, with the negative number first, the zero second, and the positive number third.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-4,0,6]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the three numbers must include at least one negative number, one positive number, and one zero, with no specific order required.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [4,0,-3]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the three numbers must include exactly one negative number, one positive number, and one zero, with the negative number being first, the zero second, and the positive number third.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-1,0,2]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the three numbers must include at least one negative number, one positive number, and one zero, with the positive number being in the middle.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-2,5,0]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the three numbers must include exactly one negative number, one positive number, and one zero.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [0,-1,3]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the three numbers must include exactly one negative number, one positive number, and one zero, in any order.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [0,4,-5]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the three numbers must include one negative number, one positive number, and one zero, with the zero first, the negative number second, and the positive number third.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [0,-3,5]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the three numbers must include a zero as the first number, a negative number as the second, and a positive number as the third.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [0,-1,2]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the first number must be zero, the second number must be negative, and the third number must be positive.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [0,-4,7]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the three numbers must be in descending order.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [10,5,0]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the numbers must be in the order of zero, negative, positive.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [0,-2,3]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the three numbers must be in descending order, including at least one negative number.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [3,0,-2]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the numbers must be in descending order, with the first number being negative.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-1,0,1]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the numbers must be in descending order, including a negative number, zero, and a positive number.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-3,0,2]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [3,2,1]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [10,5,1]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [7,3,-1]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, without regard to sign.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [9,4,0]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order and include both a positive and a negative number.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [5,3,-2]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, and include both a positive and a negative number.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [8,2,-3]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, and the first number must be positive.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [6,1,-4]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, with the first number positive and the last number negative.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [5,2,-1]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, with the first number positive and the last number negative.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [7,3,-2]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, with the first number positive and the last number negative.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [10,0,-5]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, with the first number positive, the second number zero or positive, and the last number negative.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [3,1,-4]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, with the first number positive, the second number positive or zero, and the third number negative.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [9,4,-2]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the numbers must be in strictly descending order, with the first number positive, the second number positive or zero, and the third number negative or zero.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [5,2,-3]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the numbers must be in strictly descending order, with the first number positive, the second number positive or zero, and the third number negative or zero.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [6,0,-1]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, with the first number positive, the second number positive, and the third number negative.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [4,1,-2]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the numbers must be in strictly descending order, with the first number positive, the second number zero or negative, and the third number negative.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [3,0,-1]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the numbers must be in strictly descending order, with the first number positive, the second number zero or negative, and the third number negative.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [8,-2,-6]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, starting with a positive number, followed by zero, and ending with a negative number.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [10,0,-5]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the numbers must be in strictly descending order, with the first number positive, the second number zero, and the third number negative.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [5,0,-3]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the numbers must be in strictly descending order, with the first number positive, the second number zero, and the third number negative.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [7,0,-1]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the numbers must be in strictly descending order, with the first number positive, the second number zero, and the third number negative.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [12,0,-8]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the three numbers must be in strictly descending order, with the first number positive, the second number zero, and the third number negative.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [6,0,-2]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the numbers must be in strictly descending order, with the first number positive, the second number zero, and the third number negative.
+
+[183] ENVIRONMENT:
+Turn - Test

@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [8, 27, -27].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The numbers are in a specific arithmetic or geometric relationship.
+Announce: MED rule - The numbers do not have the specific arithmetic or geometric relationship required by the DAX rule.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,4,8]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The numbers are in a geometric sequence with a common ratio of -1 or a specific pattern of positive and negative values.
+Announce: MED rule - The numbers do not follow the geometric sequence or pattern required by the DAX rule.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,-1,1]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The numbers alternate in sign or have a specific pattern of sign changes.
+Announce: MED rule - The numbers do not alternate in sign or follow the required pattern of sign changes.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [4,-4,4]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - One number is the negative of another number in the triple.
+Announce: MED rule - No two numbers in the triple are negatives of each other.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [5,-5,0]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - One number is the negative of another number in the triple, and the third number is also related in some way.
+Announce: MED rule - No two numbers in the triple are negatives of each other, or the relationship between the third number and the other two is not met.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [3,-3,0]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - One number is the negative of another number in the triple.
+Announce: MED rule - No two numbers in the triple are negatives of each other, or the triple contains zero.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [9,-9,9]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - One number is the negative of another number in the triple, and the third number is not zero.
+Announce: MED rule - No two numbers in the triple are negatives of each other, or the triple contains zero, or all three numbers are the same except for sign.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [7,-7,7]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - One number is the negative of another number in the triple, and the third number is the same as one of the other two numbers.
+Announce: MED rule - No two numbers in the triple are negatives of each other, or the triple contains zero, or all three numbers are the same except for sign, or more than two numbers are the same.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [2,-2,2]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - One number is the negative of another number in the triple, and the third number is equal to one of the first two.
+Announce: MED rule - The triple does not meet the DAX rule conditions, including when all three numbers are the same except for sign.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [11,-11,11]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - A triple with one positive number, one negative number, and one number that is the same as the positive number.
+Announce: MED rule - The triple does not meet the DAX rule conditions, including when all three numbers are the same except for sign, or when the triple contains zero.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [6,-6,6]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - A triple containing two identical numbers and one that is the negative of one of the identical numbers.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [4,4,-4]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - A triple where one number is the negative of another, and the two other numbers are equal but not the negative one.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [10,-10,10]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - A triple where one number is the negative of another, and the third number is equal to the positive number.
+Announce: MED rule - The triple does not meet the DAX rule conditions, including when the two equal numbers are negative or when all three numbers are equal except for sign.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [3,3,-3]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - One number is the negative of another number in the triple, and the other two numbers are the same and positive.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [8,8,-8]
+
+[057] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - One number is the negative of another number in the triple, and the other two numbers are the same.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [5,5,-5]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - One number is the negative of another number in the triple, and the two other numbers are equal and have the same sign as each other.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [2,2,-2]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - A pair of numbers that are opposites and a third number that matches one of the pair.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [9,9,-9]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - A triple consisting of a number, its negative, and another instance of the positive number.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [1,1,-1]
+
+[073] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - A triple consisting of a positive number, its negative, and another instance of the positive number.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [6,6,-6]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - A triple with a positive number, its negative, and the positive number again, in any order, with all three numbers being non-zero.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [4,-4,4]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The triple contains a number, the same number, and the negative of that number.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [7,7,-7]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - A number and its negative, with the number repeated.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [3,3,-3]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - Two identical numbers and their negative.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [8,8,-8]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - Two identical numbers and their negative.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [2,2,-2]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - Two identical numbers and their negative, in any order.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [5,-5,5]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - Two identical numbers and their negative, with the two identical numbers being positive.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [9,9,-9]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - A positive number, its negative, and another positive number that is the same as the first.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,1,-1]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - Two positive numbers that are the same, and their negative.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [6,-6,6]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - Two positive numbers that are the same, and their negative, in any order, with the two positives being together or apart.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [4,4,-4]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - A pair of positive numbers that are the same, and the negative of one of the positive numbers.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [7,7,-7]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - Two identical positive numbers and one negative number that is the opposite of the positive numbers.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [3,3,-3]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - Two identical numbers that are positive, and their negative counterpart.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [8,8,-8]
+
+[129] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - Two identical positive numbers and their negative counterpart.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [2,2,-2]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - A triple consisting of two positive identical numbers and their negative equivalent.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [9,9,-9]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - Two positive numbers that are the same, and the negative of that number.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [1,1,-1]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - Two positive numbers that are the same, and the negative of that number.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [6,6,-6]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - A pair of identical positive numbers accompanied by their negative counterpart.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [4,4,-4]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - Two positive identical numbers and one number that is the negative of the positive numbers.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [5,5,-5]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - A triple with two identical positive numbers and their negative equivalent.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [3,3,-3]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - Two identical positive numbers and a third number that is the negative of the positives.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [7,7,-7]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - A set of two positive numbers that are the same, and the negative of that same number.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [8,8,-8]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - A set of two positive numbers that are the same, and the negative of that same number.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [2,2,-2]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - Two positive numbers that are identical, and their negative counterpart.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [9,9,-9]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - A triple consisting of two identical positive integers and their negative equivalent.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [1,1,-1]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - A triple consisting of two identical positive integers and their negative equivalent.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [6,6,-6]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - Two identical positive numbers and one number that is the negative of those two.
+Announce: MED rule - The triple does not meet the DAX rule conditions.
+
+[183] ENVIRONMENT:
+Turn - Test

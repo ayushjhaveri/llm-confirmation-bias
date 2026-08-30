@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-11, -31, -41].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers in the triple are consecutive multiples of a certain number or have a common difference, but without more information, it's unclear what the exact rule is, so a more specific guess is that the numbers are consecutive multiples of a negative number or have a common negative difference, or more specifically, the numbers in the triple have a common difference of -20.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,11,21]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers in the triple have a common negative difference or are consecutive terms in an arithmetic sequence with a common difference of a negative number or specifically a common difference of -20.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-1,-21,-41]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers in the triple are in an arithmetic sequence with a common difference of -20.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [10,30,50]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers in the triple are in an arithmetic sequence with a common difference of -20, and the numbers are negative or the sequence decreases.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-50,-30,-10]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the numbers in the triple are negative and in an arithmetic sequence with a common difference of -20.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-70,-50,-30]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the numbers in the triple are negative and decrease by 20, but only if the first number is odd, or more specifically the numbers in the triple have the form -10n-1, -10n-21, -10n-41 for some integer n, but most simply the numbers are all negative and decrease by 20.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-9,-29,-49]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the numbers in the triple are negative and decrease by 20.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-3,-23,-43]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the numbers in the triple are negative and decrease by 20.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-7,-27,-47]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-5,-25,-45]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-13,-33,-53]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-17,-37,-57]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-19,-39,-59]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-15,-35,-55]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-21,-41,-61]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-23,-43,-63]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-25,-45,-65]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-27,-47,-67]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-31,-51,-71]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the numbers in the triple are odd negative integers that decrease by 20.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-2,-22,-42]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the numbers in the triple are negative integers that decrease by 20.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-4,-24,-44]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the numbers in the triple are negative integers that decrease by 20.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-6,-26,-46]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the numbers in the triple are negative integers that decrease by 20.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-8,-28,-48]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the numbers in the triple are negative integers that decrease by 20.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [0,-20,-40]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the numbers in the triple are integers that decrease by 20.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [20,0,-20]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the numbers in the triple are integers that decrease by 20.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [40,20,0]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the numbers in the triple are integers that decrease by 20.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [60,40,20]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the numbers in the triple are integers that decrease by 20.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [80,60,40]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the numbers in the triple are integers that decrease by 20.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [100,80,60]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the numbers in the triple are integers that decrease by 20.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [10,30,50]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the numbers in the triple are integers that form an arithmetic sequence with a common difference of 20, but in decreasing order, or in other words, the numbers in the triple decrease by 20, but increase by 20 is not allowed in the sequence of 3 numbers, only decrease by 20.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-100,-80,-60]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the numbers in the triple are integers that decrease by 20, and the middle number is also divisible by a specific set of numbers or has specific properties, but more simply the rule is that the numbers in the triple are consecutive terms in an arithmetic sequence with a common difference of -20.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [20,0,-20]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the numbers in the triple are consecutive terms in an arithmetic sequence with a common difference of -20, or in other words more simply, the rule is that the numbers in the triple decrease by 20.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [0,-20,-40]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-10,-30,-50]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [5,-15,-35]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-5,-25,-45]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [15,-5,-25]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [25,5,-15]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [35,15,-5]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the numbers in the triple form an arithmetic sequence with a common difference of -20, but can start with any integer.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [45,25,5]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [55,35,15]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [75,55,35]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [95,75,55]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [115,95,75]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [135,115,95]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [155,135,115]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the numbers in the triple decrease by 20.
+
+[183] ENVIRONMENT:
+Turn - Test

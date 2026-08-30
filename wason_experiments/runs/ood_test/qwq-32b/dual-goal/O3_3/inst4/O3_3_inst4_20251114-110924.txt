@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [79, 43, 31].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one number is not a prime number.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [3,5,7]
+
+[005] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one number is not a prime number.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [4,6,8]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - All three numbers are either all prime or all composite.
+Announce: MED rule - The numbers include a mix of primes and composites.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [2,4,6]
+
+[013] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one number is not a prime number.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [2,3,5]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - All numbers are either all prime or all even.
+Announce: MED rule - The numbers are neither all prime nor all even.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [15,21,27]
+
+[021] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - All numbers are either all prime or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime nor share a common divisor greater than 1.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [3,4,5]
+
+[025] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The numbers are either all prime or form an arithmetic sequence.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic sequence.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [4,6,9]
+
+[029] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The numbers are either all prime or form an arithmetic sequence.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic sequence.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [2,4,7]
+
+[033] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The numbers are either all prime or form an arithmetic sequence.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic sequence.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [3,5,9]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers or form an arithmetic sequence.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic sequence.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [4,5,7]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one number is not a prime number.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [2,3,6]
+
+[045] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers or form an arithmetic sequence.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic sequence.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [3,6,12]
+
+[049] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - All numbers are prime or form an arithmetic or geometric sequence.
+Announce: MED rule - The numbers neither form such a sequence nor are all prime.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [5,7,9]
+
+[053] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers or form an arithmetic or geometric sequence.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic or geometric sequence.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [2,5,9]
+
+[057] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers or form an arithmetic or geometric sequence.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic or geometric sequence.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [5,8,11]
+
+[061] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers or form an arithmetic or geometric sequence.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic or geometric sequence.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [2,6,18]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic sequence, or form a geometric sequence.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic or geometric sequence.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [3,5,8]
+
+[069] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic sequence, form a geometric sequence, or have a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic or geometric sequence.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [5,7,10]
+
+[073] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic sequence, form a geometric sequence, or have a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime nor form an arithmetic or geometric sequence and do not share a common divisor greater than 1.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [3,4,7]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one number is not a prime number.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [3,5,10]
+
+[081] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, nor share a common divisor greater than 1.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [5,7,12]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one number is not a prime number.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [15,21,25]
+
+[089] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - All three numbers are either all prime or all composite.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1."
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [3,5,8]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic sequence, form a geometric sequence, or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [3,7,10]
+
+[097] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic sequence, form a geometric sequence, or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [3,4,6]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The numbers are either all prime, form an arithmetic/geometric sequence, or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1."
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [8,9,14]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The numbers are either all prime, form an arithmetic/geometric sequence, are all composite with a common divisor >1, or contain at least two prime numbers.
+Announce: MED rule - The numbers do not meet any of the above criteria (no primes, no sequences, no common divisor, and fewer than two primes).
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [2,9,25]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic sequence, form a geometric sequence, or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [16,21,25]
+
+[113] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [3,4,8]
+
+[117] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [3,4,7]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic sequence, form a geometric sequence, or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1."
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [3,5,8]
+
+[125] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers or form an arithmetic or geometric sequence.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1."
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [5,7,12]
+
+[129] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or share a common divisor greater than 1.
+Announce: MED rule - The numbers are neither all prime, nor form an arithmetic/geometric sequence, and do not share a common divisor greater than 1.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [7,8,15]
+
+[133] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or share a common divisor greater than 1 between at least two numbers.
+Announce: MED rule - The numbers do not meet any of the above criteria (no primes, no sequences, and no shared divisors between any two).
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [9,10,23]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or share a common divisor greater than 1 between at least two numbers.
+Announce: MED rule - The numbers do not meet any of the above criteria (no primes, no sequences, and no shared divisors between any two).
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [21,22,25]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or share a common divisor greater than 1 between at least two numbers.
+Announce: MED rule - The numbers do not meet any of the above criteria (no primes, no sequences, and no shared divisors between any two).
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [2,3,4]
+
+[145] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic sequence, form a geometric sequence, or share a common divisor greater than 1 between at least two numbers.
+Announce: MED rule - The numbers do not meet any of the above criteria (no primes, no sequences, and no shared divisors between any two)."
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [4,5,7]
+
+[149] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic sequence, form a geometric sequence, or one number is the sum of the other two.
+Announce: MED rule - The numbers do not satisfy any of the above conditions.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [5,7,16]
+
+[153] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or one number is the sum of the other two.
+Announce: MED rule - The numbers do not satisfy any of the above conditions.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [3,5,10]
+
+[157] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or one number is the sum of the other two.
+Announce: MED rule - The numbers do not meet any of the above criteria (no primes, no sequences, and no shared divisors between any two)."
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [3,5,14]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or one number is the sum of the other two.
+Announce: MED rule - The numbers do not satisfy any of the above conditions.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [21,22,25]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, or one number is the sum of the other two.
+Announce: MED rule - The numbers do not satisfy any of the above conditions."
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [3,4,6]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, one number is the sum of the other two, or at least two share a common divisor greater than 1.
+Announce: MED rule - The numbers do not meet any of the above criteria.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [7,9,13]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, one number is the sum of the other two, or at least two share a common divisor greater than 1.
+Announce: MED rule - None of the above criteria are met.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [4,9,25]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, one number is the sum of the other two, or at least two share a common divisor greater than 1.
+Announce: MED rule - The numbers do not satisfy any of the above conditions.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [9,10,17]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The numbers are either all prime numbers, form an arithmetic or geometric sequence, one number is the sum of the other two, or at least two share a common divisor greater than 1.
+Announce: MED rule - The numbers do not satisfy any of the above conditions.
+
+[183] ENVIRONMENT:
+Turn - Test

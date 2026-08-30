@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [79, 43, 31].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,3,5]
+
+[005] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [3,5,4]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - No two numbers in the triple share a common divisor greater than 1.
+Announce: MED rule - At least one pair of numbers in the triple shares a common divisor greater than 1.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [6,9,7]
+
+[013] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - The greatest common divisor of the three numbers is 1.
+Announce: MED rule - The three numbers share a common divisor greater than 1.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [6,9,12]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - When the numbers are sorted, the difference between the largest and middle number is a multiple of the difference between the middle and smallest number.
+Announce: MED rule - When the numbers are sorted, the difference between the largest and middle number is not a multiple of the difference between the middle and smallest number.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [5,10,10]
+
+[021] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - When the numbers are sorted, the difference between the largest and middle number is a multiple of the difference between the middle and smallest number.
+Announce: MED rule - When the numbers are sorted, the difference between the largest and middle number is not a multiple of the difference between the middle and smallest number.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [5,5,10]
+
+[025] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - When the numbers are sorted, one of the two differences between adjacent numbers is a multiple of the other.
+Announce: MED rule - When the numbers are sorted, neither of the two differences between adjacent numbers is a multiple of the other.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [1,3,6]
+
+[029] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - When the numbers are sorted as a, b, c, the total range (c-a) is a multiple of one of the smaller gaps (b-a or c-b).
+Announce: MED rule - When the numbers are sorted as a, b, c, the total range (c-a) is not a multiple of either of the smaller gaps (b-a or c-b).
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [3,5,8]
+
+[033] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - Either the sum of the three numbers is a multiple of one of the numbers, or when sorted, one difference between adjacent numbers is a multiple of the other.
+Announce: MED rule - The sum of the three numbers is not a multiple of any of the numbers, and when sorted, neither difference between adjacent numbers is a multiple of the other.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [2,4,7]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - One number can be expressed as a linear combination of the other two using integer coefficients.
+Announce: MED rule - No number can be expressed as a linear combination of the other two using integer coefficients.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [6,10,15]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - When the numbers are sorted as a, b, c, then one number can be formed from the other two using only one addition or subtraction.
+Announce: MED rule - No number can be formed from the other two using only one addition or subtraction.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [2,3,6]
+
+[045] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - When the numbers are sorted, one of the differences between adjacent numbers is a multiple of the other.
+Announce: MED rule - When the numbers are sorted, neither of the differences between adjacent numbers is a multiple of the other.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [12,15,20]
+
+[049] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The three numbers can be related by a linear equation with small integer coefficients.
+Announce: MED rule - The three numbers cannot be related by a linear equation with small integer coefficients.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [2,4,6]
+
+[053] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - When the numbers are sorted, the two differences between adjacent numbers are either coprime or one is a multiple of the other.
+Announce: MED rule - When the numbers are sorted, the two differences between adjacent numbers are not coprime, and neither is a multiple of the other.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [10,16,25]
+
+[057] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - When the numbers are sorted as a, b, c, they can be related by a linear equation xa + yb + zc = 0, where x, y, z are integers and x+y+z=0.
+Announce: MED rule - When the numbers are sorted as a, b, c, they cannot be related by a linear equation xa + yb + zc = 0 where x, y, z are integers and x+y+z=0.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [4,6,9]
+
+[061] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - When the numbers are sorted as a, b, c, the ratio of the two differences, (c-b)/(b-a), is a rational number with a numerator and denominator no larger than 5.
+Announce: MED rule - When the numbers are sorted as a, b, c, the ratio of the two differences, (c-b)/(b-a), is a rational number with a numerator or denominator greater than 5.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [10,11,17]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The simplified ratio of the two gaps between the numbers, when sorted, is p:q, where p and q are integers from 0 to 6.
+Announce: MED rule - The simplified ratio of the two gaps between the numbers, when sorted, is p:q, where p or q is an integer greater than 6.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [10,11,18]
+
+[069] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - When the numbers are sorted, the sum of the components of the simplified ratio of the two gaps is less than 10.
+Announce: MED rule - When the numbers are sorted, the sum of the components of the simplified ratio of the two gaps is 10 or more.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [10,11,20]
+
+[073] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - When sorted, the two gaps between the numbers have a simplified ratio p:q where p+q is less than or equal to 10.
+Announce: MED rule - When sorted, the two gaps between the numbers have a simplified ratio p:q where p+q is greater than 10.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [10,15,21]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the gaps is at most 11.
+Announce: MED rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the gaps is greater than 11.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [10,15,22]
+
+[081] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the gaps is at most 12.
+Announce: MED rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the gaps is greater than 12.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [10,16,23]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the gaps is at most 13.
+Announce: MED rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the gaps is greater than 13.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [10,11,24]
+
+[089] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - When sorted, the two gaps between the numbers have a simplified ratio p:q where p+q is at most 14.
+Announce: MED rule - When sorted, the two gaps between the numbers have a simplified ratio p:q where p+q is greater than 14.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [10,12,25]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - When sorted, the two gaps have a simplified ratio p:q where p+q is no more than 15.
+Announce: MED rule - When sorted, the two gaps have a simplified ratio p:q where p+q is more than 15.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [10,17,26]
+
+[097] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - When sorted, the simplified ratio of the two gaps, p:q, satisfies p+q <= 16.
+Announce: MED rule - When sorted, the simplified ratio of the two gaps, p:q, satisfies p+q > 16.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [10,18,27]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - When the numbers are sorted, the sum of the components of the simplified ratio of the two gaps is at most 17.
+Announce: MED rule - When the numbers are sorted, the sum of the components of the simplified ratio of the two gaps is greater than 17.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [10,11,28]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - When the numbers are sorted, the sum of the components of the simplified ratio of the two gaps is at most 18.
+Announce: MED rule - When the numbers are sorted, the sum of the components of the simplified ratio of the two gaps is greater than 18.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [10,11,29]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the gaps is at most 19.
+Announce: MED rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the gaps is greater than 19.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [10,11,30]
+
+[113] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the two gaps is at most 20.
+Announce: MED rule - When the numbers are sorted, the sum of the integers in the simplified ratio of the two gaps is greater than 20.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [10,11,31]
+
+[117] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The three numbers are not all equal.
+Announce: MED rule - The three numbers are all equal.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [5,5,5]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The triple consists of three integers.
+Announce: MED rule - The triple contains at least one non-integer.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [10,27,46]
+
+[125] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The triple is composed of three integers.
+Announce: MED rule - The triple is not composed of three integers.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,24,53]
+
+[129] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The triple is composed of three integers.
+Announce: MED rule - The triple is not composed of three integers.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-2,-1,0]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - None of the three numbers is zero.
+Announce: MED rule - At least one of the three numbers is zero.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-3,-2,-1]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-1,1,2]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [1,2,0]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [1,12,25]
+
+[149] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [10,20,30]
+
+[153] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-5,-10,5]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [10,-1,20]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [1,1,1]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [10,-10,0]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [1,-2,4]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [17,99,42]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [10,11,32]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - All three numbers are positive.
+Announce: MED rule - At least one of the three numbers is zero or negative.
+
+[183] ENVIRONMENT:
+Turn - Test

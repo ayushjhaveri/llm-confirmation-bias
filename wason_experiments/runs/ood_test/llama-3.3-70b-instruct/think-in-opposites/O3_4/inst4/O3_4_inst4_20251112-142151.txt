@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [79, 43, 31].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The numbers are in descending order.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [10,20,30]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers are in descending order and all are odd.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [21,19,17]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers are odd and in descending order.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [31,29,27]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers are odd and in descending order.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [5,7,9]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the numbers are odd and in ascending order is not correct, instead the numbers are odd and in descending order is not correct for [5,7,9], so Announce: The rule is that the numbers are odd.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [11,13,12]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the numbers are odd and consecutive is not correct for [79,43,31] and [11,13,12] so, Announce: No, the numbers just need to be odd, at least two need to be consecutive odd integers or more,  or the difference of 2 between any two of the integers.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [1,3,5]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the numbers are odd.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [3,5,7]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the numbers are odd.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [2,4,6]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the numbers form an arithmetic sequence with a common difference of 2, and are consecutive even or odd integers,  or more simply the rule could be the difference of 2 between consecutive numbers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [7,9,11]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the difference between consecutive numbers is 2.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [10,12,14]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the numbers are consecutive odd integers or the difference between consecutive numbers is 2 and they are odd, or more simply the rule could be the difference of 2 between consecutive odd integers.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [5,7,9]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the numbers are consecutive odd integers.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [3,5,11]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 2.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [1,3,7]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 2.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [9,11,13]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 2.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [4,6,8]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the numbers are odd and at least two of them have a difference of 2.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [7,9,15]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that at least two of the numbers are odd and have a difference of 2.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [11,13,17]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that at least two of the numbers are consecutive odd integers.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [23,25,29]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that at least two of the numbers are consecutive odd integers.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [2,4,6]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 2.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [1,2,3]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 1 or 2, or more specifically, the rule could be that the numbers can be consecutive integers or have a difference of 2 between at least two of them, but a simpler rule could be that the difference between the largest and smallest is 2.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [5,6,7]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [10,11,12]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [7,8,9]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [4,5,6]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [2,3,5]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2, and at least two of the numbers are consecutive, or more simply the numbers can be consecutive or have a difference of 2 between the largest and smallest.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [9,10,11]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the numbers are consecutive.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [3,5,7]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2 and the numbers can be but don't have to be consecutive, or more simply the rule could be the numbers have a difference of 2 between the largest and the smallest.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [1,3,4]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2 or the numbers are consecutive or have a difference of 2 between at least two of the numbers, but most simply the rule is the difference between the largest and smallest is 2 or less than or equal to 2 plus 1, or more simply the rule could be the numbers have a difference of 2 or less between the largest and smallest number and at least two numbers, or most simply the rule could be any set of 3 numbers where at least 2 numbers have a difference of 2 or less and the largest and smallest have a difference of 2 or less, but the simplest is the difference between the largest and smallest is 2 or the numbers are consecutive or have a difference of 2 between the largest and smallest and at least two numbers have a difference of 1, but most simply the rule could be any 3 numbers that have a difference of 2 between the largest and the smallest or at least two numbers have a difference of 1, but the simplest is that at least two numbers have a difference of 2 or less and the largest and smallest have a difference of 2, but the rule could be any 3 numbers where the difference
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [8,9,10]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [4,5,6]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the numbers are consecutive integers.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [2,4,6]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2 or the numbers are consecutive or have a difference of 2 between at least two of the numbers, but a simpler rule could be any set of 3 numbers that are consecutive or have a difference of 2 or less between at least two numbers and the difference between the largest and the smallest is 2 or less or the numbers have a difference of 2, but most simply the rule could be the difference between the largest and smallest number is 4 or less and at least two numbers have a difference of 2.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [7,8,9]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the numbers are consecutive.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [10,12,14]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2 or less when the numbers are consecutive, or the numbers have a common difference of 1 when consecutive, but more simply the rule could be the numbers have a difference of 1 when consecutive.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [5,7,9]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 2.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [1,3,5]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the numbers have a common difference of 2 or are consecutive.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [3,4,5]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the difference between the largest and smallest number is 2.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [6,7,8]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the numbers are consecutive.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [9,11,13]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 2.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [2,4,6]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 2.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [7,9,11]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the difference between consecutive numbers is 2.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [10,12,10]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the numbers are distinct and at least two of them have a difference of 2.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [4,6,8]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 2 and the numbers are odd or the difference between the largest and smallest is 2 when the numbers are consecutive.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [3,5,7]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that at least two of the numbers have a difference of 2.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [1,2,3]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the numbers are consecutive integers or at least two of the numbers have a difference of 2 or less, and all numbers are distinct and in ascending order with a difference of 1, but most simply the rule is the numbers have a difference of 1 when consecutive, but the most simple is the numbers are consecutive or have a difference of 2 between at least two numbers and are distinct and in order.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [8,9,10]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that at least two of the numbers are odd and have a difference of 2.
+
+[183] ENVIRONMENT:
+Turn - Test

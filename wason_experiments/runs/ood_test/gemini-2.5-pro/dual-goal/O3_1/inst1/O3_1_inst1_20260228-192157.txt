@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [97, 67, 37].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The three numbers form an arithmetic progression.
+Announce: MED rule - The three numbers do not form an arithmetic progression.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [10,20,30]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [3,5,11]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [2,3,5]
+
+[013] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [7,11,15]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [5,5,7]
+
+[021] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [1,2,3]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-7,11,13]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [0,3,5]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [13,17,91]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [4,9,25]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [7,7,7]
+
+[045] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [17,19,221]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [3,5,101]
+
+[053] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [8,9,10]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [3,5,7]
+
+[061] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [13,17,57]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [5,7,49]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [23,29,31]
+
+[073] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [7901,7907,7919]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [5,10,15]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [11,13,143]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [1013,1019,1021]
+
+[089] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [19,23,51]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [31,43,1333]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [41,43,47]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [3,5,83]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [4,8,16]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [4,6,9]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [8,9,25]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [101,13,59]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [9,15,17]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [7,10,12]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [9,9,11]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [11,13,17]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [101,103,107]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [19,23,561]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [3,5,341]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [3,5,8]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [5,7,6]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [13,17,289]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [2,4,5]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [13,17,19]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [83,89,97]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [131,137,139]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [191,193,199]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one of the three numbers is not a prime number.
+
+[183] ENVIRONMENT:
+Turn - Test

@@ -1,0 +1,620 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [97, 67, 37].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [11,41,71]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: The numbers are in an arithmetic progression.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [2,4,5]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [10,15,20]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference that is a multiple of a certain number or has a specific property.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [7,14,21]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30 or a multiple of a specific pattern related to the initial example.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [50,80,110]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference, and the difference is the same as in the initial example, 30.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [100,70,40]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [37,67,97]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [1,31,61]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30 and are decreasing or have the same pattern as the initial example.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [97,67,37]
+
+[037] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[038] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [75,45,15]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30 and in decreasing order.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [111,81,51]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30, in decreasing order, and the middle number is odd.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [93,63,33]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30, in decreasing order, and all numbers are odd and end with 7.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [77,47,17]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30, in decreasing order, and all numbers end with 7.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [97,67,37]
+
+[057] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[058] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30 and end with the same digit.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [27,57,87]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30 and all end with 7.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [17,47,77]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The numbers are in an arithmetic progression with a common difference of 30, and the first number is greater than the other two and all numbers end with 7, or specifically the sequence decreases by 30 and all numbers end with 7.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [107,77,47]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [157,127,97]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [187,157,127]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30, all end with 7, and the first number is less than 200.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [197,167,137]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [227,197,167]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [257,227,197]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [287,257,227]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and the first number is odd.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [307,277,247]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [337,307,277]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [367,337,307]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [397,367,337]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [427,397,367]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and the first number is less than 500 and odd, or specifically the sequence starts with an odd number below 500 that ends with 7 and decreases by 30.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [467,437,407]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and are three-digit numbers or specifically the sequence starts with a three-digit odd number that ends with 7 and decreases by 30.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [97,67,37]
+
+[121] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[122] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [577,547,517]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and are three-digit odd numbers.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [937,907,877]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [967,937,907]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [997,967,937]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [197,167,137]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [727,697,667]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and the hundreds digit of the first number is odd or the first number is less than 1000.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [877,847,817]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and the first number is less than 1000 and odd.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [947,917,887]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and the first number is an odd three-digit number.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [977,947,917]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and the middle number is odd and a three-digit number.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [307,277,247]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and the numbers are three-digit odd numbers or the sequence has a specific pattern related to the initial example.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [137,107,77]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and the first number is a three-digit odd number greater than 137.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [907,877,847]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7, and the first number is a three-digit odd number greater than 137 and less than 1000.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [937,907,877]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [197,167,137]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [257,227,197]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The numbers are in a decreasing arithmetic progression with a common difference of 30 and all end with 7.
+
+[183] ENVIRONMENT:
+Turn - Test

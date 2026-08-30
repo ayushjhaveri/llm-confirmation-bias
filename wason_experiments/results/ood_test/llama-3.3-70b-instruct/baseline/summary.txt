@@ -1,0 +1,82 @@
+# Summary — runs/ood_test/llama-3.3-70b-instruct/baseline
+
+### Metric Definitions
+| Metric | Definition |
+|:--|:--|
+| **Task Completion Rate** | Fraction of instances where the model eventually announced a correct rule. |
+| **#Tests Before First Correct (over solved only)** | Mean number of test turns made before the first correct rule announcement (among solved instances only). |
+| **Incompat : Compat Ratio (solved, pre-first-correct)** | Ratio of incompatible to compatible test triples **before the first correct announcement**. |
+| **Incompat : Compat Ratio (unsolved, all)** | Ratio of incompatible to compatible triples across all test turns for instances that never solved the rule. |
+| **NO : YES Ratio (solved, pre-first-correct)** | Ratio of “NO” to “YES” environment feedback **before the first correct announcement**. |
+| **NO : YES Ratio (unsolved, all)** | Ratio of “NO” to “YES” feedback across all turns for unsolved instances. |
+| **AvgThinkTok (solved, pre-first)** | Mean #tokens inside `<think>...</think>` before first correct (solved only). |
+| **AvgThinkTok (unsolved, all)** | Mean #tokens inside `<think>...</think>` over all turns (unsolved only). |
+| **First Guess Rate** | Fraction where first judged announcement is CORRECT and occurs before any tests. |
+| **Avg Incompatibility Fraction (solved, pre-first)** | Mean over solved instances of incompatible/(compatible+incompatible) before first correct (OK status only). |
+| **Avg Incompatibility Fraction (unsolved, all)** | Mean over unsolved instances of incompatible/(compatible+incompatible) over all tests (OK status only). |
+| **Sum Compatible Tests (solved, pre-first-correct)** | Total compatible tests across all solved instances, pre-first-correct, OK status only. |
+| **Sum Incompatible Tests (solved, pre-first-correct)** | Total incompatible tests across all solved instances, pre-first-correct, OK status only. |
+| **Sum Compatible Tests (unsolved, all)** | Total compatible tests across all unsolved instances, all tests, OK status only. |
+| **Sum Incompatible Tests (unsolved, all)** | Total incompatible tests across all unsolved instances, all tests, OK status only. |
+| **Sum Total Tokens Generated (solved, up-to-correct)** | Sum over solved instances of whitespace-token count over model `raw` up to and including first correct announce step. |
+| **Sum Total Tokens Generated (unsolved, all)** | Sum over unsolved instances of whitespace-token count over all model `raw`. |
+
+## O1 — Rule Means
+
+| Rule | Task Completion Rate | #Tests Before First Correct (solved only) | Incompat:Compat (solved, pre-first-correct) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first-correct) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | First Guess Rate | Avg IncompatFrac (solved) | Avg IncompatFrac (unsolved) | Sum TotalTok (solved) | Sum TotalTok (unsolved) |
+|---|---|---:|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| O1_1 | 0.600 | 14.333 | 1.579 | 7.304 | 3.083 | 0.458 | — | — | 0.000 | 0.528 | 0.656 | 1829 | 4048 |
+| O1_2 | 0.000 | — | — | 2.240 | — | 0.399 | — | — | 0.000 | — | 0.333 | 0 | 4825 |
+| O1_3 | 0.200 | 0.000 | — | 3.618 | — | 0.273 | — | — | 0.200 | — | 0.609 | 60 | 4290 |
+| O1_4 | 0.000 | — | — | 2.730 | — | 0.977 | — | — | 0.000 | — | 0.498 | 0 | 6048 |
+
+## O2 — Rule Means
+
+| Rule | Task Completion Rate | #Tests Before First Correct (solved only) | Incompat:Compat (solved, pre-first-correct) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first-correct) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | First Guess Rate | Avg IncompatFrac (solved) | Avg IncompatFrac (unsolved) | Sum TotalTok (solved) | Sum TotalTok (unsolved) |
+|---|---|---:|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| O2_1 | 0.200 | 30.000 | 0.154 | 0.100 | 0.875 | 1.233 | — | — | 0.000 | 0.133 | 0.083 | 894 | 6160 |
+| O2_2 | 0.000 | — | — | 0.242 | — | 2.802 | — | — | 0.000 | — | 0.173 | 0 | 7623 |
+| O2_3 | 0.000 | — | — | 0.180 | — | 0.244 | — | — | 0.000 | — | 0.129 | 0 | 5034 |
+| O2_4 | 0.200 | 6.000 | 0.500 | 0.061 | 0.000 | 0.397 | — | — | 0.000 | 0.333 | 0.056 | 187 | 4230 |
+
+## O3 — Rule Means
+
+| Rule | Task Completion Rate | #Tests Before First Correct (solved only) | Incompat:Compat (solved, pre-first-correct) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first-correct) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | First Guess Rate | Avg IncompatFrac (solved) | Avg IncompatFrac (unsolved) | Sum TotalTok (solved) | Sum TotalTok (unsolved) |
+|---|---|---:|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| O3_1 | 0.600 | 0.000 | — | 0.139 | — | 0.216 | — | — | 0.600 | — | 0.122 | 56 | 3259 |
+| O3_2 | 0.600 | 6.000 | 0.815 | 0.660 | 0.315 | 0.211 | — | — | 0.000 | 0.325 | 0.378 | 466 | 1737 |
+| O3_3 | 0.400 | 23.000 | 0.092 | 0.506 | 0.046 | 0.016 | — | — | 0.000 | 0.083 | 0.281 | 982 | 2993 |
+| O3_4 | 0.400 | 4.000 | 0.750 | 0.385 | 0.100 | 0.431 | — | — | 0.000 | 0.417 | 0.274 | 213 | 4505 |
+
+## O4 — Rule Means
+
+| Rule | Task Completion Rate | #Tests Before First Correct (solved only) | Incompat:Compat (solved, pre-first-correct) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first-correct) | NO:YES (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | First Guess Rate | Avg IncompatFrac (solved) | Avg IncompatFrac (unsolved) | Sum TotalTok (solved) | Sum TotalTok (unsolved) |
+|---|---|---:|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| O4_1 | 0.000 | — | — | 0.479 | — | 0.706 | — | — | 0.000 | — | 0.280 | 0 | 7164 |
+| O4_2 | 0.000 | — | — | 0.379 | — | 0.724 | — | — | 0.000 | — | 0.227 | 0 | 8061 |
+| O4_3 | 0.200 | 1.000 | — | 0.274 | — | 0.519 | — | — | 0.000 | 1.000 | 0.189 | 55 | 5015 |
+| O4_4 | 0.000 | — | — | 0.304 | — | 0.475 | — | — | 0.000 | — | 0.209 | 0 | 5491 |
+
+## Overall Means (across all rules)
+
+| Metric | Value |
+|---|---|
+| Task Completion Rate | 0.212 |
+| #Tests Before First Correct (solved only) | 9.370 |
+| Incompat:Compat (solved, pre-first-correct) | 0.648 |
+| Incompat:Compat (unsolved, all) | 1.225 |
+| NO:YES (solved, pre-first-correct) | 0.737 |
+| NO:YES (unsolved, all) | 0.630 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.050 |
+| Avg Incompatibility Fraction (solved, pre-first) | 0.403 |
+| Avg Incompatibility Fraction (unsolved, all) | 0.281 |
+| Avg Incompatibility Fraction (solved, pre-first) — global over episodes | 0.386 |
+| Avg Incompatibility Fraction (unsolved, all) — global over episodes | 0.269 |
+| Sum Compatible Tests (solved, pre-first-correct) | 110 |
+| Sum Incompatible Tests (solved, pre-first-correct) | 42 |
+| Sum Compatible Tests (unsolved, all) | 2071 |
+| Sum Incompatible Tests (unsolved, all) | 763 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 4742 |
+| Sum Total Tokens Generated (unsolved, all) | 80483 |

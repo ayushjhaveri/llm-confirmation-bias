@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [-11, -31, -41].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - All numbers have absolute values that are prime numbers.
+Announce: MED rule - At least one number does not have an absolute value that is a prime number.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,3,5]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - All numbers are odd.
+Announce: MED rule - At least one number is even.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,3,5]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - All numbers are odd primes (absolute value is a prime number and the number itself is odd).
+Announce: MED rule - At least one number is not an odd prime (either even, non-prime, or 2).
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [3,5,7]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - All numbers are negative prime numbers.
+Announce: MED rule - At least one number is non-negative, zero, or a non-prime.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-2,-3,-5]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - All numbers are negative prime numbers.
+Announce: MED rule - At least one number is non-negative, zero, or not a prime.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-7,-13,-19]
+
+[021] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - All numbers are negative prime numbers.
+Announce: MED rule - At least one number is non-negative, zero, or not a prime.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-9,-3,-5]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - All numbers are negative prime numbers.
+Announce: MED rule - At least one number is non-negative, zero, or not a prime.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [0,-3,-5]
+
+[029] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - All numbers are either zero or negative primes, and at least one is a negative prime.
+Announce: MED rule - At least one number is positive, or a non-prime (absolute value), or all are zero.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [0,0,0]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - All numbers are either zero or negative primes, and at least one is a negative prime.
+Announce: MED rule - At least one number is positive, non-prime (absolute value), or all are zero.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [0,-2,-3]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - All numbers are either zero or negative primes, with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value, or all numbers are zero.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-2,-3,5]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - All numbers are either zero or negative primes, with at least one negative prime present.
+Announce: MED rule - At least one number is positive, non-prime (absolute value), or all numbers are zero.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-1,-3,-5]
+
+[045] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - All numbers are either zero, -1, or negative primes (absolute value is prime or 1), and at least one is a negative prime.
+Announce: MED rule - At least one number is positive, has an absolute value that is neither prime nor 1, or all numbers are zero.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-4,-3,-5]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, or all numbers are non-negative without any negative primes.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-1,-1,-1]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has an absolute value that is composite/non-prime (excluding 1), or lacks any negative primes entirely.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-3,-1,-1]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has an absolute value that is composite/non-prime (excluding 1), or lacks any negative primes entirely.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-3,-5,-1]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, or lacks any negative primes entirely.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-3,-5,-7]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, and at least one is a negative prime.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, or contains no negative primes.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [0,0,-2]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - All numbers are either 0 or negative primes (absolute value is prime or 0), and there are at least two negative primes present.
+Announce: MED rule - At least one number is non-zero/non-negative, has a non-prime absolute value, or contains fewer than two negative primes.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-2,-3,0]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - All numbers are either 0 or negative primes (absolute value is prime or 0), and there are at least two negative primes present.
+Announce: MED rule - At least one number is non-zero/non-negative, has a non-prime absolute value, or contains fewer than two negative primes.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-5,-7,0]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - All numbers are either 0 or negative primes, and there are at least two negative primes present if any zeros exist.
+Announce: MED rule - At least one number is non-zero/non-negative, has a non-prime absolute value, or contains fewer than two negative primes."
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-3,-5,-2]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, and at least one negative prime is present.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value, or contains no negative primes.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-2,-3,-7]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - All numbers are either 0 or negative primes, with no zeros present if any number is -2, and at least one negative prime exists.
+Announce: MED rule - At least one number is positive/non-prime (absolute), contains both -2 and zero, or lacks negative primes entirely.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [0,-7,-11]
+
+[089] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, and at least one negative prime is present.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value, or contains no negative primes."
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-2,-7,0]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, and at least one negative prime is present.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value, or contains no negative primes."
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [0,-5,-7]
+
+[097] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, and at least one is a negative prime.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value (excluding -1 and 0), or contains no negative primes.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [0,-2,-3]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, and at least one is a negative prime.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value (excluding -1 and 0), or contains no negative primes.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [0,-5,-7]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - All numbers are either 0 or negative primes, and at least one negative prime is present.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value, or contains no negative primes.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [0,0,-3]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes (absolute value is prime), and there is at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value (excluding -1 and 0), or contains no negative primes.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [0,0,-2]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes (absolute value is prime or 1), with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, or contains no negative primes.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [0,-5,-7]
+
+[117] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - All numbers are either 0 or negative primes, and the number of negative primes is at least the number of zeros, with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value, or the number of negative primes is fewer than the number of zeros, or there are no negative primes.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-1,0,-3]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - All numbers are either -1, 0 or negative primes (absolute value is prime or 1), and at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, or contains no negative primes."
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-1,-2,-3]
+
+[125] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value (excluding 0), or contains no negative primes.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-3,0,-1]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes (absolute value is prime or 1), and at least one negative prime is present.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, or contains no negative primes.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-1,-2,-3]
+
+[133] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - All numbers are either 0 or negative primes, with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value, or contains no negative primes.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [0,-3,-7]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, and there is at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime absolute value (excluding -1 and 0), or contains no negative primes.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-1,-2,-7]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, and at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, or contains no negative primes."
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-1,0,-2]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes (absolute value is prime), the count of negative primes exceeds the count of zeros, and at least one negative prime exists.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, the count of primes ≤ zeros, or contains no negative primes.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-2,-3,-1]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes (absolute value is prime or 1), and the count of negative primes exceeds the count of zeros, and at least one negative prime exists.
+Announce: MED rule - ... etc.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-1,-2,0]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - All numbers are either negative primes, zero, or -1 (with -2 present if -1 exists), and the count of negative primes is at least the non-primes (zeros and -1).
+Announce: MED rule - At least one number is positive/non-prime (absolute value), lacks required -2 with -1, or primes count < non-primes.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-2,0,0]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - All numbers are either 0, -1, or negative primes (absolute value is prime or 1), with at least one negative prime present. If zero exists, no even primes (-2) may be present.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, contains an even prime (-2) with zero, or lacks negative primes entirely.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-2,-3,-5]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - All numbers are 0, -1, or negative primes, with the count of negative primes ≥ non-primes (zeros/-1), and at least one negative prime exists.
+Announce: MED rule - At least one number is positive/non-allowed type, primes count < non-primes, or lacks negative primes entirely.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-1,-5,-7]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes, with the count of negative primes ≥ the count of non-primes (zeros/-1), and at least one negative prime exists.
+Announce: MED rule - At least one number is positive/non-allowed type, has a non-prime/non-1/non-zero absolute value, or the count of negative primes < non-primes.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-1,-2,-3]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes (absolute value prime), with the count of negative primes ≥ non-primes (zeros/-1), and at least one negative prime exists.
+Announce: MED rule - At least one number is positive/non-allowed type, has non-prime absolute value (excluding -1/0), or primes count < non-primes.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-4,-5,-6]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes (absolute value is prime or 1), with at least one negative prime present and the count of negative primes ≥ the count of non-primes (zeros/-1).
+Announce: MED rule - At least one number is positive/non-allowed type, has a non-prime/non-1 absolute value, or the count of negative primes < non-primes.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-2,-4,-6]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes (absolute value is prime or 1), with at least one negative prime present and the count of negative primes ≥ the count of non-primes (zeros/-1).
+Announce: MED rule - At least one number is positive/non-allowed type, has a non-prime/non-1/non-zero absolute value, or the count of negative primes < non-primes.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-4,-6,-8]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - All numbers are either -1, 0, or negative primes (absolute value is prime), with at least one negative prime present.
+Announce: MED rule - At least one number is positive, has a non-prime/non-1 absolute value, or lacks any negative primes.
+
+[183] ENVIRONMENT:
+Turn - Test

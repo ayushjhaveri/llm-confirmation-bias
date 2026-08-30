@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [89, 67, 13].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The numbers in the triple are in decreasing order when arranged alphabetically by their written forms.
+Announce: MED rule - The numbers in the triple are not in decreasing order when arranged alphabetically by their written forms.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [8,6,4]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The sum of the three numbers is odd.
+Announce: MED rule - The sum of the three numbers is even.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,2,3]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The numbers in the triple are all different.
+Announce: MED rule - The numbers in the triple contain at least two identical values.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [2,4,6]
+
+[013] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - The numbers in the triple are in strictly increasing order when arranged numerically.
+Announce: MED rule - The numbers in the triple are not in strictly increasing order when arranged numerically.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [3,5,2]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - At least one of the numbers in the triple is an odd number and the other numbers are either odd or the difference between them and the odd number is even.
+Announce: MED rule - None of the numbers in the triple are odd or all numbers in the triple are even and the difference between any two of them is odd.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [9,7,5]
+
+[021] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - The triple contains no odd numbers, consisting only of even numbers.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [10,12,14]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [7,11,13]
+
+[029] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - The triple contains only even numbers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [2,4,8]
+
+[033] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - At least one number in the triple is odd or exactly one number in the triple is even and the others are odd, but given the tests, it seems the rule is the triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [3,5,7]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - The triple contains only even numbers.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [11,9,15]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [20,18,16]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [1,3,6]
+
+[049] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [4,6,8]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [7,9,11]
+
+[057] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [2,6,10]
+
+[061] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The triple contains at least one odd number, but since [2,6,10] is DAX and all numbers are even, the correct rule must be different, however all previous tests still point to the original rule.
+Announce: MED rule - All numbers in the triple are even, but [2,6,10] is DAX, so this rule is incorrect.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [15,17,19]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [12,14,16]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [9,12,15]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The triple contains only odd numbers or at least two odd numbers and one even number, but given [2,6,10] is DAX, it seems the rule is actually that the triple contains at least one odd number is not correct for all cases.
+Announce: MED rule - All numbers in the triple are even, but [9,12,15] is MED and not all numbers are even, so this rule needs reevaluation.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [5,10,15]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [8,10,12]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [3,9,6]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [4,8,12]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [7,14,21]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [6,12,18]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [11,13,17]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The triple contains at least one odd number.
+Announce: MED rule - All numbers in the triple are even.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [2,4,6]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order is not correct, however one rule could be that one of the numbers in the triple is odd or the difference between the numbers is not always even.
+Announce: MED rule - The triple contains three consecutive even integers in ascending order or all numbers are even and the difference between them is even.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,2,3]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order.
+Announce: MED rule - The triple contains three consecutive even integers in ascending order.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [5,7,9]
+
+[113] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order.
+Announce: MED rule - The triple contains three consecutive even integers in ascending order.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [10,12,14]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order.
+Announce: MED rule - The triple contains three consecutive even integers in ascending order.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [3,5,9]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order.
+Announce: MED rule - The triple contains three consecutive even integers in ascending order.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [8,10,16]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order.
+Announce: MED rule - The triple contains three consecutive even integers in ascending order.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [7,11,13]
+
+[129] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order.
+Announce: MED rule - The triple contains three consecutive even integers in ascending order.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [4,6,8]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order.
+Announce: MED rule - The triple contains three consecutive even integers in ascending order.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [9,15,21]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order or three numbers in an arithmetic sequence with an even common difference.
+Announce: MED rule - The triple contains three consecutive even integers in ascending order or three numbers in an arithmetic sequence with an even common difference.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [2,6,10]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive integers in ascending order, regardless of being even or odd, or more specifically, the difference between the consecutive numbers is not always the same.
+Announce: MED rule - The triple contains three consecutive integers in ascending order, or three numbers in an arithmetic sequence.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [3,5,7]
+
+[145] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive integers in ascending order.
+Announce: MED rule - The triple contains three consecutive integers in ascending order.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [12,14,16]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive integers in ascending order.
+Announce: MED rule - The triple contains three consecutive integers in ascending order.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [7,9,11]
+
+[153] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order.
+Announce: MED rule - The triple contains three consecutive integers in ascending order, regardless of being even or odd, but the DAX [7,9,11] and [2,6,10] suggest the rule might be related to the common difference being odd or even.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [15,17,19]
+
+[157] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive integers in ascending order with an even common difference.
+Announce: MED rule - The triple contains three consecutive integers in ascending order with an even common difference.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [2,4,10]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive integers in ascending order.
+Announce: MED rule - The triple contains three consecutive integers in ascending order.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [5,10,15]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive integers in ascending order with a common difference of 1 or an even common difference that results in three consecutive even integers.
+Announce: MED rule - The triple contains three consecutive integers in ascending order or three consecutive even integers in ascending order.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [1,3,5]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive even integers in ascending order.
+Announce: MED rule - The triple contains three consecutive integers in ascending order with a common difference of 1 or an even common difference that results in three consecutive even integers, but [1,3,5] is DAX, so the rule needs reevaluation to include odd common differences for non-even sequences.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [8,12,16]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The triple does not contain three consecutive integers in ascending order with a common difference of 1, 2, or any other fixed constant that results in three consecutive even or odd integers.
+Announce: MED rule - The triple contains three consecutive integers in ascending order with a common difference, regardless of the common difference being odd or even.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [4,8,12]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The triple does not contain three integers in an arithmetic sequence.
+Announce: MED rule - The triple contains three integers in an arithmetic sequence.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [9,11,15]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The triple does not contain three integers in an arithmetic sequence.
+Announce: MED rule - The triple contains three integers in an arithmetic sequence.
+
+[183] ENVIRONMENT:
+Turn - Test

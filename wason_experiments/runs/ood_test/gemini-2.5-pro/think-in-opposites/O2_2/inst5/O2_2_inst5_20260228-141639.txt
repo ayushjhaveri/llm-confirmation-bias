@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-39, 81, 3].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: All three numbers are multiples of 3.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,4,6]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The three numbers, when sorted, do not form an arithmetic progression.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,2,3]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The sum of the three numbers is a multiple of 9.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [1,8,9]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: All three numbers are odd.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [1,5,7]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: There is at least one positive number and at least one negative number.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-10,-20,-30]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: There is at least one positive number and at least one negative number.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-1,-2,5]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: All three numbers are multiples of 3.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [6,12,18]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The three numbers are all multiples of 3, but do not form an arithmetic progression.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [3,9,30]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: All numbers are multiples of 3, and the set contains both positive and negative numbers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-6,9,12]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: All three numbers are odd and are also multiples of 3.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [3,9,15]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The numbers are all odd multiples of 3 and do not form an arithmetic progression.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-9,15,21]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: Two of the numbers are divisible by 3 but not 9, and the third number is divisible by 27.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [27,6,15]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The total number of factors of 3 across the three numbers is a multiple of 3.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [3,6,12]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: At least one of the numbers is divisible by 81.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [81,1,1]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. When the three exponents {v3(a), v3(b), v3(c)} are sorted, the two smallest are equal and the largest is greater than 2.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [1,2,27]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. When the three exponents {v3(a), v3(b), v3(c)} are sorted, the two smallest are equal and the largest is greater than 2.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [3,6,243]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: Let k be the exponent of 3 in a number's prime factorization; two numbers must have the same k, while the third number's k must be a different number that is a multiple of 4.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [3,9,27]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: Two numbers have the same positive number of factors of 3, k, and the third number has 4k factors of 3.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [9,18,6561]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: Two numbers are divisible by 3 exactly once, and the third number is divisible by 3 exactly four times.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [9,18,243]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The exponents of 3 in the prime factorizations of the numbers must be 1, 1, and 4.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [3,6,81]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The exponents of 3 in the prime factorizations of the numbers are {1, 1, 4}, and all three numbers are odd.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-3,15,81]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The three numbers, when sorted, do not form an arithmetic progression.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [9,45,3]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: All three numbers are multiples of 3, and when sorted do not form an arithmetic progression.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [9,21,27]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. Two of the numbers have the same v3 exponent, say k, and the third number has a different exponent.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [9,36,27]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. Two of the numbers have the same exponent, k, while the third has a different exponent, m, and the sum k+m is an odd number.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [3,6,15]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: When the exponent of 3 in the prime factorization of each number is calculated (v3), two of these exponents are identical, and the third is different.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [3,15,81]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: When the three numbers are sorted, they do not form an arithmetic progression.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [3,6,9]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: When the exponent of 3 in the prime factorization of each number is calculated (v3), two of these exponents are identical, and the third is different.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [3,9,18]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. Two of the numbers must have the same v3 exponent, and the third must have a different one.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [3,9,81]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. Two numbers have the same v3 exponent, k, and the third number has a different exponent, m. For the two numbers with the same exponent, x and y, the numbers x/(3^k) and y/(3^k) must not have the same parity.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [9,-45,243]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. The set of three exponents {v3(a), v3(b), v3(c)} has the property that two of the exponents are equal to each other, and the third is different.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [15,21,81]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. Two of the numbers have the same v3 exponent, k, and the third number has a different v3 exponent, m.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-9,-27,-54]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. When the three exponents {v3(a), v3(b), v3(c)} are sorted from smallest to largest, the smallest two exponents are equal to each other.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [18,54,81]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. When the three exponents {v3(a), v3(b), v3(c)} are sorted from smallest to largest, the smallest two exponents are equal to each other, and the largest exponent is greater than the smallest two.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [3,12,27]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. Two of the numbers have the same v3 exponent, k, and the third has a different exponent, m, and the sum of the cores of the first two numbers is a multiple of the core of the third.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [3,15,18]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. When the three exponents {v3(a), v3(b), v3(c)} are sorted from smallest to largest, the two smallest exponents are equal to each other, and the largest exponent is greater than the smallest two.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [3,27,54]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. The rule has two cases depending on the sorted exponents {x,y,z}. Case 1: if x=y<z, the cores of the two numbers with exponent x must not sum to zero. Case 2: if x<y=z, the cores of the two numbers with exponent y must have different parity.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-9,-36,-27]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. The set of exponents {v3(a), v3(b), v3(c)} must have two identical values and one different value.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [9,18,27]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: Two numbers share the same highest power-of-3 factor, and for these two numbers, dividing out that factor leaves one odd number and one number that is an odd number times a power of 4.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [9,18,15]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. Two of the numbers have the same v3 exponent, k, and the third number has a different v3 exponent, m. Let the two numbers with exponent k be A and B. Then the sum of their "cores", (A/3^k + B/3^k), must be a multiple of 3.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [12,15,27]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. Two of the numbers have the same v3 exponent, k, and the third number has a different v3 exponent, m. Let the two numbers with the same exponent be A and B. The triple conforms if v3(A+B) is not equal to m.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [9,18,27]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: Exactly two numbers share the same exponent of 3 in their prime factorization, and the exponent of 3 in the sum of those two numbers is different from the third number's exponent.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [3,6,81]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. The rule is that the set of three exponents {v3(a), v3(b), v3(c)} contains exactly two distinct values.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [1,1,3]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. Two of the three numbers have the same smallest v3 exponent, and the third number has a larger v3 exponent.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [3,12,18]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. For a triple [a,b,c], the two smallest values in the set {v3(a-b), v3(b-c), v3(c-a)} must be equal.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [3,6,9]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: Let v3(n) be the exponent of 3 in the prime factorization of n. The rule is that the set of three exponents {v3(a), v3(b), v3(c)} contains exactly two distinct values.
+
+[183] ENVIRONMENT:
+Turn - Test

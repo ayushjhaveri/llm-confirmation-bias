@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-39, 81, 3].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers can be multiplied together to give a product that is a multiple of 3.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,4,6]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [9,10,11]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers are in arithmetic progression or one of the numbers is a multiple of 3 or the difference between the largest and smallest is a multiple of 3 or the sum of the numbers has a digit 3 in it, but none of these seem to apply here so I will test more, however I must give an answer so: The rule is that one of the numbers is a multiple of 3 or the difference between the largest and smallest is a multiple of 3.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [3,5,7]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and the other two numbers have the same remainder when divided by 3, but since this didn't work I'll try something else, however I must give an answer so: The rule is that the numbers have a factor in common or one of the numbers is a multiple of 3 and the difference between the two other numbers is also a multiple of 3.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [1,4,7]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [12,15,18]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the sum of the numbers is a multiple of 3 or one of the numbers is a multiple of 3 and the difference between the largest and smallest is also a multiple of 3, however I must simplify so: The rule is that one of the numbers is a multiple of 3 and the other two have the same remainder when divided by 3 or the difference between the largest and the smallest is a multiple of 3.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [3,9,15]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and another number is 3 times the remaining number.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [1,2,6]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and the difference between the largest and smallest is also a multiple of 3 or the product of the three numbers has 3 as a factor in one of them and the other two are related by multiplication with 3, however I must simplify: The rule is that one number is a multiple of 3 and another is 3 times the third number or one is 3 and the other two have the same remainder when divided by 3, however since none of these seem to apply I must try again so: The rule is that at least one of the numbers is a multiple of 3.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [3,6,9]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and another number is 3 times the third number, but the example given [-39, 81, 3] also works with this so I'll keep it: The rule is that one of the numbers is a multiple of 3 and another number is 3 times the third number or one number is 3 more or less than a multiple of the third number.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [27,9,3]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that one number is 3 times another number.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [2,6,12]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and the numbers can be arranged in increasing order with one number being 3 times another or the difference between the two larger numbers is the smaller number and one of the larger numbers is a multiple of 3, but looking back at the example [-39, 81, 3], I see that -39 * 3 = -117 and 81 - (-117) = 198 and 198/3 = 66 and 66 is not one of the numbers and 3 * 3 = 9 which is not one of the numbers but 81/3 = 27 and -39 + 27 = -12 and -12/3 = -4 which is not one of the numbers, however 81 = 3 * 27 and -39 = -3 * 13 so the numbers are related by multiplication with 3 but not in the way I previously thought so I must simplify: The rule is that one number is a multiple of another number and that multiple is 3.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [1,3,9]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that one number is a multiple of another and the factor is 3 or one of the numbers is 3 more or less than a multiple of another number, but looking back at the example [-39, 81, 3], I see that 81 = -39 * -3 + 3 * 26 and 3 = -39 * -1/13, so I'll try to simplify: The rule is that one of the numbers is a factor of another, and the factor or the result of the division is 3 or -3 or one number is a multiple of 3 and another is the result of the division of the first by -3 or 3 but I see this might be too complicated so I'll try: The rule is that one of the numbers is a factor of another.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [2,4,8]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that one of the numbers is a multiple of another and the factor or the result of the division is an integer and one of the numbers is a multiple of 3, however looking at the example [-39, 81, 3] I see 81 = 3 * 27 and -39 = 3 * -13 so I must simplify: The rule is that one of the numbers is a multiple of another.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [4,2,1]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that one of the numbers is a multiple of another and the larger number is the multiple, but since the example given is [-39, 81, 3] and -39 is negative, the rule could be that one of the numbers is a multiple of another, regardless of order, so: The rule is that one number is a multiple of another.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-3,9,3]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that one number is a multiple of another.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [6,2,4]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that one number is a multiple of another, and the multiple is one of the larger numbers is not necessary but one of the numbers must be a multiple of the smallest number, however looking at the example [-39, 81, 3] and the test [-3,9,3] I see that in both cases the middle number is a multiple of the smallest, so I'll simplify: The rule is that the middle number is a multiple of the smallest number when the numbers are arranged in order from smallest to largest, but looking at the example given [-39, 81, 3] I see that -39 is the smallest and 81 is a multiple of 3, so the rule is actually that one of the larger numbers is a multiple of the smallest number, but since we arranged the numbers in the test [-3,9,3] from smallest to largest I see that the rule is actually: The rule is that one of the larger numbers is a multiple of the smallest.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [1,2,3]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that one of the numbers is 3 times another.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [9,3,27]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that one of the larger numbers is a multiple of the smallest number.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [2,6,12]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that one number is a multiple of another, and the larger number is 3 times the smaller number or one of the larger numbers is a multiple of the smallest, but looking at the examples given I see that the rule can be simplified to: The rule is that one of the larger numbers is 3 times the smallest number or one number is 3 and the other two numbers have the same remainder when divided by 3, however since this is not the case I'll try to simplify it more: The rule is that one number is 3 times another.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [3,9,27]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that one number is 3 times another, and the numbers are in a specific order, with the smaller number first, but looking at the example [-39, 81, 3] I see that -39 * -3 = 117 which is not one of the numbers, however 81 = 3 * 27, so I'll try: The rule is that the largest number is a multiple of the smallest.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-12,36,3]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that one of the numbers is a multiple of another, specifically the largest number is a multiple of the smallest number when the numbers are arranged in order from smallest to largest, and the multiple is 3 or the smallest number is 3 and one of the larger numbers is a multiple of 3, but looking at the example [-39, 81, 3] and the test [-12,36,3] I see that the rule can be simplified to: The rule is that the largest number is a multiple of the smallest.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [4,12,1]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the largest number is a multiple of the smallest number.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [6,18,3]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that one number is 3 times another, with the smaller number first when arranged in order from smallest to largest, but looking at the example [-39, 81, 3] I see that -39 is the smallest and 81 is not -39 * 3, however -39 * -3 is not one of the numbers, but looking at the test [-12,36,3] I see that -12 * -3 = 36 so I'll try: The rule is that the product of the two smallest numbers is equal to the largest number, but since this didn't work I'll try: The rule is that one of the numbers is 3 times another in a specific order, but looking at the example given I see the rule can be simplified to: The rule is that when the numbers are arranged in order from smallest to largest, one of the two larger numbers is a multiple of the smallest.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [1,3,9]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that when the numbers are arranged in order from smallest to largest, the middle number is not necessarily a multiple of the smallest, but one of the larger numbers is a multiple of the smallest, specifically the largest number is a multiple of the smallest.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-6,18,3]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that when the numbers are arranged in order from smallest to largest, one of the larger numbers is a multiple of the smallest.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [2,6,12]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that when the numbers are arranged in order from smallest to largest, the largest number is a multiple of the smallest.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [3,12,9]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that when the numbers are arranged in order from smallest to largest, the second largest number is not necessarily a multiple of the smallest, but the largest number is a multiple of the smallest.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-9,27,3]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that when the numbers are arranged in order from smallest to largest, the largest number is a multiple of the smallest.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [3,12,36]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that when the numbers are arranged in order from smallest to largest, the largest number is a multiple of the smallest, and the multiple is exactly 3 times, or one of the numbers is -3 times another, but looking at the examples given I see the rule can be simplified to: The rule is that one of the larger numbers is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [1,3,9]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that one of the numbers is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-3,9,6]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that one of the numbers is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [2,6,18]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the largest number is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-12,36,-6]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the largest number is exactly 3 times the smallest number when the numbers are in order from smallest to largest, and the order can be negative.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [4,12,36]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the largest number is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-4,12,-12]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the largest number is exactly 3 times the smallest number when the numbers are in order from smallest to largest, considering both positive and negative numbers.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [3,9,27]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that one of the larger numbers is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-6,18,0]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the largest number is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [1,3,12]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that one of the larger numbers is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-9,27,3]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that one of the numbers is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [3,9,27]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the second largest number is exactly 3 times the smallest number when the numbers are in order from smallest to largest, or the largest number is exactly 3 times the smallest number.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-2,6,-6]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that one of the larger numbers is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [3,12,36]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that one of the larger numbers is exactly 3 times the smallest number when the numbers are in order from smallest to largest, but not necessarily the largest number.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [2,6,18]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the middle number is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-1,3,9]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the middle number is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [4,12,36]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the middle number is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-3,9,27]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the middle number is exactly 3 times the smallest number when the numbers are in order from smallest to largest.
+
+[183] ENVIRONMENT:
+Turn - Test

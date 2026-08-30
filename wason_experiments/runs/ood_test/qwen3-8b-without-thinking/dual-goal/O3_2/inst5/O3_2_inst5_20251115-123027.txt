@@ -1,0 +1,665 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [89, 67, 2].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [3,5,8]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [2,4,6]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [1,2,3]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [4,5,9]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [5,3,8]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [7,5,12]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [3,4,7]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [2,3,5]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [4,6,10]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [1,1,2]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [2,3,5]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [6,7,13]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [8,9,17]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [9,10,19]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [10,11,21]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [1,2,3]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [2,4,6]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [89,67,2]
+
+[073] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[074] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [3,5,8]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [5,3,8]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [4,6,10]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [3,4,7]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [5,5,10]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [1,3,4]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [2,3,5]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [1,2,3]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,1,2]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [4,5,9]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [6,7,13]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [7,8,15]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [3,6,9]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [4,8,12]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [5,5,10]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [2,2,4]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [1,2,3]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [3,4,7]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [2,4,6]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [1,3,4]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [1,4,5]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [2,5,7]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [4,6,10]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [3,5,8]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [8,9,17]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [1,2,3]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [2,4,6]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - All numbers are even.
+
+[183] ENVIRONMENT:
+Turn - Test

@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-27, 0, 1].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The numbers can be in ascending order.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [3,2,1]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The numbers are in ascending order.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-5,-3,-1]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers can include zero and at least one positive and one negative number, or zero itself.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [0,1,-1]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers include at least one positive number, one negative number, and zero.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-2,0,3]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the numbers are consecutive integers.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [1,2,3]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that one of the numbers is zero and the other two numbers are consecutive integers, one positive and one negative.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-3,0,3]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the numbers include zero and the absolute difference between the other two numbers is 1.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [0,-2,-1]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that one of the numbers is zero and the other two numbers are consecutive integers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [0,2,1]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the set contains one negative number, zero, and one positive number, and the negative number is one less than zero and the positive number is one more than zero.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-1,0,1]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the numbers are consecutive integers, with one being negative, one being zero, and one being positive.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [0,-1,1]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the numbers are consecutive integers spanning zero.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [1,0,-1]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the numbers are consecutive integers including zero.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-2,-1,0]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the set contains three consecutive integers, one of which is zero.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [0,1,2]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the numbers are three consecutive integers with zero in the middle.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-1,0,1]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the numbers are three consecutive integers with zero in the middle, specifically -1, 0, and 1.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [1,0,-1]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the numbers are -1, 0, and 1, in any order.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-1,1,0]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the numbers are -1, 0, and 1, regardless of order.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [0,-1,1]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the set contains the numbers -1, 0, and 1.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [1,-1,0]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the set contains the exact numbers -1, 0, and 1, in any order.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [0,1,-1]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the numbers are exactly -1, 0, and 1, in any permutation.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-1,1,0]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the set consists of the numbers -1, 0, and 1, in any order.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [1,0,-1]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the numbers are the integers -1, 0, and 1, regardless of their order.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-1,0,1]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the set contains the three specific integers -1, 0, and 1, in any order.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [0,-1,1]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the numbers are the specific integers -1, 0, and 1, in any permutation or combination.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [1,-1,0]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the set consists exactly of the three numbers -1, 0, and 1, in any order.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [0,1,-1]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the numbers are precisely -1, 0, and 1, in any possible arrangement.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-1,1,0]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the set contains the three distinct integers -1, 0, and 1, in any order or sequence.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,0,-1]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the numbers are the three integers -1, 0, and 1, and they can appear in the set in any order.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [0,-1,1]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the set consists of the integers -1, 0, and 1, and the order of the numbers does not matter.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-1,0,1]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the numbers in the set are -1, 0, and 1, and they can be arranged in any sequence.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [1,-1,0]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the set contains the three integers -1, 0, and 1, without regard to their order.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [0,1,-1]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the numbers are exactly the integers -1, 0, and 1, in any order or arrangement.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-1,1,0]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the set is composed of the three specific numbers -1, 0, and 1, regardless of order.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [1,0,-1]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the numbers in the set are the three distinct integers -1, 0, and 1, in any sequence or permutation.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [0,-1,1]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the set consists of the integers -1, 0, and 1, and the order of the numbers is irrelevant.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-1,0,1]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the set contains the exact integers -1, 0, and 1, without any restriction on their order.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [1,-1,0]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the numbers are the three integers -1, 0, and 1, and their order does not matter.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [0,1,-1]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the set is composed of the three integers -1, 0, and 1, in any possible order or combination.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-1,1,0]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the numbers in the set are precisely the integers -1, 0, and 1, and they can appear in any sequence.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [1,0,-1]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the set contains the three integers -1, 0, and 1, and the order of the integers is not important.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [0,-1,1]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the numbers are exactly -1, 0, and 1, and they can be in any order.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-1,0,1]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the set consists of the integers -1, 0, and 1, in any arrangement or permutation.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [1,-1,0]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the numbers in the set are the three specific integers -1, 0, and 1, and their order is irrelevant.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [0,1,-1]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the set contains the three distinct integers -1, 0, and 1, without regard to order or sequence.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-1,1,0]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the numbers are the integers -1, 0, and 1, and they can occur in the set in any order whatsoever.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [1,0,-1]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the set is composed of the three integers -1, 0, and 1, and the order in which they appear is immaterial.
+
+[183] ENVIRONMENT:
+Turn - Test

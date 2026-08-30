@@ -1,0 +1,59 @@
+rules:
+  # =========================
+  # Train (16)
+  # =========================
+  - { id: T1_1, name: "All even",                               expr: "a%2==0 and b%2==0 and c%2==0", family: parity }
+  - { id: T1_2, name: "Each divides next",                      expr: "a!=0 and (b%a==0) and b!=0 and (c%b==0)", family: divisibility }
+  - { id: T1_3, name: "Exactly two equal",                      expr: "len({a,b,c})==2", family: equality }
+  - { id: T1_4, name: "At least one even",                      expr: "(a%2==0) or (b%2==0) or (c%2==0)", family: parity }
+
+  - { id: T2_1, name: "All end with 6",                         expr: "abs(a)%10==6 and abs(b)%10==6 and abs(c)%10==6", family: last_digit }
+  - { id: T2_2, name: "Increasing differences",                 expr: "0<(b-a)<(c-b)", family: differences }
+  - { id: T2_3, name: "a is min",                               expr: "a<=b and a<=c", family: order }
+  - { id: T2_4, name: "All distinct",                           expr: "len({a,b,c})==3", family: equality }
+
+  - { id: T3_1, name: "All divisible by 5",                     expr: "a%5==0 and b%5==0 and c%5==0", family: divisibility }
+  - { id: T3_2, name: "a is max",                               expr: "a>=b and a>=c", family: order }
+  - { id: T3_3, name: "Non-monotone (middle between ends)",     expr: "(a-b)*(b-c)<0", family: order }
+  - { id: T3_4, name: "At least two multiples of 5",            expr: "((a%5==0)+(b%5==0)+(c%5==0))>=2", family: divisibility }
+
+  - { id: T4_1, name: "All divisible by 3",                     expr: "a%3==0 and b%3==0 and c%3==0", family: divisibility }
+  - { id: T4_2, name: "Alternating parity (ends same)",         expr: "(a%2)==(c%2) and (b%2)!=(a%2)", family: parity }
+  - { id: T4_3, name: "Ascending",                              expr: "a<b<c", family: order }
+  - { id: T4_4, name: "Non-decreasing",                         expr: "a<=b<=c", family: order }
+
+  # =========================
+  # OOD Validation (8)
+  # =========================
+  - { id: V1_1, name: "All end with 9",                         expr: "abs(a)%10==9 and abs(b)%10==9 and abs(c)%10==9", family: last_digit }
+  - { id: V1_2, name: "Non-decreasing differences",             expr: "(b-a) <= (c-b)", family: differences }
+  - { id: V1_3, name: "c is max",                               expr: "c>=a and c>=b", family: order }
+  - { id: V1_4, name: "Arithmetic progression (AP)",            expr: "(b-a)==(c-b)", family: differences }
+
+  - { id: V2_1, name: "All divisible by 7",                     expr: "a%7==0 and b%7==0 and c%7==0", family: divisibility }
+  - { id: V2_2, name: "Exactly two even",                       expr: "((a%2==0)+(b%2==0)+(c%2==0))==2", family: parity }
+  - { id: V2_3, name: "At least one multiple of 4",             expr: "(a%4==0) or (b%4==0) or (c%4==0)", family: divisibility }
+  - { id: V2_4, name: "At least two distinct",                  expr: "len({a,b,c})>=2", family: equality }
+
+  # =========================
+  # OOD Test (16)
+  # =========================
+  - { id: O1_1, name: "All end with 1",                         expr: "abs(a)%10==1 and abs(b)%10==1 and abs(c)%10==1", family: last_digit }
+  - { id: O1_2, name: "c is min",                               expr: "c<=a and c<=b", family: order }
+  - { id: O1_3, name: "All negative",                           expr: "a<0 and b<0 and c<0", family: sign }
+  - { id: O1_4, name: "Descending",                             expr: "a>b>c", family: order }
+
+  - { id: O2_1, name: "All odd",                                expr: "a%2==1 and b%2==1 and c%2==1", family: parity }
+  - { id: O2_2, name: "b is (strict) max",                      expr: "b>a and b>c", family: order }
+  - { id: O2_3, name: "Mixed signs",                            expr: "((a<0)+(b<0)+(c<0)) in {1,2}", family: sign }
+  - { id: O2_4, name: "At least one multiple of 3",             expr: "(a%3==0) or (b%3==0) or (c%3==0)", family: divisibility }
+
+  - { id: O3_1, name: "All prime numbers",                      expr: "is_prime(a) and is_prime(b) and is_prime(c)", family: number_type }
+  - { id: O3_2, name: "Non-increasing",                         expr: "a>=b>=c", family: order }
+  - { id: O3_3, name: "All positive",                           expr: "a>0 and b>0 and c>0", family: sign }
+  - { id: O3_4, name: "Contains a prime",                       expr: "is_prime(a) or is_prime(b) or is_prime(c)", family: number_type }
+
+  - { id: O4_1, name: "All cube numbers",                       expr: "is_cube(a) and is_cube(b) and is_cube(c)", family: number_type }
+  - { id: O4_2, name: "Exactly two odd",                        expr: "((a%2==1)+(b%2==1)+(c%2==1))==2", family: parity }
+  - { id: O4_3, name: "Decreasing gaps",                        expr: "(b-a)>(c-b)", family: differences }
+  - { id: O4_4, name: "At least one odd",                       expr: "(a%2==1) or (b%2==1) or (c%2==1)", family: parity }

@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-67, 75, 25].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: All numbers are odd.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,3,5]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: All numbers are odd.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [7,9,11]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: All numbers are odd.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [2,4,6]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The sum of the numbers is divisible by 3.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [3,6,9]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The sum of the numbers is divisible by 3.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [3,3,3]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The sum of the numbers is divisible by 3.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [10,10,10]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [4,8,12]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [5,8,11]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [1,2,4]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [1,4,7]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [6,12,18]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [5,10,15]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [8,16,24]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [9,18,27]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [6,9,12]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [7,14,21]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [10,20,30]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [11,22,33]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [12,24,36]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [13,26,39]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [14,28,42]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [15,30,45]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [16,32,48]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [17,34,51]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [2,3,5]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [4,5,7]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [18,36,54]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [19,38,57]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [18,36,54]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [20,40,60]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [21,42,63]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [22,44,66]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [23,46,69]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [24,48,72]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [19,38,57]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [25,50,75]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [2,4,8]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [1,4,7]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The numbers form an arithmetic sequence where each term is a multiple of the first term.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [1,2,3]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [3,5,7]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [1,5,9]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The numbers form an arithmetic sequence with a common difference that divides the first term.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [2,4,8]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [1,4,7]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [4,5,6]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [2,6,10]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The numbers form an arithmetic sequence.
+
+[183] ENVIRONMENT:
+Turn - Test

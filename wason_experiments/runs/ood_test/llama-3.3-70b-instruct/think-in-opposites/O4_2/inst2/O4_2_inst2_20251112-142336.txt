@@ -1,0 +1,621 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [8, 27, -27].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers can be the cubes of any integers, but one of them is negative.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,8,-64]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that two of the numbers are opposites of each other.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [5,-5,0]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that two of the numbers are opposites of each other.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [10,-10,10]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that two of the numbers are opposites of each other and the third number is different from the first two.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [4,-4,7]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that one of the numbers is the negative of another number in the set.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [3,-3,3]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [2,-2,0]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the third number is not zero.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [9,-9,1]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the third number is an integer.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [7,-7,5]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [11,-11,3]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that exactly two of the numbers in the set are opposites of each other, with no further restrictions on the third number being an integer, other than it being different from the two that are opposites, but that is already covered by the first condition.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [15,-15,20]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [22,-22,31]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and all numbers are integers.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [4,-4,9]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that exactly two of the numbers in the set are opposites of each other.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [6,-6,12]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [18,-18,7]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [25,-25,30]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [50,-50,75]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [20,-20,10]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the third number is not a multiple of either of the two opposites.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [13,-13,17]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the third number is not related to the two opposites by a simple arithmetic operation such as addition, subtraction, multiplication, or division, except that it can be unrelated.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [21,-21,28]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the third number is odd.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [32,-32,99]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the third number is odd and not a multiple of either of the opposites.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [41,-41,23]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [19,-19,43]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the third number is an odd integer that is not equal to the absolute value of either of the two opposites multiplied by an odd integer.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [14,-14,27]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the original example numbers is a cube.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [8,-8,27]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is a cube or the difference between two cubes that are also perfect cubes of integers, in absolute value or one of the numbers in the original set was a cube.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [8,-8,64]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the original set contained a cube.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [27,-27,8]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is a cube.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [64,-64,4]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is a cube, and the cube is not a perfect sixth power.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [8,-8,27]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is a perfect cube, and the set contains a number that is a perfect cube from the original example.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [27,-27,8]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the set contains an 8 or a 27.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [8,-8,64]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is either 8 or 27 or -27 or -8.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [27,-27,7]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is either 8 or -8 or 27 or -27, from the original example set [8, 27, -27].
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [8,-8,27]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is either 8 or 27 or -27.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-27,27,8]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is 8 or -8 or 27 or -27.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [8,-8,-27]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is either 8 or 27 or -27, and the number that is not part of the opposite pair is one of the original numbers.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [27,-27,8]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and the third number is either 8 or -8 or 27 or -27.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-8,8,27]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is either 8 or 27 or -27, and 8 is the number that is not part of the opposite pair or one of the opposites is 27 or -27.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [27,-27,8]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that exactly two of the numbers are opposites of each other and one of the numbers is 8 and the other two are 27 and -27.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-27,27,8]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the set contains 8, 27, and -27.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [8,27,-27]
+
+[157] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[158] MODEL:
+Announce: The set contains 8, 27, and -27.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [8,-8,27]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the set contains 8, 27, and -27, in any order, and exactly two of the numbers are 27 and -27.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [27,-27,8]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the set contains 8, 27, and -27.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-27,27,8]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the set contains 8, 27, and -27, in any order.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [8,27,-27]
+
+[173] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[174] MODEL:
+Announce: The set contains 8, 27, and -27.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-8,27,-27]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the set contains 27 and -27, and the third number is 8 or -8.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [27,-27,8]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the set contains 27 and -27, and the third number is 8 or -8.
+
+[183] ENVIRONMENT:
+Turn - Test

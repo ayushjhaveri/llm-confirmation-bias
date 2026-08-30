@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [89, 67, 13].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The numbers in the triple are in decreasing order when sorted.
+Announce: MED rule - The numbers in the triple are not in decreasing order when sorted.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [5,3,1]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The numbers in the triple are in decreasing order.
+Announce: MED rule - The numbers in the triple are in increasing order.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [10,7,4]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The numbers in the triple are decreasing in a specific pattern or sequence.
+Announce: MED rule - The numbers in the triple do not form any specific pattern or sequence, or are increasing.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [20,15,10]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - The numbers in the triple are decreasing and have a decreasing difference between consecutive terms is not the rule, but having all different numbers is.
+Announce: MED rule - The numbers in the triple have a repeating number or are the same.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [7,5,3]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The numbers in the triple are all different and in decreasing order when arranged from largest to smallest.
+Announce: MED rule - The numbers in the triple are either increasing, have duplicate values, or are not in decreasing order.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [11,9,9]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order.
+Announce: MED rule - The numbers in the triple have at least two identical values or are not in decreasing order.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [25,18,11]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order, with no specific arithmetic relationship required.
+Announce: MED rule - The numbers in the triple are either not distinct, not in decreasing order, or have some other property that distinguishes them from DAX triples.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [9,8,7]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order, but with a decreasing difference that is not constant.
+Announce: MED rule - The numbers in the triple are either not distinct, not in decreasing order, or have a constant decreasing difference, such as an arithmetic sequence.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [12,7,2]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order, with no specific relationship between the differences.
+Announce: MED rule - The numbers in the triple have a specific pattern, such as an arithmetic or geometric sequence, or are not distinct, or not in decreasing order.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [8,5,2]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order, with the difference between the first two numbers being greater than the difference between the last two numbers.
+Announce: MED rule - The numbers in the triple do not meet the condition that the difference between the first two numbers is greater than the difference between the last two numbers, or are not distinct, or not in decreasing order.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [19,13,7]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order, with the difference between the first two numbers being greater than the difference between the last two numbers.
+Announce: MED rule - The numbers in the triple do not meet the condition that the difference between the first two numbers is greater than the difference between the last two numbers, or are not distinct, or not in decreasing order.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [75,49,23]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order, with the difference between the first two numbers being greater than the difference between the last two numbers, but only if the differences are not decreasing by the same amount.
+Announce: MED rule - The numbers in the triple do not meet the DAX condition or the differences between consecutive terms are decreasing by the same amount.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [21,14,7]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order, with the difference between the first two numbers being greater than the difference between the last two numbers, and the differences are not decreasing by the same amount, and also not an arithmetic sequence.
+Announce: MED rule - The numbers in the triple are either an arithmetic sequence, or do not meet the DAX condition, or are not distinct, or not in decreasing order.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [50,34,18]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order, with a decreasing difference between consecutive terms that decreases by a non-constant amount.
+Announce: MED rule - The numbers in the triple are either an arithmetic sequence, a geometric sequence, or do not meet the DAX condition, or are not distinct, or not in decreasing order.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [43,29,15]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The numbers in the triple are all distinct and in decreasing order, with a specific decreasing pattern that is not an arithmetic or geometric sequence.
+Announce: MED rule - The numbers in the triple are either an arithmetic sequence, a geometric sequence, or do not meet the DAX condition, or are not distinct, or not in decreasing order, or have a constant difference between consecutive terms.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [98,67,13]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - One number is the sum of the other two numbers or the numbers have a specific relationship that is not immediately apparent.
+Announce: MED rule - The numbers in the triple do not have the specific relationship that defines the DAX rule, or are not distinct, or not in decreasing order.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [7,2,5]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - One number is the sum of the other two numbers.
+Announce: MED rule - The numbers in the triple do not have the property that one number is the sum of the other two numbers.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [11,4,7]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - One number is the sum of the other two numbers.
+Announce: MED rule - The numbers in the triple do not have the property that one number is the sum of the other two numbers.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [3,4,7]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - One number is the sum of the other two numbers, with the numbers in decreasing order when the summands are the smaller two numbers.
+Announce: MED rule - The numbers in the triple do not have the property that one number is the sum of the other two numbers, or are not in the correct order.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [9,3,6]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [5,3,2]
+
+[081] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [8,2,6]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [10,5,5]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [7,2,5]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct and the numbers are in decreasing order is not required but the sum condition is.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [4,3,7]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [6,5,1]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [11,7,4]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [9,8,1]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [6,3,3]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct, with at least two numbers being equal.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [8,2,6]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [7,4,3]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [5,2,3]
+
+[125] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [10,6,4]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [8,3,5]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [9,4,5]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [7,3,4]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct, with the correct order being largest = smaller + smallest.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct, or the order is not correct.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [6,5,1]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [12,9,3]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [8,5,3]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct, and the numbers are in a specific order.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct, or the order is not correct, with the largest number being the sum of the two smaller numbers in a specific arrangement.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [4,3,1]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [7,2,5]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The largest number is the sum of the other two numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the other two numbers, or the numbers are not distinct.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [6,2,4]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The largest number is the sum of the two smaller numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the two smaller numbers, or the numbers are not distinct.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [9,5,4]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The largest number is the sum of the two smaller numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the two smaller numbers, or the numbers are not distinct.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [8,3,5]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The largest number is the sum of the two smaller numbers, and all numbers are distinct, with the correct order and combination.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the two smaller numbers, or the numbers are not distinct, or the order and combination are incorrect.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [7,1,6]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The largest number is the sum of the two smaller numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the two smaller numbers, or the numbers are not distinct.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [10,3,7]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The largest number is the sum of the two smaller numbers, and all numbers are distinct.
+Announce: MED rule - The numbers in the triple either do not have the property that the largest number is the sum of the two smaller numbers, or the numbers are not distinct.
+
+[183] ENVIRONMENT:
+Turn - Test

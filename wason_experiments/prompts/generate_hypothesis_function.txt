@@ -1,0 +1,38 @@
+Your task is to write a Python function that determines whether three integers
+(a, b, c) satisfy a given natural-language rule.
+
+The function should directly implement the logical condition described in the rule.
+Use basic arithmetic and comparisons. If the rule mentions "prime", "square", or "cube" numbers,
+you may define small helper functions (e.g., is_prime, is_cube) nested inside the main function.
+Do not import any modules. Use pure Python only.
+
+Handle negative and zero values safely - especially for divisibility (avoid divide-by-zero errors).
+Return True if the triple satisfies the rule, otherwise False.
+
+---
+FORMAT & SAFETY CONSTRAINTS (MANDATORY):
+
+- Output ONLY the function definition. No prose, no explanations, no code fences.
+- Signature must be exactly:
+  def rule(a: int, b: int, c: int) -> bool:
+- You may define small helper functions NESTED INSIDE rule().
+- Do NOT use: import, from, global, nonlocal, with, try/except, raise, class, lambda,
+  eval, exec, file or network I/O, or context managers.
+- Use only pure Python integer arithmetic, comparisons, loops, and these builtins:
+  abs, min, max, range, len, all, any, sum.
+- You may only call functions that are:
+  * the parameters a, b, c,
+  * local variables or helper functions that you defined inside rule, or
+  * the allowed builtins listed above.
+  If a name is not in this list, you MUST NOT use it.
+  In particular, do NOT use: sorted, set, list, dict, pow, divmod, enumerate, zip, map, filter,
+  or any other builtin.
+- Handle negatives and zero safely; avoid division/modulo by zero.
+- Before you output the function, silently check that you did not use any disallowed syntax
+  and did not call any builtin other than the allowed ones above.
+  Then output ONLY the final function.
+
+---
+
+Rule:
+{HYPOTHESIS}

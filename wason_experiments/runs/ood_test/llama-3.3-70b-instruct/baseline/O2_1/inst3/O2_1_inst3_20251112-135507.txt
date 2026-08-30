@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-51, 37, -87].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers in the triple have an odd sum.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,2,4]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers in the triple are in arithmetic progression or have a common difference between consecutive terms when arranged in ascending order, but a more likely rule given the initial example is that two of the numbers are negative and one is positive.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-3,-5,7]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that exactly two of the numbers in the triple are negative and one is positive, or exactly two are positive and one is negative, but more specifically, the rule seems to be that exactly one of the numbers is positive and the other two are negative, or vice versa, with no restriction on the magnitude of the numbers.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [11,-13,-17]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-2,-7,3]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [5,-9,-11]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-10,-8,4]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [2,-5,-7]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the positive number being the middle number when the numbers are arranged in ascending order.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-4,6,-8]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-20,5,-30]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, and the positive number is the second number when the triple is given, or more likely the rule is simply that exactly one of the numbers in the triple is positive and the other two are negative, with no specific order.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-3,-1,9]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-11,13,-7]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [8,-2,-6]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-15,-23,42]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-7,25,-31]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-49,-13,27]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-73,-29,19]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-1,-9,5]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-3,-2,8]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, and the numbers are in a specific order, with the two negative numbers first, in either ascending or descending order, followed by the positive number, but more simply, the rule seems to be that the positive number must be the last number in the sequence when arranged in a specific way, however the most straightforward rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-10,-4,6]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the positive number in the last position.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-8,-5,3]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, and the positive number is the last number in the triple when the numbers are arranged in ascending order, but more simply the rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the positive number in the last position when given.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-7,-3,9]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-22,-19,14]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, and the positive number is the last number in the sequence.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-11,-8,7]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, and the positive number is the last number in the sequence when the numbers are in ascending order, but more specifically the rule is that the two negative numbers are in the first and second position and the positive number is in the third position in the given sequence.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-4,-9,2]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the positive number being the third number in the given sequence.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-15,-23,41]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the positive number being the third number in the given sequence.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-13,-7,22]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the positive number being the third number in the given sequence, and the two negative numbers being in descending order in the first two positions.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-30,-10,25]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the positive number being the third number in the given sequence, and the first two numbers being in descending order is not a requirement, the only requirement is the positive number is the last number.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-18,-25,32]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, and the two negative numbers are in ascending order, followed by the positive number in the given sequence.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-5,-2,9]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the positive number being the last number in the given sequence, and the two negative numbers being in a specific order, but it seems the only consistent rule is that the positive number must be the last number.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-19,-8,11]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the positive number being the last number in the given sequence, however a more specific rule might be that the two negative numbers are in ascending order followed by the positive number.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-4,-1,6]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers being in ascending order, followed by the positive number.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-23,-17,19]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-9,-5,7]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-13,-3,9]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-7,-2,5]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-15,-11,20]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-20,-18,22]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-12,-8,10]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-25,-10,32]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-18,-4,9]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-30,-14,16]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-6,-1,8]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-11,-2,7]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-9,-5,4]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-8,-3,12]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that exactly one of the numbers in the triple is positive and the other two are negative, with the two negative numbers in ascending order, followed by the positive number.
+
+[183] ENVIRONMENT:
+Turn - Test

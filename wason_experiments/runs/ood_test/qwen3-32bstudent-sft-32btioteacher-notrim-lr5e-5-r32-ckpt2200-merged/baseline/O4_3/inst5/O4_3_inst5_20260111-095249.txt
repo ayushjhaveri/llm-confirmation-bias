@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-64, 1, -1].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: All numbers are perfect cubes.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [8,27,64]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The three numbers are not all of the same sign.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-2,3,-5]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The triple contains exactly two negative numbers and one positive number.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-1,-2,-3]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The triple contains exactly two negative numbers and one positive number.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [1,2,-3]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-5,6,7]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-3,-4,5]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [2,3,-5]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-1,-1,1]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [4,5,-1]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-7,2,-9]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-10,-20,5]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [3,4,-7]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [2,3,4]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [2,3,-4]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [2,4,-6]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The sum of the three numbers is zero.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [1,2,3]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-3,-4,7]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [6,8,-14]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The sum of the three numbers is zero.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-1,-1,2]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [3,4,-7]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [5,3,-8]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-8,2,-6]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [10,2,-5]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-3,4,-1]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-9,4,5]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [5,7,-12]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [2,5,-7]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [4,5,-9]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [5,5,-10]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [7,-2,-5]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [3,-3,5]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,1,-2]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [3,-4,-7]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [3,-4,1]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-1,-2,3]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [3,4,7]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [3,4,-7]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [2,-3,1]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [4,5,-9]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [6,-2,-4]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [3,-4,1]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [2,-3,4]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-4,-5,9]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [5,2,-7]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: One of the numbers is the negative sum of the other two.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [4,-5,-1]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: Exactly two numbers have the same sign, and the third has the opposite sign.
+
+[183] ENVIRONMENT:
+Turn - Test

@@ -1,0 +1,664 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [89, 67, 2].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - All three numbers are prime numbers.
+Announce: MED rule - At least one number is not a prime number.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [3,5,7]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - At least one number is even.
+Announce: MED rule - All numbers are odd.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [2,3,5]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The three primes do not contain any twin primes (pairs differing by 2).
+Announce: MED rule - The three primes contain at least one pair of twin primes.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [7,11,23]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - The triple includes the number 2 and contains no twin primes.
+Announce: MED rule - The triple either excludes 2 or contains at least one pair of twin primes.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [2,3,7]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The triple includes the number 2 and both other primes are greater than 60.
+Announce: MED rule - The triple either excludes 2 or at least one prime (other than 2) is 60 or below.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [2,61,67]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The triple includes the number 2 and the other two primes are not part of any twin prime pairs.
+Announce: MED rule - The triple either excludes 2 or contains at least one prime that is part of a twin prime pair.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [2,23,37]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The triple includes the number 2, and the other two primes are both greater than 60 and not part of any twin prime pairs.
+Announce: MED rule - The triple either excludes 2, contains primes ≤60, or includes primes that are part of twin prime pairs.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [2,67,79]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The triple includes the number 2 and both other primes are greater than 60 and not part of any twin prime pairs.
+Announce: MED rule - Excludes 2, contains primes ≤60, or the two primes >60 have a difference <20.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [2,89,113]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The triple includes 2, the other two primes are >60, neither is part of a twin prime pair, and their average is non-prime.
+Announce: MED rule - Fails any of the above conditions (excludes 2, primes ≤60, contains twin primes, or their average is prime).
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [2,89,97]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The triple includes 2, the other two primes are greater than 60, not consecutive primes, neither is part of a twin pair, and their average is non-prime.
+Announce: MED rule - Fails any of the above conditions (excludes 2, primes ≤60, consecutive primes, primes in twin pairs, or average is prime).
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [2,79,97]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The triple includes 2, the other two primes are >60, neither is part of a twin pair, their difference is ≥20, and their average is non-prime.
+Announce: MED rule - Fails any condition: excludes 2, primes ≤60, twin primes, difference <20, or average is prime.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [2,67,89]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The triple includes 2, the other two primes are greater than 60 and not part of any twin prime pairs, their difference is ≥20, and their average is non-prime.
+Announce: MED rule - Fails any condition: excludes 2, primes ≤60, twin primes, difference <20, or average is prime.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [89,67,2]
+
+[049] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[050] MODEL:
+Announce: DAX rule - The triple includes 2, the other two primes are greater than 60 and not part of any twin prime pairs, their difference is ≥20, and their average is non-prime.
+Announce: MED rule - Fails any condition: excludes 2, primes ≤60, twin primes, difference <20, or average is prime.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [2,89,127]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes differing by exactly 22.
+Announce: MED rule - The triple either excludes 2 or the two primes (excluding 2) do not differ by exactly 22.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [2,67,97]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The triple includes 2 and the primes 67 and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [2,7,29]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [67,89,2]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [2,83,89]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [2,67,89]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 whose difference is a multiple of 11.
+Announce: MED rule - Any triple not meeting the DAX criteria.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [2,23,89]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 whose difference is a multiple of 11.
+Announce: MED rule - Any triple not meeting all three conditions (includes 2, primes >60, and their difference is a multiple of 11).
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [2,61,83]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [2,67,89]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [2,67,89]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The triple contains exactly the prime numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89."
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [2,71,97]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [2,67,89]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89."
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [2,73,83]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The triple contains exactly the prime numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [2,67,97]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 89, 67, and 2 in any order.
+Announce: MED rule - Any triple not containing exactly 89, 67, and 2.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [73,67,2]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 with an average that is a composite number.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89."
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [2,73,89]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 with an average that is a composite number.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89."
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [2,79,83]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 with an average that is a composite number.
+Announce: MED rule - Any triple not meeting the DAX criteria.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [2,71,83]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 with an average that is a composite number.
+Announce: MED rule - Any triple not meeting the DAX criteria.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [2,71,83]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 whose average is a composite number that is not a perfect square.
+Announce: MED rule - Any triple not containing exactly two primes >60 with 2, or their average is prime/a perfect square.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [2,79,101]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 with an even average.
+Announce: MED rule - Any triple not containing exactly two primes >60 with 2 and/or their average is odd or not composite.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [2,67,83]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [89,67,2]
+
+[137] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[138] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [2,67,101]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [2,67,101]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 but less than 100 with an average that is a composite number.
+Announce: MED rule - Any triple not meeting all these conditions.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [2,67,73]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes greater than 60 with an average that is a composite number.
+Announce: MED rule - Any triple not meeting the DAX criteria.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [2,67,71]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The triple contains exactly the prime numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [2,71,73]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and either 73 or 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and either 73 or 89.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [2,67,97]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89."
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [2,67,79]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The triple includes 2, 67, and a prime number greater than 70 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and a prime >70.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [2,67,89]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and either 73 or 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and 89."
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [2,73,89]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and either 73 or 89 in any order.
+Announce: MED rule - Any triple not containing exactly 2, 67, and either 73 or 89.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [2,73,83]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The triple includes 2 and two primes between 61 and 89 with an even composite average.
+Announce: MED rule - Any triple not containing exactly two primes between 61-89 with 2 and/or their average is not even composite.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [2,79,97]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The triple contains exactly the numbers 2, 67, and either 73 or 89 in any order.
+Announce: MED rule - Any triple not meeting the DAX criteria."
+
+[183] ENVIRONMENT:
+Turn - Test

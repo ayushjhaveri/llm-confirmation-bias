@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-51, 37, -87].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the sum of the three numbers is negative.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [10,-20,-5]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers must alternate in sign, starting with a negative number.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-10,20,-5]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers must be in a strictly decreasing order.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-5,-10,-15]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers must all be odd.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-3,5,7]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that all three numbers must be odd.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [1,3,5]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [9,11,13]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [21,33,45]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-1,3,-5]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [7,15,23]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-9,-7,-5]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [13,17,19]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [101,103,105]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [1,5,9]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [11,13,15]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [25,27,29]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [35,37,39]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [41,43,45]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [51,53,55]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [61,63,65]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [71,73,75]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [81,83,85]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [91,93,95]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [101,103,105]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [111,113,115]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [121,123,125]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [131,133,135]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [141,143,145]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [151,153,155]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [161,163,165]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [171,173,175]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [181,183,185]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [191,193,195]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [201,203,205]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [211,213,215]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [221,223,225]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [231,233,235]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [241,243,245]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [251,253,255]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [261,263,265]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [271,273,275]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [281,283,285]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [291,293,295]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [301,303,305]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [311,313,315]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [321,323,325]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that all three numbers must be odd integers.
+
+[183] ENVIRONMENT:
+Turn - Test

@@ -1,0 +1,665 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [-27, 8, 27].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The numbers in the triple are in arithmetic progression.
+Announce: MED rule - The numbers in the triple are not in arithmetic progression.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,2,3]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The numbers in the triple are in arithmetic progression and include a negative number, a positive number, and zero, or have a specific pattern of negative and positive numbers.
+Announce: MED rule - The numbers in the triple do not meet the specific pattern of having a negative, a zero, and a positive number, or the specific pattern of negative and positive numbers.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-5,0,5]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - One of the numbers in the triple is the negative of another number in the triple, and the third number is the sum of the first two.
+Announce: MED rule - The numbers in the triple do not meet the condition of one being the negative of another and the third being their sum.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-3,3,0]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - One number is the negative of another, and the third is the sum of the positive and negative numbers, but not zero.
+Announce: MED rule - The numbers in the triple do not meet the condition of one being the negative of another and the third being their sum, unless the sum is zero.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [4,-4,0]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The numbers in the triple are a negative number, its positive counterpart, and their sum.
+Announce: MED rule - The numbers in the triple do not meet the condition of being a negative number, its positive counterpart, and their sum, unless the sum is zero.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-2,2,0]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The sum of the first two numbers in the triple equals the third number, and the first two numbers are opposites.
+Announce: MED rule - The numbers in the triple do not meet the condition of the first two being opposites and their sum being the third, unless the two opposites sum to zero.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-10,10,0]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - One number is the negative of another, and the third number is the sum of the two, excluding the case where the sum is zero.
+Announce: MED rule - The numbers in the triple either do not meet the condition of one being the negative of another, or they meet this condition but their sum is zero.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [15,-15,0]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The numbers in the triple are an integer, its negative, and the sum of the integer and its negative, with the sum being non-zero.
+Announce: MED rule - The numbers in the triple are an integer, its negative, and zero.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-7,7,0]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The triple consists of a number, its negative, and their sum, with the sum not being zero.
+Announce: MED rule - The triple consists of a number, its negative, and zero.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [25,-25,0]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - A triple consists of a number, its negative, and the sum of the number and its negative, excluding zero.
+Announce: MED rule - The triple consists of a number, its negative, and their sum, where the sum is zero.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-11,11,0]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The triple consists of two numbers that are opposites and a third number that is the sum of the two, as long as the sum is not zero.
+Announce: MED rule - The triple consists of two numbers that are opposites and their sum, which is zero.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-9,9,0]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The numbers in the triple are a number, its negative, and their non-zero sum.
+Announce: MED rule - The numbers in the triple are a number, its negative, and zero.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-4,4,0]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - A triple consists of two opposite numbers and a non-zero third number that is their sum.
+Announce: MED rule - A triple consists of two opposite numbers and zero.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [13,-13,0]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The triple consists of a positive number, its negative counterpart, and a third number that is their sum, excluding the case where the sum is zero.
+Announce: MED rule - The triple consists of a positive number, its negative counterpart, and zero.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-6,6,0]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The numbers are a pair of opposites and their non-zero sum.
+Announce: MED rule - The numbers are a pair of opposites and their sum is zero.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [20,-20,0]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The triple consists of two numbers that are additive inverses of each other and a non-zero third number that is their sum.
+Announce: MED rule - The triple consists of two numbers that are additive inverses of each other and their sum is zero.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-18,18,0]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - A number, its opposite, and a third number that equals their sum, as long as the sum is not zero.
+Announce: MED rule - A number, its opposite, and zero.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [12,-12,0]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The triple consists of a number, its negative, and their sum, with the sum being a non-zero value.
+Announce: MED rule - The triple consists of a number, its negative, and zero, which is the result of their sum.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-22,22,0]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The numbers in the triple are a number, its opposite, and a non-zero result of their addition.
+Announce: MED rule - The numbers in the triple are a number, its opposite, and zero, which results from their addition.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [8,-8,0]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - One number is the negative of another, and the third number is the sum of the two, but only if the original example [-27, 8, 27] is considered, which does not fit the previously tested rules.
+Announce: MED rule - The numbers in the triple are a number, its negative, and zero, or do not meet the specific condition that defines a DAX triple, which is still unclear.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-27,8,27]
+
+[081] ENVIRONMENT:
+Please test a different triple (not the given example).
+
+[082] MODEL:
+Announce: DAX rule - The numbers in the triple have one number that is the sum of the other two.
+Announce: MED rule - The numbers in the triple do not have one number that is the sum of the other two.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [3,4,7]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The triple consists of two numbers and their difference, where the middle number is the difference between the other two.
+Announce: MED rule - The triple does not consist of two numbers and their difference.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-5,3,-8]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - One number is the sum of the other two.
+Announce: MED rule - No number is the sum of the other two.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [2,3,5]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The numbers in the triple are in a specific arithmetic relationship, where one number is the sum of the other two, as seen in the original example.
+Announce: MED rule - The numbers in the triple do not have an arithmetic relationship where one number is the sum of the other two.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-2,8,6]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The triple consists of two numbers and their sum, with one of the numbers being negative and the other positive, as in the original example [-27, 8, 27].
+Announce: MED rule - The triple does not meet the specific criteria of the DAX rule, having two numbers and their sum with one negative and one positive, or having a different relationship altogether.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [10,-3,7]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - One of the numbers in the triple is the sum of the other two, and the numbers have a specific relationship, such as one being negative and the other two having a certain arithmetic connection.
+Announce: MED rule - The numbers in the triple do not meet the specific arithmetic relationship required for a DAX triple.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-14,21,7]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The numbers in the triple have a specific relationship where one is the negative of a number that, when added to another, gives the third number, as seen in the original example.
+Announce: MED rule - The numbers in the triple do not meet the specific relationship of one being the negative of a number that, when added to another, gives the third number.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-30,10,20]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The triple consists of a negative number, a positive number, and the sum of the negative number and the positive number, as seen in the original example [-27, 8, 27].
+Announce: MED rule - The triple does not consist of a negative number, a positive number, and their sum, or does not meet the specific criteria of the DAX rule.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-25,12,-13]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The numbers in the triple are related in such a way that one number is the sum of the other two, with a specific pattern or condition that is not yet fully understood.
+Announce: MED rule - The numbers in the triple do not meet the specific pattern or condition required for a DAX triple, and do not have one number that is the sum of the other two in the required way.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [15,-23,-8]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The triple consists of two numbers and a third number that is their sum, but with a specific condition or pattern that distinguishes it from a MED triple.
+Announce: MED rule - The triple does not meet the specific condition or pattern required for a DAX triple, and the numbers do not have the required relationship.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-18,20,2]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The numbers in the triple have a specific relationship where the first and last numbers are opposites, and the middle number is the difference between them, or another specific pattern is present.
+Announce: MED rule - The numbers in the triple do not meet the specific relationship or pattern required for a DAX triple.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-9,16,7]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - A specific arithmetic relationship exists between the numbers, such as one being the sum of the other two, but with a unique condition or constraint that sets it apart from MED triples.
+Announce: MED rule - The numbers in the triple do not satisfy the specific arithmetic relationship or unique condition required for a DAX triple.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [22,-22,0]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The triple consists of a number, its negative, and a third number that is not zero, which is related to the first two in a specific way.
+Announce: MED rule - The triple consists of a number, its negative, and zero, or does not meet the specific relationship required for a DAX triple.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-5,5,0]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The numbers in the triple are related in such a way that one number is the sum of the other two, with a specific condition that distinguishes it from MED triples, as seen in the original example [-27, 8, 27].
+Announce: MED rule - The numbers in the triple do not meet the specific condition or relationship required for a DAX triple, and are instead characterized by a different pattern or property.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-32,18,-14]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The triple consists of two numbers and their sum, where the sum is not zero and the numbers have a specific relationship, such as one being negative and the other positive.
+Announce: MED rule - The triple does not meet the specific relationship or condition required for a DAX triple, and may consist of two numbers and their sum where the sum is zero, or have a different pattern altogether.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-11,19,8]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The numbers in the triple have a specific relationship where one number is the negative of another, and the third number is the sum of the positive and negative numbers.
+Announce: MED rule - The numbers in the triple do not meet the specific relationship required for a DAX triple, or consist of a number, its negative, and zero.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-7,24,17]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The triple consists of a negative number, a positive number, and the sum of the negative and positive numbers, which must be non-zero.
+Announce: MED rule - The triple consists of a number, its negative, and zero, or does not meet the specific criteria of the DAX rule.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-4,12,8]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - One number is the sum of the other two, with a specific condition or pattern that applies, such as the original example [-27, 8, 27].
+Announce: MED rule - The numbers in the triple do not meet the specific condition or pattern required for a DAX triple, and do not have one number that is the sum of the other two in the required way.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [19,-25,-6]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The triple consists of two numbers and a third number that is their sum, but with a specific constraint or relationship that distinguishes it from MED triples.
+Announce: MED rule - The triple does not meet the specific constraint or relationship required for a DAX triple, and the numbers do not have the required arithmetic connection.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-13,20,7]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The numbers in the triple have a specific relationship where one number is the negative of another number, and the third number is the sum of the two, excluding the case where the sum is zero.
+Announce: MED rule - The numbers in the triple do not meet the specific relationship required for a DAX triple, or consist of a number, its negative, and zero.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-16,22,6]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The triple consists of a number, its negative, and a non-zero third number that is related to the first two in a specific way, such as the original example [-27, 8, 27].
+Announce: MED rule - The triple consists of a number, its negative, and zero, or does not meet the specific relationship or condition required for a DAX triple.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [10,-15,-5]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The numbers in the triple are related in such a way that one number is the sum of the other two, with a specific pattern or condition that applies, as seen in the original example [-27, 8, 27].
+Announce: MED rule - The numbers in the triple do not meet the specific pattern or condition required for a DAX triple, and do not have one number that is the sum of the other two in the required way.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-9,17,8]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The triple consists of two numbers and their sum, where the two numbers have opposite signs and the sum is not zero.
+Announce: MED rule - The triple does not meet the specific condition of having two numbers with opposite signs and a non-zero sum, or consists of a number, its negative, and zero.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-23,19,-4]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The numbers in the triple have a specific relationship where one number is the negative of another, and the third number is the sum of the two, but only if the sum is not zero.
+Announce: MED rule - The numbers in the triple do not meet the specific relationship required for a DAX triple, or consist of a number, its negative, and zero.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-8,15,7]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The triple consists of a negative number, a positive number, and the sum of the negative and positive numbers, which must be non-zero, as seen in the original example [-27, 8, 27].
+Announce: MED rule - The triple consists of a number, its negative, and zero, or does not meet the specific criteria of the DAX rule.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [20,-13,7]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The numbers in the triple are related in such a way that one number is the sum of the other two, with a specific condition or pattern that applies, and the numbers have opposite signs.
+Announce: MED rule - The numbers in the triple do not meet the specific condition or pattern required for a DAX triple, or do not have one number that is the sum of the other two with opposite signs.
+
+[183] ENVIRONMENT:
+Turn - Test

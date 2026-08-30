@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [89, 67, 2].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The numbers can be in any order and have no apparent mathematical relationship.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,2,3]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers are all different.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [4,4,4]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers are in increasing order or all the same.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [5,3,1]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that one of the numbers is the smallest and one of the numbers is the largest of the three.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [7,7,7]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the numbers can be in any order, but one number must be the smallest and one number must be the largest, or all numbers are the same.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [10,9,8]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the set contains a smallest and a largest number, or all numbers are equal, regardless of order.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [2,2,1]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the set of three numbers contains at least one smallest and one largest number, or all numbers are the same.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [5,5,6]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the set contains a smallest and a largest number and no number is between them, or all numbers are the same.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [3,1,3]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that one number is the smallest, one number is the largest, and the third number is equal to either the smallest or the largest, or all numbers are the same.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [11,11,9]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the three numbers are in non-increasing or non-decreasing order, or all numbers are the same, but a more precise definition is that at least two of the numbers are the same or one is the smallest and one is the largest and the third is equal to one of them, or all are equal.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [4,4,4]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that at least two of the numbers are the same or the numbers are in order from smallest to largest or largest to smallest.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [9,8,7]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the three numbers are either in ascending order, descending order, or at least two of them are equal.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [6,6,5]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the numbers are in ascending or descending order, or at least two numbers are the same.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [3,5,4]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the three numbers are either in strictly ascending order, strictly descending order, or at least two of the numbers are equal.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [7,7,7]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the numbers are in non-decreasing or non-increasing order, meaning they can be the same, strictly increasing, or strictly decreasing.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [2,9,1]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the three numbers are either monotonically increasing, monotonically decreasing, or have at least two identical values.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [1,1,2]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the three numbers form a sequence where each number is either greater than or equal to the previous one, or less than or equal to the previous one.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [8,8,8]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the three numbers are either monotonically non-decreasing or monotonically non-increasing.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [6,5,4]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the three numbers are either in non-decreasing order or non-increasing order.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [3,3,3]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the sequence of three numbers is either non-decreasing or non-increasing, including the case where all numbers are equal.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [10,10,9]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the three numbers form a non-strictly increasing or non-strictly decreasing sequence.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [7,6,5]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the three numbers are in a sequence where each number is either less than or equal to the next, or greater than or equal to the next.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [4,3,2]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the three numbers are monotonically increasing, monotonically decreasing, or contain duplicate values, which can be restated as the numbers being in non-decreasing or non-increasing order.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [9,9,10]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the numbers are in non-increasing or non-decreasing order, allowing for duplicates, but not necessarily requiring them.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [1,2,3]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the three numbers are in non-increasing order, or there are at least two identical numbers.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [8,7,6]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the three numbers are either in non-increasing order or have at least two equal elements, which also encompasses the case of all three numbers being equal.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [5,4,3]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the three numbers form a sequence that is either non-increasing or contains at least two identical elements.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [6,6,7]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the three numbers are in non-increasing order, allowing for duplicates, or all three numbers are the same.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [3,2,1]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the three numbers are arranged in a non-increasing sequence.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [9,8,8]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the three numbers are in non-increasing order.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [7,6,5]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the numbers are arranged in a sequence where each subsequent number is less than or equal to the previous one.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [4,3,2]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the three numbers are in a non-increasing sequence, meaning each number is less than or equal to the one before it.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,1,1]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the three numbers form a non-increasing sequence.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [10,9,8]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the three numbers are in non-increasing order.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [6,5,4]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the three numbers are arranged in descending or equal order.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [3,2,1]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the three numbers are in descending order or have equal values.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [8,7,6]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the numbers are in a descending sequence or are equal.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [4,4,4]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the three numbers are either equal or in descending order.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [9,8,7]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the three numbers are in descending order or all the same.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [5,4,3]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the three numbers are arranged in a descending sequence or are identical.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [2,1,1]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the three numbers are either in descending order or all three numbers are the same.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [6,5,4]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the three numbers form a descending sequence or are all equal.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [3,3,2]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the three numbers are in a descending order sequence, or all three are identical.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [7,6,5]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the three numbers are arranged in descending order or are the same.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [1,1,1]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the three numbers are either the same or in descending order.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [9,8,7]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the three numbers are in descending sequence or all are equal.
+
+[183] ENVIRONMENT:
+Turn - Test

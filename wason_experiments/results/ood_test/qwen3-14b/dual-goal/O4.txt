@@ -1,0 +1,113 @@
+# Group O4
+
+## Rule O4_1
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | MED:DAX (solved, pre-first) | MED:DAX (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 1 | 0 | — | — | — | — | — | — | 1 | 0 | 0 | — | 1388 |
+| inst2 | 1 | 0 | — | — | — | — | — | — | 1 | 0 | 0 | — | 756 |
+| inst3 | 0 | — | — | 0.154 | — | 0.667 | — | 2017.923 | 0 | 39 | 6 | 0.133 | 185274 |
+| inst4 | 0 | — | — | 0.607 | — | 1.444 | — | 1186.978 | 0 | 28 | 17 | 0.378 | 110414 |
+| inst5 | 1 | 6 | 0.000 | — | — | — | 1710.417 | — | 0 | 6 | 0 | 0.000 | 23497 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.600 |
+| #Tests Before First Correct (solved only) | 2.000 |
+| Incompat:Compat (solved, pre-first) | 0.000 |
+| Incompat:Compat (unsolved, all) | 0.380 |
+| MED:DAX (solved, pre-first) | — |
+| MED:DAX (unsolved, all) | 1.056 |
+| AvgThinkTok (solved, pre-first) | 1710.417 |
+| AvgThinkTok (unsolved, all) | 1602.451 |
+| First Guess Rate | 0.400 |
+| Avg Incompatibility Fraction (solved, pre-first) | 0.000 |
+| Avg Incompatibility Fraction (unsolved, all) | 0.256 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 25641 |
+| Sum Total Tokens Generated (unsolved, all) | 295688 |
+
+## Rule O4_2
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | MED:DAX (solved, pre-first) | MED:DAX (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 0 | — | — | 0.406 | — | 0.364 | — | 570.516 | 0 | 32 | 13 | 0.289 | 53294 |
+| inst2 | 0 | — | — | 0.286 | — | 0.286 | — | 593.736 | 0 | 35 | 10 | 0.222 | 55461 |
+| inst3 | 0 | — | — | 0.406 | — | 0.364 | — | 729.022 | 0 | 32 | 13 | 0.289 | 67728 |
+| inst4 | 0 | — | — | 0.324 | — | 0.406 | — | 490.286 | 0 | 34 | 11 | 0.244 | 45971 |
+| inst5 | 1 | 5 | 0.667 | — | 0.250 | — | 1176.500 | — | 0 | 3 | 2 | 0.400 | 13313 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.200 |
+| #Tests Before First Correct (solved only) | 5.000 |
+| Incompat:Compat (solved, pre-first) | 0.667 |
+| Incompat:Compat (unsolved, all) | 0.355 |
+| MED:DAX (solved, pre-first) | 0.250 |
+| MED:DAX (unsolved, all) | 0.355 |
+| AvgThinkTok (solved, pre-first) | 1176.500 |
+| AvgThinkTok (unsolved, all) | 595.890 |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | 0.400 |
+| Avg Incompatibility Fraction (unsolved, all) | 0.261 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 13313 |
+| Sum Total Tokens Generated (unsolved, all) | 222454 |
+
+## Rule O4_3
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | MED:DAX (solved, pre-first) | MED:DAX (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 0 | — | — | 0.071 | — | 0.556 | — | 1958.736 | 0 | 42 | 3 | 0.067 | 180198 |
+| inst2 | 0 | — | — | 0.607 | — | 1.812 | — | 2310.989 | 0 | 28 | 17 | 0.378 | 212076 |
+| inst3 | 0 | — | — | 0.154 | — | 1.143 | — | 1919.912 | 0 | 39 | 6 | 0.133 | 176551 |
+| inst4 | 0 | — | — | 0.216 | — | 0.286 | — | 465.857 | 0 | 37 | 8 | 0.178 | 44461 |
+| inst5 | 0 | — | — | 4.625 | — | 0.552 | — | 2204.143 | 0 | 8 | 37 | 0.822 | 202496 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.000 |
+| #Tests Before First Correct (solved only) | — |
+| Incompat:Compat (solved, pre-first) | — |
+| Incompat:Compat (unsolved, all) | 1.135 |
+| MED:DAX (solved, pre-first) | — |
+| MED:DAX (unsolved, all) | 0.870 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | 1771.927 |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | — |
+| Avg Incompatibility Fraction (unsolved, all) | 0.316 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 0 |
+| Sum Total Tokens Generated (unsolved, all) | 815782 |
+
+## Rule O4_4
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | MED:DAX (solved, pre-first) | MED:DAX (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 1 | 11 | 1.750 | — | 0.100 | — | 1999.591 | — | 0 | 4 | 7 | 0.636 | 47080 |
+| inst2 | 1 | 17 | 0.545 | — | 0.133 | — | 987.059 | — | 0 | 11 | 6 | 0.353 | 36637 |
+| inst3 | 1 | 7 | 2.500 | — | 0.167 | — | 1633.714 | — | 0 | 2 | 5 | 0.714 | 25370 |
+| inst4 | 0 | — | — | 0.184 | — | 0.000 | — | 2045.791 | 0 | 38 | 7 | 0.156 | 188320 |
+| inst5 | 0 | — | — | 0.500 | — | 0.154 | — | 2048.879 | 0 | 30 | 15 | 0.333 | 188395 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.600 |
+| #Tests Before First Correct (solved only) | 11.667 |
+| Incompat:Compat (solved, pre-first) | 1.598 |
+| Incompat:Compat (unsolved, all) | 0.342 |
+| MED:DAX (solved, pre-first) | 0.133 |
+| MED:DAX (unsolved, all) | 0.077 |
+| AvgThinkTok (solved, pre-first) | 1540.121 |
+| AvgThinkTok (unsolved, all) | 2047.335 |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | 0.568 |
+| Avg Incompatibility Fraction (unsolved, all) | 0.244 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 109087 |
+| Sum Total Tokens Generated (unsolved, all) | 376715 |

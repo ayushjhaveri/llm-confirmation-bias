@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [8, 27, -27].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers can be the cubes of any three integers, but at least one must be negative.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,8,27]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers are perfect cubes.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [8,27,64]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that two of the numbers are perfect cubes and the third is the negative of one of the perfect cubes.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [8,-8,27]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that one of the numbers is the negative of a perfect cube and the other two are perfect cubes.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-1,8,27]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that one number is the negative of a perfect cube and the other two are perfect cubes.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-8,27,64]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that exactly one of the numbers is the negative of a perfect cube and the other two are perfect cubes.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [1,-1,8]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that exactly one number is the negative of a perfect cube and the other two are perfect cubes.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-27,8,64]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that exactly one of the numbers is the negative of a perfect cube and the other two are perfect cubes, and the perfect cubes are of consecutive integers or one is the cube of 1.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [1,-8,27]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that exactly one of the numbers is the negative of a perfect cube and the other two are perfect cubes.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-64,1,8]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that exactly one of the numbers is the negative of a perfect cube and the other two are perfect cubes, with one of the perfect cubes being 1 or the cubes are of consecutive integers.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [1,-27,8]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that exactly one of the numbers is the negative of a perfect cube and the other two are perfect cubes, with one of the cubes being the cube of 1 or the cubes of consecutive integers, but the consecutive integers must include 1 or be centered around the cube root of the negative number.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-1,8,27]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that exactly one of the numbers is the negative of a perfect cube and the other two are perfect cubes, with one being the cube of 1 or the cubes of consecutive integers including 1, or the negative of a cube is the cube of an integer one more or one less than the cube root of one of the positive cubes.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [1,-8,64]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that exactly one of the numbers is the negative of a perfect cube and the other two are perfect cubes, with one of the perfect cubes being 1 or the cube of an integer one more or one less than the cube root of the negative cube.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-8,1,27]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that exactly one of the numbers is the negative of a perfect cube and the other two are perfect cubes, with the cube roots of the two positive cubes being consecutive integers.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [1,-1,8]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that exactly one of the numbers is the negative of a perfect cube and the other two are perfect cubes, with one of the cubes being 1 or the cube roots of the three numbers are consecutive integers.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-27,8,1]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the numbers are perfect cubes, one of which is negative, and their cube roots are consecutive integers.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-64,1,8]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the numbers are perfect cubes, one of which is negative, and the cube roots of the numbers are three consecutive integers, with one of the integers being 1, or the negative cube is the cube of an integer one more or one less than the cube root of one of the positive cubes, but the consecutive integers must include 1 or be centered around the cube root of the negative number, however a simpler rule could be the numbers are consecutive cubes with one being negative.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-1,8,27]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the numbers are three consecutive perfect cubes, with one of them being negative.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-8,27,64]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the numbers are three consecutive perfect cubes, with one of them being negative, in the sequence ...,-1,0,1,... of cubes, but 0 is not included.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-27,8,27]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the numbers are three consecutive perfect cubes, with one of them being negative.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-125,64,125]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the numbers are three consecutive perfect cubes, with one of them being negative.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-8,1,8]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the numbers are three consecutive perfect cubes, with one of them being negative, and they are symmetric around zero.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-64,-27,-8]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the numbers are three consecutive perfect cubes, one positive, one negative, and the negative is the mirror image of the largest positive cube.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-125,-64,-27]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the numbers are a perfect cube, its negative, and the perfect cube of the next integer.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-1,1,8]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next integer.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-8,8,27]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, the same number as a positive perfect cube, and the perfect cube of the next consecutive integer.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-27,27,64]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the next consecutive perfect cube.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-64,64,125]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer, in a sequence where the cube roots are consecutive integers.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-1,1,8]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next integer.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-8,8,27]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, the same number as a positive perfect cube, and the perfect cube of the next consecutive integer, with the consecutive integers being one apart, such as -1, 0, and 1, or -1, 1, and 2, but not -2, -1, and 0, or any other sequence with a gap.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-27,27,64]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-125,125,216]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-216,216,343]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer, with the cube roots of the numbers being consecutive integers, one of which is negative, and the sequence of cube roots starts from a negative number or 1, but not from a positive number greater than 1, and includes the next consecutive integer.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-8,8,27]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next integer, where the sequence of cube roots is consecutive and includes 1 or starts from a negative number and includes the next two consecutive integers.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-1,1,8]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-27,27,64]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-64,64,125]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer, with the cube root of the negative number being one less than the cube root of the positive number.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-1,1,8]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-8,8,27]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next integer, where the cube roots of the negative and positive cubes differ by 1.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-27,27,64]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next integer, where the cube roots of the negative and positive cubes differ by 1.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-125,125,216]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next integer, where the cube roots of the negative and positive cubes differ by 1.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-216,216,343]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next integer, where the cube roots of the negative and positive cubes are consecutive integers.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-1,1,8]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-8,8,27]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer, in a sequence where the cube roots are consecutive, such as -1, 1, and 2, or -2, -1 is not included, but 1 and the next consecutive integer is.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-27,27,64]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next integer, where the cube roots are consecutive integers, with one being negative and the next two being positive.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-125,125,216]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the numbers are a negative perfect cube, its positive counterpart, and the perfect cube of the next consecutive integer.
+
+[183] ENVIRONMENT:
+Turn - Test

@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-64, 1, -1].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: One number is a multiple of the other two.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [8,1,-1]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: One number is a multiple of the other two.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [4,2,-2]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: One number is a multiple of the other two, and the other two are coprime.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [10,5,2]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: Two numbers are negatives of each other, and the third is a multiple of one of them, with the two negatives being coprime.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-1,1,2]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: Two numbers are negatives of each other, and the third is a multiple of one of them, with the two negatives being coprime.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-1,1,6]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [1,-1,0]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: Two numbers are negatives of each other, and the third is a multiple of one of them, with the two negatives being coprime.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-1,1,4]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [1,-1,5]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [1,-1,7]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [1,-1,3]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [2,-2,-4]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-1,1,-2]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [1,-1,3]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them and even.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [1,-1,4]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them and even.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [1,-1,8]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them and even.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [1,-1,4]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [1,-1,2]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them and even.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [1,-1,10]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them and even.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-1,1,6]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-1,1,10]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [1,-1,12]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [1,-1,14]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them and even.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-1,1,0]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-1,1,-4]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [1,-1,12]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them and even.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [1,-1,4]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even and a multiple of one of them.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [1,-1,8]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them and even.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [1,-1,16]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: Two numbers are negatives of each other, coprime, and the third is even.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [1,-1,2]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [1,-1,2]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is a multiple of one of them and even.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [1,-1,3]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,-1,2]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [1,-1,10]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even and a multiple of one of them.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [2,-2,4]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [1,-1,8]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even and a multiple of one of them.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [1,-1,4]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: Two numbers are negatives of each other (1 and -1), and the third is even.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [1,-1,18]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: Two numbers are 1 and -1, and the third is even.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [1,-1,6]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: Two numbers are 1 and -1, and the third is even.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [1,-1,2]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: Two numbers are 1 and -1, and the third is even.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [1,-1,14]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: Two numbers are 1 and -1, and the third is even.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [1,-1,12]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: Two numbers are 1 and -1, and the third is even.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [1,-1,20]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [1,-1,2]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: Two numbers are 1 and -1, and the third is even.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [1,-1,6]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-1,1,16]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: Two numbers are negatives of each other and coprime, and the third is even.
+
+[183] ENVIRONMENT:
+Turn - Test

@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [89, 67, 13].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The numbers are in descending order.
+Announce: MED rule - The numbers are not in descending order.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [5,3,1]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order.
+Announce: MED rule - The numbers are not in strictly descending order.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [10,8,5]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order with no consecutive numbers.
+Announce: MED rule - The numbers are not in strictly descending order or they include consecutive numbers.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [15,10,5]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, and each number is not consecutive with the next.
+Announce: MED rule - The numbers are not in strictly descending order, or at least one pair of consecutive numbers exists.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [20,17,13]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 5 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 5.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [30,24,18]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 6 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 6.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [40,30,20]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 7 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 7.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [50,40,30]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 8 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 8.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [20,11,2]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 9 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 9.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [30,20,10]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 10 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 10.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [25,15,5]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 11 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 11.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [21,10,0]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 12 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 12.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [22,10,-2]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 13 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 13.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [26,13,0]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 14 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 14.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [27,13,-1]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 15 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 15.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [28,13,-2]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 16 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 16.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [29,13,-3]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 17 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 17.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [30,13,-4]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 18 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 18.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [31,13,-5]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 19 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 19.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [32,13,-6]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 20 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 20.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [33,13,-7]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 21 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 21.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [34,13,-8]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 22 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 22.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [35,13,-9]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 23 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 23.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [36,13,-10]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 24 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 24.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [37,13,-11]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 25 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 25.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [38,13,-12]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 26 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 26.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [39,13,-13]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 27 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 27.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [40,13,-14]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 28 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 28.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [41,13,-15]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 29 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 29.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [42,13,-16]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 30 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 30.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [43,13,-17]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 31 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 31.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [44,13,-18]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 32 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 32.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [45,13,-19]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 33 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 33.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [46,13,-20]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 34 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 34.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [47,13,-21]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 35 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 35.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [48,13,-22]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 36 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 36.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [49,13,-23]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 37 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 37.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [50,13,-24]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 38 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 38.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [51,13,-25]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 39 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 39.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [52,13,-26]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 40 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 40.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [53,13,-27]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 41 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 41.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [54,13,-28]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 42 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 42.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [55,13,-29]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 43 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 43.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [56,13,-30]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 44 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 44.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [57,13,-31]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 45 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 45.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [58,13,-32]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The numbers are in strictly descending order, with a difference of at least 46 between each consecutive pair.
+Announce: MED rule - The numbers are not in strictly descending order, or the difference between any consecutive pair is less than 46.
+
+[183] ENVIRONMENT:
+Turn - Test

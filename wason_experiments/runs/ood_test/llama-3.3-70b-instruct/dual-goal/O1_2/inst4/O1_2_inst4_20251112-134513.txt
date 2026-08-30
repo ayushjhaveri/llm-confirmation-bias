@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [-21, -41, -91].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The numbers in the triple are all negative.
+Announce: MED rule - The numbers in the triple contain at least one positive number.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [10,20,30]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The numbers in the triple are all negative and the difference between the first and second number is 20, and the difference between the second and third number is 50.
+Announce: MED rule - The numbers in the triple contain at least one non-negative number or do not meet the specific difference criteria.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-1,-21,-91]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The numbers in the triple are all negative and the differences between consecutive numbers are multiples of a common factor, in this case, the differences are -20 and -70, which are both multiples of 10 and also the first and last numbers differ by a multiple of the common factor minus the middle number.
+Announce: MED rule - The numbers in the triple do not meet the specific pattern of differences between consecutive numbers being multiples of a common factor.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-10,-30,-50]
+
+[013] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression, with a common difference between consecutive terms.
+Announce: MED rule - The numbers in the triple do not form an arithmetic progression.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [1,3,5]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one non-negative number.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-2,0,2]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one non-negative number, including zero.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-5,-1,3]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one non-negative number.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-7,-3,1]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or do not consist entirely of negative numbers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-4,-2,0]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one number that is not negative.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-10,-20,-30]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one number that is not negative.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-3,-6,-9]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one number that is not negative.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [2,4,6]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one number that is not negative.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-1,-2,-3]
+
+[049] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one number that is not negative.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [0,2,4]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-5,-4,-3]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression or contain at least one number that is not strictly negative, including zero or positive numbers, or have a common difference of 1.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-8,-6,-4]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference that is a multiple of a certain number and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, have a common difference of 1 or 2, or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-7,-5,-3]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference that is an even number and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, have an odd common difference, or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-9,-7,-5]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of an even number greater than 2 and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, have a common difference of 1, 2, or an odd number, or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-6,-4,-2]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference that is a multiple of a certain even number greater than 2 and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, have a common difference that is not a multiple of the certain even number, or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-12,-8,-4]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of a multiple of a certain number, such as 10 or a factor of 10, minus a fixed constant and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not meet the specific common difference criteria, or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-15,-10,-5]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of a certain number and all numbers are negative, with a specific pattern related to the differences between consecutive terms.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not meet the specific pattern of differences, or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-20,-10,0]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference and all numbers are negative, with a specific pattern where the difference between consecutive terms is decreasing by a constant factor.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not meet the specific pattern of differences, or contain at least one number that is not strictly negative, including zero or positive numbers, or have a non-constant difference between consecutive terms.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-30,-20,-10]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference that is a multiple of a certain number and all numbers are negative, with a decreasing sequence.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, have a common difference that is not a multiple of the certain number, or contain at least one number that is not strictly negative, including zero or positive numbers, or have an increasing or constant sequence.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-40,-30,-20]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of a specific even number, such as a multiple of 10 or a factor of 10, and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [-18,-12,-6]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference that is a multiple of a certain number and all numbers are negative, with the difference between the first two numbers being equal to the difference between the last two numbers multiplied by a factor.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not meet the specific pattern of differences, or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-24,-18,-12]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference and all numbers are negative, where the ratio of the differences between consecutive terms is an integer.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not meet the specific pattern of differences, or contain at least one number that is not strictly negative, including zero or positive numbers, or have a non-integer ratio of differences.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-60,-40,-20]
+
+[105] ENVIRONMENT:
+MED
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference that is a multiple of a certain number, such as 10 or 20, and all numbers are negative, with a specific ratio between terms.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific ratio between terms.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-80,-60,-40]
+
+[109] ENVIRONMENT:
+MED
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 20 or a multiple of 10 that is not 20, and a multiple of a smaller even factor, and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-50,-30,-10]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10 or a multiple of 10 that is not 20, and all numbers are negative, with the first term being a multiple of a certain number.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific condition of the first term.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-90,-80,-70]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10 or a factor of 10 that is not 20, and a factor of the difference between terms is a divisor of the first term, and all numbers are negative.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific condition of the factor and divisor.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-70,-60,-50]
+
+[121] ENVIRONMENT:
+MED
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10 and all numbers are negative, with a specific pattern related to the decimal representation of the numbers.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the decimal representation.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-19,-9,1]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10 or a factor of 10, and the numbers are all negative, and have a specific digit pattern.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific digit pattern.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [-40,-30,-20]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference and all numbers are negative, with a specific pattern related to the ending digits of the numbers.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the ending digits.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-21,-11,-1]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference and all numbers are negative, with a specific pattern where the numbers end in 1, and the difference between consecutive terms is 10 or a multiple of 10.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the ending digits.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-31,-21,-11]
+
+[137] ENVIRONMENT:
+MED
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10 or a multiple of 10, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by a certain amount.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-91,-81,-71]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by 1.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-41,-31,-21]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10 or a decrement of 10 in the tens place, and all numbers are negative, and have a units digit of 1.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units digit.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-51,-41,-31]
+
+[149] ENVIRONMENT:
+MED
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by 1 in a specific sequence.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [-61,-51,-41]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10, and all numbers are negative, and end with the digit 1, and have a specific decrementing pattern in the tens digit.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-71,-61,-51]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by 1 in a consecutive sequence, with the first term being a multiple of a certain number or having a specific digit pattern.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-81,-71,-61]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by 1 in a consecutive sequence, with a specific starting point or digit pattern.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits, or have a starting point that is not a multiple of a certain number.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-91,-81,-71]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by 1 in a consecutive sequence, starting from a specific multiple of 10 or having a certain digit pattern.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits, or have a starting point that does not meet the specific condition.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-101,-91,-81]
+
+[169] ENVIRONMENT:
+MED
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by 1 in a consecutive sequence, with the hundreds digit being non-zero or having a specific condition.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits, or have a hundreds digit that does not meet the specific condition.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-111,-101,-91]
+
+[173] ENVIRONMENT:
+MED
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by 1 in a consecutive sequence, with a specific condition on the hundreds digit or the overall digit pattern.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits, or have a digit pattern that does not meet the specific condition.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-21,-11,-1]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by 1 in a consecutive sequence, with the first term being a multiple of a certain small number.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-31,-21,-11]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The numbers in the triple are in an arithmetic progression with a common difference of 10, and all numbers are negative, and have a units digit of 1, and the tens digit decreases by 1 in a consecutive sequence, with the first term having a specific small number of digits.
+Announce: MED rule - The numbers in the triple are either not in an arithmetic progression, do not have the specific common difference or pattern, or contain at least one number that is not strictly negative, including zero or positive numbers, or do not meet the specific pattern related to the units and tens digits.
+
+[183] ENVIRONMENT:
+Turn - Test

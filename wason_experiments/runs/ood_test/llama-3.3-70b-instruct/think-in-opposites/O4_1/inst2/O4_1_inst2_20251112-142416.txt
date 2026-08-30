@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [8, 27, -27].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers can be the cubes of any three integers, but one of them is negative.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,8,-64]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that two of the numbers are the negatives of each other and the third is a perfect cube or the numbers are all perfect cubes with one being the negative of another.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [4,-4,0]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that one of the numbers is the cube of an integer and the other two numbers are the negatives of each other.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [8,8,-8]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that two of the numbers are the negatives of each other and the third number is any integer.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [2,-2,12]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two are the positive and negative of the same number.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [27,3,-3]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that two of the numbers are the positives and negatives of the same perfect cube and the third number is also a perfect cube.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-8,8,27]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that two of the numbers are the positives and negatives of the same number and the third number is also a perfect cube.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [1,-1,64]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that one number is a perfect cube and the other two numbers are the positive and negative of the same integer.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [0,0,125]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that two of the numbers are the positives and negatives of the same integer and the third number is a perfect cube.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-64,64,1]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two numbers are additive inverses of each other.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [125,-5,5]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that one number is a perfect cube and the other two numbers are additive inverses of each other, with one being a perfect cube or zero if the other is not.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [8,-2,2]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two numbers are opposites of each other.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [0,7,-7]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that two of the numbers are opposites and the third number is a perfect cube or zero.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [27,3,-3]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two are a pair of additive inverses.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [64,-4,4]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that two of the numbers are additive inverses of each other and the third is any perfect cube.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-1,1,8]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that two of the numbers are additive inverses of each other and the third number is a perfect cube.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [0,5,-5]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two numbers are additive inverses of each other, with at least one of the inverses being nonzero if the cube is not zero.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-8,8,0]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that two of the numbers are additive inverses of each other and the third is a perfect cube, or the third is zero and the other two are additive inverses of each other.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [0,9,-9]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two numbers are additive inverses of each other.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [125,-10,10]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [216,7,-7]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that one number is a perfect cube and the other two are additive inverses of a perfect cube or zero.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [27,-3,3]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that two of the numbers are additive inverses of each other and the third number is a perfect cube, and the additive inverses are not necessarily perfect cubes.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [64,2,-2]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that one number is a perfect cube and the other two numbers are additive inverses of each other, where one of the inverses can also be a perfect cube.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [8,-1,1]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [0,-4,4]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two numbers are additive inverses of each other, with the perfect cube being nonzero if the inverses are not a perfect cube.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-27,3,-3]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube, and the perfect cube is not the negative of one of the inverses.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [1,-2,2]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two numbers are additive inverses of each other, and at least one of the numbers is a perfect cube.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [0,8,-8]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that two of the numbers are additive inverses of each other and the third number is a perfect cube.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-64,4,-4]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that one number is a perfect cube and the other two numbers are additive inverses of each other, with the cube and the inverses being distinct.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [125,-5,5]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube, and the perfect cube is not one of the inverses unless it is zero.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [8,-16,16]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two numbers are additive inverses of each other, and one of the inverses is not a perfect cube unless the cube is zero.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [27,6,-6]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube, where the cube can be zero and the inverses are any integers.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [0,9,-9]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that two of the numbers are additive inverses of each other and the third is a perfect cube, and if the cube is zero, the inverses must also be a perfect cube and its negative.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [216,-1,1]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [64,2,-2]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube and the other two numbers are additive inverses of each other, with one of the inverses not being a perfect cube unless the cube is zero.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [8,-8,0]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [1,-3,3]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that two of the numbers are additive inverses of each other and the third number is a perfect cube, and the perfect cube is not one of the additive inverses unless the cube is zero.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [0,-64,64]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [27,-27,0]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that one number is a perfect cube or zero and the other two numbers are additive inverses of each other.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [8,-4,4]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is either a perfect cube or zero.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [125,-3,3]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that two of the numbers are additive inverses of each other and the third number is a perfect cube or zero.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [0,8,-8]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube or zero.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [64,7,-7]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that one of the numbers is a perfect cube or zero and the other two numbers are additive inverses of each other.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [216,-9,9]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is either zero or a perfect cube.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [27,4,-4]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that two of the numbers are additive inverses of each other and the third is a perfect cube or zero.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [0,-27,27]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that two numbers are additive inverses of each other and the third number is a perfect cube or zero.
+
+[183] ENVIRONMENT:
+Turn - Test

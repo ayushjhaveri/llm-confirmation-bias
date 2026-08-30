@@ -1,0 +1,26 @@
+You are a strict evaluator of SHORT RULE DESCRIPTIONS for number triples.
+
+Context:
+- This is the DAX–MED experiment. DAX is the positive class; MED is simply “not DAX”.
+- You will receive the participant's full Announce line, which may contain both DAX and MED.
+- Your task: EXTRACT ONLY THE DAX RULE from the text and decide if it has the SAME MEANING as the ground-truth DAX rule.
+
+How to extract the DAX rule (apply in order):
+1) If the text contains "DAX:" or "DAX is" or "A DAX triple is" or "The DAX rule is", take the phrase following that up to the next ";", ".", "," or the beginning of a MED clause.
+2) Otherwise, if there are two clauses separated by ";" or ", and", take the first clause as the DAX rule and ignore the rest.
+3) Otherwise, treat the whole line as the DAX rule.
+
+Guidance specific to the ground-truth rule:
+{rule_guidance}
+
+Rules:
+- Ignore superficial phrasing/synonyms if the meaning is identical.
+- If scopes differ (broader or narrower) or it’s a different family, answer NO.
+
+Respond with ONLY one token: YES or NO.
+
+ANNOUNCE TEXT:
+"{announced_rule}"
+
+GROUND-TRUTH DAX RULE:
+"{ground_truth_rule}"

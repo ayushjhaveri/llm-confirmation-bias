@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [-1, -81, -91].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime.
+Announce: MED rule - At least one pair of numbers in the triple is not coprime.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,4,6]
+
+[005] ENVIRONMENT:
+MED
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime.
+Announce: MED rule - At least one pair of numbers in the triple is not coprime.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [3,4,5]
+
+[009] ENVIRONMENT:
+MED
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The triple is not an arithmetic progression.
+Announce: MED rule - The triple is an arithmetic progression.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [1,2,4]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - All numbers in the triple are odd.
+Announce: MED rule - At least one number in the triple is even.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [3,5,7]
+
+[017] ENVIRONMENT:
+MED
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime.
+Announce: MED rule - At least one pair of numbers in the triple is not coprime.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [2,3,5]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The triple is not an arithmetic progression.
+Announce: MED rule - The triple is an arithmetic progression.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [9,19,29]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - All numbers are odd and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one number is even, or the triple is an arithmetic progression.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [5,7,11]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - All numbers are odd and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one number is even, or the triple is an arithmetic progression.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [7,9,11]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - All numbers are odd and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one number is even, or the triple is an arithmetic progression.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [3,5,9]
+
+[037] ENVIRONMENT:
+MED
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [5,7,11]
+
+[041] ENVIRONMENT:
+MED
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [1,3,5]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [5,7,11]
+
+[049] ENVIRONMENT:
+MED
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The triple is not an arithmetic progression and all pairs of numbers are coprime.
+Announce: MED rule - The triple is an arithmetic progression or at least one pair of numbers is not coprime.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [5,7,12]
+
+[053] ENVIRONMENT:
+MED
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - All numbers are odd, not in an arithmetic progression, and all pairs are coprime.
+Announce: MED rule - The triple contains an even number, is an arithmetic progression, or has at least one pair that isn't coprime.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [5,7,13]
+
+[057] ENVIRONMENT:
+MED
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [5,7,11]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [2,3,4]
+
+[065] ENVIRONMENT:
+MED
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [3,5,7]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [5,7,13]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [5,7,11]
+
+[077] ENVIRONMENT:
+MED
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime, and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [5,7,11]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-3,-5,-7]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - All numbers are odd, the triple is not an arithmetic progression, and all pairs of numbers are coprime.
+Announce: MED rule - The triple contains at least one even number, is an arithmetic progression, or has at least one pair of numbers that are not coprime.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [5,7,11]
+
+[089] ENVIRONMENT:
+MED
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [3,5,7]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - All pairs of numbers in the triple are coprime and the triple is not an arithmetic progression.
+Announce: MED rule - Either at least one pair of numbers is not coprime or the triple is an arithmetic progression.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [5,7,11]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - All numbers are negative, odd, not in an arithmetic progression, and all pairs are coprime.
+Announce: MED rule - The triple contains at least one non-negative number, is an even number, is in an arithmetic progression, or has at least one pair that isn't coprime.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-5,-7,-11]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - All numbers are negative, coprime, and the triple is not an arithmetic progression.
+Announce: MED rule - The triple contains at least one non-negative number, is an arithmetic progression, or has at least one pair that isn't coprime.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-7,-11,-13]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - All numbers are negative, all pairs are coprime, and the triple is not an arithmetic progression.
+Announce: MED rule - The triple contains at least one non-negative number, has at least one pair that isn't coprime, or is an arithmetic progression.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-2,-4,-6]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - All numbers in the triple are negative integers.
+Announce: MED rule - At least one number in the triple is non-negative.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-2,-4,-6]
+
+[113] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - All numbers in the triple are negative integers.
+Announce: MED rule - At least one number in the triple is non-negative.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-9,-10,-11]
+
+[117] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - All numbers in the triple are negative integers.
+Announce: MED rule - At least one number in the triple is non-negative.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-9,-10,-11]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - All numbers in the triple are negative integers.
+Announce: MED rule - At least one number in the triple is non-negative.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-1,-2,-3]
+
+[125] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - All numbers in the triple are negative integers.
+Announce: MED rule - At least one number in the triple is non-negative.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,-2,-3]
+
+[129] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - All numbers in the triple are negative integers.
+Announce: MED rule - At least one number in the triple is non-negative.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-1,-3,-5]
+
+[133] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - All numbers in the triple are negative integers.
+Announce: MED rule - At least one number in the triple is non-negative.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-5,-7,-9]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is positive.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-1,-2,-3]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - All numbers in the triple are negative integers.
+Announce: MED rule - At least one number in the triple is non-negative.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [2,3,5]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is positive.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-4,-6,-8]
+
+[149] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is positive.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [5,-7,-8]
+
+[153] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is positive.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-3,-5,-7]
+
+[157] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is positive.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-1,-2,-3]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is positive.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [1,-2,-3]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is positive.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [-5,-7,-11]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is positive.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [4,-5,-6]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is positive.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-2,-3,-4]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is non-negative.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [0,0,0]
+
+[181] ENVIRONMENT:
+MED
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The sum of the three numbers is negative.
+Announce: MED rule - The sum of the three numbers is non-negative.
+
+[183] ENVIRONMENT:
+Turn - Test

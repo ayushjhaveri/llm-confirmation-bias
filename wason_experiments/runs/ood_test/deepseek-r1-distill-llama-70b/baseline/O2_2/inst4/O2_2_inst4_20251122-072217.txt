@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-67, 75, 25].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The product of the three numbers is a perfect square.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,1,-1]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The greatest common divisor of all three numbers is 1, and exactly two of the numbers have a greatest common divisor greater than 1.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [4,6,9]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: Exactly two of the numbers share a common divisor greater than 1, and the third is coprime with them.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [6,9,5]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [10,15,7]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [12,18,7]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [8,12,5]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [14,21,5]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [15,21,4]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [3,6,4]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [9,12,7]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: Exactly one pair of the three numbers has a greatest common divisor greater than 1, and the other two pairs have a greatest common divisor of 1.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [2,4,5]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [9,15,4]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [6,9,7]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [6,10,7]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [12,18,5]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: Exactly one pair of the three numbers has a greatest common divisor greater than 1, and the third number is coprime with both numbers in that pair.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [12,18,5]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: Exactly one pair of the three numbers shares at least one common prime factor, and the third number is coprime with both numbers in that pair, with the two numbers in the pair not being powers of each other.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [9,15,4]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, the third number is coprime with both of those two, and the two numbers sharing the common factor are not powers of each other.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [2,4,3]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [9,15,4]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, the third number is coprime with both of those two, and the two numbers sharing the common factor are not powers of each other.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [10,15,21]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: Among the three numbers, exactly one pair shares at least one common prime factor, and the third number is coprime with at least one of the two numbers in that pair.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [14,21,5]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: Exactly one pair of the three numbers has a greatest common divisor greater than 1, and the third number is coprime with both numbers in that pair.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [12,18,5]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: Exactly one pair of the three numbers shares a common divisor greater than 1, and the third number is coprime with both numbers in that pair.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [8,12,5]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: Exactly one pair of the three numbers shares a common divisor greater than 1, the third number is coprime with both numbers in that pair, and the two numbers in the pair are not powers of each other.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [6,9,7]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, the third number is coprime with both of those two numbers, and the two numbers sharing the common factor are not powers of each other.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [6,10,7]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: Exactly one pair of the three numbers shares a common divisor greater than 1, and the third number is coprime with both numbers in that pair.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [9,15,4]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number does not share that same divisor with them. The third number can share a different divisor with one of the two, but not the one that the pair shares.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [12,18,7]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: Exactly one pair of the three numbers shares a common divisor greater than 1, and the third number is coprime with both numbers in that pair.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [8,12,7]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, the third number is coprime with both of those two, and the two numbers sharing the common factor are not powers of each other.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [8,12,5]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [14,21,5]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: Exactly one pair of the three numbers shares a common divisor greater than 1, and the third number is coprime with both numbers in that pair.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [12,18,7]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, the third number is coprime with both of those two numbers, and the two numbers sharing the common factor are not powers of each other.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [8,12,7]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: Exactly one pair of the three numbers shares a common divisor greater than 1, and the third number is coprime with both numbers in that pair.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [16,24,5]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [18,27,5]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, the third number is coprime with both of those two numbers, and the two numbers sharing the common factor are not powers of each other.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [20,30,7]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, the third number is coprime with both of those two numbers, and the two numbers sharing the common factor are not powers of each other.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [21,35,8]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, and the third number is coprime with both of those two numbers.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [15,21,8]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, the third number is coprime with both of those two numbers, and the two numbers sharing the common factor are not powers of each other.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [14,21,5]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, and the third number is coprime with both of those two numbers.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [6,9,2]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, and the third number is coprime with both of those two numbers.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [6,9,7]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, the third number does not share that same divisor with them, and the two numbers sharing the common divisor are not powers of each other.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [18,27,5]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: Exactly one pair of the three numbers shares a common divisor greater than 1, and the third number is coprime with both numbers in that pair.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [6,10,7]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: Exactly two of the three numbers share a common divisor greater than 1, and the third number is coprime with both of those two numbers.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [10,15,7]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, and the third number is coprime with both of those two numbers.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [21,35,8]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: Exactly two of the three numbers share a common prime factor, the third number is coprime with both of those two numbers, and the two numbers sharing the common factor are not powers of each other.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [15,21,8]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: Exactly one pair of the three numbers shares a common divisor greater than 1, the third number is coprime with both numbers in that pair, and the two numbers in the pair are not powers of each other.
+
+[183] ENVIRONMENT:
+Turn - Test

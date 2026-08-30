@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-1, -81, -91].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers are in arithmetic progression.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,5,8]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers are consecutive integers multiplied by the same constant, or in this case possibly all perfect squares or related to a sequence of negative numbers.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [4,9,16]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that the numbers are all negative and their absolute values are consecutive integers when their digits are reversed.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [-19,-98,-109]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers are negative and the absolute values of the numbers are related to the sequence of numbers that when their digits are reversed result in a sequence of consecutive numbers, such as 1, 8, 9 for -1, -8, -9 or -1, -81, -91.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-1,-8,-9]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that the numbers are negative and the absolute values of the numbers are increments of a specific pattern when their digits are reversed, possibly related to increasing the reversed digits in a particular sequence.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-2,-12,-21]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that the numbers are negative and their absolute values are the results of reversing the digits of consecutive integers.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [-13,-31,-41]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the numbers are negative and the absolute values of the numbers are obtained by reversing the digits of consecutive integers, but only for certain starting numbers, such as 1, 81, 91.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-1,-19,-109]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that the numbers are negative and the absolute values of the numbers are obtained by reversing the digits of numbers that are related to a sequence where the original numbers have a digit 1, such as 1, 81, 91.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [-79,-98,-109]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the numbers are negative and their absolute values are the results of reversing the digits of numbers that have a specific pattern or sequence, possibly related to the position of the digit 1, as in 1, 81, 91, which become -1, -81, -91 when reversed and negated, but not a simple reversal of consecutive integers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-1,-81,-91]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the numbers are negative and the absolute values of the numbers are the results of reversing the digits of numbers in the sequence where each number is obtained by adding 80, then 10, such as 1, 81, 91.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-2,-82,-92]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that the numbers are negative and their absolute values are 1, 81, and 91, which are related to the concept of the first, ninth, and tenth squares being 1, 81, and 100 but with a shift to 91 instead of 100, possibly indicating a unique sequence or pattern.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [1,81,100]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that the numbers are negative and the absolute values of the numbers are the squares of 1, 9, and a number close to 10, specifically 1, 81, and 91, which are the squares of 1, 9, and a number between 9 and 10.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-4,-9,-25]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the numbers are negative and their absolute values are the squares of consecutive integers with a specific adjustment, such as the squares of 1, 9, and a number that would be the square of a number between 9 and 10, but is actually 91, which could be related to a unique mathematical sequence or pattern.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-1,-81,-91]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the numbers are the negatives of the squares of 1, 9, and a number that is close to but not exactly 10, which results in the sequence 1, 81, 91 when squared and then negated, specifically -1, -81, and -91.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [1,9,10]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the numbers are negative and their absolute values are the squares of 1 and 9, and a third number that is not a perfect square but is 91, which when negated results in the sequence -1, -81, and -91.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-1,-9,-10]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the numbers are negative and their absolute values are 1, 81, and 91, which correspond to the squares of 1 and 9, and a unique number 91 that is not a perfect square, but when negated, form the sequence -1, -81, and -91.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-1,-81,-100]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the numbers are the negatives of 1, 81, and 91, which are related to the sequence of squares of 1 and 9, and a specific non-square number 91 that is close to but not exactly 100, the square of 10.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-1,-64,-81]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the numbers are negative and their absolute values are 1, 81, and 91, which are the specific numbers that satisfy the hidden rule, possibly related to their unique properties or sequence, and no other numbers satisfy this rule.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-2,-81,-82]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the numbers are the negatives of the specific sequence 1, 81, and 91, and this sequence is unique in satisfying the hidden rule, with no other numbers or sequences being valid.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [1,81,91]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the numbers are 1, 81, and 91, or their negatives, which form a unique sequence that satisfies the hidden rule.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-1,-81,-91]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the numbers are either 1, 81, and 91 or their negatives, -1, -81, and -91.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [2,81,91]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that the numbers are the specific set of 1, 81, and 91, or their exact negatives, -1, -81, and -91, and no other combinations or variations are valid.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [1,81,92]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the numbers are exactly 1, 81, and 91, or exactly -1, -81, and -91, with no substitutions or alterations allowed.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-1,-81,-90]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the numbers are precisely the set 1, 81, 91 or the set -1, -81, -91, with no other numbers or combinations being valid.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [1,81,91]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the numbers are either the exact sequence 1, 81, 91 or the exact sequence -1, -81, -91.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [-1,-81,-91]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that the numbers are the sequence 1, 81, 91 or their negatives -1, -81, -91, and only these two sequences are valid.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [1,81,90]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the numbers must be exactly the sequence 1, 81, 91 or exactly the sequence -1, -81, -91, with no variations or substitutions allowed.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-1,-81,-91]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that the numbers are only the sequences 1, 81, 91 and -1, -81, -91, and no other sequences satisfy the rule.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [1,9,81]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the numbers are exclusively the sequences 1, 81, 91 and -1, -81, -91, with no other numbers or combinations being valid.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-1,-81,-91]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that the numbers must be either the exact sequence 1, 81, 91 or the exact sequence -1, -81, -91, with no exceptions or alternatives.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [1,81,91]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that the numbers are only and exactly the sequences 1, 81, 91 and -1, -81, -91, with no other sequences or combinations being valid.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-1,-81,-91]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the numbers are the specific sequences 1, 81, 91 and their negatives -1, -81, -91, and these are the only valid sequences.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,81,91]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that the numbers must be the exact sequences 1, 81, 91 or the exact sequences -1, -81, -91, with no other combinations or numbers satisfying the rule.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-1,-81,-91]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that the numbers are exclusively the sequences 1, 81, 91 and -1, -81, -91, and no other numbers or sequences are valid.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [1,81,91]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that the numbers are only the exact sequences 1, 81, 91 and their exact negatives -1, -81, -91.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-1,-81,-91]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the numbers must be either the sequence 1, 81, 91 or the sequence -1, -81, -91, with no other sequences or numbers being valid.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [1,81,91]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that the numbers are the sequences 1, 81, 91 and -1, -81, -91, and only these two specific sequences satisfy the rule.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-1,-81,-91]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that the numbers are exactly the sequences 1, 81, 91 or exactly the sequences -1, -81, -91, with no exceptions or variations.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [1,81,91]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that the numbers must be the specific sequences 1, 81, 91 or the specific sequences -1, -81, -91, and no other numbers or sequences are valid.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-1,-81,-91]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that the numbers are only the sequences 1, 81, 91 and their negatives -1, -81, -91, with these being the sole valid sequences.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [1,81,91]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that the numbers are the exact sequences 1, 81, 91 or the exact sequences -1, -81, -91, with no other sequences or combinations being valid.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-1,-81,-91]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the numbers must be either the sequence 1, 81, 91 or the sequence -1, -81, -91, with these two sequences being the only valid solutions.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [1,81,91]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that the numbers are exclusively the sequences 1, 81, 91 and -1, -81, -91, with no other numbers or sequences satisfying the rule.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [-1,-81,-91]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that the numbers are the specific sequences 1, 81, 91 or the specific sequences -1, -81, -91, and only these sequences are valid.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [1,81,91]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that the numbers must be exactly the sequences 1, 81, 91 or exactly the sequences -1, -81, -91, with no exceptions or alternatives.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-1,-81,-91]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that the numbers are only the sequences 1, 81, 91 and their negatives -1, -81, -91, with these being the only valid solutions.
+
+[183] ENVIRONMENT:
+Turn - Test

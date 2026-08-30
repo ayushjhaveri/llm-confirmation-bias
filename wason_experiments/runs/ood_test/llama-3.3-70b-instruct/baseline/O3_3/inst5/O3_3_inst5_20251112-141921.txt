@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [89, 67, 2].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The numbers are in decreasing order.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [5,3,1]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: The numbers are in decreasing order.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [10,8,8]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The numbers are in non-increasing order.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [7,7,7]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The numbers are in non-increasing order.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [4,4,9]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule does not exist or the numbers are in non-increasing order when read from left to right with possible exceptions.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [2,9,7]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The numbers are in non-increasing order when read from left to right, but the rule actually seems to be that at least two of the numbers are in non-increasing order, or there's an error in previous tests.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [1,1,1]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that the numbers are in non-increasing order.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [3,2,4]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: At least two of the numbers are in non-increasing order or the rule is not strictly non-increasing order for all three numbers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [8,6,5]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that at least two of the numbers are in non-increasing order, or any two consecutive numbers are in non-increasing order, but not necessarily all three.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [9,1,8]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: At least two of the numbers are in non-increasing order when compared to each other, but not necessarily in a sequence.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [7,7,3]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that there exists at least one pair of adjacent numbers in non-increasing order, or at least two numbers are equal or in non-increasing order.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [6,5,6]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that at least two of the numbers are equal or in non-increasing order when compared to each other.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [4,3,3]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the numbers can be in any order but at least two of them must be equal or one must be less than or equal to another.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [2,2,5]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that at least two of the numbers are equal.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [1,3,2]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the set contains at least two numbers that are equal or one number is less than or equal to another number.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [10,9,8]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the set contains at least two numbers that are equal or one number is less than or equal to another number, which can be generalized to the numbers not being in strictly increasing order.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [3,5,6]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that the numbers are not in strictly increasing order.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [11,12,13]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is not that the numbers are in a specific order, but rather that they are not in strictly increasing order, however the previous test suggests this might not be the case, a more general rule could be that the set does not contain three distinct numbers in strictly increasing order.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [7,8,10]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the three numbers do not form a sequence of three distinct numbers in strictly increasing order.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [2,4,6]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that the set of three numbers does not contain three distinct integers in strictly increasing order, with no number being equal to another.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [9,9,11]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that the three numbers are not a sequence of three distinct integers in strictly increasing order.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [1,2,3]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is not applicable as the test result is inconsistent with the previous announcements, however a possible rule could be that the numbers do not have to follow any specific order but having three distinct numbers in strictly increasing order is allowed.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [1,3,4]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that the set of three numbers does not have any specific order restriction, the only restriction is that the numbers do not have to be in a specific order, any order is allowed, including strictly increasing order.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [5,5,5]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that there is no specific order or pattern required for the three numbers.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [10,10,11]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that the three numbers can be any integers, with no restrictions on their order or relationship to each other.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [8,8,8]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that there are no rules governing the relationship or order of the three numbers.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [3,3,4]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the three numbers can be any integers, with no restrictions or patterns required.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [6,7,6]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that there is no rule, any three integers are valid.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [2,1,1]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: Any three integers satisfy the rule, there are no constraints.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [4,4,4]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that any set of three integers is valid, with no exceptions or restrictions.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [9,9,9]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: There is no rule, any three integers are a valid set.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [11,11,12]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that there is no rule, and any combination of three integers is acceptable.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [6,6,7]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: Any three integers, regardless of their values or relationship, satisfy the rule.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [1,2,2]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that there are no restrictions on the three integers, any combination is valid.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [8,9,8]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: There are no constraints or rules governing the selection of the three integers.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [5,6,5]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: Any set of three integers is valid, with no rules or restrictions applying.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [7,7,8]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that there is no rule, any three integers are a valid combination.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [3,4,3]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: There are no rules or constraints for the three integers, any combination is acceptable.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [2,3,2]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: Any combination of three integers is valid, with no restrictions or rules applying.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [10,10,10]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: There are no rules or patterns that the three integers must follow, any set is valid.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [6,5,6]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that there is no specific rule, any three integers are a valid set.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [9,10,9]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: Any three integers, in any order, with any values, are a valid combination.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [1,1,2]
+
+[169] ENVIRONMENT:
+YES
+Turn - Announce
+
+[170] MODEL:
+Announce: There are no restrictions, rules, or patterns that apply to the three integers, any combination is valid.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [8,8,9]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: The three integers can be any numbers, in any order, and still be a valid combination.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [4,5,4]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: Any combination of three integers is acceptable, with no limitations or rules.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [7,8,7]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: There are no constraints or rules that govern the selection of the three integers, any set is valid.
+
+[183] ENVIRONMENT:
+Turn - Test

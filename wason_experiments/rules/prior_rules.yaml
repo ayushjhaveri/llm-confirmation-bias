@@ -1,0 +1,145 @@
+instances:
+  - id: P1
+    seed: [4, 6, 8]
+    rule_ids: [P1_1, P1_2, P1_3, P1_4, P1_5, P1_6, P1_7, P1_8, P1_9, P1_10, P1_11, P1_12]
+
+  - id: P2
+    seed: [3, 3, 3]
+    rule_ids: [P2_1, P2_2, P2_3, P2_4, P2_5, P2_6, P2_7, P2_8, P2_9, P2_10, P2_11, P2_12]
+
+  - id: P3
+    seed: [-2, 0, 4]
+    rule_ids: [P3_1, P3_2, P3_3, P3_4, P3_5, P3_6, P3_7, P3_8, P3_9, P3_10, P3_11, P3_12]
+
+  - id: P4
+    seed: [5, 10, 20]
+    rule_ids: [P4_1, P4_2, P4_3, P4_4, P4_5, P4_6, P4_7, P4_8, P4_9, P4_10, P4_11, P4_12]
+
+  - id: P5
+    seed: [-5, -3, -1]
+    rule_ids: [P5_1, P5_2, P5_3, P5_4, P5_5, P5_6, P5_7, P5_8, P5_9, P5_10, P5_11, P5_12]
+
+  - id: P6
+    seed: [1, 4, 9]
+    rule_ids: [P6_1, P6_2, P6_3, P6_4, P6_5, P6_6, P6_7, P6_8, P6_9, P6_10, P6_11, P6_12]
+
+  - id: P7
+    seed: [7, 11, 13]
+    rule_ids: [P7_1, P7_2, P7_3, P7_4, P7_5, P7_6, P7_7, P7_8, P7_9, P7_10, P7_11, P7_12]
+
+  - id: P8
+    seed: [0, 0, 5]
+    rule_ids: [P8_1, P8_2, P8_3, P8_4, P8_5, P8_6, P8_7, P8_8, P8_9, P8_10, P8_11, P8_12]
+
+rules:
+  # P1: [4, 6, 8]
+  - { id: P1_1,  name: "strictly increasing",          expr: "a < b < c", family: order }
+  - { id: P1_2,  name: "non-decreasing",               expr: "a <= b <= c", family: order }
+  - { id: P1_3,  name: "all positive",                 expr: "a > 0 and b > 0 and c > 0", family: sign }
+  - { id: P1_4,  name: "all even",                     expr: "a%2==0 and b%2==0 and c%2==0", family: parity }
+  - { id: P1_5,  name: "sum is even",                  expr: "(a+b+c)%2==0", family: arithmetic }
+  - { id: P1_6,  name: "max is last",                  expr: "c >= a and c >= b", family: order }
+  - { id: P1_7,  name: "min is first",                 expr: "a <= b and a <= c", family: order }
+  - { id: P1_8,  name: "arithmetic progression",       expr: "(b-a)==(c-b)", family: differences }
+  - { id: P1_9,  name: "at least one multiple of 3",   expr: "(a%3==0) or (b%3==0) or (c%3==0)", family: divisibility }
+  - { id: P1_10, name: "no duplicates",                expr: "len({a,b,c})==3", family: equality }
+  - { id: P1_11, name: "at least one even",            expr: "(a%2==0) or (b%2==0) or (c%2==0)", family: parity }
+  - { id: P1_12, name: "all non-zero",                 expr: "a!=0 and b!=0 and c!=0", family: zero }
+
+  # P2: [3,3,3]
+  - { id: P2_1,  name: "all equal",                    expr: "a==b==c", family: equality }
+  - { id: P2_2,  name: "non-decreasing",               expr: "a <= b <= c", family: order }
+  - { id: P2_3,  name: "non-increasing",               expr: "a >= b >= c", family: order }
+  - { id: P2_4,  name: "all positive",                 expr: "a > 0 and b > 0 and c > 0", family: sign }
+  - { id: P2_5,  name: "all odd",                      expr: "a%2!=0 and b%2!=0 and c%2!=0", family: parity }
+  - { id: P2_6,  name: "divisible by 3",               expr: "a%3==0 and b%3==0 and c%3==0", family: divisibility }
+  - { id: P2_7,  name: "sum divisible by 3",           expr: "(a+b+c)%3==0", family: arithmetic }
+  - { id: P2_8,  name: "no negatives",                 expr: "a>=0 and b>=0 and c>=0", family: sign }
+  - { id: P2_9,  name: "symmetric (a=c)",              expr: "a==c", family: equality }
+  - { id: P2_10, name: "no zeros",                     expr: "a!=0 and b!=0 and c!=0", family: zero }
+  - { id: P2_11, name: "at least two equal",           expr: "len({a,b,c})<=2", family: equality }
+  - { id: P2_12, name: "at least one multiple of 3",   expr: "(a%3==0) or (b%3==0) or (c%3==0)", family: divisibility }
+
+  # P3: [-2,0,4]
+  - { id: P3_1,  name: "increasing",                   expr: "a < b < c", family: order }
+  - { id: P3_2,  name: "non-decreasing",               expr: "a <= b <= c", family: order }
+  - { id: P3_3,  name: "contains zero",                expr: "(a==0) or (b==0) or (c==0)", family: zero }
+  - { id: P3_4,  name: "mixed signs",                  expr: "((a<0) or (b<0) or (c<0)) and ((a>0) or (b>0) or (c>0))", family: sign }
+  - { id: P3_5,  name: "at least one negative",        expr: "(a<0) or (b<0) or (c<0)", family: sign }
+  - { id: P3_6,  name: "at least one positive",        expr: "(a>0) or (b>0) or (c>0)", family: sign }
+  - { id: P3_7,  name: "even numbers",                 expr: "a%2==0 and b%2==0 and c%2==0", family: parity }
+  - { id: P3_8,  name: "no duplicates",                expr: "len({a,b,c})==3", family: equality }
+  - { id: P3_9,  name: "sum even",                     expr: "(a+b+c)%2==0", family: arithmetic }
+  - { id: P3_10, name: "at least one multiple of 4",   expr: "(a%4==0) or (b%4==0) or (c%4==0)", family: divisibility }
+  - { id: P3_11, name: "at least one even",            expr: "(a%2==0) or (b%2==0) or (c%2==0)", family: parity }
+  - { id: P3_12, name: "at least two even",            expr: "((a%2==0)+(b%2==0)+(c%2==0))>=2", family: parity }
+
+  # P4: [5,10,20]
+  - { id: P4_1,  name: "increasing",                   expr: "a < b < c", family: order }
+  - { id: P4_2,  name: "non-decreasing",               expr: "a <= b <= c", family: order }
+  - { id: P4_3,  name: "all positive",                 expr: "a > 0 and b > 0 and c > 0", family: sign }
+  - { id: P4_4,  name: "divisible by 5",               expr: "a%5==0 and b%5==0 and c%5==0", family: divisibility }
+  - { id: P4_5,  name: "at least one multiple of 10",  expr: "(a%10==0) or (b%10==0) or (c%10==0)", family: divisibility }
+  - { id: P4_6,  name: "no duplicates",                expr: "len({a,b,c})==3", family: equality }
+  - { id: P4_7,  name: "max is last",                  expr: "c >= a and c >= b", family: order }
+  - { id: P4_8,  name: "min is first",                 expr: "a <= b and a <= c", family: order }
+  - { id: P4_9,  name: "at least one multiple of 5",   expr: "(a%5==0) or (b%5==0) or (c%5==0)", family: divisibility }
+  - { id: P4_10, name: "sum divisible by 5",           expr: "(a+b+c)%5==0", family: arithmetic }
+  - { id: P4_11, name: "not all equal",                expr: "not (a==b==c)", family: equality }
+  - { id: P4_12, name: "no negatives",                 expr: "a>=0 and b>=0 and c>=0", family: sign }
+
+  # P5: [-5,-3,-1]
+  - { id: P5_1,  name: "increasing",                   expr: "a < b < c", family: order }
+  - { id: P5_2,  name: "non-decreasing",               expr: "a <= b <= c", family: order }
+  - { id: P5_3,  name: "all negative",                 expr: "a < 0 and b < 0 and c < 0", family: sign }
+  - { id: P5_4,  name: "all odd",                      expr: "a%2!=0 and b%2!=0 and c%2!=0", family: parity }
+  - { id: P5_5,  name: "at least one multiple of 5",   expr: "(a%5==0) or (b%5==0) or (c%5==0)", family: divisibility }
+  - { id: P5_6,  name: "no duplicates",                expr: "len({a,b,c})==3", family: equality }
+  - { id: P5_7,  name: "max is last",                  expr: "c >= a and c >= b", family: order }
+  - { id: P5_8,  name: "min is first",                 expr: "a <= b and a <= c", family: order }
+  - { id: P5_9,  name: "sum odd",                      expr: "(a+b+c)%2!=0", family: arithmetic }
+  - { id: P5_10, name: "product negative",             expr: "(a*b*c) < 0", family: arithmetic }
+  - { id: P5_11, name: "consecutive odd numbers",      expr: "b-a==2 and c-b==2 and a%2!=0 and b%2!=0 and c%2!=0", family: differences }
+  - { id: P5_12, name: "arithmetic progression",       expr: "(b-a)==(c-b)", family: differences }
+
+  # P6: [1,4,9]
+  - { id: P6_1,  name: "increasing",                   expr: "a < b < c", family: order }
+  - { id: P6_2,  name: "non-decreasing",               expr: "a <= b <= c", family: order }
+  - { id: P6_3,  name: "perfect squares",              expr: "is_square(a) and is_square(b) and is_square(c)", family: number_type }
+  - { id: P6_4,  name: "no duplicates",                expr: "len({a,b,c})==3", family: equality }
+  - { id: P6_5,  name: "max is last",                  expr: "c >= a and c >= b", family: order }
+  - { id: P6_6,  name: "min is first",                 expr: "a <= b and a <= c", family: order }
+  - { id: P6_7,  name: "sum even",                     expr: "(a+b+c)%2==0", family: arithmetic }
+  - { id: P6_8,  name: "at least one multiple of 3",   expr: "(a%3==0) or (b%3==0) or (c%3==0)", family: divisibility }
+  - { id: P6_9,  name: "at least one square number",   expr: "is_square(a) or is_square(b) or is_square(c)", family: number_type }
+  - { id: P6_10, name: "mixed parity",                 expr: "not ((a%2)==(b%2)==(c%2))", family: parity }
+  - { id: P6_11, name: "differences increasing",       expr: "(b-a) < (c-b)", family: differences }
+  - { id: P6_12, name: "at least one even",            expr: "(a%2==0) or (b%2==0) or (c%2==0)", family: parity }
+
+  # P7: [7,11,13]
+  - { id: P7_1,  name: "increasing",                   expr: "a < b < c", family: order }
+  - { id: P7_2,  name: "non-decreasing",               expr: "a <= b <= c", family: order }
+  - { id: P7_3,  name: "all positive",                 expr: "a > 0 and b > 0 and c > 0", family: sign }
+  - { id: P7_4,  name: "all prime",                    expr: "is_prime(a) and is_prime(b) and is_prime(c)", family: number_type }
+  - { id: P7_5,  name: "odd numbers",                  expr: "a%2!=0 and b%2!=0 and c%2!=0", family: parity }
+  - { id: P7_6,  name: "no duplicates",                expr: "len({a,b,c})==3", family: equality }
+  - { id: P7_7,  name: "max is last",                  expr: "c >= a and c >= b", family: order }
+  - { id: P7_8,  name: "min is first",                 expr: "a <= b and a <= c", family: order }
+  - { id: P7_9,  name: "sum odd",                      expr: "(a+b+c)%2!=0", family: arithmetic }
+  - { id: P7_10, name: "at least one prime",           expr: "is_prime(a) or is_prime(b) or is_prime(c)", family: number_type }
+  - { id: P7_11, name: "at least one odd",             expr: "(a%2!=0) or (b%2!=0) or (c%2!=0)", family: parity }
+  - { id: P7_12, name: "no zeros",                     expr: "a!=0 and b!=0 and c!=0", family: zero }
+
+  # P8: [0,0,5]
+  - { id: P8_1,  name: "at least two equal",           expr: "len({a,b,c})<=2", family: equality }
+  - { id: P8_2,  name: "non-decreasing",               expr: "a <= b <= c", family: order }
+  - { id: P8_3,  name: "contains zero",                expr: "(a==0) or (b==0) or (c==0)", family: zero }
+  - { id: P8_4,  name: "max is last",                  expr: "c >= a and c >= b", family: order }
+  - { id: P8_5,  name: "min is first",                 expr: "a <= b and a <= c", family: order }
+  - { id: P8_6,  name: "no negatives",                 expr: "a>=0 and b>=0 and c>=0", family: sign }
+  - { id: P8_7,  name: "at least one positive",        expr: "(a>0) or (b>0) or (c>0)", family: sign }
+  - { id: P8_8,  name: "not all equal",                expr: "not (a==b==c)", family: equality }
+  - { id: P8_9,  name: "divisible by 5",               expr: "a%5==0 and b%5==0 and c%5==0", family: divisibility }
+  - { id: P8_10, name: "at least one multiple of 5",   expr: "(a%5==0) or (b%5==0) or (c%5==0)", family: divisibility }
+  - { id: P8_11, name: "sum is divisible by 5",        expr: "(a+b+c)%5==0", family: arithmetic }
+  - { id: P8_12, name: "sum is odd",                   expr: "(a+b+c)%2!=0", family: arithmetic }

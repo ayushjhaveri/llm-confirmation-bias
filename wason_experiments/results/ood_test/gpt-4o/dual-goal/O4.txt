@@ -1,0 +1,113 @@
+# Group O4
+
+## Rule O4_1
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | MED:DAX (solved, pre-first) | MED:DAX (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 1 | 25 | 0.042 | — | 7.333 | — | — | — | 0 | 24 | 1 | 0.040 | 1098 |
+| inst2 | 0 | — | — | 0.023 | — | — | — | — | 0 | 44 | 1 | 0.022 | 1744 |
+| inst3 | 0 | — | — | 0.047 | — | 3.000 | — | — | 0 | 43 | 2 | 0.044 | 1162 |
+| inst4 | 0 | — | — | 0.500 | — | 1.857 | — | — | 0 | 30 | 15 | 0.333 | 1960 |
+| inst5 | 0 | — | — | 0.552 | — | 8.000 | — | — | 0 | 29 | 16 | 0.356 | 1220 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.200 |
+| #Tests Before First Correct (solved only) | 25.000 |
+| Incompat:Compat (solved, pre-first) | 0.042 |
+| Incompat:Compat (unsolved, all) | 0.280 |
+| MED:DAX (solved, pre-first) | 7.333 |
+| MED:DAX (unsolved, all) | 4.286 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | 0.040 |
+| Avg Incompatibility Fraction (unsolved, all) | 0.189 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 1098 |
+| Sum Total Tokens Generated (unsolved, all) | 6086 |
+
+## Rule O4_2
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | MED:DAX (solved, pre-first) | MED:DAX (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 0 | — | — | 0.071 | — | 1.143 | — | — | 0 | 42 | 3 | 0.067 | 1664 |
+| inst2 | 0 | — | — | 0.731 | — | 2.462 | — | — | 0 | 26 | 19 | 0.422 | 2895 |
+| inst3 | 0 | — | — | 0.023 | — | 1.143 | — | — | 0 | 44 | 1 | 0.022 | 1822 |
+| inst4 | 0 | — | — | 0.071 | — | 1.368 | — | — | 0 | 42 | 3 | 0.067 | 1814 |
+| inst5 | 0 | — | — | 0.023 | — | 3.091 | — | — | 0 | 44 | 1 | 0.022 | 1236 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.000 |
+| #Tests Before First Correct (solved only) | — |
+| Incompat:Compat (solved, pre-first) | — |
+| Incompat:Compat (unsolved, all) | 0.184 |
+| MED:DAX (solved, pre-first) | — |
+| MED:DAX (unsolved, all) | 1.841 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | — |
+| Avg Incompatibility Fraction (unsolved, all) | 0.120 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 0 |
+| Sum Total Tokens Generated (unsolved, all) | 9431 |
+
+## Rule O4_3
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | MED:DAX (solved, pre-first) | MED:DAX (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 0 | — | — | 0.125 | — | — | — | — | 0 | 40 | 5 | 0.111 | 2187 |
+| inst2 | 0 | — | — | 1.143 | — | 0.731 | — | — | 0 | 21 | 24 | 0.533 | 1704 |
+| inst3 | 0 | — | — | 0.250 | — | 0.250 | — | — | 0 | 36 | 9 | 0.200 | 2408 |
+| inst4 | 0 | — | — | 3.091 | — | 0.364 | — | — | 0 | 11 | 34 | 0.756 | 1182 |
+| inst5 | 0 | — | — | 0.452 | — | 1.500 | — | — | 0 | 31 | 14 | 0.311 | 1232 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.000 |
+| #Tests Before First Correct (solved only) | — |
+| Incompat:Compat (solved, pre-first) | — |
+| Incompat:Compat (unsolved, all) | 1.012 |
+| MED:DAX (solved, pre-first) | — |
+| MED:DAX (unsolved, all) | 0.711 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | — |
+| Avg Incompatibility Fraction (unsolved, all) | 0.382 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 0 |
+| Sum Total Tokens Generated (unsolved, all) | 8713 |
+
+## Rule O4_4
+
+
+| Instance | TaskComplete | #TestsBeforeFirstCorrect | Incompat:Compat (solved, pre-first) | Incompat:Compat (unsolved, all) | MED:DAX (solved, pre-first) | MED:DAX (unsolved, all) | AvgThinkTok (solved, pre-first) | AvgThinkTok (unsolved, all) | FirstGuess (correct & before tests) | CompatCt (window) | IncompatCt (window) | IncompatFrac (window) | TotalTokGenerated (window) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| inst1 | 0 | — | — | 0.047 | — | 0.364 | — | — | 0 | 43 | 2 | 0.044 | 1474 |
+| inst2 | 0 | — | — | 0.000 | — | 0.324 | — | — | 0 | 45 | 0 | 0.000 | 2140 |
+| inst3 | 0 | — | — | 0.047 | — | 0.000 | — | — | 0 | 43 | 2 | 0.044 | 1202 |
+| inst4 | 0 | — | — | 8.000 | — | 0.023 | — | — | 0 | 5 | 40 | 0.889 | 1634 |
+| inst5 | 0 | — | — | 0.800 | — | 0.324 | — | — | 0 | 25 | 20 | 0.444 | 1162 |
+
+**Rule Summary (means / sums):**
+| Metric | Value |
+|---|---:|
+| Task Completion Rate | 0.000 |
+| #Tests Before First Correct (solved only) | — |
+| Incompat:Compat (solved, pre-first) | — |
+| Incompat:Compat (unsolved, all) | 1.779 |
+| MED:DAX (solved, pre-first) | — |
+| MED:DAX (unsolved, all) | 0.207 |
+| AvgThinkTok (solved, pre-first) | — |
+| AvgThinkTok (unsolved, all) | — |
+| First Guess Rate | 0.000 |
+| Avg Incompatibility Fraction (solved, pre-first) | — |
+| Avg Incompatibility Fraction (unsolved, all) | 0.284 |
+| Sum Total Tokens Generated (solved, up-to-correct) | 0 |
+| Sum Total Tokens Generated (unsolved, all) | 7612 |

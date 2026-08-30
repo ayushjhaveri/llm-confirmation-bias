@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [97, 67, 37].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [10,20,30]
+
+[005] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [3,6,11]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The differences between consecutive numbers are both prime or both composite.
+Announce: MED rule - One difference is prime and the other is composite.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [2,5,9]
+
+[013] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [15,10,5]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [5,10,15]
+
+[021] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [4,7,10]
+
+[025] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [1,4,8]
+
+[029] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [5,10,15]
+
+[033] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [7,10,13]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [5,10,15]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [5,10,15]
+
+[045] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [4,7,12]
+
+[049] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [5,10,15]
+
+[053] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [5,10,15]
+
+[057] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [1,2,4]
+
+[061] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [4,8,12]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [4,7,12]
+
+[069] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - The differences between consecutive numbers are non-decreasing.
+Announce: MED rule - The differences between consecutive numbers are not non-decreasing.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [3,6,9]
+
+[073] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - The triple, when sorted, has differences between consecutive numbers that are non-decreasing.
+Announce: MED rule - The triple, when sorted, has differences between consecutive numbers that are not non-decreasing.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [1,3,6]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [2,5,8]
+
+[081] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are non-decreasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are decreasing.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [3,5,6]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [4,6,8]
+
+[089] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are non-decreasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are decreasing.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [5,10,15]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [2,4,8]
+
+[097] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [1,4,5]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [5,8,11]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are non-decreasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are not non-decreasing.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [5,3,1]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are non-decreasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are not non-decreasing.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [3,5,7]
+
+[113] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are non-decreasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are not non-decreasing.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [1,3,4]
+
+[117] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are non-decreasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are not non-decreasing.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [1,3,5]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [1,5,6]
+
+[125] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,5,6]
+
+[129] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [1,5,6]
+
+[133] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [2,5,7]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [1,3,6]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are non-decreasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are not non-decreasing.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [10,20,30]
+
+[145] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [2,5,7]
+
+[149] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [1,5,6]
+
+[153] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [5,9,10]
+
+[157] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [5,10,15]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [1,2,3]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [1,2,4]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - The differences between consecutive numbers are both positive or both negative.
+Announce: MED rule - One difference is positive and the other is negative.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [1,5,6]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - The triple forms an arithmetic progression with a common difference between consecutive numbers.
+Announce: MED rule - The triple does not form an arithmetic progression.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [2,4,7]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are non-decreasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are not non-decreasing.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [2,4,6]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - When sorted, the differences between consecutive numbers are either non-decreasing or non-increasing.
+Announce: MED rule - When sorted, the differences between consecutive numbers are neither non-decreasing nor non-increasing.
+
+[183] ENVIRONMENT:
+Turn - Test

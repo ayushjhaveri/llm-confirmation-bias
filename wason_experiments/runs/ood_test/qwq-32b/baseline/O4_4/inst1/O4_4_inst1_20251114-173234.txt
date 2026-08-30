@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-27, 8, 27].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,8,27]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [0,1,-8]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [2,4,8]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [-8,1,64]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [-1,8,216]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [8,64,729]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [343,512,729]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [512,729,1000]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [343,1000,1331]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [3375,4096,4913]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-1,0,1]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: All three numbers must be perfect cubes of integers.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [125,216,343]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: All numbers must be perfect cubes of integers.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [64,216,729]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: All numbers must be perfect cubes of integers.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [1000,1331,1728]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: All numbers must be perfect cubes of integers.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-3375,-2744,-2197]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: All numbers must be perfect cubes of integers.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-343,-512,-729]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: All numbers must be perfect cubes of integers.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [1000,1331,1728]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: All numbers must be perfect cubes of integers.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [27,64,125]
+
+[073] ENVIRONMENT:
+YES
+Turn - Announce
+
+[074] MODEL:
+Announce: All numbers must be perfect cubes of integers.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [0,0,0]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: All three numbers must be distinct perfect cubes of integers.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [1,1,8]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: All three numbers are perfect cubes, and not all three are zero.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [0,0,1]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: All three numbers are perfect cubes, and not all three are zero.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [0,0,8]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: All three numbers must be perfect cubes, and they cannot all be even or all be odd.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [1,27,125]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: All numbers must be perfect cubes, not all even, and not all zero.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [8,64,512]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: All numbers must be perfect cubes, and their cube roots cannot all be even.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [8,27,64]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: All numbers must be perfect cubes, and their cube roots cannot all be even or all be odd.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [1,343,2197]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: All three numbers must be perfect cubes of integers, not all zero, and their cube roots cannot all be even.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [8,27,64]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [0,8,64]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [1,343,3375]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [0,1,-1]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [-8,-64,-512]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [27,125,343]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [0,8,27]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [27,64,125]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: All numbers must be perfect cubes, and their cube roots cannot all be even.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [1,8,64]
+
+[141] ENVIRONMENT:
+YES
+Turn - Announce
+
+[142] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [8,64,216]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [216,64,1728]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [0,1,8]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [125,64,27]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [343,1331,2197]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [0,1,216]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [8,64,216]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [0,8,64]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [27,125,343]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [1,343,729]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: All numbers must be perfect cubes of integers, and their cube roots cannot all be even.
+
+[183] ENVIRONMENT:
+Turn - Test

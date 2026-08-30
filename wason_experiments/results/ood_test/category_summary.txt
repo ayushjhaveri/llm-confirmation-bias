@@ -1,0 +1,136 @@
+# OOD Metrics by Rule Category
+
+| Model | Variant | Category | Task Completion Rate | First Guess Rate | #Tests Before First Correct (solved only) | Incompat:Compat (solved, pre-first-correct) | Incompat:Compat (unsolved, all) | NO:YES (solved, pre-first-correct) | NO:YES (unsolved, all) | Sum Compatible Tests (solved, pre-first-correct) | Sum Incompatible Tests (solved, pre-first-correct) | Sum Compatible Tests (unsolved, all) | Sum Incompatible Tests (unsolved, all) | Avg Incompatibility Fraction (solved, pre-first) | Avg Incompatibility Fraction (unsolved, all) | Sum Total Tokens Generated (solved, up-to-correct) | Sum Total Tokens Generated (unsolved, all) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| deepseek-r1-distill-llama-70b | baseline | Ordering | 0.160 | 0.000 | 18.834 | 0.478 | 0.432 | 0.182 | 2.407 | 48 | 17 | 732 | 213 | 0.276 | 0.217 | 116562 | 2028954 |
+| deepseek-r1-distill-llama-70b | baseline | Parity | 0.133 | 0.000 | 12.000 | 0.493 | 0.422 | 0.262 | 0.142 | 16 | 8 | 465 | 120 | 0.329 | 0.211 | 67790 | 1151548 |
+| deepseek-r1-distill-llama-70b | baseline | Sign | 0.067 | 0.000 | 3.000 | 0.500 | 0.319 | 2.000 | 1.015 | 2 | 1 | 516 | 114 | 0.333 | 0.176 | 7451 | 913883 |
+| deepseek-r1-distill-llama-70b | baseline | Number-theoretic / Numeric properties | 0.640 | 0.200 | 4.733 | 0.539 | 1.417 | 0.425 | 0.092 | 57 | 24 | 260 | 144 | 0.352 | 0.350 | 188350 | 1119246 |
+| deepseek-r1-distill-llama-70b | dual-goal | Ordering | 0.360 | 0.000 | 15.500 | 1.147 | 3.471 | 4.211 | 1.798 | 80 | 56 | 432 | 288 | 0.467 | 0.502 | 304819 | 1800207 |
+| deepseek-r1-distill-llama-70b | dual-goal | Parity | 0.333 | 0.000 | 9.400 | 1.510 | 1.086 | 0.180 | 0.524 | 20 | 27 | 284 | 166 | 0.575 | 0.369 | 135382 | 826980 |
+| deepseek-r1-distill-llama-70b | dual-goal | Sign | 0.600 | 0.067 | 7.633 | 1.008 | 0.368 | 2.135 | 2.294 | 33 | 20 | 198 | 71 | 0.355 | 0.264 | 109541 | 548731 |
+| deepseek-r1-distill-llama-70b | dual-goal | Number-theoretic / Numeric properties | 0.520 | 0.080 | 6.983 | 0.873 | 0.785 | 1.683 | 0.851 | 65 | 40 | 331 | 209 | 0.353 | 0.365 | 251539 | 1816300 |
+| deepseek-r1-distill-llama-70b | think-in-opposites | Ordering | 0.360 | 0.000 | 9.475 | 1.654 | 0.853 | 0.459 | 0.632 | 41 | 45 | 453 | 266 | 0.540 | 0.345 | 217009 | 1803938 |
+| deepseek-r1-distill-llama-70b | think-in-opposites | Parity | 0.333 | 0.000 | 9.250 | 1.097 | 0.673 | 0.579 | 0.347 | 36 | 26 | 311 | 139 | 0.496 | 0.337 | 163036 | 935544 |
+| deepseek-r1-distill-llama-70b | think-in-opposites | Sign | 0.067 | 0.000 | 24.000 | 0.091 | 0.366 | 0.091 | 0.162 | 22 | 2 | 503 | 127 | 0.083 | 0.197 | 21212 | 860983 |
+| deepseek-r1-distill-llama-70b | think-in-opposites | Number-theoretic / Numeric properties | 0.680 | 0.200 | 9.550 | 1.155 | 1.088 | 0.207 | 1.276 | 109 | 51 | 211 | 148 | 0.491 | 0.357 | 357253 | 1196477 |
+| gemini-2.5-pro | baseline | Ordering | 0.600 | 0.000 | 12.125 | 1.074 | 0.666 | 2.367 | 1.965 | 92 | 82 | 283 | 167 | 0.438 | 0.382 | 2938 | 8182 |
+| gemini-2.5-pro | baseline | Parity | 0.867 | 0.000 | 12.267 | 1.402 | 0.419 | 0.665 | 0.419 | 78 | 80 | 64 | 26 | 0.488 | 0.289 | 2808 | 1174 |
+| gemini-2.5-pro | baseline | Sign | 0.400 | 0.067 | 16.600 | 1.260 | 0.509 | 1.197 | 0.557 | 22 | 24 | 277 | 128 | 0.491 | 0.324 | 512 | 4213 |
+| gemini-2.5-pro | baseline | Number-theoretic / Numeric properties | 0.920 | 0.120 | 11.140 | 0.964 | 1.395 | 1.222 | 0.334 | 146 | 100 | 38 | 52 | 0.422 | 0.578 | 4429 | 1966 |
+| gemini-2.5-pro | dual-goal | Ordering | 0.600 | 0.000 | 12.992 | 0.992 | 0.941 | 3.755 | 9.497 | 90 | 66 | 248 | 202 | 0.414 | 0.451 | 6081 | 20774 |
+| gemini-2.5-pro | dual-goal | Parity | 0.533 | 0.000 | 17.367 | 1.480 | 1.039 | 0.897 | 3.328 | 54 | 56 | 172 | 143 | 0.493 | 0.461 | 4414 | 12861 |
+| gemini-2.5-pro | dual-goal | Sign | 0.933 | 0.133 | 8.800 | 0.686 | 0.452 | 2.867 | 44.000 | 82 | 45 | 31 | 14 | 0.320 | 0.311 | 4557 | 2389 |
+| gemini-2.5-pro | dual-goal | Number-theoretic / Numeric properties | 0.880 | 0.160 | 9.140 | 1.320 | 0.642 | 3.108 | 0.781 | 106 | 106 | 83 | 52 | 0.469 | 0.385 | 9115 | 5926 |
+| gemini-2.5-pro | think-in-opposites | Ordering | 0.720 | 0.000 | 10.220 | 1.473 | 0.877 | 1.493 | 3.782 | 93 | 108 | 193 | 122 | 0.568 | 0.435 | 3537 | 7871 |
+| gemini-2.5-pro | think-in-opposites | Parity | 0.933 | 0.000 | 13.700 | 1.313 | 0.667 | 0.822 | 0.500 | 90 | 105 | 27 | 18 | 0.583 | 0.400 | 3349 | 1038 |
+| gemini-2.5-pro | think-in-opposites | Sign | 0.400 | 0.000 | 6.900 | 1.500 | 0.575 | 0.786 | 0.610 | 16 | 21 | 264 | 141 | 0.590 | 0.336 | 505 | 4303 |
+| gemini-2.5-pro | think-in-opposites | Number-theoretic / Numeric properties | 0.960 | 0.120 | 7.720 | 1.264 | 0.667 | 1.902 | 0.607 | 91 | 98 | 27 | 18 | 0.504 | 0.400 | 3233 | 1275 |
+| gpt-4o | baseline | Ordering | 0.000 | 0.000 | — | — | 3.773 | — | 0.301 | 0 | 0 | 815 | 310 | — | 0.276 | 0 | 24286 |
+| gpt-4o | baseline | Parity | 0.000 | 0.000 | — | — | 1.073 | — | 0.359 | 0 | 0 | 572 | 102 | — | 0.152 | 0 | 14581 |
+| gpt-4o | baseline | Sign | 0.600 | 0.600 | 0.000 | — | 0.270 | — | 0.992 | 0 | 0 | 214 | 56 | — | 0.124 | 68 | 5517 |
+| gpt-4o | baseline | Number-theoretic / Numeric properties | 0.000 | 0.000 | — | — | 0.332 | — | 3.839 | 0 | 0 | 973 | 152 | — | 0.135 | 0 | 23380 |
+| gpt-4o | dual-goal | Ordering | 0.120 | 0.040 | 7.750 | 0.709 | 1.263 | 0.150 | 0.413 | 10 | 8 | 693 | 297 | 0.369 | 0.301 | 783 | 33483 |
+| gpt-4o | dual-goal | Parity | 0.067 | 0.000 | 13.000 | 1.167 | 0.787 | 0.300 | 0.858 | 6 | 7 | 493 | 137 | 0.538 | 0.220 | 590 | 21841 |
+| gpt-4o | dual-goal | Sign | 0.467 | 0.467 | 0.000 | — | 1.996 | — | 5.529 | 0 | 0 | 270 | 90 | — | 0.215 | 161 | 13388 |
+| gpt-4o | dual-goal | Number-theoretic / Numeric properties | 0.040 | 0.000 | 25.000 | 0.042 | 0.312 | 7.333 | 2.293 | 24 | 1 | 867 | 213 | 0.040 | 0.197 | 1098 | 39725 |
+| gpt-4o | think-in-opposites | Ordering | 0.120 | 0.080 | 0.667 | 1.000 | 1.052 | 0.000 | 0.093 | 1 | 1 | 831 | 159 | 0.500 | 0.151 | 55 | 21516 |
+| gpt-4o | think-in-opposites | Parity | 0.000 | 0.000 | — | — | 0.765 | — | 0.376 | 0 | 0 | 575 | 100 | — | 0.148 | 0 | 14217 |
+| gpt-4o | think-in-opposites | Sign | 0.333 | 0.333 | 0.000 | — | 6.482 | — | 3.091 | 0 | 0 | 343 | 107 | — | 0.244 | 49 | 9298 |
+| gpt-4o | think-in-opposites | Number-theoretic / Numeric properties | 0.080 | 0.040 | 3.500 | 0.000 | 0.384 | — | 4.598 | 7 | 0 | 902 | 133 | 0.000 | 0.124 | 119 | 23685 |
+| llama-3.3-70b-instruct | baseline | Ordering | 0.160 | 0.040 | 1.667 | 0.750 | 1.352 | 0.100 | 0.885 | 5 | 4 | 650 | 294 | 0.709 | 0.316 | 328 | 26258 |
+| llama-3.3-70b-instruct | baseline | Parity | 0.000 | 0.000 | — | — | 0.974 | — | 0.533 | 0 | 0 | 502 | 173 | — | 0.256 | 0 | 18377 |
+| llama-3.3-70b-instruct | baseline | Sign | 0.400 | 0.200 | 3.000 | 0.815 | 1.176 | 0.315 | 0.468 | 12 | 6 | 248 | 157 | 0.325 | 0.333 | 522 | 11044 |
+| llama-3.3-70b-instruct | baseline | Number-theoretic / Numeric properties | 0.240 | 0.000 | 14.444 | 0.724 | 1.706 | 1.043 | 0.364 | 67 | 28 | 656 | 199 | 0.315 | 0.280 | 2998 | 23469 |
+| llama-3.3-70b-instruct | dual-goal | Ordering | 0.160 | 0.040 | 8.500 | 0.393 | 2.774 | 0.550 | 2.611 | 21 | 13 | 604 | 341 | 0.236 | 0.449 | 1787 | 49225 |
+| llama-3.3-70b-instruct | dual-goal | Parity | 0.067 | 0.000 | 35.000 | 1.692 | 1.275 | 0.750 | 1.340 | 13 | 22 | 359 | 271 | 0.629 | 0.424 | 1622 | 36385 |
+| llama-3.3-70b-instruct | dual-goal | Sign | 0.533 | 0.067 | 11.361 | 0.840 | 0.601 | 1.147 | 3.651 | 40 | 22 | 223 | 92 | 0.362 | 0.335 | 3269 | 17200 |
+| llama-3.3-70b-instruct | dual-goal | Number-theoretic / Numeric properties | 0.120 | 0.000 | 6.250 | 0.334 | 0.947 | 5.500 | 2.324 | 12 | 4 | 659 | 327 | 0.229 | 0.341 | 936 | 45687 |
+| llama-3.3-70b-instruct | think-in-opposites | Ordering | 0.240 | 0.040 | 2.125 | 4.000 | 1.300 | 1.500 | 1.745 | 2 | 11 | 517 | 338 | 0.892 | 0.455 | 631 | 29274 |
+| llama-3.3-70b-instruct | think-in-opposites | Parity | 0.067 | 0.000 | 40.000 | 0.905 | 0.680 | 2.900 | 1.288 | 21 | 19 | 411 | 219 | 0.475 | 0.338 | 1134 | 18524 |
+| llama-3.3-70b-instruct | think-in-opposites | Sign | 0.533 | 0.133 | 4.833 | 0.514 | 0.849 | 0.441 | 1.486 | 18 | 18 | 221 | 94 | 0.554 | 0.322 | 1200 | 10592 |
+| llama-3.3-70b-instruct | think-in-opposites | Number-theoretic / Numeric properties | 0.560 | 0.080 | 10.633 | 1.305 | 0.860 | 3.277 | 0.961 | 105 | 57 | 371 | 124 | 0.486 | 0.296 | 4696 | 14736 |
+| qwen3-14b | baseline | Ordering | 0.280 | 0.040 | 11.500 | 0.226 | 0.606 | 0.088 | 0.557 | 63 | 11 | 651 | 159 | 0.317 | 0.143 | 138357 | 2281576 |
+| qwen3-14b | baseline | Parity | 0.067 | 0.000 | 3.000 | 0.000 | 0.501 | 0.500 | 0.159 | 3 | 0 | 510 | 120 | 0.000 | 0.181 | 4833 | 1741392 |
+| qwen3-14b | baseline | Sign | 0.067 | 0.000 | 1.000 | 0.000 | 0.033 | — | 0.330 | 1 | 0 | 610 | 20 | 0.000 | 0.031 | 3800 | 1185818 |
+| qwen3-14b | baseline | Number-theoretic / Numeric properties | 0.520 | 0.240 | 8.667 | 0.173 | 1.042 | 0.136 | 0.152 | 110 | 12 | 424 | 116 | 0.134 | 0.217 | 243672 | 1477596 |
+| qwen3-14b | dual-goal | Ordering | 0.400 | 0.120 | 3.700 | 1.133 | 0.515 | 0.567 | 2.437 | 18 | 19 | 531 | 144 | 0.359 | 0.213 | 105988 | 2191455 |
+| qwen3-14b | dual-goal | Parity | 0.267 | 0.000 | 8.334 | 1.133 | 0.275 | 0.192 | 0.308 | 20 | 20 | 401 | 94 | 0.484 | 0.205 | 122400 | 1197618 |
+| qwen3-14b | dual-goal | Sign | 0.733 | 0.133 | 13.400 | 0.778 | 0.143 | 0.421 | 1.006 | 83 | 42 | 158 | 22 | 0.382 | 0.122 | 209241 | 459981 |
+| qwen3-14b | dual-goal | Number-theoretic / Numeric properties | 0.640 | 0.080 | 6.867 | 0.531 | 0.784 | 0.990 | 0.581 | 70 | 36 | 228 | 177 | 0.241 | 0.409 | 325549 | 1117394 |
+| qwen3-14b | think-in-opposites | Ordering | 0.360 | 0.120 | 3.975 | 0.912 | 0.453 | 0.380 | 0.677 | 17 | 16 | 559 | 161 | 0.452 | 0.255 | 80971 | 2933305 |
+| qwen3-14b | think-in-opposites | Parity | 0.333 | 0.000 | 10.375 | 0.644 | 1.012 | 0.624 | 0.938 | 60 | 14 | 332 | 118 | 0.358 | 0.368 | 246043 | 1518874 |
+| qwen3-14b | think-in-opposites | Sign | 0.133 | 0.000 | 23.000 | 0.123 | 0.171 | 0.239 | 0.341 | 42 | 4 | 497 | 88 | 0.107 | 0.143 | 59986 | 1195127 |
+| qwen3-14b | think-in-opposites | Number-theoretic / Numeric properties | 0.680 | 0.160 | 4.440 | 1.050 | 0.199 | 3.475 | 0.286 | 36 | 35 | 297 | 63 | 0.524 | 0.142 | 266619 | 821008 |
+| qwen3-14b-without-thinking | baseline | Ordering | 0.080 | 0.080 | 0.000 | — | 1.317 | — | 2.316 | 0 | 0 | 658 | 377 | — | 0.366 | 16 | 16693 |
+| qwen3-14b-without-thinking | baseline | Parity | 0.000 | 0.000 | — | — | 1.979 | — | 0.347 | 0 | 0 | 418 | 257 | — | 0.381 | 0 | 10581 |
+| qwen3-14b-without-thinking | baseline | Sign | 0.267 | 0.267 | 0.000 | — | 0.853 | — | 0.996 | 0 | 0 | 305 | 190 | — | 0.370 | 26 | 11456 |
+| qwen3-14b-without-thinking | baseline | Number-theoretic / Numeric properties | 0.360 | 0.200 | 4.800 | 1.375 | 3.838 | 1.500 | 1.442 | 15 | 9 | 340 | 380 | 0.445 | 0.527 | 414 | 12096 |
+| qwen3-14b-without-thinking | dual-goal | Ordering | 0.080 | 0.040 | 1.500 | 0.000 | 2.131 | 2.000 | 2.261 | 3 | 0 | 701 | 334 | 0.000 | 0.333 | 112 | 32149 |
+| qwen3-14b-without-thinking | dual-goal | Parity | 0.000 | 0.000 | — | — | 1.798 | — | 0.545 | 0 | 0 | 419 | 256 | — | 0.379 | 0 | 20396 |
+| qwen3-14b-without-thinking | dual-goal | Sign | 0.267 | 0.267 | 0.000 | — | 0.792 | — | 1.000 | 0 | 0 | 355 | 140 | — | 0.208 | 80 | 15690 |
+| qwen3-14b-without-thinking | dual-goal | Number-theoretic / Numeric properties | 0.160 | 0.160 | 0.000 | — | 0.996 | — | 1.590 | 0 | 0 | 672 | 273 | — | 0.243 | 82 | 29393 |
+| qwen3-14b-without-thinking | think-in-opposites | Ordering | 0.160 | 0.080 | 3.167 | 2.500 | 1.332 | 0.500 | 3.581 | 2 | 5 | 531 | 414 | 0.416 | 0.423 | 110 | 16603 |
+| qwen3-14b-without-thinking | think-in-opposites | Parity | 0.000 | 0.000 | — | — | 3.000 | — | 0.650 | 0 | 0 | 321 | 354 | — | 0.525 | 0 | 8973 |
+| qwen3-14b-without-thinking | think-in-opposites | Sign | 0.267 | 0.200 | 7.000 | 0.167 | 2.383 | 0.273 | 0.775 | 12 | 2 | 282 | 213 | 0.143 | 0.486 | 252 | 7572 |
+| qwen3-14b-without-thinking | think-in-opposites | Number-theoretic / Numeric properties | 0.440 | 0.200 | 4.125 | 4.250 | 6.516 | 0.000 | 0.713 | 5 | 34 | 324 | 306 | 0.867 | 0.585 | 483 | 11762 |
+| qwen3-32b | baseline | Ordering | 0.360 | 0.080 | 6.550 | 0.646 | 0.120 | 0.183 | 0.280 | 45 | 11 | 637 | 83 | 0.309 | 0.092 | 118283 | 1913106 |
+| qwen3-32b | baseline | Parity | 0.067 | 0.000 | 45.000 | 0.125 | 0.183 | 0.500 | 0.165 | 40 | 5 | 542 | 86 | 0.111 | 0.136 | 220790 | 1245398 |
+| qwen3-32b | baseline | Sign | 0.267 | 0.067 | 4.667 | 0.075 | 0.115 | 0.178 | 0.496 | 25 | 2 | 454 | 41 | 0.062 | 0.084 | 28855 | 673968 |
+| qwen3-32b | baseline | Number-theoretic / Numeric properties | 0.560 | 0.160 | 11.580 | 0.303 | 0.222 | 0.674 | 0.284 | 90 | 29 | 419 | 76 | 0.206 | 0.151 | 259305 | 1495195 |
+| qwen3-32b | dual-goal | Ordering | 0.480 | 0.040 | 14.350 | 0.737 | 0.692 | 0.700 | 1.636 | 77 | 54 | 364 | 219 | 0.364 | 0.373 | 306536 | 2156998 |
+| qwen3-32b | dual-goal | Parity | 0.400 | 0.000 | 12.500 | 1.335 | 0.561 | 0.469 | 0.698 | 34 | 43 | 267 | 138 | 0.551 | 0.338 | 285857 | 1134394 |
+| qwen3-32b | dual-goal | Sign | 0.800 | 0.267 | 4.400 | 0.262 | 1.110 | 2.229 | 1.050 | 34 | 12 | 64 | 71 | 0.153 | 0.512 | 137571 | 534470 |
+| qwen3-32b | dual-goal | Number-theoretic / Numeric properties | 0.560 | 0.160 | 11.233 | 0.698 | 1.233 | 0.699 | 0.316 | 61 | 59 | 241 | 254 | 0.380 | 0.440 | 424557 | 2290666 |
+| qwen3-32b | think-in-opposites | Ordering | 0.520 | 0.080 | 7.108 | 1.419 | 0.562 | 1.504 | 0.295 | 42 | 42 | 367 | 172 | 0.504 | 0.312 | 211485 | 1502628 |
+| qwen3-32b | think-in-opposites | Parity | 0.467 | 0.000 | 15.666 | 1.369 | 1.006 | 0.303 | 0.389 | 54 | 58 | 243 | 117 | 0.490 | 0.411 | 404460 | 1352855 |
+| qwen3-32b | think-in-opposites | Sign | 0.533 | 0.000 | 3.667 | 0.467 | 0.206 | 1.248 | 0.211 | 26 | 16 | 265 | 50 | 0.230 | 0.166 | 85187 | 381651 |
+| qwen3-32b | think-in-opposites | Number-theoretic / Numeric properties | 0.760 | 0.160 | 6.260 | 1.384 | 2.430 | 1.816 | 0.232 | 55 | 64 | 148 | 122 | 0.568 | 0.581 | 330524 | 1370383 |
+| qwen3-32b-without-thinking | baseline | Ordering | 0.200 | 0.160 | 0.200 | 0.000 | 1.099 | — | 8.603 | 1 | 0 | 554 | 346 | 0.000 | 0.384 | 41 | 11845 |
+| qwen3-32b-without-thinking | baseline | Parity | 0.000 | 0.000 | — | — | 0.934 | — | 0.447 | 0 | 0 | 466 | 209 | — | 0.310 | 0 | 10753 |
+| qwen3-32b-without-thinking | baseline | Sign | 0.467 | 0.333 | 2.250 | 3.000 | 0.396 | 3.500 | 0.597 | 3 | 6 | 272 | 88 | 0.429 | 0.255 | 138 | 4519 |
+| qwen3-32b-without-thinking | baseline | Number-theoretic / Numeric properties | 0.360 | 0.160 | 9.944 | 0.587 | 0.660 | 3.689 | 2.639 | 53 | 25 | 506 | 214 | 0.359 | 0.312 | 1198 | 11466 |
+| qwen3-32b-without-thinking | dual-goal | Ordering | 0.080 | 0.080 | 0.000 | — | 0.422 | — | 3.174 | 0 | 0 | 754 | 281 | — | 0.259 | 38 | 32537 |
+| qwen3-32b-without-thinking | dual-goal | Parity | 0.000 | 0.000 | — | — | 0.872 | — | 0.982 | 0 | 0 | 417 | 258 | — | 0.382 | 0 | 18877 |
+| qwen3-32b-without-thinking | dual-goal | Sign | 0.200 | 0.200 | 0.000 | — | 0.595 | — | 8.546 | 0 | 0 | 394 | 146 | — | 0.272 | 63 | 15922 |
+| qwen3-32b-without-thinking | dual-goal | Number-theoretic / Numeric properties | 0.080 | 0.080 | 0.000 | — | 1.229 | — | 6.583 | 0 | 0 | 670 | 365 | — | 0.356 | 39 | 30554 |
+| qwen3-32b-without-thinking | think-in-opposites | Ordering | 0.200 | 0.120 | 0.400 | 0.000 | 2.134 | — | 5.393 | 2 | 0 | 514 | 386 | 0.000 | 0.429 | 52 | 11526 |
+| qwen3-32b-without-thinking | think-in-opposites | Parity | 0.000 | 0.000 | — | — | 1.958 | — | 0.591 | 0 | 0 | 420 | 252 | — | 0.374 | 0 | 9138 |
+| qwen3-32b-without-thinking | think-in-opposites | Sign | 0.733 | 0.333 | 2.555 | 0.416 | 0.319 | 1.000 | 0.420 | 12 | 11 | 138 | 42 | 0.483 | 0.233 | 322 | 2116 |
+| qwen3-32b-without-thinking | think-in-opposites | Number-theoretic / Numeric properties | 0.320 | 0.120 | 9.125 | 1.236 | 0.500 | 0.037 | 4.051 | 54 | 19 | 487 | 278 | 0.325 | 0.272 | 924 | 10905 |
+| qwen3-8b | baseline | Ordering | 0.080 | 0.000 | 30.500 | 0.105 | 0.174 | 0.034 | 1.299 | 55 | 6 | 917 | 118 | 0.092 | 0.106 | 89374 | 2557603 |
+| qwen3-8b | baseline | Parity | 0.000 | 0.000 | — | — | 3.011 | — | 0.115 | 0 | 0 | 588 | 87 | — | 0.129 | 0 | 1678387 |
+| qwen3-8b | baseline | Sign | 0.000 | 0.000 | — | — | 0.134 | — | 0.287 | 0 | 0 | 624 | 51 | — | 0.076 | 0 | 1218685 |
+| qwen3-8b | baseline | Number-theoretic / Numeric properties | 0.480 | 0.160 | 8.688 | 0.084 | 4.387 | 0.805 | 1.524 | 104 | 10 | 465 | 120 | 0.063 | 0.203 | 270644 | 1207435 |
+| qwen3-8b | dual-goal | Ordering | 0.320 | 0.040 | 8.034 | 1.861 | 0.531 | 0.064 | 5.200 | 17 | 36 | 513 | 224 | 0.797 | 0.305 | 269682 | 3712039 |
+| qwen3-8b | dual-goal | Parity | 0.267 | 0.000 | 10.500 | 0.730 | 1.924 | 0.123 | 1.062 | 26 | 16 | 283 | 212 | 0.413 | 0.516 | 193642 | 2345871 |
+| qwen3-8b | dual-goal | Sign | 0.533 | 0.133 | 12.000 | 0.511 | 1.167 | 1.116 | 1.890 | 43 | 23 | 165 | 150 | 0.381 | 0.491 | 275742 | 1131782 |
+| qwen3-8b | dual-goal | Number-theoretic / Numeric properties | 0.320 | 0.120 | 2.944 | 0.643 | 0.481 | 0.709 | 1.617 | 16 | 8 | 531 | 234 | 0.613 | 0.279 | 106169 | 4110526 |
+| qwen3-8b | think-in-opposites | Ordering | 0.240 | 0.000 | 3.750 | 2.583 | 0.396 | 0.312 | 1.127 | 6 | 12 | 617 | 228 | 0.581 | 0.233 | 68535 | 3493119 |
+| qwen3-8b | think-in-opposites | Parity | 0.400 | 0.000 | 13.750 | 1.329 | 0.756 | 0.583 | 0.541 | 45 | 46 | 275 | 130 | 0.461 | 0.330 | 345598 | 1421506 |
+| qwen3-8b | think-in-opposites | Sign | 0.133 | 0.000 | 10.000 | 1.325 | 0.281 | 0.466 | 0.387 | 9 | 11 | 461 | 124 | 0.489 | 0.208 | 87033 | 1071453 |
+| qwen3-8b | think-in-opposites | Number-theoretic / Numeric properties | 0.440 | 0.000 | 10.567 | 2.367 | 0.308 | 0.591 | 8.919 | 83 | 46 | 491 | 139 | 0.480 | 0.203 | 325745 | 2875877 |
+| qwen3-8b-without-thinking | baseline | Ordering | 0.000 | 0.000 | — | — | 2.415 | — | 3.805 | 0 | 0 | 888 | 237 | — | 0.211 | 0 | 18547 |
+| qwen3-8b-without-thinking | baseline | Parity | 0.000 | 0.000 | — | — | 0.648 | — | 1.494 | 0 | 0 | 537 | 138 | — | 0.205 | 0 | 10940 |
+| qwen3-8b-without-thinking | baseline | Sign | 0.067 | 0.000 | 3.000 | 2.000 | 0.888 | — | 13.955 | 1 | 2 | 457 | 173 | 0.667 | 0.276 | 49 | 10429 |
+| qwen3-8b-without-thinking | baseline | Number-theoretic / Numeric properties | 0.120 | 0.040 | 3.500 | 0.167 | 2.779 | 0.167 | 7.797 | 12 | 2 | 689 | 301 | 0.143 | 0.306 | 259 | 17608 |
+| qwen3-8b-without-thinking | dual-goal | Ordering | 0.040 | 0.040 | 0.000 | — | 1.937 | — | 3.207 | 0 | 0 | 649 | 431 | — | 0.400 | 18 | 27868 |
+| qwen3-8b-without-thinking | dual-goal | Parity | 0.000 | 0.000 | — | — | 0.486 | — | 1.111 | 0 | 0 | 462 | 213 | — | 0.315 | 0 | 18011 |
+| qwen3-8b-without-thinking | dual-goal | Sign | 0.133 | 0.133 | 0.000 | — | 2.774 | — | 16.967 | 0 | 0 | 364 | 221 | — | 0.372 | 36 | 14304 |
+| qwen3-8b-without-thinking | dual-goal | Number-theoretic / Numeric properties | 0.120 | 0.120 | 0.000 | — | 1.696 | — | 2.717 | 0 | 0 | 619 | 371 | — | 0.335 | 72 | 25275 |
+| qwen3-8b-without-thinking | think-in-opposites | Ordering | 0.120 | 0.000 | 21.000 | 0.426 | 1.351 | — | 10.563 | 51 | 12 | 749 | 241 | 0.278 | 0.273 | 869 | 17412 |
+| qwen3-8b-without-thinking | think-in-opposites | Parity | 0.000 | 0.000 | — | — | 2.029 | — | 1.189 | 0 | 0 | 458 | 217 | — | 0.321 | 0 | 9171 |
+| qwen3-8b-without-thinking | think-in-opposites | Sign | 0.000 | 0.000 | — | — | 0.716 | — | 23.226 | 0 | 0 | 549 | 126 | — | 0.187 | 0 | 13709 |
+| qwen3-8b-without-thinking | think-in-opposites | Number-theoretic / Numeric properties | 0.080 | 0.000 | 9.500 | 0.000 | 0.750 | — | 3.544 | 19 | 0 | 795 | 240 | 0.000 | 0.236 | 271 | 17410 |
+| qwq-32b | baseline | Ordering | 0.400 | 0.000 | 19.600 | 0.960 | 0.388 | 0.241 | 0.705 | 74 | 48 | 500 | 175 | 0.422 | 0.227 | 285102 | 3763956 |
+| qwq-32b | baseline | Parity | 0.400 | 0.000 | 32.600 | 0.333 | 0.225 | 0.190 | 0.436 | 120 | 42 | 332 | 73 | 0.239 | 0.174 | 520266 | 1871771 |
+| qwq-32b | baseline | Sign | 0.067 | 0.000 | 5.000 | 0.667 | 0.144 | 0.250 | 0.171 | 3 | 2 | 553 | 77 | 0.400 | 0.117 | 8438 | 1096430 |
+| qwq-32b | baseline | Number-theoretic / Numeric properties | 0.760 | 0.240 | 8.173 | 1.599 | 1.293 | 0.533 | 0.193 | 64 | 67 | 144 | 126 | 0.503 | 0.385 | 502386 | 1932588 |
+| qwq-32b | dual-goal | Ordering | 0.560 | 0.000 | 12.979 | 1.282 | 1.023 | 1.020 | 0.608 | 84 | 88 | 316 | 179 | 0.450 | 0.400 | 502390 | 3081702 |
+| qwq-32b | dual-goal | Parity | 0.467 | 0.000 | 21.084 | 1.637 | 0.613 | 0.459 | 0.717 | 59 | 79 | 231 | 129 | 0.611 | 0.357 | 450451 | 1955774 |
+| qwq-32b | dual-goal | Sign | 0.733 | 0.400 | 10.800 | 4.836 | 0.486 | 1.760 | 11.420 | 56 | 44 | 122 | 58 | 0.502 | 0.322 | 380829 | 1100037 |
+| qwq-32b | dual-goal | Number-theoretic / Numeric properties | 0.520 | 0.080 | 9.938 | 1.521 | 2.176 | 0.665 | 0.795 | 45 | 64 | 212 | 328 | 0.467 | 0.542 | 525864 | 3733204 |
+| qwq-32b | think-in-opposites | Ordering | 0.560 | 0.000 | 15.300 | 1.064 | 0.300 | 0.901 | 0.448 | 84 | 72 | 382 | 113 | 0.445 | 0.223 | 518630 | 1785352 |
+| qwq-32b | think-in-opposites | Parity | 0.533 | 0.000 | 12.500 | 0.595 | 0.255 | 0.717 | 0.383 | 64 | 33 | 250 | 64 | 0.318 | 0.200 | 274175 | 1147291 |
+| qwq-32b | think-in-opposites | Sign | 0.267 | 0.000 | 12.250 | 0.738 | 0.158 | 0.220 | 0.194 | 36 | 13 | 421 | 74 | 0.347 | 0.133 | 82709 | 797708 |
+| qwq-32b | think-in-opposites | Number-theoretic / Numeric properties | 0.760 | 0.200 | 7.990 | 2.443 | 0.358 | 0.760 | 0.490 | 67 | 92 | 190 | 80 | 0.542 | 0.243 | 597748 | 1194019 |

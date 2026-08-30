@@ -1,0 +1,616 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude – for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b,c]. You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+- Announce: based on all previous tets, state what you believe the hidden rule is. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-39, 81, 3].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: All three numbers are multiples of 3.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [1,2,3]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: All three numbers are odd.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,2,4]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The sum of the three numbers is a multiple of 9.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [6,6,6]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: All numbers are multiples of 3, and exactly one of them is a multiple of 9.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [3,6,9]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: All three numbers are odd multiples of 3.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [3,9,21]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The sum of the three numbers is an odd multiple of 9.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [1,3,5]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: All three numbers are multiples of 3, and their sum is a multiple of 9.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [3,3,3]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The numbers are odd, and their remainders modulo 9 are a permutation of {0, 3, 6}.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [3,9,15]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The sum of the three numbers is a multiple of 5.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [5,5,5]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: All three numbers are multiples of 3, and their sum is a multiple of 5.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [3,6,6]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The sum of the three numbers is a multiple of 45.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [40,5,0]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: All three numbers are multiples of 3, and their sum is a multiple of 45.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [3,6,36]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The sum of the three numbers is 45 and all three numbers are odd.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [1,1,43]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: All three numbers are odd multiples of 3, and their sum is 45.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [9,15,21]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: All three numbers are odd multiples of 3, and exactly one of them is a multiple of 27.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-3,6,9]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The numbers are all multiples of 3, their sum is 45, and at least one is negative.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-3,6,42]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The sum of the three numbers is 45.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-9,-15,69]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: One number is a multiple of 81, and all three are multiples of 3.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [81,3,6]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The sum of the three numbers is 45, all are odd, and all are multiples of 3.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-27,3,69]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: All three numbers are multiples of 3, their sum is 45, and one of them is a multiple of 81.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-81,6,120]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The sum of the three numbers is 45, all three are odd multiples of 3, and at least one is a multiple of 81.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-27,81,-9]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: All three numbers are odd multiples of 3 that sum to 45, and at least one is a multiple of 81.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [-6,-30,81]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: All three numbers are odd multiples of 3 that sum to 45, and at least one is a multiple of 81.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [81,-81,45]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The numbers are odd multiples of 3 that sum to 45, have distinct absolute values, and one is a multiple of 81.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [63,63,-81]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The numbers are odd multiples of 3 with distinct absolute values that sum to 45, and exactly one number is a multiple of 81.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [81,9,-45]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The sum of the three numbers is 45, all three are odd multiples of 3 with distinct absolute values, one number is a multiple of 81, and the other two numbers have absolute values less than 45.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-33,-3,81]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The sum of the three numbers is 45, all three numbers are odd, and exactly one of the numbers is a multiple of 81.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [-21,-15,81]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The numbers are distinct odd multiples of 3 that sum to 45, exactly one is a multiple of 81, and the other two have remainders of {1, 3} modulo 5.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [11,-47,81]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The sum of the three numbers is 45 and all three are odd multiples of 3.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [81,-3,-33]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The sum of the three numbers is 45 and all three are odd multiples of 3.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [3,9,33]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: One number is 81, the other two sum to -36, and the smaller of the two is 9 mod 12.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [3,15,27]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The sum is 45, one number is 81, and the smallest number is congruent to 9 modulo 12.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [81,21,-57]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The sum of the three numbers is 45, all three are odd multiples of 3, and one of the numbers is 81.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [81,-15,-21]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The sum of the three numbers is 45, all three are odd multiples of 3, and their range is a multiple of 12.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-81,69,57]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The sum of the three numbers is 45.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [99,-21,-33]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The sum of the three numbers is 45, and they are not all positive.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [243,-3,-195]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The sum of the three numbers is 45 and the greatest common divisor of the three numbers is an odd multiple of 3.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-3,15,33]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The sum of the three numbers is 45, and they are all odd.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [45,45,-45]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The sum of the three numbers is 45, and their greatest common divisor is 3.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [-39,81,-3]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: The third number is between the first and second numbers.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [-5,5,0]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: The third number is strictly between the first and second numbers.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [5,10,5]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The third number is in the interval [a, b), or (b, a].
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [10,5,7]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The first number must be strictly less than the second number, and the third number must be greater than or equal to the first number and strictly less than the second number.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [5,10,10]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The first number must be strictly less than the second number, and the third number must be greater than or equal to the first number and strictly less than the second number.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [0,2,1]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The third number is greater than or equal to the first number and strictly less than the second number.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [5,6,5]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: The third number is greater than or equal to the minimum of the first two numbers and strictly less than the maximum of the first two numbers.
+
+[183] ENVIRONMENT:
+Turn - Test

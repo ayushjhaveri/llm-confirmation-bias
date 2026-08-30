@@ -1,0 +1,20 @@
+{
+  "model_name": "llama-3.3-70b-instruct",
+  "model_path": "/scratch/aj4332/models/llama-3.3-70b-instruct",
+  "backend": "vllm",
+  "dtype": "bfloat16",
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "max_new_tokens": 256,
+  "repetition_penalty": 1.0,
+  "stop": [
+    "<|eot_id|>",
+    "<|end_of_text|>",
+    "</s>",
+    "```"
+  ],
+  "tensor_parallel_size": null,
+  "gpu_memory_utilization": null,
+  "max_model_len": null
+}

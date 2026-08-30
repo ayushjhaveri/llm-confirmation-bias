@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [79, 43, 31].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - All three numbers are prime.
+Announce: MED rule - At least one number is not prime.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,3,5]
+
+[005] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - All three numbers are prime.
+Announce: MED rule - At least one number is not prime.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [2,3,4]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - Each number is a prime or a square of a prime.
+Announce: MED rule - At least one number is neither a prime nor a square of a prime.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [4,9,25]
+
+[013] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - Each number is a prime power (a prime raised to an integer exponent ≥1).
+Announce: MED rule - At least one number is not a prime power.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [8,27,125]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - Each number is a prime power (a prime raised to an integer exponent ≥1).
+Announce: MED rule - At least one number is not a prime power.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [7,49,343]
+
+[021] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - Each number is a prime power (a prime raised to an integer exponent ≥1).
+Announce: MED rule - At least one number is not a prime power.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [2,4,6]
+
+[025] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - Each number is a product of distinct primes or a prime power.
+Announce: MED rule - At least one number is neither a product of distinct primes nor a prime power.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [2,4,12]
+
+[029] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - Each number has at most two distinct prime factors.
+Announce: MED rule - At least one number has three or more distinct prime factors.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [6,10,30]
+
+[033] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - Each number has at most three distinct prime factors.
+Announce: MED rule - At least one number has four or more distinct prime factors.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [210,2,3]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [2,6,12]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [12,18,36]
+
+[045] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [30,42,105]
+
+[049] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [6,15,35]
+
+[053] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [12,18,30]
+
+[057] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [2,3,6]
+
+[061] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [12,15,21]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [24,3,5]
+
+[069] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [1,2,3]
+
+[073] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is not a prime power and not a product of distinct primes.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [8,12,18]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [6,10,15]
+
+[081] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [12,30,210]
+
+[085] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [6,15,21]
+
+[089] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [6,10,15]
+
+[093] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [1,2,4]
+
+[097] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [6,8,9]
+
+[101] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [6,8,9]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [12,18,36]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [6,12,15]
+
+[113] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [8,12,18]
+
+[117] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - Each number is a prime power or a product of distinct primes.
+Announce: MED rule - At least one number is neither a prime power nor a product of distinct primes.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [2,3,7]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - Each number is a product of primes (allowing repeated primes) or a prime power.
+Announce: MED rule - At least one number is not a product of primes or a prime power.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [0,2,3]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - All three numbers are non-zero.
+Announce: MED rule - At least one number is zero.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,0,2]
+
+[129] ENVIRONMENT:
+MED
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - All three numbers are non-zero.
+Announce: MED rule - At least one number is zero.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [0,0,0]
+
+[133] ENVIRONMENT:
+MED
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - All three numbers are non-zero.
+Announce: MED rule - At least one number is zero.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [4,5,6]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - All three numbers are non-zero.
+Announce: MED rule - At least one number is zero.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [0,5,5]
+
+[141] ENVIRONMENT:
+MED
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - All three numbers are non-zero.
+Announce: MED rule - At least one number is zero.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [-1,2,3]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [5,7,11]
+
+[149] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [4,6,8]
+
+[153] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [1,4,9]
+
+[157] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [1,1,1]
+
+[161] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [2,-3,5]
+
+[165] ENVIRONMENT:
+MED
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [5,7,9]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [3,4,5]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [-1,-2,-3]
+
+[177] ENVIRONMENT:
+MED
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [5,6,7]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - All three numbers are positive integers.
+Announce: MED rule - At least one number is zero or negative.
+
+[183] ENVIRONMENT:
+Turn - Test

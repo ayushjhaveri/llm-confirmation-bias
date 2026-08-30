@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-39, 81, 3].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers can be multiplied together to give a product that is a multiple of 3.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [2,4,6]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers can be multiplied together to give a product that is a multiple of 3 and at least one of the numbers is a multiple of 3.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [9,12,15]
+
+[009] ENVIRONMENT:
+NO
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [3,5,7]
+
+[013] ENVIRONMENT:
+NO
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that the numbers are in arithmetic progression, with a common difference that is a multiple of 3, or one of the numbers is a multiple of 3 and the others are not, or the difference between the first and last term is a multiple of 3 and one term is a multiple of 3, however a simpler rule could be that one and only one of the numbers or all of the numbers are multiples of 3 but given [-39, 81, 3] has 3 multiples of 3: The rule is that exactly one or all of the numbers are multiples of 3 or the difference between the largest and smallest term is a multiple of 3 and at least one term is a multiple of 3, however the given example has 3 multiples of 3 so: The rule is that one or more of the numbers are multiples of 3.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [1,4,7]
+
+[017] ENVIRONMENT:
+NO
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that at least one of the numbers is a multiple of 3 and the numbers are in arithmetic progression or have the same remainder when divided by 3, but given the previous example [-39, 81, 3] and the failed test [1,4,7] and [9,12,15], a simpler rule could be: one of the numbers is a multiple of 3, however the given example [-39, 81, 3] has 3 multiples of 3 and the failed tests had either 3 multiples of 3 or none, so: The rule is that exactly one or exactly three of the numbers are multiples of 3, however given [2,4,6] had no multiples of 3 and failed and [9,12,15] had 3 multiples of 3 and failed: The rule is that exactly one of the numbers is a multiple of 3.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [6,9,12]
+
+[021] ENVIRONMENT:
+NO
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that exactly one of the numbers is a multiple of 3.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [3,4,5]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that one and only one of the numbers is a multiple of 3 and the numbers are consecutive integers or in an arithmetic sequence is not the rule since [9,12,15] failed, however the original example [-39, 81, 3] had a difference between the largest and smallest term that is a multiple of 3 and one term is a multiple of 3: The rule is that the difference between the largest and smallest term is a multiple of 3 and exactly one term is a multiple of 3, but the given example [3,4,5] failed, however the difference between the largest and smallest term of the given example [-39, 81, 3] is a multiple of 3 and at least one term is a multiple of 3, however the failed test [1,4,7] had a difference that is a multiple of 3 but no term was a multiple of 3, so the difference being a multiple of 3 is not enough: The rule is that one of the numbers is a multiple of 3.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [8,9,10]
+
+[029] ENVIRONMENT:
+NO
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that one and only one of the numbers is a multiple of 3 and the numbers are in an increasing or decreasing sequence, but since the sequence can be increasing or decreasing: The rule is that one of the numbers is a multiple of 3 and the numbers are in a sequence of consecutive integers or the difference between the largest and smallest term is a multiple of 3 and one term is a multiple of 3, however given the previous examples: The rule is that one of the numbers is a multiple of 3.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [1,2,3]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that the numbers have exactly one multiple of 3 and are in a specific order, such as the multiple of 3 being the first, last, or middle number, but since [-39, 81, 3] was a valid example: The rule is that one of the numbers is a multiple of 3 and it is not necessarily in a specific position, however given the failed tests: The rule is that one and only one of the numbers is a multiple of 3, however the original example had 3 multiples of 3, so a possible rule could be: The rule is that the difference between the largest and smallest numbers is a multiple of 3 or one of the numbers is a multiple of 3 and the other two are not or one of the numbers is a multiple of 3, however the original example [-39, 81, 3] had 3 multiples of 3 and the difference between the largest and smallest term was a multiple of 3, however the failed test [9,12,15] had 3 multiples of 3, so the rule could be: The rule is that one or three of the numbers are multiples of 3 and the difference between the largest and smallest term is
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [-3,0,3]
+
+[037] ENVIRONMENT:
+NO
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that the difference between the largest and smallest numbers is a multiple of 3 and exactly one of the numbers is a multiple of 3, but since [-39, 81, 3] had 3 multiples of 3, however the failed tests had either 3 multiples of 3 or none and the difference was a multiple of 3 for some of the failed tests: The rule is that one or three of the numbers are multiples of 3.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [0,3,6]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and the other two numbers are not, but since the original example had 3 multiples of 3: The rule is that the numbers are in an arithmetic progression or the difference between the largest and smallest term is a multiple of 3, but the failed test [1,4,7] had a difference that was a multiple of 3, however it was not a valid example, however the original example [-39, 81, 3] had a difference that was a multiple of 3: The rule is that the difference between the largest and smallest term is a multiple of 3, but the failed test [8,9,10] had a difference that was not a multiple of 3, however [2,4,6] had a difference that was a multiple of 3 and was not valid: The rule is that one or three of the numbers are multiples of 3.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-39,3,81]
+
+[045] ENVIRONMENT:
+NO
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that one or three of the numbers are multiples of 3 and they are in a specific order, such as increasing or decreasing order, but since the original example [-39, 81, 3] was valid and the failed test [-39,3,81] was not: The rule is that one or three of the numbers are multiples of 3 and they are in a specific order.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [3,9,27]
+
+[049] ENVIRONMENT:
+NO
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that the numbers are in a specific order, such as increasing or decreasing order, with one of the numbers being a multiple of 3, but the original example [-39, 81, 3] had a specific order, however the failed test [-39,3,81] did not, however since [3,9,27] failed: The rule is that one of the numbers is a multiple of 3 and the numbers are in increasing order, but since [-39, 81, 3] was valid: The rule is that the middle number is a multiple of 3.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [2,6,10]
+
+[053] ENVIRONMENT:
+NO
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that the middle number is a multiple of 3.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [4,9,14]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that the middle number is a multiple of 3 and the numbers are in a specific pattern or sequence, but since the original example [-39, 81, 3] was valid: The rule is that the middle number is a multiple of 3, however the failed tests had the middle number as a multiple of 3, so a possible rule could be the numbers are in a specific sequence: The rule is that one number is a multiple of 3 and it is in the middle.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [1,3,5]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that the middle number is a multiple of 3 and the numbers are in a specific sequence or pattern, such as an arithmetic sequence with a common difference, but since [1,3,5] failed: The rule is that the middle number is a multiple of 3 and the numbers are in an arithmetic sequence with a common difference that is not necessarily 1 or 2, however since [-39, 81, 3] was valid: The rule is that one of the numbers is a multiple of 3 and it is the middle number when the numbers are arranged in a specific order.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [7,21,35]
+
+[065] ENVIRONMENT:
+NO
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and it is the middle number when the numbers are in ascending order.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [10,12,15]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that the middle number is a multiple of 3 when the numbers are arranged in ascending order.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [4,6,8]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that the middle number is a multiple of 3 when the numbers are arranged in ascending order, and the difference between the largest and smallest number is a multiple of 3 plus 3, or more simply: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order and the numbers have a specific relationship, however since the original example [-39, 81, 3] was valid: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-3,0,3]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3 and the numbers are in a specific pattern or sequence, but since the original example [-39, 81, 3] was valid and [-3,0,3] was not: The rule is that when the numbers are in ascending order, the middle number is a multiple of 3.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-1,3,5]
+
+[081] ENVIRONMENT:
+NO
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3, but the original example [-39, 81, 3] had 3 as the smallest number, so: The rule is that when the numbers are in ascending order, the middle number is a multiple of 3, however since [-1,3,5] failed: The rule is that the numbers have a specific relationship and when the numbers are in ascending order, the middle number is a multiple of 3.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [2,6,10]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that when the numbers are in ascending order, the middle number is a multiple of 3, and this is the only condition, however the failed tests suggest there might be another condition, but since the original example [-39, 81, 3] was valid: The rule is that the middle number is a multiple of 3 when the numbers are arranged in ascending order.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [5,9,13]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3, however since [5,9,13] failed, and the original example [-39, 81, 3] was valid, and considering all the previous tests: The rule is that one number is a multiple of 3 and it is in the middle when the numbers are in ascending order.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [-6,3,12]
+
+[093] ENVIRONMENT:
+NO
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that the numbers are in ascending order and the middle number is a multiple of 3.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [1,9,17]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3, however since [1,9,17] failed: The rule is that one of the numbers is a multiple of 3 and when the numbers are in ascending order, the multiple of 3 is in the middle position, but a simpler rule could be: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [7,15,23]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that when the numbers are in ascending order, the middle number is a multiple of 3.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-3,0,6]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that the middle number is a multiple of 3 when the numbers are arranged in ascending order and are consecutive multiples of a certain number or have a specific difference, however since the original example [-39, 81, 3] was valid: The rule is that one of the numbers is a multiple of 3 and when the numbers are in ascending order, the multiple of 3 is the middle number.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [10,12,14]
+
+[109] ENVIRONMENT:
+NO
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3 and the numbers are not consecutive even numbers.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [4,9,14]
+
+[113] ENVIRONMENT:
+NO
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [2,3,4]
+
+[117] ENVIRONMENT:
+NO
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that when the numbers are in ascending order, the middle number is a multiple of 3 and the difference between the largest and smallest number is a multiple of a certain number, however since [2,3,4] failed: The rule is that one number is a multiple of 3 and it is the middle number when the numbers are in ascending order, however a simpler rule could be: The rule is that the middle number is a multiple of 3.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [8,9,10]
+
+[121] ENVIRONMENT:
+NO
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [5,6,7]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order, however since [5,6,7] failed: The rule is that one of the numbers is a multiple of 3 and when the numbers are in ascending order, the multiple of 3 is the middle number, but a simpler rule could be: The rule is that the middle number is a multiple of 3.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [1,3,5]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that when the numbers are in ascending order, the middle number is a multiple of 3, and this must be the only condition, however since [1,3,5] failed, a possible rule could be: The rule is that one number is a multiple of 3 and it is in the middle when the numbers are in ascending order, and there is a specific relationship or pattern between the numbers.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [7,15,23]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and when the numbers are in ascending order, the multiple of 3 is the middle number, however since the original example [-39, 81, 3] was valid: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [10,12,14]
+
+[137] ENVIRONMENT:
+NO
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3, however since [10,12,14] failed: The rule is that one number is a multiple of 3 and it is the middle number when the numbers are in ascending order, and there is a specific pattern or relationship between the numbers, but a simpler rule could be: The rule is that the middle number is a multiple of 3.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [4,6,8]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that the middle number is a multiple of 3 when the numbers are arranged in ascending order and are part of a specific sequence or pattern, but since the original example [-39, 81, 3] was valid: The rule is that one number is a multiple of 3 and it is the middle number when the numbers are in ascending order.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [2,3,4]
+
+[145] ENVIRONMENT:
+NO
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and when the numbers are in ascending order, the multiple of 3 is the middle number, however since [2,3,4] failed, and considering the original example [-39, 81, 3] was valid: The rule is that the numbers in ascending order have the multiple of 3 in the middle, but the numbers must also be in a specific order or have a certain relationship, however a simpler rule could be: The rule is that when the numbers are in ascending order, the middle number is a multiple of 3.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [7,9,11]
+
+[149] ENVIRONMENT:
+NO
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that when the numbers are in ascending order, the middle number is a multiple of 3.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [5,6,7]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that one number is a multiple of 3 and it is the middle number when the numbers are in ascending order, however since [5,6,7] failed: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order and the difference between consecutive numbers is 1, but since this is not the case for the original example [-39, 81, 3], a simpler rule could be: The rule is that the middle number is a multiple of 3.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [1,2,3]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and when the numbers are in ascending order, the multiple of 3 is the middle number, and there is a specific relationship or pattern between the numbers, but a simpler rule could be: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [8,9,10]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3, however since [8,9,10] failed: The rule is that one number is a multiple of 3 and it is in the middle when the numbers are in ascending order, and the numbers have a specific relationship or pattern, but a simpler rule could be: The rule is that the middle number is a multiple of 3.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [4,6,8]
+
+[165] ENVIRONMENT:
+NO
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order and the numbers are part of a specific sequence, however since the original example [-39, 81, 3] was valid: The rule is that one number is a multiple of 3 and it is the middle number when the numbers are in ascending order.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [10,12,14]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that when the numbers are in ascending order, the middle number is a multiple of 3, and the numbers have a specific relationship or pattern, but since the original example [-39, 81, 3] was valid: The rule is that one of the numbers is a multiple of 3 and when the numbers are in ascending order, the multiple of 3 is the middle number.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [7,9,11]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that one number is a multiple of 3 and it is the middle number when the numbers are in ascending order, however since [7,9,11] failed: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order, but there may be an additional condition or pattern that applies, such as the numbers being part of a specific sequence or having a certain relationship.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [2,3,4]
+
+[177] ENVIRONMENT:
+NO
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that when the numbers are arranged in ascending order, the middle number is a multiple of 3, however since [2,3,4] failed, and considering the original example [-39, 81, 3] was valid: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order and the difference between the numbers is not necessarily 1.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [5,6,7]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that one of the numbers is a multiple of 3 and when the numbers are in ascending order, the multiple of 3 is the middle number, however since [5,6,7] failed: The rule is that the middle number is a multiple of 3 when the numbers are in ascending order, and there may be an additional condition that applies, such as the numbers having a specific relationship or pattern, but a simpler rule could be: The rule is that the middle number is a multiple of 3.
+
+[183] ENVIRONMENT:
+Turn - Test

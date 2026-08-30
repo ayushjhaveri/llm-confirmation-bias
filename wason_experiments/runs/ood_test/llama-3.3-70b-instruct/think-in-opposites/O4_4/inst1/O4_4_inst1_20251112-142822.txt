@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [-27, 8, 27].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: The rule is that the numbers can be positive, negative, or zero.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [10,20,30]
+
+[005] ENVIRONMENT:
+NO
+Turn - Announce
+
+[006] MODEL:
+Announce: The rule is that the numbers are in arithmetic progression or one is the negative of another.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [-5,0,5]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [1,2,-1]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [4,-4,7]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [3,5,6]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: The rule is that one number is the negative of another or the set contains a negative number, a positive number, and zero is not required but one number must be negative of other.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [2,4,6]
+
+[025] ENVIRONMENT:
+NO
+Turn - Announce
+
+[026] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [-3,0,3]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [8,-8,10]
+
+[033] ENVIRONMENT:
+NO
+Turn - Announce
+
+[034] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [15,-15,20]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [-2,2,2]
+
+[041] ENVIRONMENT:
+NO
+Turn - Announce
+
+[042] MODEL:
+Announce: The rule is that one number is the negative of another and no number is repeated.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [9,-9,9]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [7,7,-7]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-1,1,1]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [6,6,6]
+
+[057] ENVIRONMENT:
+NO
+Turn - Announce
+
+[058] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-4,4,0]
+
+[061] ENVIRONMENT:
+NO
+Turn - Announce
+
+[062] MODEL:
+Announce: The rule is that one number is the negative of another and there are exactly two distinct numbers.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [3,-3,5]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-11,11,11]
+
+[069] ENVIRONMENT:
+YES
+Turn - Announce
+
+[070] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [12,12,12]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-8,8,8]
+
+[077] ENVIRONMENT:
+NO
+Turn - Announce
+
+[078] MODEL:
+Announce: The rule is that one number is the negative of another and the set contains exactly two distinct numbers or the negative and positive number appear only once and the third number can be any number.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [6,-6,7]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-3,3,3]
+
+[085] ENVIRONMENT:
+YES
+Turn - Announce
+
+[086] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [2,4,8]
+
+[089] ENVIRONMENT:
+NO
+Turn - Announce
+
+[090] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [9,-9,10]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [1,1,1]
+
+[097] ENVIRONMENT:
+YES
+Turn - Announce
+
+[098] MODEL:
+Announce: The rule is that one number is the negative of another, or all numbers are the same and one of them is zero or the set contains a zero, or one number is the negative of another and the third is any number.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [0,0,0]
+
+[101] ENVIRONMENT:
+NO
+Turn - Announce
+
+[102] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [-2,2,2]
+
+[105] ENVIRONMENT:
+NO
+Turn - Announce
+
+[106] MODEL:
+Announce: The rule is that one number is the negative of another and the negative and positive numbers appear the same number of times or one is the negative of the other and the third number can be any.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [5,-5,-5]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [-7,7,7]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [3,3,-3]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-9,9,9]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [8,8,-8]
+
+[125] ENVIRONMENT:
+NO
+Turn - Announce
+
+[126] MODEL:
+Announce: The rule is that one number is the negative of another and the set contains exactly one pair of identical numbers or one number is the negative of the other.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [6,6,8]
+
+[129] ENVIRONMENT:
+NO
+Turn - Announce
+
+[130] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [-4,4,4]
+
+[133] ENVIRONMENT:
+NO
+Turn - Announce
+
+[134] MODEL:
+Announce: The rule is that one number is the negative of another and the negative number and the positive number appear the same number of times, or one is the negative of the other and the third is any number but not the same as the first two.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [1,1,-1]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [-6,6,0]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: The rule is that one number is the negative of another and zero is not allowed as the third number unless it is the negative or positive number.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [2,-2,5]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [-3,3,9]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [7,7,7]
+
+[153] ENVIRONMENT:
+YES
+Turn - Announce
+
+[154] MODEL:
+Announce: The rule is that one number is the negative of another, or all numbers are the same.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [0,0,0]
+
+[157] ENVIRONMENT:
+NO
+Turn - Announce
+
+[158] MODEL:
+Announce: The rule is that one number is the negative of another, or all numbers are the same and not zero.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [4,4,4]
+
+[161] ENVIRONMENT:
+NO
+Turn - Announce
+
+[162] MODEL:
+Announce: The rule is that one number is the negative of another, or all numbers are the same and not zero, but only if there are exactly two distinct numbers in the set or one number is the negative of another.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [-1,1,1]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: The rule is that one number is the negative of another.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [8,-8,8]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: The rule is that one number is the negative of another and the negative and positive numbers appear the same number of times, or one number is the negative of the other and the third number can be any.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [6,6,-6]
+
+[173] ENVIRONMENT:
+NO
+Turn - Announce
+
+[174] MODEL:
+Announce: The rule is that one number is the negative of another and the set contains exactly one pair of identical numbers or the third number is different from the first two.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [3,3,5]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: The rule is that one number is the negative of another, or all numbers are the same, but only if there are exactly two distinct numbers.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [-2,2,2]
+
+[181] ENVIRONMENT:
+NO
+Turn - Announce
+
+[182] MODEL:
+Announce: The rule is that one number is the negative of another and the negative number appears only once.
+
+[183] ENVIRONMENT:
+Turn - Test

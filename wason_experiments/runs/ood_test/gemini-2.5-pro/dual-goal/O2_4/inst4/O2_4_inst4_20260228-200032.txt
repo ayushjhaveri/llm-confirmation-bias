@@ -1,0 +1,666 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+Triples that fit this rule are called DAX, and triples that do not fit this rule are called MED.
+
+These rules are concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, they are not rules like "all numbers above (or below) 50."
+
+Your goal is to discover both rules: the rule for DAX triples and the rule for MED triples.
+You will then be told if the triple conforms with the DAX rule or the MED rule.
+
+At each turn, you may perform one of two actions:
+
+- Test: propose a new set of three integers, denoted [a,b, c]. You will then be told whether that triple conforms with the DAX or MED rule ("DAX" or "MED").
+- Announce: based on all previous tets, state what you believe the two hidden rules are. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly two lines:
+  Announce: DAX rule - <one short sentence>
+  Announce: MED rule - <one short sentence>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A DAX triple is: [-67, 75, 25].
+Let's begin.
+Turn - Announce.
+
+[002] MODEL:
+Announce: DAX rule - One number in the triple is a multiple of another.
+Announce: MED rule - No number in the triple is a multiple of another.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [3,5,7]
+
+[005] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[006] MODEL:
+Announce: DAX rule - All three numbers have the same parity.
+Announce: MED rule - The three numbers have mixed parity.
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [1,2,3]
+
+[009] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[010] MODEL:
+Announce: DAX rule - The sum of the three numbers is a multiple of 3.
+Announce: MED rule - The sum of the three numbers is not a multiple of 3.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [1,1,2]
+
+[013] ENVIRONMENT:
+MED
+Turn - Announce
+
+[014] MODEL:
+Announce: DAX rule - The sum of the three numbers is a multiple of 3.
+Announce: MED rule - The sum of the three numbers is not a multiple of 3.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [3,6,9]
+
+[017] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[018] MODEL:
+Announce: DAX rule - The sum of the three numbers is a multiple of 3.
+Announce: MED rule - The sum of the three numbers is not a multiple of 3.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [1,1,1]
+
+[021] ENVIRONMENT:
+MED
+Turn - Announce
+
+[022] MODEL:
+Announce: DAX rule - All three numbers in the triple are distinct.
+Announce: MED rule - At least two of the numbers in the triple are the same.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [5,10,5]
+
+[025] ENVIRONMENT:
+MED
+Turn - Announce
+
+[026] MODEL:
+Announce: DAX rule - All three numbers in the triple are distinct.
+Announce: MED rule - At least two of the numbers in the triple are the same.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [1,2,4]
+
+[029] ENVIRONMENT:
+MED
+Turn - Announce
+
+[030] MODEL:
+Announce: DAX rule - The minimum and maximum numbers in the triple are different, but have the same parity.
+Announce: MED rule - The minimum and maximum numbers in the triple are equal, or they have different parity.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [2,5,10]
+
+[033] ENVIRONMENT:
+MED
+Turn - Announce
+
+[034] MODEL:
+Announce: DAX rule - The sum of the three numbers is a multiple of 3, and all three numbers are distinct.
+Announce: MED rule - The sum of the three numbers is not a multiple of 3, or at least two of the numbers are equal.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [1,3,4]
+
+[037] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[038] MODEL:
+Announce: DAX rule - When sorted, the middle number is greater than or equal to the average of the other two, unless all three numbers are identical.
+Announce: MED rule - When sorted, the middle number is less than the average of the other two, or all three numbers are identical.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [2,3,3]
+
+[041] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[042] MODEL:
+Announce: DAX rule - The numbers are not all identical, and when sorted, the middle number is greater than or equal to the average of the other two.
+Announce: MED rule - The numbers are all identical, or when sorted, the middle number is less than the average of the other two.
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [-10,-4,-1]
+
+[045] ENVIRONMENT:
+MED
+Turn - Announce
+
+[046] MODEL:
+Announce: DAX rule - When sorted, the middle number is greater than or equal to the average of the other two, unless all three numbers are identical or all are negative.
+Announce: MED rule - When sorted, the middle number is less than the average of the other two, or all three numbers are identical, or all three are negative.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [-5,-3,-1]
+
+[049] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[050] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the difference b-a is greater than or equal to c-b, unless all numbers are identical, or they are all negative and b-a is strictly greater than c-b.
+Announce: MED rule - When sorted as [a,b,c], the difference b-a is less than c-b, or all numbers are identical, or they are all negative and b-a is strictly greater than c-b.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [-3,-1,0]
+
+[053] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[054] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the difference b-a is greater than or equal to c-b if the triple contains non-negative numbers and is not all identical; or b-a is less than or equal to c-b if all numbers are negative.
+Announce: MED rule - When sorted as [a,b,c], the difference b-a is less than c-b if the triple contains non-negative numbers; or b-a is greater than c-b if all numbers are negative; or all numbers are identical.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [-10,-9,-7]
+
+[057] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[058] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the difference b-a is greater than or equal to c-b if the triple contains a non-negative number, and b-a is less than or equal to c-b if all numbers are negative, provided the numbers are not all identical.
+Announce: MED rule - A triple is MED if all three numbers are identical, or if when sorted as [a,b,c], b-a is less than c-b if it contains a non-negative number, or b-a is greater than c-b if all numbers are negative.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [-2,-2,-2]
+
+[061] ENVIRONMENT:
+MED
+Turn - Announce
+
+[062] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the difference b-a is greater than or equal to c-b if the triple contains a non-negative number, and less than or equal to c-b if all numbers are negative.
+Announce: MED rule - A triple is MED if all numbers are identical, or if when sorted as [a,b,c], b-a is less than c-b if a non-negative number is present, or b-a is greater than c-b if all numbers are negative.
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [-5,0,5]
+
+[065] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[066] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the numbers are not all identical, and b-a >= c-b if c is non-negative, or b-a <= c-b if c is negative.
+Announce: MED rule - The numbers are all identical, or when sorted as [a,b,c], b-a < c-b if c is non-negative, or b-a > c-b if c is negative.
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [-10,-1,2]
+
+[069] ENVIRONMENT:
+MED
+Turn - Announce
+
+[070] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the numbers are not all identical, and b-a >= c-b if at least one number is non-negative, or b-a <= c-b if all numbers are negative.
+Announce: MED rule - The three numbers are identical, or when sorted as [a,b,c], b-a < c-b if at least one number is non-negative, or b-a > c-b if all numbers are negative.
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-8,-2,1]
+
+[073] ENVIRONMENT:
+MED
+Turn - Announce
+
+[074] MODEL:
+Announce: DAX rule - For a sorted non-identical triple a,b,c, the gap b-a is less than or equal to c-b if all numbers are negative, and greater than or equal to c-b otherwise, unless the signs are specifically negative, negative, positive.
+Announce: MED rule - A triple is MED if its numbers are identical, or if sorted as a,b,c, it has a `(-,-,+)` sign pattern with b-a > c-b, or it otherwise violates the primary DAX condition on its gaps.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [-4,-3,-1]
+
+[077] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[078] MODEL:
+Announce: DAX rule - For a sorted non-identical triple a,b,c, the middle number b is greater than or equal to the average of a and c, unless all numbers are negative or only the largest is positive, in which case b must be less than or equal to the average.
+Announce: MED rule - The three numbers are identical, or they violate the DAX rule for the position of the middle number relative to the average of the other two.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [-5,-4,1]
+
+[081] ENVIRONMENT:
+MED
+Turn - Announce
+
+[082] MODEL:
+Announce: DAX rule - A non-identical triple, sorted as a,b,c, is DAX if its sign pattern is not (-, -, +), and it satisfies b-a >= c-b if c is non-negative, or b-a <= c-b if c is negative.
+Announce: MED rule - A triple is MED if its numbers are identical, its sorted sign pattern is (-, -, +), or it otherwise fails the DAX condition.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [-2,1,2]
+
+[085] ENVIRONMENT:
+MED
+Turn - Announce
+
+[086] MODEL:
+Announce: DAX rule - A triple is DAX if, when sorted as a,b,c, it is an arithmetic progression (b-a = c-b) and not all numbers are identical.
+Announce: MED rule - A triple is MED if it is not an arithmetic progression, or if all three numbers are identical.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [3,1,2]
+
+[089] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[090] MODEL:
+Announce: DAX rule - Two of the numbers in the triple sum to the third number.
+Announce: MED rule - No two numbers in the triple sum to the third number.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [2,4,5]
+
+[093] ENVIRONMENT:
+MED
+Turn - Announce
+
+[094] MODEL:
+Announce: DAX rule - Two of the numbers in the triple sum to the third number.
+Announce: MED rule - No two numbers in the triple sum to the third number.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [1,4,5]
+
+[097] ENVIRONMENT:
+MED
+Turn - Announce
+
+[098] MODEL:
+Announce: DAX rule - The three numbers can form an arithmetic progression.
+Announce: MED rule - The three numbers cannot form an arithmetic progression.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [2,2,4]
+
+[101] ENVIRONMENT:
+MED
+Turn - Announce
+
+[102] MODEL:
+Announce: DAX rule - The sum of the two smaller numbers is greater than the largest number, considering their absolute values.
+Announce: MED rule - The sum of the two smaller numbers is less than or equal to the largest number, considering their absolute values.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [2,3,5]
+
+[105] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[106] MODEL:
+Announce: DAX rule - The sum of the two smaller numbers is greater than or equal to the largest number.
+Announce: MED rule - The sum of the two smaller numbers is less than the largest number.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [3,3,6]
+
+[109] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[110] MODEL:
+Announce: DAX rule - Two of the numbers in the triple sum to the third number.
+Announce: MED rule - No two numbers in the triple sum to the third number.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [1,2,4]
+
+[113] ENVIRONMENT:
+MED
+Turn - Announce
+
+[114] MODEL:
+Announce: DAX rule - Two of the numbers in the triple sum to the third number.
+Announce: MED rule - No two numbers in the triple sum to the third number.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [-1,2,1]
+
+[117] ENVIRONMENT:
+MED
+Turn - Announce
+
+[118] MODEL:
+Announce: DAX rule - Two of the numbers in the triple sum to the third number.
+Announce: MED rule - No two numbers in the triple sum to the third number.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [-1,0,1]
+
+[121] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[122] MODEL:
+Announce: DAX rule - Two of the numbers in the triple sum to the third number.
+Announce: MED rule - No two numbers in the triple sum to the third number.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [1,1,2]
+
+[125] ENVIRONMENT:
+MED
+Turn - Announce
+
+[126] MODEL:
+Announce: DAX rule - Two of the numbers in the triple sum to the third number.
+Announce: MED rule - No two numbers in the triple sum to the third number.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [4,2,0]
+
+[129] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[130] MODEL:
+Announce: DAX rule - The three numbers can form an arithmetic progression and are not all identical.
+Announce: MED rule - The three numbers cannot form an arithmetic progression, or they are all identical.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [2,3,4]
+
+[133] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[134] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the middle number b is closer to c than to a, or equidistant.
+Announce: MED rule - When sorted as [a,b,c], the middle number b is closer to a than to c.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [-10,-6,-1]
+
+[137] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[138] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the numbers are not all identical and the middle number is closer to the average of the other two than the endpoints are.
+Announce: MED rule - The three numbers are identical, or when sorted as [a,b,c], the endpoints are closer to the average than the middle number is.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [1,3,5]
+
+[141] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[142] MODEL:
+Announce: DAX rule - The numbers can form an arithmetic progression.
+Announce: MED rule - The numbers cannot form an arithmetic progression.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [10,20,31]
+
+[145] ENVIRONMENT:
+MED
+Turn - Announce
+
+[146] MODEL:
+Announce: DAX rule - The three numbers can form an arithmetic progression.
+Announce: MED rule - The three numbers cannot form an arithmetic progression.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [10,15,20]
+
+[149] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[150] MODEL:
+Announce: DAX rule - The three numbers can form an arithmetic progression.
+Announce: MED rule - The three numbers cannot form an arithmetic progression.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [1,1,1]
+
+[153] ENVIRONMENT:
+MED
+Turn - Announce
+
+[154] MODEL:
+Announce: DAX rule - The three numbers can form an arithmetic progression and are not all identical.
+Announce: MED rule - The three numbers cannot form an arithmetic progression, or they are all identical.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [5,5,5]
+
+[157] ENVIRONMENT:
+MED
+Turn - Announce
+
+[158] MODEL:
+Announce: DAX rule - The three numbers can form an arithmetic progression.
+Announce: MED rule - The three numbers cannot form an arithmetic progression.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [1,2,5]
+
+[161] ENVIRONMENT:
+MED
+Turn - Announce
+
+[162] MODEL:
+Announce: DAX rule - The three numbers can form an arithmetic progression and are not all identical.
+Announce: MED rule - The three numbers cannot form an arithmetic progression, or they are all identical.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [2,4,6]
+
+[165] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[166] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the difference b-a is greater than or equal to the difference c-b.
+Announce: MED rule - When sorted as [a,b,c], the difference b-a is less than the difference c-b.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [2,6,8]
+
+[169] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[170] MODEL:
+Announce: DAX rule - When the absolute values of the three numbers are sorted as [x,y,z], the difference y-x is greater than or equal to z-y.
+Announce: MED rule - When the absolute values of the three numbers are sorted as [x,y,z], the difference y-x is less than z-y.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [0,3,4]
+
+[173] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[174] MODEL:
+Announce: DAX rule - When sorted as [a,b,c], the middle number b is greater than or equal to the average of a and c.
+Announce: MED rule - When sorted as [a,b,c], the middle number b is less than the average of a and c.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [1,2,6]
+
+[177] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[178] MODEL:
+Announce: DAX rule - The sum of the three numbers is an even number.
+Announce: MED rule - The sum of the three numbers is an odd number.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [1,2,9]
+
+[181] ENVIRONMENT:
+DAX
+Turn - Announce
+
+[182] MODEL:
+Announce: DAX rule - The sum of the three numbers is odd, or the three numbers are not all identical and can form an arithmetic progression.
+Announce: MED rule - The sum of the three numbers is even and they cannot form an arithmetic progression, or all three numbers are identical.
+
+[183] ENVIRONMENT:
+Turn - Test

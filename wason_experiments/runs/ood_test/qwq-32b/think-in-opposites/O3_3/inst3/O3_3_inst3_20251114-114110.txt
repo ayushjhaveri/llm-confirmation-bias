@@ -1,0 +1,623 @@
+[001] ENVIRONMENT:
+You will be given three numbers which conform to a simple rule that I have in mind.
+This rule is concerned with the common attributes or relations between any three numbers,
+and not with their absolute magnitude - for example, it is not a rule like "all numbers above (or below) 50."
+
+Your goal is to discover this hidden rule by proposing sets of three numbers.
+You will then be told if the triple conforms with the hidden rule or not.
+
+Before proposing each new triple, look at the example and think about one feature it has.
+Then imagine a triple that is opposite with respect to that feature, and test whether it still conforms with the rule.
+If it does, that feature is probably irrelevant; if it does not, that feature might be crucial.
+
+In short: to discover the rule, test triples that both confirm and contradict your current idea.
+
+At each turn, you may perform one of two actions:
+
+Test: propose a new set of three integers, denoted [a,b,c].
+You will then be told whether that triple conforms with the hidden rule ("YES" or "NO").
+
+Announce: state what you believe the hidden rule is.
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: <one short sentence naming the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Check: [a,b,c]
+
+A triple that conforms with the hidden rule is: [89, 67, 13].
+Let's begin.
+Turn – Announce.
+
+[002] MODEL:
+Announce: All numbers are prime numbers.
+
+[003] ENVIRONMENT:
+Turn - Test
+
+[004] MODEL:
+Check: [4,6,8]
+
+[005] ENVIRONMENT:
+YES
+Turn - Announce
+
+[006] MODEL:
+Announce: All numbers are of the same parity (all even or all odd).
+
+[007] ENVIRONMENT:
+Turn - Test
+
+[008] MODEL:
+Check: [3,5,8]
+
+[009] ENVIRONMENT:
+YES
+Turn - Announce
+
+[010] MODEL:
+Announce: Each number is either a prime number or an even number.
+
+[011] ENVIRONMENT:
+Turn - Test
+
+[012] MODEL:
+Check: [3,5,9]
+
+[013] ENVIRONMENT:
+YES
+Turn - Announce
+
+[014] MODEL:
+Announce: The triple contains at least two prime numbers or at least two even numbers.
+
+[015] ENVIRONMENT:
+Turn - Test
+
+[016] MODEL:
+Check: [2,9,15]
+
+[017] ENVIRONMENT:
+YES
+Turn - Announce
+
+[018] MODEL:
+Announce: The triple contains at least one even number or at least two prime numbers.
+
+[019] ENVIRONMENT:
+Turn - Test
+
+[020] MODEL:
+Check: [3,9,15]
+
+[021] ENVIRONMENT:
+YES
+Turn - Announce
+
+[022] MODEL:
+Announce: At least one number is either even or a prime.
+
+[023] ENVIRONMENT:
+Turn - Test
+
+[024] MODEL:
+Check: [15,21,27]
+
+[025] ENVIRONMENT:
+YES
+Turn - Announce
+
+[026] MODEL:
+Announce: The numbers are either all prime numbers or they share a common divisor greater than 1.
+
+[027] ENVIRONMENT:
+Turn - Test
+
+[028] MODEL:
+Check: [9,25,49]
+
+[029] ENVIRONMENT:
+YES
+Turn - Announce
+
+[030] MODEL:
+Announce: All numbers are either prime numbers, or the set contains at least one even number or at least one multiple of 3.
+
+[031] ENVIRONMENT:
+Turn - Test
+
+[032] MODEL:
+Check: [5,7,25]
+
+[033] ENVIRONMENT:
+YES
+Turn - Announce
+
+[034] MODEL:
+Announce: The triple contains at least one even number, at least one prime number, or at least one multiple of 3.
+
+[035] ENVIRONMENT:
+Turn - Test
+
+[036] MODEL:
+Check: [25,35,49]
+
+[037] ENVIRONMENT:
+YES
+Turn - Announce
+
+[038] MODEL:
+Announce: At least one number is a prime, even, or a multiple of 5.
+
+[039] ENVIRONMENT:
+Turn - Test
+
+[040] MODEL:
+Check: [21,27,33]
+
+[041] ENVIRONMENT:
+YES
+Turn - Announce
+
+[042] MODEL:
+Announce: At least one number is a prime or a prime power (e.g., squares, cubes of primes).
+
+[043] ENVIRONMENT:
+Turn - Test
+
+[044] MODEL:
+Check: [15,21,33]
+
+[045] ENVIRONMENT:
+YES
+Turn - Announce
+
+[046] MODEL:
+Announce: At least one number is prime or at least two numbers share a common prime factor.
+
+[047] ENVIRONMENT:
+Turn - Test
+
+[048] MODEL:
+Check: [4,9,25]
+
+[049] ENVIRONMENT:
+YES
+Turn - Announce
+
+[050] MODEL:
+Announce: Every number is either a prime power or shares a common prime factor with at least one other number in the triplet.
+
+[051] ENVIRONMENT:
+Turn - Test
+
+[052] MODEL:
+Check: [6,35,49]
+
+[053] ENVIRONMENT:
+YES
+Turn - Announce
+
+[054] MODEL:
+Announce: The triplet contains at least one prime power or at least two numbers share a common prime factor.
+
+[055] ENVIRONMENT:
+Turn - Test
+
+[056] MODEL:
+Check: [14,15,221]
+
+[057] ENVIRONMENT:
+YES
+Turn - Announce
+
+[058] MODEL:
+Announce: Each number has at least one prime factor.
+
+[059] ENVIRONMENT:
+Turn - Test
+
+[060] MODEL:
+Check: [30,105,130]
+
+[061] ENVIRONMENT:
+YES
+Turn - Announce
+
+[062] MODEL:
+Announce: Every number has at least one prime factor (i.e., all numbers are greater than 1).
+
+[063] ENVIRONMENT:
+Turn - Test
+
+[064] MODEL:
+Check: [1,2,3]
+
+[065] ENVIRONMENT:
+YES
+Turn - Announce
+
+[066] MODEL:
+Announce: At least two numbers have the same parity (both even or both odd).
+
+[067] ENVIRONMENT:
+Turn - Test
+
+[068] MODEL:
+Check: [0,2,4]
+
+[069] ENVIRONMENT:
+NO
+Turn - Announce
+
+[070] MODEL:
+Announce: All numbers are positive integers (greater than zero).
+
+[071] ENVIRONMENT:
+Turn - Test
+
+[072] MODEL:
+Check: [-1,2,3]
+
+[073] ENVIRONMENT:
+NO
+Turn - Announce
+
+[074] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[075] ENVIRONMENT:
+Turn - Test
+
+[076] MODEL:
+Check: [2,3,4]
+
+[077] ENVIRONMENT:
+YES
+Turn - Announce
+
+[078] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[079] ENVIRONMENT:
+Turn - Test
+
+[080] MODEL:
+Check: [1,1,1]
+
+[081] ENVIRONMENT:
+YES
+Turn - Announce
+
+[082] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[083] ENVIRONMENT:
+Turn - Test
+
+[084] MODEL:
+Check: [0,1,2]
+
+[085] ENVIRONMENT:
+NO
+Turn - Announce
+
+[086] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[087] ENVIRONMENT:
+Turn - Test
+
+[088] MODEL:
+Check: [5,6,7]
+
+[089] ENVIRONMENT:
+YES
+Turn - Announce
+
+[090] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[091] ENVIRONMENT:
+Turn - Test
+
+[092] MODEL:
+Check: [1,2,3]
+
+[093] ENVIRONMENT:
+YES
+Turn - Announce
+
+[094] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[095] ENVIRONMENT:
+Turn - Test
+
+[096] MODEL:
+Check: [0,0,0]
+
+[097] ENVIRONMENT:
+NO
+Turn - Announce
+
+[098] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[099] ENVIRONMENT:
+Turn - Test
+
+[100] MODEL:
+Check: [2,3,5]
+
+[101] ENVIRONMENT:
+YES
+Turn - Announce
+
+[102] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[103] ENVIRONMENT:
+Turn - Test
+
+[104] MODEL:
+Check: [5,6,7]
+
+[105] ENVIRONMENT:
+YES
+Turn - Announce
+
+[106] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[107] ENVIRONMENT:
+Turn - Test
+
+[108] MODEL:
+Check: [9,15,21]
+
+[109] ENVIRONMENT:
+YES
+Turn - Announce
+
+[110] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[111] ENVIRONMENT:
+Turn - Test
+
+[112] MODEL:
+Check: [1,2,3]
+
+[113] ENVIRONMENT:
+YES
+Turn - Announce
+
+[114] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[115] ENVIRONMENT:
+Turn - Test
+
+[116] MODEL:
+Check: [2,3,5]
+
+[117] ENVIRONMENT:
+YES
+Turn - Announce
+
+[118] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[119] ENVIRONMENT:
+Turn - Test
+
+[120] MODEL:
+Check: [1,4,6]
+
+[121] ENVIRONMENT:
+YES
+Turn - Announce
+
+[122] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[123] ENVIRONMENT:
+Turn - Test
+
+[124] MODEL:
+Check: [10,20,30]
+
+[125] ENVIRONMENT:
+YES
+Turn - Announce
+
+[126] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[127] ENVIRONMENT:
+Turn - Test
+
+[128] MODEL:
+Check: [5,7,9]
+
+[129] ENVIRONMENT:
+YES
+Turn - Announce
+
+[130] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[131] ENVIRONMENT:
+Turn - Test
+
+[132] MODEL:
+Check: [5,7,9]
+
+[133] ENVIRONMENT:
+YES
+Turn - Announce
+
+[134] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[135] ENVIRONMENT:
+Turn - Test
+
+[136] MODEL:
+Check: [1,2,3]
+
+[137] ENVIRONMENT:
+YES
+Turn - Announce
+
+[138] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[139] ENVIRONMENT:
+Turn - Test
+
+[140] MODEL:
+Check: [0,1,1]
+
+[141] ENVIRONMENT:
+NO
+Turn - Announce
+
+[142] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[143] ENVIRONMENT:
+Turn - Test
+
+[144] MODEL:
+Check: [1,1,1]
+
+[145] ENVIRONMENT:
+YES
+Turn - Announce
+
+[146] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[147] ENVIRONMENT:
+Turn - Test
+
+[148] MODEL:
+Check: [3,4,5]
+
+[149] ENVIRONMENT:
+YES
+Turn - Announce
+
+[150] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[151] ENVIRONMENT:
+Turn - Test
+
+[152] MODEL:
+Check: [0,1,2]
+
+[153] ENVIRONMENT:
+NO
+Turn - Announce
+
+[154] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[155] ENVIRONMENT:
+Turn - Test
+
+[156] MODEL:
+Check: [3,4,5]
+
+[157] ENVIRONMENT:
+YES
+Turn - Announce
+
+[158] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[159] ENVIRONMENT:
+Turn - Test
+
+[160] MODEL:
+Check: [1,4,9]
+
+[161] ENVIRONMENT:
+YES
+Turn - Announce
+
+[162] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[163] ENVIRONMENT:
+Turn - Test
+
+[164] MODEL:
+Check: [1,2,3]
+
+[165] ENVIRONMENT:
+YES
+Turn - Announce
+
+[166] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[167] ENVIRONMENT:
+Turn - Test
+
+[168] MODEL:
+Check: [0,0,1]
+
+[169] ENVIRONMENT:
+NO
+Turn - Announce
+
+[170] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[171] ENVIRONMENT:
+Turn - Test
+
+[172] MODEL:
+Check: [5,10,15]
+
+[173] ENVIRONMENT:
+YES
+Turn - Announce
+
+[174] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[175] ENVIRONMENT:
+Turn - Test
+
+[176] MODEL:
+Check: [4,6,8]
+
+[177] ENVIRONMENT:
+YES
+Turn - Announce
+
+[178] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[179] ENVIRONMENT:
+Turn - Test
+
+[180] MODEL:
+Check: [5,7,11]
+
+[181] ENVIRONMENT:
+YES
+Turn - Announce
+
+[182] MODEL:
+Announce: All numbers are positive integers greater than zero.
+
+[183] ENVIRONMENT:
+Turn - Test
