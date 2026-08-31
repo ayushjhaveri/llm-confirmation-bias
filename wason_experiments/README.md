@@ -9,7 +9,7 @@ Create an environment and install the dependencies from `requirements.txt`:
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 ```
 
 Run all commands from this directory so that `data/`, `rules/`, and `prompts/` resolve correctly.
