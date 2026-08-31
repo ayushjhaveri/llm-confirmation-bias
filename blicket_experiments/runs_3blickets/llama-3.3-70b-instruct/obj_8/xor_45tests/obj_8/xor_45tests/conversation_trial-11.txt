@@ -1,0 +1,495 @@
+You are playing a game with several objects and a device.
+
+Placing a set of objects on the device causes it to turn on.
+This depends on which objects are placed on the device, according to a hidden rule.
+
+Your goal is to discover:
+- which objects are relevant to turn the device on
+- the hidden rule that determines when the device turns on.
+
+At each turn, you will be instructed to do one of two things:
+
+- Test: propose a set of objects to place on the device. You will then receive feedback on the device's state: ON or OFF.
+- Announce: based on all previous tests, state which objects you believe are relevant to turn the device on and describe the hidden rule. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: relevant=[object A, object B, object C]; rule=<one short description of the rule>
+  (there can be any number of relevant objects)
+
+- If the instruction is Turn – Test, output exactly one line:
+  Test: [object A, object B, object C]
+  (you can test any number and combination of objects)
+
+Important rules:
+- Always refer to objects using the exact name "object N".
+- Do not include any extra text.
+
+--------------------------------------------------
+Initial configuration (this is not the result of a test):
+
+You are in a room. You see a device at the center of this room. 
+
+There are also 8 objects scattered around the room. You observe them: object 0 is on the floor, object 1 is on the floor, object 2 is on the floor, object 3 is on the floor, object 4 is on the floor, object 5 is on the floor, object 6 is on the floor, object 7 is on the device. 
+
+The device is off. You wonder if there is a relationship between the objects and the device.
+
+--------------------------------------------------
+
+Turn - Announce.
+
+Announce: relevant=[object 7]; rule=object 7 is on the device
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 5, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 7]; rule=object 7 must be on the device
+
+Turn - Test.
+
+Test: [object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 7, object 1]; rule=at least object 7 and one other object must be on the device
+
+Turn - Test.
+
+Test: [object 7, object 1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 7, object 1, object 2, object 3, object 4, object 5, object 6]; rule=object 7 and at least one of the other objects must be on the device, but not all of them
+
+Turn - Test.
+
+Test: [object 7, object 1, object 2]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 7]; rule=object 7 alone is not enough, and adding more objects does not turn it on, need to test other combinations
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 7, object 0]; rule=object 7 and object 0 must be on the device
+
+Turn - Test.
+
+Test: [object 7, object 0]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 7, object 0]; rule=both object 7 and object 0 must be on the device
+
+Turn - Test.
+
+Test: [object 0]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device
+
+Turn - Test.
+
+Test: [object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 5, object 6, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=only object 0 must be on the device, others do not matter
+
+Turn - Test.
+
+Test: [object 0, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, presence of other objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 2, object 3, object 4, object 5, object 6, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, presence of other objects does not matter
+
+Turn - Test.
+
+Test: [object 0]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, presence of other objects does not matter
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 5, object 6, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=only object 0 alone, or with object 7, turns the device on, other objects turn it off when combined with object 0
+
+Turn - Test.
+
+Test: [object 0, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and either alone or only with object 7
+
+Turn - Test.
+
+Test: [object 0, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with any single object or alone
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with any number of other objects
+
+Turn - Test.
+
+Test: [object 1, object 2, object 3, object 4, object 5, object 6, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device
+
+Turn - Test.
+
+Test: [object 0]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1, object 2, object 3, object 4, object 5, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, but not with all other objects
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1, object 2, object 3, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, but not with more than 1 other object
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with any one or two other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with any number of other objects, but previous results are inconsistent
+
+Turn - Test.
+
+Test: [object 0, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1, object 2, object 3, object 4, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, but not with more than a certain number of other objects
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1, object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, but not with more than 6 other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 5, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, but not with all other 7 objects, and not with 6 other objects if object 7 is not among them
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1, object 2, object 3, object 4, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, but not with 6 or 7 other objects, regardless of which objects they are
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, but not with 6 other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, but not with 5 or 6 or 7 other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 4 other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects
+
+Turn - Test.
+
+Test: [object 0, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects
+
+Turn - Test.
+
+Test: [object 0]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects
+
+Turn - Test.
+
+Test: [object 1, object 2, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects, or 4 if one of them is object 7
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects, or 4 if one of them is object 7
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects, or more than 3 if object 7 is among them
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects, or 4 if object 7 is among them
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1, object 2, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects, or 4 if object 7 is among them
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects, or 4 other objects if and only if one of them is object 7 and it is one of the first 4 objects placed
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1, object 2, object 3, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects, or 4 other objects if object 7 is among the first 4 objects, including object 0
+
+Turn - Test.
+
+Test: [object 0, object 7, object 1, object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be on the device, and can be with up to 3 other objects, or 4 other objects if object 7 is among them and is placed with 3 other objects including object 0
+

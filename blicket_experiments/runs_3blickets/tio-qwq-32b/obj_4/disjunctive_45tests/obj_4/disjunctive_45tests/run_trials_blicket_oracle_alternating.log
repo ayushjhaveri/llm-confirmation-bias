@@ -1,0 +1,18 @@
+[2026-02-25 16:32:00,023][__main__][INFO] - Current working directory: /scratch/aj4332/cb_env/blicket-text-llm/runs_3blickets/tio-qwq-32b/obj_4/disjunctive_45tests/obj_4/disjunctive_45tests
+[2026-02-25 16:33:02,092][__main__][INFO] - Trial: 0. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(3)]. Rule: disjunctive
+[2026-02-25 17:18:28,996][__main__][INFO] - Trial: 1. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(1), np.int64(2), np.int64(3)]. Rule: disjunctive
+[2026-02-25 17:57:32,884][__main__][INFO] - Trial: 2. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(2)]. Rule: disjunctive
+[2026-02-25 18:37:57,610][__main__][INFO] - Trial: 3. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(2)]. Rule: disjunctive
+[2026-02-25 19:18:21,292][__main__][INFO] - Trial: 4. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(1), np.int64(2), np.int64(3)]. Rule: disjunctive
+[2026-02-25 19:57:08,375][__main__][INFO] - Trial: 5. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: disjunctive
+[2026-02-25 20:49:54,759][__main__][INFO] - Trial: 6. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(1), np.int64(2), np.int64(3)]. Rule: disjunctive
+[2026-02-25 21:27:06,180][__main__][INFO] - Trial: 7. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(2)]. Rule: disjunctive
+[2026-02-25 22:08:41,625][__main__][INFO] - Trial: 8. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(3)]. Rule: disjunctive
+[2026-02-25 23:05:08,411][__main__][INFO] - Trial: 9. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(2)]. Rule: disjunctive
+[2026-02-25 23:46:36,974][__main__][INFO] - Trial: 10. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: disjunctive
+[2026-02-26 00:32:38,232][__main__][INFO] - Trial: 11. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: disjunctive
+[2026-02-26 01:19:15,614][__main__][INFO] - Trial: 12. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: disjunctive
+[2026-02-26 02:06:09,868][__main__][INFO] - Trial: 13. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(3)]. Rule: disjunctive
+[2026-02-26 03:01:05,055][__main__][INFO] - Trial: 14. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: disjunctive
+[2026-02-26 03:41:59,052][__main__][INFO] - Trial: 15. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: disjunctive
+[2026-02-26 04:22:45,606][__main__][INFO] - Num trials: 16. Total time: 42645.58s. Estimated total cost: 0.0.

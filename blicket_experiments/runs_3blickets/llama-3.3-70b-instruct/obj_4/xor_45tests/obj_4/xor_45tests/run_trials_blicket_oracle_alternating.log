@@ -1,0 +1,18 @@
+[2026-02-28 05:41:27,010][__main__][INFO] - Current working directory: /scratch/aj4332/cb_env/blicket-text-llm/runs_3blickets/llama-3.3-70b-instruct/obj_4/xor_45tests/obj_4/xor_45tests
+[2026-02-28 05:42:53,698][__main__][INFO] - Trial: 0. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(3)]. Rule: xor
+[2026-02-28 05:44:55,210][__main__][INFO] - Trial: 1. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(1), np.int64(2), np.int64(3)]. Rule: xor
+[2026-02-28 05:46:33,244][__main__][INFO] - Trial: 2. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(2)]. Rule: xor
+[2026-02-28 05:48:03,704][__main__][INFO] - Trial: 3. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(2)]. Rule: xor
+[2026-02-28 05:49:37,318][__main__][INFO] - Trial: 4. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(1), np.int64(2), np.int64(3)]. Rule: xor
+[2026-02-28 05:51:14,636][__main__][INFO] - Trial: 5. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: xor
+[2026-02-28 05:52:59,833][__main__][INFO] - Trial: 6. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(1), np.int64(2), np.int64(3)]. Rule: xor
+[2026-02-28 05:54:43,344][__main__][INFO] - Trial: 7. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(2)]. Rule: xor
+[2026-02-28 05:56:14,655][__main__][INFO] - Trial: 8. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(3)]. Rule: xor
+[2026-02-28 05:57:50,013][__main__][INFO] - Trial: 9. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(2)]. Rule: xor
+[2026-02-28 05:59:23,535][__main__][INFO] - Trial: 10. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: xor
+[2026-02-28 06:01:24,313][__main__][INFO] - Trial: 11. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: xor
+[2026-02-28 06:03:12,566][__main__][INFO] - Trial: 12. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: xor
+[2026-02-28 06:04:59,637][__main__][INFO] - Trial: 13. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(1), np.int64(3)]. Rule: xor
+[2026-02-28 06:06:32,259][__main__][INFO] - Trial: 14. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: xor
+[2026-02-28 06:08:50,117][__main__][INFO] - Trial: 15. num_objects=4. Object names: ['object 0', 'object 1', 'object 2', 'object 3']. Blicket indices: [np.int64(0), np.int64(2), np.int64(3)]. Rule: xor
+[2026-02-28 06:10:13,871][__main__][INFO] - Num trials: 16. Total time: 1726.86s. Estimated total cost: 0.0.

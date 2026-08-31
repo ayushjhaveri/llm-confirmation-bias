@@ -1,0 +1,9 @@
+- model_name=qwen3-8bstudent-8btioteacher/obj_8/conjunctive_45tests
+- num_trials=16
+- seed=0
+- env_kwargs.rule=conjunctive
+- env_kwargs.num_objects=8
+- env_kwargs.num_blickets=3
+- max_actions_per_trial=45
+- agent.model=local_vllm:/scratch/aj4332/models/qwen3-8bstudent-sft-8btioteacher-notrim-lr7.5e-5-r16-ckpt3400-merged
+- agent.initial_msg_path=./agent/prompts/alternating_relevant_initial.txt

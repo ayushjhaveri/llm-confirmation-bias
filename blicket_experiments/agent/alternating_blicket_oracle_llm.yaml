@@ -1,0 +1,15 @@
+_target_: agent.alternating_blicket_oracle_llm.AlternatingBlicketOracleAgent
+
+# will be overridden from the main run yaml if you want
+model: local_vllm:/scratch/aj4332/models/qwen3-8b
+temperature: 0.6
+
+# the new prompt
+initial_msg_path: ./agent/prompts/alternating_blicket_oracle_initial.txt
+
+# provided by runner
+horizon_tests: ${max_actions_per_trial}
+
+max_format_retries: 3
+
+thinking_mode: true

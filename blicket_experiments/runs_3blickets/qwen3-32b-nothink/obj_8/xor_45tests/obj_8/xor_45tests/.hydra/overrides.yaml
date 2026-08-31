@@ -1,0 +1,10 @@
+- model_name=qwen3-32b-nothink/obj_8/xor_45tests
+- num_trials=16
+- seed=0
+- env_kwargs.rule=xor
+- env_kwargs.num_objects=8
+- env_kwargs.num_blickets=3
+- max_actions_per_trial=45
+- agent.model=local_vllm:/scratch/aj4332/models/qwen3-32b
+- agent.thinking_mode=False
+- agent.initial_msg_path=./agent/prompts/alternating_relevant_initial.txt

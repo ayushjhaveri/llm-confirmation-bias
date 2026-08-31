@@ -1,0 +1,32 @@
+# config.yaml
+defaults:
+  - agent: prompts_llm
+  - _self_
+
+model_name: qwen3-8bstudent-sft-32btio-notrim-lr2e-4-r16-ckpt3200-merged   # <-- set this (or qwen3-8b-sft)
+
+num_trials: 4
+max_actions_per_trial: 32
+
+save_trial_log: True
+
+use_threadpool: False
+tp_max_workers: 4
+
+seed: 0
+
+env_kwargs:
+  num_objects: 4
+  num_blickets: 2
+  init_prob: 0.1
+  transition_noise: 0.0
+  rule: "conjunctive"
+
+hydra:
+  run:
+    dir: exp_output_thinkopp/${model_name}/obj_${env_kwargs.num_objects}/${env_kwargs.rule}_${max_actions_per_trial}steps
+  sweep:
+    dir: exp_output_thinkopp/${model_name}/obj_${env_kwargs.num_objects}
+    subdir: ${env_kwargs.rule}_${max_actions_per_trial}steps_${hydra.job.num}
+  job:
+    chdir: True

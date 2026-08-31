@@ -1,0 +1,495 @@
+You are playing a game with several objects and a device.
+
+Placing a set of objects on the device causes it to turn on.
+This depends on which objects are placed on the device, according to a hidden rule.
+
+Your goal is to discover:
+- which objects are relevant to turn the device on
+- the hidden rule that determines when the device turns on.
+
+At each turn, you will be instructed to do one of two things:
+
+- Test: propose a set of objects to place on the device. You will then receive feedback on the device's state: ON or OFF.
+- Announce: based on all previous tests, state which objects you believe are relevant to turn the device on and describe the hidden rule. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: relevant=[object A, object B, object C]; rule=<one short description of the rule>
+  (there can be any number of relevant objects)
+
+- If the instruction is Turn – Test, output exactly one line:
+  Test: [object A, object B, object C]
+  (you can test any number and combination of objects)
+
+Important rules:
+- Always refer to objects using the exact name "object N".
+- Do not include any extra text.
+
+--------------------------------------------------
+Initial configuration (this is not the result of a test):
+
+You are in a room. You see a device at the center of this room. 
+
+There are also 8 objects scattered around the room. You observe them: object 0 is on the floor, object 1 is on the floor, object 2 is on the floor, object 3 is on the device, object 4 is on the floor, object 5 is on the floor, object 6 is on the floor, object 7 is on the floor. 
+
+The device is off. You wonder if there is a relationship between the objects and the device.
+
+--------------------------------------------------
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=unknown
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 3]; rule=object 3 alone is not enough to turn the device on
+
+Turn - Test.
+
+Test: [object 3, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 3]; rule=object 3 and at least one other object are not enough to turn the device on
+
+Turn - Test.
+
+Test: [object 3, object 4, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 3]; rule=object 3 and any combination of other objects so far tested are not enough to turn the device on
+
+Turn - Test.
+
+Test: [object 3, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 3]; rule=object 3 and any combination of objects 0, 1, 4, 5, 6 are not enough to turn the device on
+
+Turn - Test.
+
+Test: [object 3, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 3]; rule=object 3 and any combination of objects 0, 1, 4, 5, 6, 7 are not enough to turn the device on
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 3]; rule=object 3 and any combination of objects 0, 1, 4, 5, 6, 7 are not enough to turn the device on, and objects 0, 1, 2 are also not enough to turn the device on
+
+Turn - Test.
+
+Test: [object 2, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 3]; rule=object 3 and any combination of objects 0, 1, 2, 4, 5, 6, 7 are not enough to turn the device on, and objects 0, 1, 2 are also not enough to turn the device on
+
+Turn - Test.
+
+Test: [object 3, object 2, object 0, object 1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 3]; rule=object 3 and any combination of objects 0, 1, 2, 4, 5, 6, 7 are not enough to turn the device on, and any combination of objects 0, 1, 2 without object 3 is also not enough to turn the device on
+
+Turn - Test.
+
+Test: [object 2, object 3, object 4, object 5, object 6, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 3]; rule=object 3 and any combination of other objects are not enough to turn the device on, and any combination of objects without object 3 is also not enough to turn the device on
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 5, object 6, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 4, object 5, object 6, object 7]; rule=all of these objects together turn the device on
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 5, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 4, object 5, object 6, object 7]; rule=all of these objects together turn the device on, object 7 is necessary
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 5, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 4, object 5, object 7]; rule=these 6 objects together turn the device on, object 6 is not necessary
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 4, object 7]; rule=these 5 objects together turn the device on, objects 5 and 6 are not necessary
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 7]; rule=these 4 objects together turn the device on, objects 3, 4, 5, and 6 are not necessary
+
+Turn - Test.
+
+Test: [object 0, object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 7]; rule=these 3 objects together turn the device on, objects 2, 3, 4, 5, and 6 are not necessary
+
+Turn - Test.
+
+Test: [object 0, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 7]; rule=these 3 objects together turn the device on, object 1 is necessary in addition to objects 0 and 7
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=these 2 objects together turn the device on, object 0 is not necessary
+
+Turn - Test.
+
+Test: [object 1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 are necessary to turn the device on
+
+Turn - Test.
+
+Test: [object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient
+
+Turn - Test.
+
+Test: [object 1, object 7, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, and additional objects do not prevent the device from turning on
+
+Turn - Test.
+
+Test: [object 1, object 7, object 0, object 2, object 3, object 4, object 5, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, and any combination of other objects does not affect the device's state
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, and any combination of other objects does not affect the device's state
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, and any combination of other objects does not affect the device's state
+
+Turn - Test.
+
+Test: [object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, and any combination of other objects does not affect the device's state, order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 1, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+
+Turn - Test.
+
+Test: [object 7, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 1, object 7]; rule=both objects 1 and 7 must be present together to turn the device on, neither alone is sufficient, any combination of other objects does not affect the device's state, and order of objects does not matter
+

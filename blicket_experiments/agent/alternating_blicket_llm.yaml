@@ -1,0 +1,14 @@
+# agent/alternating_blicket_llm.yaml
+# New agent config under agent/
+_target_: agent.alternating_blicket_llm.AlternatingBlicketAgent
+_recursive_: False
+
+# horizon_tests is injected by hydra.instantiate(..., horizon_tests=n_test) in the runner
+
+model: local_vllm:/scratch/aj4332/models/qwen3-8b
+temperature: 0.6
+
+# IMPORTANT: initial prompt is a USER message (not system)
+initial_msg_path: "./agent/prompts/alternating_blicket_initial.txt"
+
+max_format_retries: 3

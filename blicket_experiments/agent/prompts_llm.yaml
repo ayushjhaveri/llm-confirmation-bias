@@ -1,0 +1,11 @@
+_target_: agent.prompts_llm.PromptsAgent
+_recursive_: False
+
+horizon: ${max_actions_per_trial}
+filter_actions: False
+react: True
+
+model: local_vllm:/scratch/aj4332/models/qwen3-8bstudent-sft-32btio-notrim-lr2e-4-r16-ckpt3200-merged
+temperature: 0.6
+
+system_msg_path: "./agent/prompts/system_basic.txt"

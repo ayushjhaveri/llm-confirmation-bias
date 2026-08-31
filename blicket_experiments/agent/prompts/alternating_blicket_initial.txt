@@ -1,0 +1,42 @@
+You are playing a game with several objects and a machine.
+
+Some of the objects are called "blickets".
+A blicket is an object that can cause the machine to turn on.
+Whether the machine turns on depends on which blickets are placed on the machine, according to a simple hidden rule.
+
+Your goal is to discover:
+- which objects are blickets, and
+- the hidden rule that determines when the machine’s light turns on.
+
+At each turn, you will be instructed to do one of two things:
+
+- Test: perform an action involving a single object. You will then be shown the updated configuration of the objects and whether the machine’s light is on or off.
+- Announce: based on all previous tests, state which objects you believe are blickets and describe the hidden rule. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: blickets=[object A, object B]; rule=<one short description of the rule>
+
+- If the instruction is Turn – Test, output exactly one line:
+  Action: <one command>
+
+  where <one command> is exactly one of:
+  - put object N on machine
+  - take object N off machine
+
+Important rules:
+- Always refer to objects using the exact name "object N".
+- Each action must involve exactly one object.
+- Do not include any extra text.
+
+--------------------------------------------------
+Initial configuration (this is not the result of a test):
+
+{{INITIAL_CONFIGURATION}}
+
+--------------------------------------------------
+
+Turn – Announce.

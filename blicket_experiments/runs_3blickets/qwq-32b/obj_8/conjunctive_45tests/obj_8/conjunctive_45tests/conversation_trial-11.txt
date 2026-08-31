@@ -1,0 +1,495 @@
+You are playing a game with several objects and a device.
+
+Placing a set of objects on the device causes it to turn on.
+This depends on which objects are placed on the device, according to a hidden rule.
+
+Your goal is to discover:
+- which objects are relevant to turn the device on
+- the hidden rule that determines when the device turns on.
+
+At each turn, you will be instructed to do one of two things:
+
+- Test: propose a set of objects to place on the device. You will then receive feedback on the device's state: ON or OFF.
+- Announce: based on all previous tests, state which objects you believe are relevant to turn the device on and describe the hidden rule. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: relevant=[object A, object B, object C]; rule=<one short description of the rule>
+  (there can be any number of relevant objects)
+
+- If the instruction is Turn – Test, output exactly one line:
+  Test: [object A, object B, object C]
+  (you can test any number and combination of objects)
+
+Important rules:
+- Always refer to objects using the exact name "object N".
+- Do not include any extra text.
+
+--------------------------------------------------
+Initial configuration (this is not the result of a test):
+
+You are in a room. You see a device at the center of this room. 
+
+There are also 8 objects scattered around the room. You observe them: object 0 is on the floor, object 1 is on the floor, object 2 is on the floor, object 3 is on the floor, object 4 is on the floor, object 5 is on the floor, object 6 is on the floor, object 7 is on the device. 
+
+The device is off. You wonder if there is a relationship between the objects and the device.
+
+--------------------------------------------------
+
+Turn - Announce.
+
+Announce: relevant=[object 7]; rule=the device turns on when object7 is not present
+
+Turn - Test.
+
+Test: [object 0, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 7]; rule=the device turns on only when object7 is removed from it
+
+Turn - Test.
+
+Test: [object 0]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least two objects are placed, excluding object7
+
+Turn - Test.
+
+Test: [object0, object1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6, object7]; rule=device turns on only when no objects are placed
+
+Turn - Test.
+
+Test: []
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on only when all objects except object7 are placed
+
+Turn - Test.
+
+Test: [object0, object1, object2, object3, object4, object5, object6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on only when all objects except object7 are placed
+
+Turn - Test.
+
+Test: [object1, object2, object3, object4, object5, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on only when all objects except object7 are placed
+
+Turn - Test.
+
+Test: [object0, object2, object3, object4, object5, object6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including object0, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object1, object2, object3, object4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed including object0, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object1, object2, object3, object4, object5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object6]; rule=the device turns on when both object0 and object6 are placed, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object1, object2, object3, object4, object6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object2, object4, object5, object6, object3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object1, object2, object3, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object2, object3, object4, object5, object6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object1, object2, object3, object4, object5, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object1, object2, object4, object5, object6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object 0, object1, object2, object3, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object1, object2, object4, object5, object6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object1, object3, object4, object5, object6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed, including both object0 and object6, and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object1, object2, object3, object5, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object1, object2, object3, object4, object5, object6]; rule=the device turns on when at least six objects are placed (excluding object7), and must include object0, object4, and object6
+
+Turn - Test.
+
+Test: [object1, object2, object3, object4, object5, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on only when objects0,4,6 are all placed and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object4, object6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on only when objects0,4,6 are all placed and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on only when objects0,4,6 are all placed and object7 is not present
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on only when objects0,4,6 are all placed and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on only when objects0,4,6 are all placed and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on only when objects0,4,6 are all placed and object7 is not present
+
+Turn - Test.
+
+Test: [object0, object4, object6, object7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 5, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object0, object4, object6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object0, object4, object6, object5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object0, object1, object2, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6, object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 4, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object0, object4, object6]; rule=the device turns on when objects0,4,6 are all placed, regardless of other objects
+

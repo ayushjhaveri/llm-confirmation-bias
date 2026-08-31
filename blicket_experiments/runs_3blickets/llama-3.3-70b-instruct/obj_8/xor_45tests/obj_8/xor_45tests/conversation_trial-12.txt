@@ -1,0 +1,495 @@
+You are playing a game with several objects and a device.
+
+Placing a set of objects on the device causes it to turn on.
+This depends on which objects are placed on the device, according to a hidden rule.
+
+Your goal is to discover:
+- which objects are relevant to turn the device on
+- the hidden rule that determines when the device turns on.
+
+At each turn, you will be instructed to do one of two things:
+
+- Test: propose a set of objects to place on the device. You will then receive feedback on the device's state: ON or OFF.
+- Announce: based on all previous tests, state which objects you believe are relevant to turn the device on and describe the hidden rule. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: relevant=[object A, object B, object C]; rule=<one short description of the rule>
+  (there can be any number of relevant objects)
+
+- If the instruction is Turn – Test, output exactly one line:
+  Test: [object A, object B, object C]
+  (you can test any number and combination of objects)
+
+Important rules:
+- Always refer to objects using the exact name "object N".
+- Do not include any extra text.
+
+--------------------------------------------------
+Initial configuration (this is not the result of a test):
+
+You are in a room. You see a device at the center of this room. 
+
+There are also 8 objects scattered around the room. You observe them: object 0 is on the floor, object 1 is on the floor, object 2 is on the floor, object 3 is on the floor, object 4 is on the floor, object 5 is on the floor, object 6 is on the floor, object 7 is on the floor. 
+
+The device is off. You wonder if there is a relationship between the objects and the device.
+
+--------------------------------------------------
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=no objects turn the device on
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4, object 5, object 6, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=no objects turn the device on
+
+Turn - Test.
+
+Test: [object 0, object 1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=no objects turn the device on
+
+Turn - Test.
+
+Test: [object 0]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0]; rule=object 0 must be present
+
+Turn - Test.
+
+Test: [object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1]; rule=either object 0 or object 1 must be present
+
+Turn - Test.
+
+Test: [object 0, object 1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1]; rule=either object 0 or object 1 must be present, but not both
+
+Turn - Test.
+
+Test: [object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=either object 0 or object 1 or object 2 must be present, but not both of object 0 and object 1
+
+Turn - Test.
+
+Test: [object 0, object 2]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or some other object combination not yet tested turns it on, but not object 0 and object 1, and not object 0 and object 2
+
+Turn - Test.
+
+Test: [object 1, object 2]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone
+
+Turn - Test.
+
+Test: [object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone
+
+Turn - Test.
+
+Test: [object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone
+
+Turn - Test.
+
+Test: [object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone
+
+Turn - Test.
+
+Test: [object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone
+
+Turn - Test.
+
+Test: [object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone
+
+Turn - Test.
+
+Test: [object 0, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3]; rule=object 0 or object 1 or object 2 must be present alone, or object 0 with any other object
+
+Turn - Test.
+
+Test: [object 1, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3]; rule=object 0 or object 1 or object 2 must be present alone, or object 0 or object 1 with any other object
+
+Turn - Test.
+
+Test: [object 2, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3]; rule=object 0 or object 1 or object 2 must be present alone, or object 0 or object 1 or object 2 with any other object
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3]; rule=object 0 or object 1 or object 2 must be present alone, or object 0 or object 1 or object 2 with any one other object, but not object 0 and object 1 together
+
+Turn - Test.
+
+Test: [object 3, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3]; rule=object 0 or object 1 or object 2 must be present alone, or object 0 or object 1 or object 2 with any one other object, but not object 0 and object 1 together, and object 3 must be paired with object 0, object 1, or object 2
+
+Turn - Test.
+
+Test: [object 3, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3]; rule=object 0 or object 1 or object 2 must be present alone, or object 0 or object 1 or object 2 with any one other object, but not object 0 and object 1 together, and object 3 must be paired with object 0, object 1, or object 2, and not with any other object besides those three
+
+Turn - Test.
+
+Test: [object 3, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3]; rule=object 0 or object 1 or object 2 must be present alone, or object 0 or object 1 or object 2 with any one other object, but not object 0 and object 1 together, and object 3 must be paired with object 0, object 1, or object 2, and not with any other object besides those three, and object 3 cannot be paired with object 4, object 5, or object 6
+
+Turn - Test.
+
+Test: [object 3, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3]; rule=object 0 or object 1 or object 2 must be present alone, or object 0 or object 1 or object 2 with any one other object, but not object 0 and object 1 together, and object 3 must be paired with object 0, object 1, or object 2, and not with any other object besides those three, and object 3 cannot be paired with object 4, object 5, object 6, or object 7
+
+Turn - Test.
+
+Test: [object 0, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3]; rule=object 0 or object 1 or object 2 must be present alone, or object 0 or object 1 or object 2 with any number of other objects, but not object 0 and object 1 together, and object 3 must be paired with object 0, object 1, or object 2, and not with any other object besides those three when alone with it
+
+Turn - Test.
+
+Test: [object 1, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present, and can be paired with any number of other objects, but not object 0 and object 1 together
+
+Turn - Test.
+
+Test: [object 2, object 4, object 5, object 6, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present, and can be paired with any number of other objects, but not object 0 and object 1 together
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present, and can be paired with any number of other objects, but not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 0, object 2]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 1, object 2]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, or object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, or object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 0]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, or object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, or object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 1, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, or object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 1, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, or object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 0, object 3, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, or object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 0, object 4, object 6, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, or object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 2, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 2, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 2, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and object 1 is paired with object 2, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 2, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and not object 1 and object 2 when object 1 is the only other object, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+
+Turn - Test.
+
+Test: [object 1, object 2, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and not object 1 and object 2 when object 1 is the only other object, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together, and not object 1 and object 2 with any additional object
+
+Turn - Test.
+
+Test: [object 1, object 3, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and not object 1 and object 2 when object 1 is the only other object, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together, and not object 1 and object 2 alone together, but object 1 and object 2 can be together with other objects besides just themselves
+
+Turn - Test.
+
+Test: [object 1, object 2, object 4, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and not object 1 and object 2 when object 1 is the only other object, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together, and not object 1 and object 2 alone together, but object 1 and object 2 can be together with one other object, but not more than one
+
+Turn - Test.
+
+Test: [object 1, object 2, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and not object 1 and object 2 when object 1 is the only other object, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together, and not object 1 and object 2 alone together, but object 1 and object 2 can be together with one specific other object, and not with any other object besides that one
+
+Turn - Test.
+
+Test: [object 1, object 2, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and not object 1 and object 2 when object 1 is the only other object, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together, and not object 1 and object 2 alone together, but object 1 and object 2 can be together with object 3, and not with any other object besides object 3
+
+Turn - Test.
+
+Test: [object 2, object 3, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and not object 1 and object 2 when object 1 is the only other object, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together, object 1 and object 2 can be together with object 3, and object 2 can be paired with any other object besides object 0 and object 1 when object 1 is the only other object
+
+Turn - Test.
+
+Test: [object 2, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 or object 1 or object 2 must be present alone, or paired with any other object except when object 0 is paired with object 2, and not object 1 and object 2 when object 1 is the only other object, and not object 0 and object 1 together, and not all three of object 0, object 1, and object 2 together
+

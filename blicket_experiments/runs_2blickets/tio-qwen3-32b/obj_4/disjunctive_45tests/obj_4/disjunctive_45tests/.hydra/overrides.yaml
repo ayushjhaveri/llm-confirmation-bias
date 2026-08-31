@@ -1,0 +1,8 @@
+- model_name=thinkopp-qwen3-32b/obj_4/disjunctive_45tests
+- num_trials=16
+- seed=0
+- env_kwargs.rule=disjunctive
+- env_kwargs.num_objects=4
+- max_actions_per_trial=45
+- agent.model=local_vllm:/scratch/aj4332/models/qwen3-32b
+- agent.initial_msg_path=./agent/prompts/alternating_relevant_initial_thinkopp.txt

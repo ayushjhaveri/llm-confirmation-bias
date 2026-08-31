@@ -1,0 +1,21 @@
+agent:
+  _target_: agent.alternating_blicket_oracle_llm.AlternatingBlicketOracleAgent
+  model: local_vllm:/scratch/aj4332/models/qwq-32b
+  temperature: 0.6
+  initial_msg_path: ./agent/prompts/alternating_relevant_initial.txt
+  horizon_tests: ${max_actions_per_trial}
+  max_format_retries: 3
+  thinking_mode: true
+model_name: qwq-32b/obj_8/disjunctive_45tests
+num_trials: 16
+max_actions_per_trial: 45
+save_trial_log: true
+use_threadpool: false
+tp_max_workers: 4
+seed: 0
+env_kwargs:
+  num_objects: 8
+  num_blickets: 3
+  init_prob: 0.1
+  transition_noise: 0.0
+  rule: disjunctive

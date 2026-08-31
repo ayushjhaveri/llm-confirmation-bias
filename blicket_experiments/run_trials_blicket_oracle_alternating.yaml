@@ -1,0 +1,27 @@
+defaults:
+  - agent: alternating_blicket_oracle_llm
+  - _self_
+
+model_name: qwen3-8b
+
+num_trials: 16
+max_actions_per_trial: 45
+
+save_trial_log: True
+use_threadpool: False
+tp_max_workers: 4
+
+seed: 0
+
+env_kwargs:
+  num_objects: 4
+  num_blickets: 2
+  init_prob: 0.1
+  transition_noise: 0.0
+  rule: "conjunctive"
+
+hydra:
+  run:
+    dir: runs14b_2blickets/${model_name}/obj_${env_kwargs.num_objects}/${env_kwargs.rule}_${max_actions_per_trial}tests
+  job:
+    chdir: True

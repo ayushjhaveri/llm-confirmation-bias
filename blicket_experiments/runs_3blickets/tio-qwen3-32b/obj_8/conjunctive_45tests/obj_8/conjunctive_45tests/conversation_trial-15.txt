@@ -1,0 +1,502 @@
+You are playing a game with several objects and a device.
+
+Placing a set of objects on the device causes it to turn on.
+This depends on which objects are placed on the device, according to a hidden rule.
+
+Your goal is to discover:
+- which objects are relevant to turn the device on
+- the hidden rule that determines when the device turns on.
+
+At each turn, you will be instructed to do one of two things:
+
+- Test: propose a set of objects to place on the device. You will then receive feedback on the device's state: ON or OFF.
+- Announce: based on all previous tests, state which objects you believe are relevant to turn the device on and describe the hidden rule. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Strategy: At every test step, follow this reasoning procedure:
+1. Form a concise current hypothesis of the relevant objects and hidden rule.
+2. Identify one feature implicit in that hypothesis.
+3. Test the OPPOSITE of that feature.
+4. If the hypothesis still holds, the feature is probably irrelevant; if it does not, that feature might be crucial.
+5. In short, prefer tests that both confirm and contradict your current idea.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: relevant=[object A, object B, object C]; rule=<one short description of the rule>
+  (there can be any number of relevant objects)
+
+- If the instruction is Turn – Test, output exactly one line:
+  Test: [object A, object B, object C]
+  (you can test any number of objects)
+
+Important rules:
+- Always refer to objects using the exact name "object N".
+- Do not include any extra text.
+
+--------------------------------------------------
+Initial configuration (this is not the result of a test):
+
+You are in a room. You see a device at the center of this room. 
+
+There are also 8 objects scattered around the room. You observe them: object 0 is on the floor, object 1 is on the floor, object 2 is on the device, object 3 is on the floor, object 4 is on the floor, object 5 is on the floor, object 6 is on the floor, object 7 is on the floor. 
+
+The device is off. You wonder if there is a relationship between the objects and the device.
+
+--------------------------------------------------
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=<unknown>
+
+Turn - Test.
+
+Test: [object 0]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=<unknown>
+
+Turn - Test.
+
+Test: [object 0, object 1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=<unknown>
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=<unknown>
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=<unknown>
+
+Turn - Test.
+
+Test: [object 4, object 5, object 6, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[]; rule=<unknown>
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 4, object 5, object 6, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 3, object 4, object 5, object 6, object 7]; rule=all of these objects must be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 4, object 5, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4, object 5, object 6, object 7]; rule=at least six objects must be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 3, object 4, object 5, object 6, object 7]; rule=object 0 and object 1 must be present with at least three other objects (excluding object 2)
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 and object 1 must be present, object 2 must not be present, and at least one other object (from object 3 to object 7) must be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 3, object 4, object 5, object 6, object 7]; rule=object 0 and object 1 must be present, object 2 must not be present, and at least one other object (from object 3 to object 7) must be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 3, object 4, object 5, object 6, object 7]; rule=object 0 and object 1 must be present, object 2 must not be present, and at least two other objects (from object 3 to object 7) must be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 and object 1 must be present; if object 2 is present, at least 5 total objects are required; if object 2 is absent, at least 4 total objects are required
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 and object 1 must be present; if object 2 is present, at least 5 total objects are required; if object 2 is absent, at least 4 total objects are required
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 and object 1 must be present; if object 2 is present, at least 5 total objects are required; if object 2 is absent, at least 4 total objects are required
+
+Turn - Test.
+
+Test: [object 1, object 2, object 3, object 4, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2]; rule=object 0 and object 1 must be present; if object 2 is present, at least 5 total objects are required; if object 2 is absent, at least 4 total objects are required
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 4]; rule=objects 0 and 1 must be present, object 4 must be present, and the total number of objects must be at least 5
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must also be present and total objects ≥5; if object 2 is absent, object 4 must be present and total objects ≥4
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 3 must be excluded and object 4 must be included; if object 2 is absent, object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must also be present; if object 2 is absent, at least two additional objects (from object 3 to object 7) must be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present, object 4 must be present, and if object 2 is present, object 3 must not be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must also be present and total objects ≥5; if object 2 is absent, at least two additional objects (from object 3 to object 7) must be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; object 4 must be present; if object 2 is present, object 3 must not be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 5, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 4]; rule=all three objects must be present
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 5, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 4, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, object 4 must be included regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded with ≥5 total objects; if object 2 is absent, object 4 must be included with ≥4 total objects regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded with ≥5 total objects; if object 2 is absent, object 4 must be included with ≥4 total objects regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, either object 3 or object 4 (or both) must be included
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded with ≥5 total objects; if object 2 is absent, object 4 must be included with ≥4 total objects regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded with ≥5 total objects; if object 2 is absent, object 4 must be included with ≥4 total objects regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 3, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, object 4 must be included regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 6]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded with ≥5 total objects; if object 2 is absent, object 4 must be included with ≥4 total objects regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2, object 4, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded; if object 2 is absent, object 4 must be included regardless of object 3's presence, with ≥4 total objects in all cases
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded with ≥5 total objects; if object 2 is absent, object 4 must be included with ≥4 total objects regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 4, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded with ≥5 total objects; if object 2 is absent, object 4 must be included with ≥4 total objects regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded with ≥5 total objects; if object 2 is absent, object 4 must be included with ≥4 total objects regardless of object 3's presence
+
+Turn - Test.
+
+Test: [object 0, object 1, object 3, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4]; rule=objects 0 and 1 must be present; if object 2 is present, object 4 must be included and object 3 must be excluded with ≥5 total objects; if object 2 is absent, object 4 must be included with ≥4 total objects regardless of object 3's presence
+

@@ -1,0 +1,10 @@
+- model_name=tio-qwq-32b/obj_4/xor_45tests
+- num_trials=16
+- seed=0
+- env_kwargs.rule=xor
+- env_kwargs.num_objects=4
+- env_kwargs.num_blickets=2
+- max_actions_per_trial=45
+- agent.model=local_vllm:/scratch/aj4332/models/qwq-32b
+- agent.thinking_mode=True
+- agent.initial_msg_path=./agent/prompts/alternating_relevant_initial_thinkopp.txt

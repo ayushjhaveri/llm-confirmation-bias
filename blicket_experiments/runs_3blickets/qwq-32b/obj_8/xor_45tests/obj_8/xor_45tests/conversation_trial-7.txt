@@ -1,0 +1,495 @@
+You are playing a game with several objects and a device.
+
+Placing a set of objects on the device causes it to turn on.
+This depends on which objects are placed on the device, according to a hidden rule.
+
+Your goal is to discover:
+- which objects are relevant to turn the device on
+- the hidden rule that determines when the device turns on.
+
+At each turn, you will be instructed to do one of two things:
+
+- Test: propose a set of objects to place on the device. You will then receive feedback on the device's state: ON or OFF.
+- Announce: based on all previous tests, state which objects you believe are relevant to turn the device on and describe the hidden rule. You will not receive any feedback for announcements.
+
+Each instruction you receive will specify what to do.
+
+Format (must follow exactly):
+
+- If the instruction is Turn – Announce, output exactly one line:
+  Announce: relevant=[object A, object B, object C]; rule=<one short description of the rule>
+  (there can be any number of relevant objects)
+
+- If the instruction is Turn – Test, output exactly one line:
+  Test: [object A, object B, object C]
+  (you can test any number and combination of objects)
+
+Important rules:
+- Always refer to objects using the exact name "object N".
+- Do not include any extra text.
+
+--------------------------------------------------
+Initial configuration (this is not the result of a test):
+
+You are in a room. You see a device at the center of this room. 
+
+There are also 8 objects scattered around the room. You observe them: object 0 is on the floor, object 1 is on the floor, object 2 is on the floor, object 3 is on the floor, object 4 is on the device, object 5 is on the floor, object 6 is on the floor, object 7 is on the floor. 
+
+The device is on. You wonder if there is a relationship between the objects and the device.
+
+--------------------------------------------------
+
+Turn - Announce.
+
+Announce: relevant=[object 4]; rule=The device turns on when object 4 is placed on it.
+
+Turn - Test.
+
+Test: [object 0]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4, object 5, object 6, object 7]; rule=The device turns on when at least one object is placed on it.
+
+Turn - Test.
+
+Test: []
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 1, object 2, object 3, object 4, object 5, object 6, object 7]; rule=The device turns on when at least one object is placed on it.
+
+Turn - Test.
+
+Test: [object 1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when either object 0 or object 4 is placed on it.
+
+Turn - Test.
+
+Test: [object 4]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when either object 0 or object 4 is placed on it.
+
+Turn - Test.
+
+Test: [object 1, object 2]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when either object 0 or object 4 is placed on it.
+
+Turn - Test.
+
+Test: [object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when either object 0 or object 4 is placed on it.
+
+Turn - Test.
+
+Test: [object 0, object 4]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on only when exactly one of object 0 or object 4 is placed on it, and no other objects are present.
+
+Turn - Test.
+
+Test: [object 0, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present, regardless of other objects.
+
+Turn - Test.
+
+Test: [object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present, regardless of other objects.
+
+Turn - Test.
+
+Test: [object 0, object 4, object 5]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present.
+
+Turn - Test.
+
+Test: [object 0, object 2, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present and the total number of objects placed is either 1 or 2.
+
+Turn - Test.
+
+Test: [object 4, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present and the total number of objects placed is 1 or 2.
+
+Turn - Test.
+
+Test: [object0, object2, object3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present.
+
+Turn - Test.
+
+Test: [object4, object5, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present and, if other objects are included, at least one is odd-numbered.
+
+Turn - Test.
+
+Test: [object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present and, if other objects are included, at least one is odd-numbered.
+
+Turn - Test.
+
+Test: [object 4, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present, and if other objects are included, at least one must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 0, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present, and if other objects are included, at least one must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 0, object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present, the total number of objects is 1 or 2, and if object 4 is included with another object, that other object must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 4, object 2, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and if object 4 is accompanied by other objects, at least one must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 4, object 2, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and if object 4 is accompanied by other objects, at least one of those must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 4, object 1, object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and if object 4 is accompanied by other objects, at least one of those must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 4, object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on if exactly one of object 0 or object 4 is present, and if object 4 is accompanied by other objects, at least one must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 4, object 2, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and if object 4 is accompanied by other objects, at least one of those must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 4, object 2, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and if object 4 is accompanied by other objects, at least one of those must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 0, object 2, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and if three or more objects are placed, at least one other must be odd-numbered.
+
+Turn - Test.
+
+Test: [object 0, object 1, object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present. If object 4 is chosen, any added objects must include at least one odd-numbered object. If object 0 is chosen with three or more objects total, at least one added object must be odd-numbered.
+
+Turn - Test.
+
+Test: [object0, object2, object3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present. If object 4 is used with others, at least one added object must be odd-numbered. If object 0 is used with ≥3 objects total, at least one added object must also be odd-numbered.
+
+Turn - Test.
+
+Test: [object0, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present. If object 4 is used with others, at least one added object must be odd-numbered. If object 0 is used with ≥3 objects total, at least one added object must also be odd-numbered.
+
+Turn - Test.
+
+Test: [object 4, object 2]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either numbered less than 4 or odd-numbered.
+
+Turn - Test.
+
+Test: [object 0, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must either be odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 0, object 2, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 4, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 4, object 6, object 1]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 0, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 4, object 3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 0, object 2, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 0, object 7]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 4, object 2, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object4, object2, object6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 0, object 2, object 6]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 4, object 6, object 7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 4, object 5]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must include at least one odd-numbered object.
+
+Turn - Test.
+
+Test: [object0, object6, object7]
+
+OFF
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object0, object2, object3]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
+Turn - Test.
+
+Test: [object 4, object 1]
+
+ON
+
+Turn - Announce.
+
+Announce: relevant=[object 0, object 4]; rule=The device turns on when exactly one of object 0 or object 4 is present, and any additional objects must be either odd-numbered or even-numbered with values less than 4.
+
